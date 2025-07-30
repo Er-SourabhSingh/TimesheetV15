@@ -8,7 +8,9 @@ import pageObjects.TimesheetApprovalPage;
 import pageObjects.TimesheetPage;
 import testBase.BaseClass;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
@@ -18,6 +20,9 @@ public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
 
     String startDate = "07/14/2025", endDate = "07/20/2025";
     String user = "user4";
+
+    Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();
+
     @Test (priority = 1)
     public void testSubmitTimesheetForProjectsCDF(){
         HeaderPage headerPage = new HeaderPage(driver);
@@ -67,6 +72,11 @@ public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
 
                         logger.info("------ Clicking Log Time button");
                         timesheetPage.clickOnLogTimeBtnForLogTime();
+
+                        Double hoursVal = Double.parseDouble(hours);
+                        projectActivityHours.putIfAbsent(project, new HashMap<>());
+                        Map<String, Double> activityMap = projectActivityHours.get(project);
+                        activityMap.put(activity, activityMap.getOrDefault(activity,0.0)+hoursVal);
                     }
                 }
 
@@ -110,6 +120,10 @@ public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
 
                 logger.info("------ Go to Date Range of Submission");
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
+
+                logger.info("------ Verify 'Design' and 'Development' Activity hours ");
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user)),projectActivityHours.get(projects[0]).getOrDefault("Design",0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user)),projectActivityHours.get(projects[0]).getOrDefault("Development",0.0));
 
                 logger.info("------ Approving timesheet for "+user);
                 timesheetApprovalPage.clickOnApproveBtn(user);
@@ -180,6 +194,10 @@ public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
                 logger.info("------ Go to Date Range of Submission");
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
+                logger.info("----- Verify 'Design' and 'Development' Activity hours ");
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user)),projectActivityHours.get(projects[1]).getOrDefault("Design",0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user)),projectActivityHours.get(projects[1]).getOrDefault("Development",0.0));
+
                 logger.info("------ Approving timesheet for "+user);
                 timesheetApprovalPage.clickOnApproveBtn(user);
                 timesheetApprovalPage.setApprovalText("Approved by -------- "+approvalUsers[i]);
@@ -249,6 +267,11 @@ public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
 
                 logger.info("------ Go to Date Range of Submission");
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
+
+                logger.info("------ Verify 'Design' and 'Development' Activity hours ");
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user)), projectActivityHours.get(projects[2]).getOrDefault("Design",0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user)), projectActivityHours.get(projects[2]).getOrDefault("Development",0.0));
+
 
                 logger.info("------ Approving timesheet for "+user);
                 timesheetApprovalPage.clickOnApproveBtn(user);
