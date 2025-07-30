@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Properties>
+        <Property name="log-path">./logs
+        </Property><!--This property defines the base directory where log files will be saved.-->
+        <Property name="log-pattern">%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
+        </Property><!-- This property defines the pattern for log messages. It will output the date (%d), log level (%p), class name (%c), line number (%L), the log message (%m), and a newline (%n).-->
+    </Properties>
+
+    <Appenders>
+        <Console name="Console"
+                 target="SYSTEM_OUT"><!--This appender writes log messages to the console (standard output).-->
+            <PatternLayout
+                    pattern="${log-pattern}"/><!--This sets the layout pattern for the console logs using the previously defined log-pattern property.-->
+        </Console>
+
+        <RollingFile name="File" fileName="${log-path}/automation.log"
+                     filePattern="${log-path}/automation-%d{MM-dd-yyyy}-%i.log.gz"><!--This appender writes logs to a file (automation.log) and rolls the file based on the size or time (as defined in the policies).-->
+            <PatternLayout
+                    pattern="${log-pattern}"/><!--This defines the log message format for the rolling file as the same as the console.-->
+            <Policies>
+                <TimeBasedTriggeringPolicy/><!--This triggers the log file rollover based on time (usually daily).-->
+                <SizeBasedTriggeringPolicy
+                        size="1MB"/><!--This triggers the log file rollover when the file size reaches 1MB.-->
+            </Policies>
+            <DefaultRolloverStrategy
+                    max="10"/><!--This ensures that a maximum of 10 archived log files are kept. Older files are deleted when this limit is exceeded.-->
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="INFO"><!-- Here you can use multiple log levels All < Trace < Debug < Info < Warn < Error < Fatal < Off -->
+            <!--<AppenderRef ref="Console"/>-->
+            <AppenderRef
+                    ref="File"/><!--This references the previously defined "File" appender, meaning log messages will be written to the rolling log file, but the console appender is commented out.-->
+        </Root>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,250 @@
+2025-07-30 13:54:26 INFO  TC004_TimesheetMultiProjectRejectionTests:30 - Test Case 1: Verify Multiple Project Rejection
+2025-07-30 13:54:26 INFO  TC004_TimesheetMultiProjectRejectionTests:33 - Step 1: Logging in as user4
+2025-07-30 13:54:27 INFO  TC004_TimesheetMultiProjectRejectionTests:36 - Step 2: Navigating to Timesheet module
+2025-07-30 13:54:27 INFO  TC004_TimesheetMultiProjectRejectionTests:39 - Step 3: Expanding timesheet view
+2025-07-30 13:54:28 INFO  TC004_TimesheetMultiProjectRejectionTests:42 - Step 4: Selecting date range filter as 'Last Week'
+2025-07-30 13:54:29 INFO  TC004_TimesheetMultiProjectRejectionTests:52 - Step 5: Logging time entries for each day from Monday to friday
+2025-07-30 13:54:29 INFO  TC004_TimesheetMultiProjectRejectionTests:57 - ---- Logging entry for: 07
+2025-07-30 13:54:29 INFO  TC004_TimesheetMultiProjectRejectionTests:60 - ------ Selecting project: Project A Default-Schema
+2025-07-30 13:54:30 INFO  TC004_TimesheetMultiProjectRejectionTests:63 - ------ Selecting issue: Test
+2025-07-30 13:54:30 INFO  TC004_TimesheetMultiProjectRejectionTests:67 - ------ Selecting activity: Design
+2025-07-30 13:54:31 INFO  TC004_TimesheetMultiProjectRejectionTests:71 - ------ Entering hours: 7
+2025-07-30 13:54:31 INFO  TC004_TimesheetMultiProjectRejectionTests:74 - ------ Clicking Log Time button
+2025-07-30 13:54:31 INFO  TC004_TimesheetMultiProjectRejectionTests:57 - ---- Logging entry for: 08
+2025-07-30 13:54:32 INFO  TC004_TimesheetMultiProjectRejectionTests:60 - ------ Selecting project: Project A Default-Schema
+2025-07-30 13:54:33 INFO  TC004_TimesheetMultiProjectRejectionTests:63 - ------ Selecting issue: Test
+2025-07-30 13:54:34 INFO  TC004_TimesheetMultiProjectRejectionTests:67 - ------ Selecting activity: Design
+2025-07-30 13:54:34 INFO  TC004_TimesheetMultiProjectRejectionTests:71 - ------ Entering hours: 9
+2025-07-30 13:54:34 INFO  TC004_TimesheetMultiProjectRejectionTests:74 - ------ Clicking Log Time button
+2025-07-30 13:54:34 INFO  TC004_TimesheetMultiProjectRejectionTests:57 - ---- Logging entry for: 09
+2025-07-30 13:54:35 INFO  TC004_TimesheetMultiProjectRejectionTests:60 - ------ Selecting project: Project A Default-Schema
+2025-07-30 13:54:36 INFO  TC004_TimesheetMultiProjectRejectionTests:63 - ------ Selecting issue: Test
+2025-07-30 13:54:36 INFO  TC004_TimesheetMultiProjectRejectionTests:67 - ------ Selecting activity: Design
+2025-07-30 13:54:36 INFO  TC004_TimesheetMultiProjectRejectionTests:71 - ------ Entering hours: 7
+2025-07-30 13:54:36 INFO  TC004_TimesheetMultiProjectRejectionTests:74 - ------ Clicking Log Time button
+2025-07-30 13:54:37 INFO  TC004_TimesheetMultiProjectRejectionTests:57 - ---- Logging entry for: 10
+2025-07-30 13:54:38 INFO  TC004_TimesheetMultiProjectRejectionTests:60 - ------ Selecting project: Project A Default-Schema
+2025-07-30 13:54:38 INFO  TC004_TimesheetMultiProjectRejectionTests:63 - ------ Selecting issue: Test
+2025-07-30 13:54:39 INFO  TC004_TimesheetMultiProjectRejectionTests:67 - ------ Selecting activity: Design
+2025-07-30 13:54:39 INFO  TC004_TimesheetMultiProjectRejectionTests:71 - ------ Entering hours: 9
+2025-07-30 13:54:39 INFO  TC004_TimesheetMultiProjectRejectionTests:74 - ------ Clicking Log Time button
+2025-07-30 13:54:39 INFO  TC004_TimesheetMultiProjectRejectionTests:57 - ---- Logging entry for: 11
+2025-07-30 13:54:41 INFO  TC004_TimesheetMultiProjectRejectionTests:60 - ------ Selecting project: Project A Default-Schema
+2025-07-30 13:54:41 INFO  TC004_TimesheetMultiProjectRejectionTests:63 - ------ Selecting issue: Test
+2025-07-30 13:54:41 INFO  TC004_TimesheetMultiProjectRejectionTests:67 - ------ Selecting activity: Design
+2025-07-30 13:54:41 INFO  TC004_TimesheetMultiProjectRejectionTests:71 - ------ Entering hours: 8
+2025-07-30 13:54:42 INFO  TC004_TimesheetMultiProjectRejectionTests:74 - ------ Clicking Log Time button
+2025-07-30 13:54:42 INFO  TC004_TimesheetMultiProjectRejectionTests:57 - ---- Logging entry for: 07
+2025-07-30 13:54:43 INFO  TC004_TimesheetMultiProjectRejectionTests:60 - ------ Selecting project: Project C 2-Level-Schema
+2025-07-30 13:54:43 INFO  TC004_TimesheetMultiProjectRejectionTests:63 - ------ Selecting issue: Test
+2025-07-30 13:54:44 INFO  TC004_TimesheetMultiProjectRejectionTests:67 - ------ Selecting activity: Design
+2025-07-30 13:54:44 INFO  TC004_TimesheetMultiProjectRejectionTests:71 - ------ Entering hours: 6
+2025-07-30 13:54:45 INFO  TC004_TimesheetMultiProjectRejectionTests:74 - ------ Clicking Log Time button
+2025-07-30 13:54:45 INFO  TC004_TimesheetMultiProjectRejectionTests:57 - ---- Logging entry for: 08
+2025-07-30 13:54:47 INFO  TC004_TimesheetMultiProjectRejectionTests:60 - ------ Selecting project: Project C 2-Level-Schema
+2025-07-30 13:54:47 INFO  TC004_TimesheetMultiProjectRejectionTests:63 - ------ Selecting issue: Test
+2025-07-30 13:54:47 INFO  TC004_TimesheetMultiProjectRejectionTests:67 - ------ Selecting activity: Development
+2025-07-30 13:54:48 INFO  TC004_TimesheetMultiProjectRejectionTests:71 - ------ Entering hours: 9
+2025-07-30 13:54:48 INFO  TC004_TimesheetMultiProjectRejectionTests:74 - ------ Clicking Log Time button
+2025-07-30 13:54:48 INFO  TC004_TimesheetMultiProjectRejectionTests:57 - ---- Logging entry for: 09
+2025-07-30 13:54:50 INFO  TC004_TimesheetMultiProjectRejectionTests:60 - ------ Selecting project: Project C 2-Level-Schema
+2025-07-30 13:54:50 INFO  TC004_TimesheetMultiProjectRejectionTests:63 - ------ Selecting issue: Test
+2025-07-30 13:54:50 INFO  TC004_TimesheetMultiProjectRejectionTests:67 - ------ Selecting activity: Design
+2025-07-30 13:54:50 INFO  TC004_TimesheetMultiProjectRejectionTests:71 - ------ Entering hours: 8
+2025-07-30 13:54:51 INFO  TC004_TimesheetMultiProjectRejectionTests:74 - ------ Clicking Log Time button
+2025-07-30 13:54:51 INFO  TC004_TimesheetMultiProjectRejectionTests:57 - ---- Logging entry for: 10
+2025-07-30 13:54:53 INFO  TC004_TimesheetMultiProjectRejectionTests:60 - ------ Selecting project: Project C 2-Level-Schema
+2025-07-30 13:54:53 INFO  TC004_TimesheetMultiProjectRejectionTests:63 - ------ Selecting issue: Test
+2025-07-30 13:54:54 INFO  TC004_TimesheetMultiProjectRejectionTests:67 - ------ Selecting activity: Development
+2025-07-30 13:54:54 INFO  TC004_TimesheetMultiProjectRejectionTests:71 - ------ Entering hours: 8
+2025-07-30 13:54:54 INFO  TC004_TimesheetMultiProjectRejectionTests:74 - ------ Clicking Log Time button
+2025-07-30 13:54:54 INFO  TC004_TimesheetMultiProjectRejectionTests:57 - ---- Logging entry for: 11
+2025-07-30 13:54:56 INFO  TC004_TimesheetMultiProjectRejectionTests:60 - ------ Selecting project: Project C 2-Level-Schema
+2025-07-30 13:54:56 INFO  TC004_TimesheetMultiProjectRejectionTests:63 - ------ Selecting issue: Test
+2025-07-30 13:54:57 INFO  TC004_TimesheetMultiProjectRejectionTests:67 - ------ Selecting activity: Development
+2025-07-30 13:54:57 INFO  TC004_TimesheetMultiProjectRejectionTests:71 - ------ Entering hours: 7
+2025-07-30 13:54:57 INFO  TC004_TimesheetMultiProjectRejectionTests:74 - ------ Clicking Log Time button
+2025-07-30 13:54:58 INFO  TC004_TimesheetMultiProjectRejectionTests:57 - ---- Logging entry for: 07
+2025-07-30 13:54:59 INFO  TC004_TimesheetMultiProjectRejectionTests:60 - ------ Selecting project: Project D 3-Level-Schema
+2025-07-30 13:55:00 INFO  TC004_TimesheetMultiProjectRejectionTests:63 - ------ Selecting issue: Test
+2025-07-30 13:55:01 INFO  TC004_TimesheetMultiProjectRejectionTests:67 - ------ Selecting activity: Development
+2025-07-30 13:55:01 INFO  TC004_TimesheetMultiProjectRejectionTests:71 - ------ Entering hours: 8
+2025-07-30 13:55:01 INFO  TC004_TimesheetMultiProjectRejectionTests:74 - ------ Clicking Log Time button
+2025-07-30 13:55:01 INFO  TC004_TimesheetMultiProjectRejectionTests:57 - ---- Logging entry for: 08
+2025-07-30 13:55:02 INFO  TC004_TimesheetMultiProjectRejectionTests:60 - ------ Selecting project: Project D 3-Level-Schema
+2025-07-30 13:55:02 INFO  TC004_TimesheetMultiProjectRejectionTests:63 - ------ Selecting issue: Test
+2025-07-30 13:55:03 INFO  TC004_TimesheetMultiProjectRejectionTests:67 - ------ Selecting activity: Development
+2025-07-30 13:55:03 INFO  TC004_TimesheetMultiProjectRejectionTests:71 - ------ Entering hours: 7
+2025-07-30 13:55:04 INFO  TC004_TimesheetMultiProjectRejectionTests:74 - ------ Clicking Log Time button
+2025-07-30 13:55:04 INFO  TC004_TimesheetMultiProjectRejectionTests:57 - ---- Logging entry for: 09
+2025-07-30 13:55:05 INFO  TC004_TimesheetMultiProjectRejectionTests:60 - ------ Selecting project: Project D 3-Level-Schema
+2025-07-30 13:55:05 INFO  TC004_TimesheetMultiProjectRejectionTests:63 - ------ Selecting issue: Test
+2025-07-30 13:55:05 INFO  TC004_TimesheetMultiProjectRejectionTests:67 - ------ Selecting activity: Design
+2025-07-30 13:55:05 INFO  TC004_TimesheetMultiProjectRejectionTests:71 - ------ Entering hours: 9
+2025-07-30 13:55:06 INFO  TC004_TimesheetMultiProjectRejectionTests:74 - ------ Clicking Log Time button
+2025-07-30 13:55:06 INFO  TC004_TimesheetMultiProjectRejectionTests:57 - ---- Logging entry for: 10
+2025-07-30 13:55:07 INFO  TC004_TimesheetMultiProjectRejectionTests:60 - ------ Selecting project: Project D 3-Level-Schema
+2025-07-30 13:55:07 INFO  TC004_TimesheetMultiProjectRejectionTests:63 - ------ Selecting issue: Test
+2025-07-30 13:55:08 INFO  TC004_TimesheetMultiProjectRejectionTests:67 - ------ Selecting activity: Development
+2025-07-30 13:55:08 INFO  TC004_TimesheetMultiProjectRejectionTests:71 - ------ Entering hours: 8
+2025-07-30 13:55:08 INFO  TC004_TimesheetMultiProjectRejectionTests:74 - ------ Clicking Log Time button
+2025-07-30 13:55:08 INFO  TC004_TimesheetMultiProjectRejectionTests:57 - ---- Logging entry for: 11
+2025-07-30 13:55:09 INFO  TC004_TimesheetMultiProjectRejectionTests:60 - ------ Selecting project: Project D 3-Level-Schema
+2025-07-30 13:55:10 INFO  TC004_TimesheetMultiProjectRejectionTests:63 - ------ Selecting issue: Test
+2025-07-30 13:55:10 INFO  TC004_TimesheetMultiProjectRejectionTests:67 - ------ Selecting activity: Development
+2025-07-30 13:55:10 INFO  TC004_TimesheetMultiProjectRejectionTests:71 - ------ Entering hours: 7
+2025-07-30 13:55:10 INFO  TC004_TimesheetMultiProjectRejectionTests:74 - ------ Clicking Log Time button
+2025-07-30 13:55:10 INFO  TC004_TimesheetMultiProjectRejectionTests:84 - Step 6: Submitting the timesheet
+2025-07-30 13:55:11 INFO  TC004_TimesheetMultiProjectRejectionTests:88 - ------ Verifying that the Project A Default-Schema status is 'Waiting for Approval'
+2025-07-30 13:55:11 INFO  TC004_TimesheetMultiProjectRejectionTests:88 - ------ Verifying that the Project C 2-Level-Schema status is 'Waiting for Approval'
+2025-07-30 13:55:11 INFO  TC004_TimesheetMultiProjectRejectionTests:88 - ------ Verifying that the Project D 3-Level-Schema status is 'Waiting for Approval'
+2025-07-30 13:55:11 INFO  TC004_TimesheetMultiProjectRejectionTests:93 - Step 8: Logging out user
+2025-07-30 13:55:11 INFO  TC004_TimesheetMultiProjectRejectionTests:107 - Test Case 2: Verify Rejection of Project A Timesheet
+2025-07-30 13:55:11 INFO  TC004_TimesheetMultiProjectRejectionTests:109 - Step 1: Logging in as admin
+2025-07-30 13:55:12 INFO  TC004_TimesheetMultiProjectRejectionTests:112 - Step 2: Navigating to project: Project A Default-Schema
+2025-07-30 13:55:13 INFO  TC004_TimesheetMultiProjectRejectionTests:116 - Step 3: Navigating to Timesheet Approval
+2025-07-30 13:55:13 INFO  TC004_TimesheetMultiProjectRejectionTests:119 - Step 4: Go to Date Range of Submission
+2025-07-30 13:55:17 INFO  TC004_TimesheetMultiProjectRejectionTests:122 - Step 5: Verify 'Design' and 'Development' Activity hours 
+2025-07-30 13:55:17 INFO  TC004_TimesheetMultiProjectRejectionTests:126 - Step 6: Reject timesheet for: user6
+2025-07-30 13:55:18 INFO  TC004_TimesheetMultiProjectRejectionTests:133 - Step 7: Logging out as Admin
+2025-07-30 13:55:18 INFO  TC004_TimesheetMultiProjectRejectionTests:136 - Step 8: Logging in as user6
+2025-07-30 13:55:19 INFO  TC004_TimesheetMultiProjectRejectionTests:139 - Step 9: Navigating to Timesheet module
+2025-07-30 13:55:19 INFO  TC004_TimesheetMultiProjectRejectionTests:142 - Step 10: Expanding timesheet view
+2025-07-30 13:55:19 INFO  TC004_TimesheetMultiProjectRejectionTests:145 - Step 11: Selecting date range filter as 'Last Week'
+2025-07-30 13:55:20 INFO  TC004_TimesheetMultiProjectRejectionTests:155 - Step 12: Logging out user6
+2025-07-30 13:55:21 INFO  TC004_TimesheetMultiProjectRejectionTests:170 - Test Case 3: Verify Rejection of Project C Timesheet
+2025-07-30 13:55:21 INFO  TC004_TimesheetMultiProjectRejectionTests:172 - Step 1: Logging in as 1Approval
+2025-07-30 13:55:21 INFO  TC004_TimesheetMultiProjectRejectionTests:175 - Step 2: Navigate to project: Project C 2-Level-Schema
+2025-07-30 13:55:22 INFO  TC004_TimesheetMultiProjectRejectionTests:179 - Step 3: Navigate to Timesheet Approval
+2025-07-30 13:55:22 INFO  TC004_TimesheetMultiProjectRejectionTests:182 - Step 4: Go to Date Range of Submission
+2025-07-30 13:55:26 INFO  TC004_TimesheetMultiProjectRejectionTests:185 - Step 5: Verify 'Design' and 'Development' Activity hours 
+2025-07-30 13:55:26 INFO  TC004_TimesheetMultiProjectRejectionTests:189 - Step 6: Reject timesheet for: user6
+2025-07-30 13:55:27 INFO  TC004_TimesheetMultiProjectRejectionTests:196 - Step 7: Logging out as 1Approval
+2025-07-30 13:55:27 INFO  TC004_TimesheetMultiProjectRejectionTests:200 - Step 8: Logging in as user6
+2025-07-30 13:55:28 INFO  TC004_TimesheetMultiProjectRejectionTests:203 - Step 9: Navigating to Timesheet module
+2025-07-30 13:55:28 INFO  TC004_TimesheetMultiProjectRejectionTests:206 - Step 10: Expanding timesheet view
+2025-07-30 13:55:28 INFO  TC004_TimesheetMultiProjectRejectionTests:209 - Step 11: Selecting date range filter as 'Last Week'
+2025-07-30 13:55:29 INFO  TC004_TimesheetMultiProjectRejectionTests:219 - Step 12: Logging out user6
+2025-07-30 13:55:29 INFO  TC004_TimesheetMultiProjectRejectionTests:234 - Test Case 4: Verify Rejection of Project D Timesheet At level 2
+2025-07-30 13:55:29 INFO  TC004_TimesheetMultiProjectRejectionTests:236 - Step 1: Logging in as 1Approval
+2025-07-30 13:55:30 INFO  TC004_TimesheetMultiProjectRejectionTests:239 - Step 2: Navigate to project: Project D 3-Level-Schema
+2025-07-30 13:55:30 INFO  TC004_TimesheetMultiProjectRejectionTests:243 - Step 3: Navigate to Timesheet Approval
+2025-07-30 13:55:31 INFO  TC004_TimesheetMultiProjectRejectionTests:246 - Step 4: Go to Date Range of Submission
+2025-07-30 13:55:35 INFO  TC004_TimesheetMultiProjectRejectionTests:249 - Step 5: Verify 'Design' and 'Development' Activity hours 
+2025-07-30 13:55:35 INFO  TC004_TimesheetMultiProjectRejectionTests:254 - Step 6: Approve at level one timesheet for: user6
+2025-07-30 13:55:36 INFO  TC004_TimesheetMultiProjectRejectionTests:261 - Step 7: Logging out as 1Approval
+2025-07-30 13:55:36 INFO  TC004_TimesheetMultiProjectRejectionTests:265 - Step 8: Logging in as user6
+2025-07-30 13:55:37 INFO  TC004_TimesheetMultiProjectRejectionTests:268 - Step 9: Navigating to Timesheet module
+2025-07-30 13:55:37 INFO  TC004_TimesheetMultiProjectRejectionTests:271 - Step 10: Expanding timesheet view
+2025-07-30 13:55:37 INFO  TC004_TimesheetMultiProjectRejectionTests:274 - Step 11: Selecting date range filter as 'Last Week'
+2025-07-30 13:55:38 INFO  TC004_TimesheetMultiProjectRejectionTests:283 - Step 12: Logging out user6
+2025-07-30 13:55:39 INFO  TC004_TimesheetMultiProjectRejectionTests:286 - Step 13: Logging in as 2Approval
+2025-07-30 13:55:39 INFO  TC004_TimesheetMultiProjectRejectionTests:289 - Step 14: Navigate to project: Project D 3-Level-Schema
+2025-07-30 13:55:40 INFO  TC004_TimesheetMultiProjectRejectionTests:293 - Step 15: Navigate to Timesheet Approval
+2025-07-30 13:55:40 INFO  TC004_TimesheetMultiProjectRejectionTests:296 - Step 16: Go to Date Range of Submission
+2025-07-30 13:55:44 INFO  TC004_TimesheetMultiProjectRejectionTests:299 - Step 17: Verify 'Design' and 'Development' Activity hours 
+2025-07-30 13:55:44 INFO  TC004_TimesheetMultiProjectRejectionTests:303 - Step 18: Reject timesheet for: user6
+2025-07-30 13:55:45 INFO  TC004_TimesheetMultiProjectRejectionTests:310 - Step 19: Logging out as 2Approval
+2025-07-30 13:55:45 INFO  TC004_TimesheetMultiProjectRejectionTests:314 - Step 20: Logging in as user6
+2025-07-30 13:55:45 INFO  TC004_TimesheetMultiProjectRejectionTests:317 - Step 21: Navigating to Timesheet module
+2025-07-30 13:55:46 INFO  TC004_TimesheetMultiProjectRejectionTests:320 - Step 22: Expanding timesheet view
+2025-07-30 13:55:46 INFO  TC004_TimesheetMultiProjectRejectionTests:323 - Step 23: Selecting date range filter as 'Last Week'
+2025-07-30 13:55:47 INFO  TC004_TimesheetMultiProjectRejectionTests:333 - Step 24: Logging out user6
+2025-07-30 13:55:47 INFO  TC004_TimesheetMultiProjectRejectionTests:346 - Test Case 5: Verifying rejected status for A, C, D
+2025-07-30 13:55:47 INFO  TC004_TimesheetMultiProjectRejectionTests:348 - Step 1: Logging in as user4
+2025-07-30 13:55:48 INFO  TC004_TimesheetMultiProjectRejectionTests:351 - Step 2: Navigating to Timesheet module
+2025-07-30 13:55:48 INFO  TC004_TimesheetMultiProjectRejectionTests:354 - Step 3: Expanding timesheet view
+2025-07-30 13:55:48 INFO  TC004_TimesheetMultiProjectRejectionTests:357 - Step 4: Selecting date range filter as 'Last Week'
+2025-07-30 13:55:49 INFO  TC004_TimesheetMultiProjectRejectionTests:367 - ------ Verifying that the Project A Default-Schema status is 'Rejected'
+2025-07-30 13:55:49 INFO  TC004_TimesheetMultiProjectRejectionTests:367 - ------ Verifying that the Project C 2-Level-Schema status is 'Rejected'
+2025-07-30 13:55:49 INFO  TC004_TimesheetMultiProjectRejectionTests:367 - ------ Verifying that the Project D 3-Level-Schema status is 'Rejected'
+2025-07-30 13:55:49 INFO  TC004_TimesheetMultiProjectRejectionTests:381 - Test case 6: Resubmitting rejected timesheets for all projects
+2025-07-30 13:55:49 INFO  TC004_TimesheetMultiProjectRejectionTests:383 - Step 1: Resubmitting the timesheet
+2025-07-30 13:55:50 INFO  TC004_TimesheetMultiProjectRejectionTests:387 - ------ Verifying that the Project A Default-Schema status is 'Waiting for Approval'
+2025-07-30 13:55:50 INFO  TC004_TimesheetMultiProjectRejectionTests:387 - ------ Verifying that the Project C 2-Level-Schema status is 'Waiting for Approval'
+2025-07-30 13:55:50 INFO  TC004_TimesheetMultiProjectRejectionTests:387 - ------ Verifying that the Project D 3-Level-Schema status is 'Waiting for Approval'
+2025-07-30 13:55:50 INFO  TC004_TimesheetMultiProjectRejectionTests:391 - Step 2: log time for project A C and D
+2025-07-30 13:55:50 INFO  TC004_TimesheetMultiProjectRejectionTests:425 - Step 3: Logging out user
+2025-07-30 13:55:50 INFO  TC004_TimesheetMultiProjectRejectionTests:439 - Test Case 7: Approving all resubmitted timesheets through levels
+2025-07-30 13:55:50 INFO  TC004_TimesheetMultiProjectRejectionTests:441 - Step 1: Logging in as admin
+2025-07-30 13:55:51 INFO  TC004_TimesheetMultiProjectRejectionTests:444 - Step 2: Navigating to project: Project A Default-Schema
+2025-07-30 13:55:51 INFO  TC004_TimesheetMultiProjectRejectionTests:448 - Step 3: Navigating to Timesheet Approval
+2025-07-30 13:55:52 INFO  TC004_TimesheetMultiProjectRejectionTests:451 - Step 4: Go to Date Range of Submission
+2025-07-30 13:55:56 INFO  TC004_TimesheetMultiProjectRejectionTests:454 - Step 5: Verify 'Design' and 'Development' Activity hours 
+2025-07-30 13:55:56 INFO  TC004_TimesheetMultiProjectRejectionTests:458 - Step 6: Approve timesheet for: user6
+2025-07-30 13:55:56 INFO  TC004_TimesheetMultiProjectRejectionTests:465 - Step 7: Logging out as Admin
+2025-07-30 13:55:57 INFO  TC004_TimesheetMultiProjectRejectionTests:468 - Step 8: Logging in as user6
+2025-07-30 13:55:57 INFO  TC004_TimesheetMultiProjectRejectionTests:471 - Step 9: Navigating to Timesheet module
+2025-07-30 13:55:58 INFO  TC004_TimesheetMultiProjectRejectionTests:474 - Step 10: Expanding timesheet view
+2025-07-30 13:55:58 INFO  TC004_TimesheetMultiProjectRejectionTests:477 - Step 11: Selecting date range filter as 'Last Week'
+2025-07-30 13:55:59 INFO  TC004_TimesheetMultiProjectRejectionTests:487 - Step 12: Logging out user6
+2025-07-30 13:55:59 INFO  TC004_TimesheetMultiProjectRejectionTests:490 - ----- Verify That Approver can Approve Timesheet Project C
+2025-07-30 13:55:59 INFO  TC004_TimesheetMultiProjectRejectionTests:492 - ---- Logging in as Approver:1Approval
+2025-07-30 13:55:59 INFO  TC004_TimesheetMultiProjectRejectionTests:495 - ------ Navigating to project: Project C 2-Level-Schema
+2025-07-30 13:56:00 INFO  TC004_TimesheetMultiProjectRejectionTests:499 - ------ Navigating to Timesheet Approval
+2025-07-30 13:56:00 INFO  TC004_TimesheetMultiProjectRejectionTests:502 - ------ Go to Date Range of Submission
+2025-07-30 13:56:05 INFO  TC004_TimesheetMultiProjectRejectionTests:508 - ------ Approving timesheet for user6
+2025-07-30 13:56:05 INFO  TC004_TimesheetMultiProjectRejectionTests:515 - ------ Logging out approver: 1Approval
+2025-07-30 13:56:06 INFO  TC004_TimesheetMultiProjectRejectionTests:519 - ------ Logging in as user6
+2025-07-30 13:56:06 INFO  TC004_TimesheetMultiProjectRejectionTests:522 - ------ Navigating to Timesheet module
+2025-07-30 13:56:06 INFO  TC004_TimesheetMultiProjectRejectionTests:525 - ------ Expanding timesheet view
+2025-07-30 13:56:07 INFO  TC004_TimesheetMultiProjectRejectionTests:528 - ------ Selecting date range filter as 'Last Week'
+2025-07-30 13:56:08 INFO  TC004_TimesheetMultiProjectRejectionTests:536 - ------ Verifying that the Project C 2-Level-Schema status is 'Waiting for Approval' after approval at level 1
+2025-07-30 13:56:08 INFO  TC004_TimesheetMultiProjectRejectionTests:546 - ------ Logging out user6
+2025-07-30 13:56:08 INFO  TC004_TimesheetMultiProjectRejectionTests:492 - ---- Logging in as Approver:2Approval
+2025-07-30 13:56:08 INFO  TC004_TimesheetMultiProjectRejectionTests:495 - ------ Navigating to project: Project C 2-Level-Schema
+2025-07-30 13:56:09 INFO  TC004_TimesheetMultiProjectRejectionTests:499 - ------ Navigating to Timesheet Approval
+2025-07-30 13:56:09 INFO  TC004_TimesheetMultiProjectRejectionTests:502 - ------ Go to Date Range of Submission
+2025-07-30 13:56:13 INFO  TC004_TimesheetMultiProjectRejectionTests:508 - ------ Approving timesheet for user6
+2025-07-30 13:56:14 INFO  TC004_TimesheetMultiProjectRejectionTests:515 - ------ Logging out approver: 2Approval
+2025-07-30 13:56:14 INFO  TC004_TimesheetMultiProjectRejectionTests:519 - ------ Logging in as user6
+2025-07-30 13:56:15 INFO  TC004_TimesheetMultiProjectRejectionTests:522 - ------ Navigating to Timesheet module
+2025-07-30 13:56:15 INFO  TC004_TimesheetMultiProjectRejectionTests:525 - ------ Expanding timesheet view
+2025-07-30 13:56:15 INFO  TC004_TimesheetMultiProjectRejectionTests:528 - ------ Selecting date range filter as 'Last Week'
+2025-07-30 13:56:16 INFO  TC004_TimesheetMultiProjectRejectionTests:541 - ------ Verifying that the Project C 2-Level-Schema status is 'Approved' after approval at level 2
+2025-07-30 13:56:17 INFO  TC004_TimesheetMultiProjectRejectionTests:546 - ------ Logging out user6
+2025-07-30 13:56:17 INFO  TC004_TimesheetMultiProjectRejectionTests:550 - ----- Verify That Approver can Approve Timesheet Project D
+2025-07-30 13:56:17 INFO  TC004_TimesheetMultiProjectRejectionTests:552 - ---- Logging in as Approver:1Approval
+2025-07-30 13:56:17 INFO  TC004_TimesheetMultiProjectRejectionTests:555 - ------ Navigating to project: Project C 2-Level-Schema
+2025-07-30 13:56:18 INFO  TC004_TimesheetMultiProjectRejectionTests:559 - ------ Navigating to Timesheet Approval
+2025-07-30 13:56:18 INFO  TC004_TimesheetMultiProjectRejectionTests:562 - ------ Go to Date Range of Submission
+2025-07-30 13:56:22 INFO  TC004_TimesheetMultiProjectRejectionTests:568 - ------ Approving timesheet for user6
+2025-07-30 13:56:23 INFO  TC004_TimesheetMultiProjectRejectionTests:575 - ------ Logging out approver: 1Approval
+2025-07-30 13:56:23 INFO  TC004_TimesheetMultiProjectRejectionTests:579 - ------ Logging in as user6
+2025-07-30 13:56:24 INFO  TC004_TimesheetMultiProjectRejectionTests:582 - ------ Navigating to Timesheet module
+2025-07-30 13:56:24 INFO  TC004_TimesheetMultiProjectRejectionTests:585 - ------ Expanding timesheet view
+2025-07-30 13:56:24 INFO  TC004_TimesheetMultiProjectRejectionTests:588 - ------ Selecting date range filter as 'Last Week'
+2025-07-30 13:56:25 INFO  TC004_TimesheetMultiProjectRejectionTests:596 - ------ Verifying that the Project D 3-Level-Schema status is 'Waiting for Approval' after approval at level 1
+2025-07-30 13:56:25 INFO  TC004_TimesheetMultiProjectRejectionTests:605 - ------ Logging out user6
+2025-07-30 13:56:26 INFO  TC004_TimesheetMultiProjectRejectionTests:552 - ---- Logging in as Approver:2Approval
+2025-07-30 13:56:26 INFO  TC004_TimesheetMultiProjectRejectionTests:555 - ------ Navigating to project: Project C 2-Level-Schema
+2025-07-30 13:56:27 INFO  TC004_TimesheetMultiProjectRejectionTests:559 - ------ Navigating to Timesheet Approval
+2025-07-30 13:56:27 INFO  TC004_TimesheetMultiProjectRejectionTests:562 - ------ Go to Date Range of Submission
+2025-07-30 13:56:31 INFO  TC004_TimesheetMultiProjectRejectionTests:568 - ------ Approving timesheet for user6
+2025-07-30 13:56:32 INFO  TC004_TimesheetMultiProjectRejectionTests:575 - ------ Logging out approver: 2Approval
+2025-07-30 13:56:32 INFO  TC004_TimesheetMultiProjectRejectionTests:579 - ------ Logging in as user6
+2025-07-30 13:56:33 INFO  TC004_TimesheetMultiProjectRejectionTests:582 - ------ Navigating to Timesheet module
+2025-07-30 13:56:33 INFO  TC004_TimesheetMultiProjectRejectionTests:585 - ------ Expanding timesheet view
+2025-07-30 13:56:33 INFO  TC004_TimesheetMultiProjectRejectionTests:588 - ------ Selecting date range filter as 'Last Week'
+2025-07-30 13:56:34 INFO  TC004_TimesheetMultiProjectRejectionTests:596 - ------ Verifying that the Project D 3-Level-Schema status is 'Waiting for Approval' after approval at level 2
+2025-07-30 13:56:34 INFO  TC004_TimesheetMultiProjectRejectionTests:605 - ------ Logging out user6
+2025-07-30 13:56:35 INFO  TC004_TimesheetMultiProjectRejectionTests:552 - ---- Logging in as Approver:3Approval
+2025-07-30 13:56:35 INFO  TC004_TimesheetMultiProjectRejectionTests:555 - ------ Navigating to project: Project C 2-Level-Schema
+2025-07-30 13:56:35 INFO  TC004_TimesheetMultiProjectRejectionTests:559 - ------ Navigating to Timesheet Approval
+2025-07-30 13:56:36 INFO  TC004_TimesheetMultiProjectRejectionTests:562 - ------ Go to Date Range of Submission
+2025-07-30 13:56:40 INFO  TC004_TimesheetMultiProjectRejectionTests:568 - ------ Approving timesheet for user6
+2025-07-30 13:56:41 INFO  TC004_TimesheetMultiProjectRejectionTests:575 - ------ Logging out approver: 3Approval
+2025-07-30 13:56:41 INFO  TC004_TimesheetMultiProjectRejectionTests:579 - ------ Logging in as user6
+2025-07-30 13:56:42 INFO  TC004_TimesheetMultiProjectRejectionTests:582 - ------ Navigating to Timesheet module
+2025-07-30 13:56:42 INFO  TC004_TimesheetMultiProjectRejectionTests:585 - ------ Expanding timesheet view
+2025-07-30 13:56:42 INFO  TC004_TimesheetMultiProjectRejectionTests:588 - ------ Selecting date range filter as 'Last Week'
+2025-07-30 13:56:43 INFO  TC004_TimesheetMultiProjectRejectionTests:601 - ------ Verifying that the Project D 3-Level-Schema status is 'Approved' after approval at level 3
+2025-07-30 13:56:43 INFO  TC004_TimesheetMultiProjectRejectionTests:605 - ------ Logging out user6
+2025-07-30 13:56:43 INFO  TC004_TimesheetMultiProjectRejectionTests:618 - Test Case 8: Final verification of all timesheet statuses
+2025-07-30 13:56:43 INFO  TC004_TimesheetMultiProjectRejectionTests:620 - ------ Logging in as user6
+2025-07-30 13:56:44 INFO  TC004_TimesheetMultiProjectRejectionTests:623 - ------ Navigating to Timesheet module
+2025-07-30 13:56:44 INFO  TC004_TimesheetMultiProjectRejectionTests:626 - ------ Expanding timesheet view
+2025-07-30 13:56:44 INFO  TC004_TimesheetMultiProjectRejectionTests:629 - ------ Selecting date range filter as 'Last Week'
+2025-07-30 13:56:45 INFO  TC004_TimesheetMultiProjectRejectionTests:637 - ------ Verifying that the Project A Default-Schema status is 'Approved'
+2025-07-30 13:56:45 INFO  TC004_TimesheetMultiProjectRejectionTests:637 - ------ Verifying that the Project C 2-Level-Schema status is 'Approved'
+2025-07-30 13:56:45 INFO  TC004_TimesheetMultiProjectRejectionTests:637 - ------ Verifying that the Project D 3-Level-Schema status is 'Approved'
