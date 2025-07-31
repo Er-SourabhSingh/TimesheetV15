@@ -54,6 +54,7 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
                 for (String project : this.projects) {
                     for (String day : days) {
                         logger.info("---- Logging entry for: " + day);
+                        System.out.println(day);
                         timesheetPage.clickOnTopRowDateCell(day);
 
                         logger.info("------ Selecting project: " + project);
@@ -186,9 +187,9 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
             Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user)),projectActivityHours.get(projects[0]).getOrDefault("Development",0.0));
 
             logger.info("Step 6: Approve timesheet for: "+user);
-            timesheetApprovalPage.clickOnRejectBtn(user);
-            timesheetApprovalPage.setRejectionText("Approved by --------- Admin");
-            timesheetApprovalPage.clickOnSubmitBtnOfRejection();
+            timesheetApprovalPage.clickOnApproveBtn(user);
+            timesheetApprovalPage.setApprovalText("Approved by --------- Admin");
+            timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
             Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(user),"Approved");
 
