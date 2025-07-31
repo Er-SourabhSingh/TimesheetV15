@@ -169,7 +169,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         logger.info("Test Case 3: Verify Rejection of Project C Timesheet");
         try{
-            logger.info("Step 1: Logging in as "+approvalUsers[0]);
+            logger.info("Step 1: Logging in as "+ approvalUsers[0]);
             super.login(approvalUsers[0], "12345678");
 
             logger.info("Step 2: Navigate to project: " + projects[1]);
@@ -378,18 +378,12 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
     public void testResubmitRejectedTimesheets(){
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
-        logger.info("Test case 6: Resubmitting rejected timesheets for all projects");
+        logger.info("Test case 6: Resubmitting rejected timesheets for all projects after updating");
         try {
-            logger.info("Step 1: Resubmitting the timesheet");
-            timesheetPage.clickOnSubmitTimesheetBtn();
 
-            for (String project : projects) {
-                logger.info("------ Verifying that the " + project + " status is 'Waiting for Approval'");
-                Assert.assertTrue(timesheetPage.hasPendingTimesheet(project));
-            }
             List<String> days = getFirstFiveDay(this.startDate, this.endDate);
-            logger.info("Step 2: log time for project A C and D");
-            String []activities = new String[]{"Design","Developement"};
+            logger.info("Step 1: log time for project A C and D");
+            String []activities = new String[]{"Design","Development"};
             if (timesheetPage.isSubmitTimesheetBtnEnabled()) {
                 for (String project : this.projects) {
                         for(String activity :activities) {
@@ -420,7 +414,13 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
                         }
                     }
                 }
+            logger.info("Step 2: Resubmitting the timesheet");
+            timesheetPage.clickOnSubmitTimesheetBtn();
 
+            for (String project : projects) {
+                logger.info("------ Verifying that the " + project + " status is 'Waiting for Approval'");
+                Assert.assertTrue(timesheetPage.hasPendingTimesheet(project));
+            }
 
             logger.info("Step 3: Logging out user");
             headerPage.clickOnLogout();
@@ -489,7 +489,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
 
             logger.info("----- Verify That Approver can Approve Timesheet Project C");
             for (int i = 0; i < approvalUsers.length - 3; i++) {
-                logger.info("---- Logging in as Approver:" + approvalUsers[i]);
+                logger.info("---- Logging in as Approver: " + approvalUsers[i]);
                 super.login(approvalUsers[i], "12345678");
 
                 logger.info("------ Navigating to project: " + projects[1]);
@@ -502,6 +502,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
                 logger.info("------ Go to Date Range of Submission");
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
+                logger.info("------ Verify 'Design' and 'Development' Activity hours ");
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user)),projectActivityHours.get(projects[1]).getOrDefault("Design",0.0));
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user)),projectActivityHours.get(projects[1]).getOrDefault("Development",0.0));
 
@@ -552,7 +553,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
                 logger.info("---- Logging in as Approver:" + approvalUsers[i]);
                 super.login(approvalUsers[i], "12345678");
 
-                logger.info("------ Navigating to project: " + projects[1]);
+                logger.info("------ Navigating to project: " + projects[2]);
                 headerPage.clickOnProjects();
                 projectsPage.clickOnProjectName(projects[2]);
 
@@ -562,6 +563,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
                 logger.info("------ Go to Date Range of Submission");
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
+                logger.info("------ Verify 'Design' and 'Development' Activity hours ");
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user)), projectActivityHours.get(projects[2]).getOrDefault("Design", 0.0));
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user)), projectActivityHours.get(projects[2]).getOrDefault("Development", 0.0));
 
