@@ -74,6 +74,31 @@ public class TimesheetApprovalPage extends BasePage{
         return element.getAttribute("value");
     }
 
+    public String getTextStatusOfUserTimesheet(String userName) {
+        By textStatus = By.xpath("//table[@class='list issues']//tbody//tr//td[3][contains(text(),'"
+                + userName + "')]/ancestor::tr//td[8]");
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(textStatus));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        return element.getText().trim();
+    }
+
+
+    public Boolean isApproveBtnEnabled(String userName){
+        // By btnApprove = By.xpath("//table[@class='list issues']//tbody//tr//td[3]//a[contains(text(),'" + userName + "')]/ancestor::tr//td[8]//a[.='Approve']");
+        By btnApprove = By.xpath("//table[@class='list issues']//tbody//tr//td[3][contains(text(),'" + userName + "')]/ancestor::tr//td[8]//a[.='Approve']");
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(btnApprove));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        return element.isEnabled();
+    }
+
+    public Boolean isRejectBtnEnabled(String userName){
+        //By btnReject = By.xpath("//table[@class='list issues']//tbody//tr//td[3]//a[contains(text(),'" + userName + "')]/ancestor::tr//td[8]//a[.='Reject']");
+        By btnReject = By.xpath("//table[@class='list issues']//tbody//tr//td[3][contains(text(),'" + userName + "')]/ancestor::tr//td[8]//a[.='Reject']");
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(btnReject));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        return element.isEnabled();
+    }
+
     public void clickOnApproveBtn(String userName){
        // By btnApprove = By.xpath("//table[@class='list issues']//tbody//tr//td[3]//a[contains(text(),'" + userName + "')]/ancestor::tr//td[8]//a[.='Approve']");
         By btnApprove = By.xpath("//table[@class='list issues']//tbody//tr//td[3][contains(text(),'" + userName + "')]/ancestor::tr//td[8]//a[.='Approve']");

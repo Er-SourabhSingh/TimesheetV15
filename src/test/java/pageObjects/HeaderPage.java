@@ -49,8 +49,17 @@ public class HeaderPage extends BasePage {
 
     public void clickOnProjects() {
         /*this.headerProjectsTab.click();*/
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(this.headerProjectsTab));
-        element.click();
+        int attempts = 0;
+        while(attempts < 3) {
+            try {
+                WebElement element = wait.until(ExpectedConditions.elementToBeClickable(this.headerProjectsTab));
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+                element.click();
+                break;
+            } catch (StaleElementReferenceException e) {
+                attempts++;
+            }
+        }
     }
 
     public void clickOnIssues() {

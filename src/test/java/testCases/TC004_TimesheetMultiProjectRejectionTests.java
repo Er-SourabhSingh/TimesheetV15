@@ -39,7 +39,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
             logger.info("Step 3: Expanding timesheet view");
             timesheetPage.selectExpand();
 
-            logger.info("Step 4: Selecting date range filter as 'Last Week'");
+            logger.info("Step 4: Selecting date range filter as 'Custom Range'");
             timesheetPage.clickOnFilterDateRange();
             timesheetPage.selectDateRangeOption("Custom Range");
             timesheetPage.selectStartDate(this.startDate);
@@ -142,7 +142,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
             logger.info("Step 10: Expanding timesheet view");
             timesheetPage.selectExpand();
 
-            logger.info("Step 11: Selecting date range filter as 'Last Week'");
+            logger.info("Step 11: Selecting date range filter as 'Custom Range'");
             timesheetPage.clickOnFilterDateRange();
             timesheetPage.selectDateRangeOption("Custom Range");
             timesheetPage.selectStartDate(startDate);
@@ -206,7 +206,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
             logger.info("Step 10: Expanding timesheet view");
             timesheetPage.selectExpand();
 
-            logger.info("Step 11: Selecting date range filter as 'Last Week'");
+            logger.info("Step 11: Selecting date range filter as 'Custom Range'");
             timesheetPage.clickOnFilterDateRange();
             timesheetPage.selectDateRangeOption("Custom Range");
             timesheetPage.selectStartDate(startDate);
@@ -271,7 +271,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
             logger.info("Step 10: Expanding timesheet view");
             timesheetPage.selectExpand();
 
-            logger.info("Step 11: Selecting date range filter as 'Last Week'");
+            logger.info("Step 11: Selecting date range filter as 'Custom Range'");
             timesheetPage.clickOnFilterDateRange();
             timesheetPage.selectDateRangeOption("Custom Range");
             timesheetPage.selectStartDate(startDate);
@@ -320,7 +320,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
             logger.info("Step 22: Expanding timesheet view");
             timesheetPage.selectExpand();
 
-            logger.info("Step 23: Selecting date range filter as 'Last Week'");
+            logger.info("Step 23: Selecting date range filter as 'Custom Range'");
             timesheetPage.clickOnFilterDateRange();
             timesheetPage.selectDateRangeOption("Custom Range");
             timesheetPage.selectStartDate(startDate);
@@ -354,7 +354,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
             logger.info("Step 3: Expanding timesheet view");
             timesheetPage.selectExpand();
 
-            logger.info("Step 4: Selecting date range filter as 'Last Week'");
+            logger.info("Step 4: Selecting date range filter as 'Custom Range'");
             timesheetPage.clickOnFilterDateRange();
             timesheetPage.selectDateRangeOption("Custom Range");
             timesheetPage.selectStartDate(this.startDate);
@@ -474,7 +474,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
             logger.info("Step 10: Expanding timesheet view");
             timesheetPage.selectExpand();
 
-            logger.info("Step 11: Selecting date range filter as 'Last Week'");
+            logger.info("Step 11: Selecting date range filter as 'Custom Range'");
             timesheetPage.clickOnFilterDateRange();
             timesheetPage.selectDateRangeOption("Custom Range");
             timesheetPage.selectStartDate(startDate);
@@ -526,7 +526,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
                 logger.info("------ Expanding timesheet view");
                 timesheetPage.selectExpand();
 
-                logger.info("------ Selecting date range filter as 'Last Week'");
+                logger.info("------ Selecting date range filter as 'Custom Range'");
                 timesheetPage.clickOnFilterDateRange();
                 timesheetPage.selectDateRangeOption("Custom Range");
                 timesheetPage.selectStartDate(startDate);
@@ -587,7 +587,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
                 logger.info("------ Expanding timesheet view");
                 timesheetPage.selectExpand();
 
-                logger.info("------ Selecting date range filter as 'Last Week'");
+                logger.info("------ Selecting date range filter as 'Custom Range'");
                 timesheetPage.clickOnFilterDateRange();
                 timesheetPage.selectDateRangeOption("Custom Range");
                 timesheetPage.selectStartDate(startDate);
@@ -628,7 +628,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
             logger.info("------ Expanding timesheet view");
             timesheetPage.selectExpand();
 
-            logger.info("------ Selecting date range filter as 'Last Week'");
+            logger.info("------ Selecting date range filter as 'Custom Range'");
             timesheetPage.clickOnFilterDateRange();
             timesheetPage.selectDateRangeOption("Custom Range");
             timesheetPage.selectStartDate(startDate);
