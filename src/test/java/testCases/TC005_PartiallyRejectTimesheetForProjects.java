@@ -48,13 +48,13 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
             this.dateRanges = timesheetPage.getSelectedDateRange();
 
             List<String> days = getFirstFiveDay(this.startDate, this.endDate);
+            System.out.println(days);
             logger.info("Step 5: Logging time entries for each day from Monday to friday");
 
             if (timesheetPage.isSubmitTimesheetBtnEnabled()) {
                 for (String project : this.projects) {
                     for (String day : days) {
                         logger.info("---- Logging entry for: " + day);
-                        System.out.println(day);
                         timesheetPage.clickOnTopRowDateCell(day);
 
                         logger.info("------ Selecting project: " + project);
@@ -223,11 +223,51 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
         }
     }
 
-    @Test (priority = 4)
+    @Test(priority = 4)
+    public void testCheckDesignAndDevelopementTimeInProjectD(){
+        HeaderPage headerPage = new HeaderPage(driver);
+        ProjectsPage projectsPage = new ProjectsPage(driver);
+        TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
+        TimesheetPage timesheetPage = new TimesheetPage(driver);
+        logger.info("Test Case 4: Verify Approval of Project A Timesheet");
+        try{
+            logger.info("Step 1: Logging in as admin");
+            super.login(approvalUsers[0], "12345678");
+
+            logger.info("Step 2: Navigating to project: " + projects[2]);
+            headerPage.clickOnProjects();
+            projectsPage.clickOnProjectName(projects[2]);
+
+            logger.info("Step 3: Navigating to Timesheet Approval");
+            headerPage.clickOnTimesheetApproval();
+
+            logger.info("Step 4: Go to Date Range of Submission");
+            timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
+
+            logger.info("Step 5: Verify 'Design' and 'Development' Activity hours ");
+            /*System.out.println(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user))+" "+projectActivityHours.get(projects[2]).getOrDefault("Design",0.0));
+            System.out.println(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user))+" "+projectActivityHours.get(projects[2]).getOrDefault("Development",0.0));*/
+            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user)),projectActivityHours.get(projects[2]).getOrDefault("Design",0.0),"Design");
+            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user)),projectActivityHours.get(projects[2]).getOrDefault("Development",0.0),"Development");
+
+
+
+            logger.info("Step 6: Logging out "+user);
+            headerPage.clickOnLogout();
+
+        }catch (Exception e){
+            logger.error(e);
+            Assert.fail();
+        }
+    }
+
+
+
+    @Test (priority = 5)
     public void testVerifyTimesheetStatusApprovedRejectedPending(){
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
-        logger.info("Test Case 4: Verify status of Project A C D");
+        logger.info("Test Case 5: Verify status of Project A C D");
         try {
             logger.info("Step 1: Logging in as user4");
             super.login(this.user, "12345678");
@@ -262,9 +302,9 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
         }
     }
 
-    @Test (priority = 5)
+    @Test (priority = 6)
     public void testResubmitRejectedProjectCTimesheet(){
-        logger.info("Test case 5: Resubmitting rejected timesheet for a Rejected Project's Timesheet after updating");
+        logger.info("Test case 6: Resubmitting rejected timesheet for a Rejected Project's Timesheet after updating");
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         try {
@@ -320,7 +360,7 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
 
     }
 
-    @Test(priority = 6)
+    @Test(priority = 7)
     public void testFinalApprovalVerificationForAllProjects(){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
@@ -342,6 +382,9 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
             timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
             logger.info("Step 5: Verify 'Design' and 'Development' Activity hours ");
+
+            /*System.out.println(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user))+" "+projectActivityHours.get(projects[0]).getOrDefault("Design",0.0));
+            System.out.println(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user))+" "+projectActivityHours.get(projects[0]).getOrDefault("Development",0.0));*/
             Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user)),projectActivityHours.get(projects[0]).getOrDefault("Design",0.0));
             Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user)),projectActivityHours.get(projects[0]).getOrDefault("Development",0.0));
 
@@ -390,6 +433,10 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
                 logger.info("------ Verify 'Design' and 'Development' Activity hours ");
+
+                /*System.out.println(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user))+" "+projectActivityHours.get(projects[1]).getOrDefault("Design",0.0));
+                System.out.println(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user))+" "+projectActivityHours.get(projects[1]).getOrDefault("Development",0.0));*/
+
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user)),projectActivityHours.get(projects[1]).getOrDefault("Design",0.0));
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user)),projectActivityHours.get(projects[1]).getOrDefault("Development",0.0));
 
@@ -451,6 +498,9 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
                 logger.info("------ Verify 'Design' and 'Development' Activity hours ");
+                /*System.out.println(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user))+" "+projectActivityHours.get(projects[2]).getOrDefault("Design",0.0));
+                System.out.println(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user))+" "+projectActivityHours.get(projects[2]).getOrDefault("Development",0.0));*/
+
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user)), projectActivityHours.get(projects[2]).getOrDefault("Design", 0.0));
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user)), projectActivityHours.get(projects[2]).getOrDefault("Development", 0.0));
 
@@ -500,7 +550,7 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
         }
     }
 
-    @Test(priority = 7)
+    @Test(priority = 8)
     public void testFinalVerificationStatusAllApproved() {
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
@@ -533,7 +583,6 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
             Assert.fail();
         }
     }
-
 
 
 }

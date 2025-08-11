@@ -163,7 +163,7 @@ public class BaseClass {
         LocalDate today = LocalDate.now();
         LocalDate monday = today.with(DayOfWeek.MONDAY);
 
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd");
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
         String[] dayNumbers = new String[5];
 
@@ -177,7 +177,7 @@ public class BaseClass {
         LocalDate today = LocalDate.now();
         LocalDate lastWeekMonday = today.with(DayOfWeek.MONDAY).minusWeeks(1);
 
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd");
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
         String[] dayNumbers = new String[5];
 
@@ -189,7 +189,7 @@ public class BaseClass {
 
     public List<String> getFirstFiveDay(String start, String end){
         DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
-        DateTimeFormatter dayFormatter = DateTimeFormatter.ofPattern("dd");
+        DateTimeFormatter dayFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
         LocalDate startDate = LocalDate.parse(start, inputFormatter);
         LocalDate endDate = LocalDate.parse(end, inputFormatter);
