@@ -8,7 +8,7 @@ import utilities.DataProviders;
 
 public class TC002_TimesheetRejectionTests extends BaseClass {
 
-    @Test(priority = 1, dataProvider = "rejectionFlow", dataProviderClass = DataProviders.class)
+    @Test(priority = 1, groups = {"Data Driven"}, dataProvider = "rejectionFlow", dataProviderClass = DataProviders.class)
     public void testTimesheetRejectionFlow(String projectName, String dateRange, String submitter, String rejectBy, String []approvers){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);

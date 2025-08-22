@@ -23,7 +23,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
 
     Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = {"Master", "Sanity", "Regression"})
     public void testSubmitTimesheetForProjectsACD() {
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
@@ -98,7 +98,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
         }
     }
 
-    @Test(priority = 2, dependsOnMethods = "testSubmitTimesheetForProjectsACD")
+    @Test(priority = 2, groups = {"Master", "Regression"}, dependsOnMethods = {"testSubmitTimesheetForProjectsACD"})
     public void testRejectProjectAByAdmin(){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
@@ -161,7 +161,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
         }
     }
 
-    @Test(priority = 3, dependsOnMethods = "testRejectProjectAByAdmin")
+    @Test(priority = 3, groups = {"Master", "Regression"}, dependsOnMethods = {"testSubmitTimesheetForProjectsACD"})
     public void testRejectProjectCAtLevel1(){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
@@ -225,7 +225,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
         }
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4, groups = {"Master", "Regression"}, dependsOnMethods = {"testSubmitTimesheetForProjectsACD"})
     public void testRejectProjectDAtLevel2(){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
@@ -339,7 +339,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
         }
     }
 
-    @Test(priority = 5)
+    @Test(priority = 5, groups = {"Master", "Regression"}, dependsOnMethods = {"testRejectProjectAByAdmin","testRejectProjectCAtLevel1","testRejectProjectDAtLevel2"})
     public void testVerifyRejectedStatusForAllProjects(){
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
@@ -374,7 +374,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
     }
 
 
-    @Test(priority = 6, dependsOnMethods = "testVerifyRejectedStatusForAllProjects")
+    @Test(priority = 6, groups = {"Master", "Regression"}, dependsOnMethods = {"testVerifyRejectedStatusForAllProjects"})
     public void testResubmitRejectedTimesheets(){
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
@@ -430,7 +430,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
         }
     }
 
-    @Test(priority = 7)
+    @Test(priority = 7, groups = {"Master", "Regression"}, dependsOnMethods = {"testResubmitRejectedTimesheets"})
     public void testApproveAllResubmittedProjects()  {
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
@@ -613,7 +613,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
         }
     }
 
-    @Test(priority = 8)
+    @Test(priority = 8, groups = {"Master", "Regression"}, dependsOnMethods = {"testApproveAllResubmittedProjects"})
     public void testFinalVerificationStatusAllApproved() {
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);

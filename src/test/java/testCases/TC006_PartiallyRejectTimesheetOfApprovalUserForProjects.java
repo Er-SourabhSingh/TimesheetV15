@@ -22,7 +22,7 @@ public class TC006_PartiallyRejectTimesheetOfApprovalUserForProjects extends Bas
 
     Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = {"Master", "Sanity", "Regression"})
     public void testSubmitTimesheetForProjectsDEF() {
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
@@ -98,7 +98,7 @@ public class TC006_PartiallyRejectTimesheetOfApprovalUserForProjects extends Bas
         }
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = {"Master", "Regression"}, dependsOnMethods = {"testSubmitTimesheetForProjectsDEF"})
     public void testVerifyApprovalDashboardDetailAsSubmittedApprovalUser(){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
@@ -138,7 +138,7 @@ public class TC006_PartiallyRejectTimesheetOfApprovalUserForProjects extends Bas
         }
     }
 
-    @Test (priority = 3)
+    @Test (priority = 3, groups = {"Master", "Regression"}, dependsOnMethods = {"testSubmitTimesheetForProjectsDEF"})
     public void testApproveProjectDTimesheet(){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
@@ -200,7 +200,7 @@ public class TC006_PartiallyRejectTimesheetOfApprovalUserForProjects extends Bas
         }
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4, groups = {"Master", "Regression"}, dependsOnMethods = {"testSubmitTimesheetForProjectsDEF"})
     public void testRejectProjectEAtLevel3(){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
@@ -263,7 +263,7 @@ public class TC006_PartiallyRejectTimesheetOfApprovalUserForProjects extends Bas
         }
     }
 
-    @Test(priority = 5)
+    @Test(priority = 5, groups = {"Master", "Regression"}, dependsOnMethods = {"testSubmitTimesheetForProjectsDEF"})
     public void testCheckDesignAndDevelopementTimeInProjectFAsLevel3(){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
@@ -301,7 +301,7 @@ public class TC006_PartiallyRejectTimesheetOfApprovalUserForProjects extends Bas
         }
     }
 
-    @Test (priority = 6)
+    @Test (priority = 6, groups = {"Master", "Regression"}, dependsOnMethods = {"testApproveProjectDTimesheet", "testRejectProjectEAtLevel3", "testCheckDesignAndDevelopementTimeInProjectFAsLevel3"})
     public void testVerifyTimesheetStatusApprovedRejectedPending(){
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
@@ -340,7 +340,7 @@ public class TC006_PartiallyRejectTimesheetOfApprovalUserForProjects extends Bas
         }
     }
 
-    @Test (priority = 7)
+    @Test (priority = 7, groups = {"Master", "Regression"}, dependsOnMethods = {"testVerifyTimesheetStatusApprovedRejectedPending"})
     public void testResubmitRejectedProjectCTimesheet(){
         logger.info("Test case 6: Resubmitting rejected timesheet for a Rejected Project's Timesheet after updating");
         HeaderPage headerPage = new HeaderPage(driver);
@@ -398,7 +398,7 @@ public class TC006_PartiallyRejectTimesheetOfApprovalUserForProjects extends Bas
 
     }
 
-    @Test(priority = 8)
+    @Test(priority = 8, groups = {"Master", "Regression"}, dependsOnMethods = {"testResubmitRejectedProjectCTimesheet"})
     public void testFinalApprovalVerificationForAllProjects(){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
@@ -581,7 +581,7 @@ public class TC006_PartiallyRejectTimesheetOfApprovalUserForProjects extends Bas
         }
     }
 
-    @Test(priority = 9)
+    @Test(priority = 9, groups = {"Master", "Regression"}, dependsOnMethods = {"testFinalApprovalVerificationForAllProjects"})
     public void testFinalVerificationStatusAllApproved() {
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);

@@ -23,7 +23,7 @@ public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
 
     Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();
 
-    @Test (priority = 1)
+    @Test (priority = 1, groups = {"Master", "Sanity", "Regression"})
     public void testSubmitTimesheetForProjectsCDF(){
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
@@ -99,7 +99,7 @@ public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
         }
     }
 
-    @Test (priority = 2)
+    @Test (priority = 2, groups = {"Master", "Regression"}, dependsOnMethods = {"testSubmitTimesheetForProjectsCDF"})
     public void testApproveTimesheetProjectC_2LevelSchema(){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
@@ -172,7 +172,7 @@ public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
         }
     }
 
-    @Test (priority = 3)
+    @Test (priority = 3, groups = {"Master", "Regression"}, dependsOnMethods = {"testSubmitTimesheetForProjectsCDF"})
     public void testApproveTimesheetProjectD_3LevelSchema(){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
@@ -246,7 +246,7 @@ public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
         }
     }
 
-    @Test (priority = 4)
+    @Test (priority = 4, groups = {"Master", "Regression"}, dependsOnMethods = {"testSubmitTimesheetForProjectsCDF"})
     public void testApproveTimesheetProjectF_5LevelSchema(){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
@@ -320,7 +320,7 @@ public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
         }
     }
 
-    @Test(priority = 5)
+    @Test(priority = 5, groups = {"Master", "Regression"}, dependsOnMethods = {"testApproveTimesheetProjectC_2LevelSchema","testApproveTimesheetProjectD_3LevelSchema","testApproveTimesheetProjectF_5LevelSchema"})
     public void testFinalTimesheetStatusOfUser(){
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
