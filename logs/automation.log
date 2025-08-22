@@ -1,268 +1,164 @@
-2025-08-22 13:48:04 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:29 - Test Case 1: Verify Multiple Project Rejection
-2025-08-22 13:48:04 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:32 - Step 1: Logging in as 2Approval
-2025-08-22 13:48:05 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:35 - Step 2: Navigating to Timesheet module
-2025-08-22 13:48:06 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:38 - Step 3: Expanding timesheet view
-2025-08-22 13:48:06 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:41 - Step 4: Selecting date range filter as 'Custom Range'
-2025-08-22 13:48:09 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:52 - Step 5: Logging time entries for each day from Monday to friday
-2025-08-22 13:48:09 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:57 - ---- Logging entry for: 2025-06-30
-2025-08-22 13:48:10 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:60 - ------ Selecting project: Project D 3-Level-Schema
-2025-08-22 13:48:10 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:63 - ------ Selecting issue: Test
-2025-08-22 13:48:11 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:67 - ------ Selecting activity: Design
-2025-08-22 13:48:11 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:71 - ------ Entering hours: 7
-2025-08-22 13:48:11 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:74 - ------ Clicking Log Time button
-2025-08-22 13:48:11 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:57 - ---- Logging entry for: 2025-07-01
-2025-08-22 13:48:13 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:60 - ------ Selecting project: Project D 3-Level-Schema
-2025-08-22 13:48:13 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:63 - ------ Selecting issue: Test
-2025-08-22 13:48:14 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:67 - ------ Selecting activity: Development
-2025-08-22 13:48:14 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:71 - ------ Entering hours: 8
-2025-08-22 13:48:14 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:74 - ------ Clicking Log Time button
-2025-08-22 13:48:14 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:57 - ---- Logging entry for: 2025-07-02
-2025-08-22 13:48:16 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:60 - ------ Selecting project: Project D 3-Level-Schema
-2025-08-22 13:48:16 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:63 - ------ Selecting issue: Test
-2025-08-22 13:48:16 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:67 - ------ Selecting activity: Design
-2025-08-22 13:48:17 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:71 - ------ Entering hours: 7
-2025-08-22 13:48:17 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:74 - ------ Clicking Log Time button
-2025-08-22 13:48:17 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:57 - ---- Logging entry for: 2025-07-03
-2025-08-22 13:48:18 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:60 - ------ Selecting project: Project D 3-Level-Schema
-2025-08-22 13:48:19 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:63 - ------ Selecting issue: Test
-2025-08-22 13:48:19 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:67 - ------ Selecting activity: Design
-2025-08-22 13:48:19 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:71 - ------ Entering hours: 6
-2025-08-22 13:48:19 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:74 - ------ Clicking Log Time button
-2025-08-22 13:48:20 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:57 - ---- Logging entry for: 2025-07-04
-2025-08-22 13:48:21 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:60 - ------ Selecting project: Project D 3-Level-Schema
-2025-08-22 13:48:21 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:63 - ------ Selecting issue: Test
-2025-08-22 13:48:22 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:67 - ------ Selecting activity: Design
-2025-08-22 13:48:22 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:71 - ------ Entering hours: 8
-2025-08-22 13:48:22 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:74 - ------ Clicking Log Time button
-2025-08-22 13:48:22 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:57 - ---- Logging entry for: 2025-06-30
-2025-08-22 13:48:24 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:60 - ------ Selecting project: Project E 4-Level-Schema
-2025-08-22 13:48:25 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:63 - ------ Selecting issue: Test
-2025-08-22 13:48:25 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:67 - ------ Selecting activity: Design
-2025-08-22 13:48:25 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:71 - ------ Entering hours: 6
-2025-08-22 13:48:25 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:74 - ------ Clicking Log Time button
-2025-08-22 13:48:26 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:57 - ---- Logging entry for: 2025-07-01
-2025-08-22 13:48:27 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:60 - ------ Selecting project: Project E 4-Level-Schema
-2025-08-22 13:48:27 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:63 - ------ Selecting issue: Test
-2025-08-22 13:48:28 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:67 - ------ Selecting activity: Development
-2025-08-22 13:48:28 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:71 - ------ Entering hours: 6
-2025-08-22 13:48:28 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:74 - ------ Clicking Log Time button
-2025-08-22 13:48:28 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:57 - ---- Logging entry for: 2025-07-02
-2025-08-22 13:48:30 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:60 - ------ Selecting project: Project E 4-Level-Schema
-2025-08-22 13:48:30 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:63 - ------ Selecting issue: Test
-2025-08-22 13:48:31 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:67 - ------ Selecting activity: Design
-2025-08-22 13:48:31 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:71 - ------ Entering hours: 9
-2025-08-22 13:48:31 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:74 - ------ Clicking Log Time button
-2025-08-22 13:48:31 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:57 - ---- Logging entry for: 2025-07-03
-2025-08-22 13:48:33 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:60 - ------ Selecting project: Project E 4-Level-Schema
-2025-08-22 13:48:34 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:63 - ------ Selecting issue: Test
-2025-08-22 13:48:34 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:67 - ------ Selecting activity: Design
-2025-08-22 13:48:34 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:71 - ------ Entering hours: 7
-2025-08-22 13:48:34 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:74 - ------ Clicking Log Time button
-2025-08-22 13:48:35 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:57 - ---- Logging entry for: 2025-07-04
-2025-08-22 13:48:36 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:60 - ------ Selecting project: Project E 4-Level-Schema
-2025-08-22 13:48:37 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:63 - ------ Selecting issue: Test
-2025-08-22 13:48:37 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:67 - ------ Selecting activity: Design
-2025-08-22 13:48:37 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:71 - ------ Entering hours: 8
-2025-08-22 13:48:37 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:74 - ------ Clicking Log Time button
-2025-08-22 13:48:38 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:57 - ---- Logging entry for: 2025-06-30
-2025-08-22 13:48:38 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:60 - ------ Selecting project: Project F 5-Level-Schema
-2025-08-22 13:48:39 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:63 - ------ Selecting issue: Test
-2025-08-22 13:48:39 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:67 - ------ Selecting activity: Design
-2025-08-22 13:48:39 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:71 - ------ Entering hours: 8
-2025-08-22 13:48:40 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:74 - ------ Clicking Log Time button
-2025-08-22 13:48:40 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:57 - ---- Logging entry for: 2025-07-01
-2025-08-22 13:48:41 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:60 - ------ Selecting project: Project F 5-Level-Schema
-2025-08-22 13:48:41 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:63 - ------ Selecting issue: Test
-2025-08-22 13:48:41 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:67 - ------ Selecting activity: Design
-2025-08-22 13:48:42 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:71 - ------ Entering hours: 9
-2025-08-22 13:48:42 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:74 - ------ Clicking Log Time button
-2025-08-22 13:48:42 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:57 - ---- Logging entry for: 2025-07-02
-2025-08-22 13:48:43 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:60 - ------ Selecting project: Project F 5-Level-Schema
-2025-08-22 13:48:43 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:63 - ------ Selecting issue: Test
-2025-08-22 13:48:44 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:67 - ------ Selecting activity: Development
-2025-08-22 13:48:44 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:71 - ------ Entering hours: 7
-2025-08-22 13:48:44 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:74 - ------ Clicking Log Time button
-2025-08-22 13:48:44 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:57 - ---- Logging entry for: 2025-07-03
-2025-08-22 13:48:45 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:60 - ------ Selecting project: Project F 5-Level-Schema
-2025-08-22 13:48:45 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:63 - ------ Selecting issue: Test
-2025-08-22 13:48:46 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:67 - ------ Selecting activity: Design
-2025-08-22 13:48:46 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:71 - ------ Entering hours: 9
-2025-08-22 13:48:46 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:74 - ------ Clicking Log Time button
-2025-08-22 13:48:46 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:57 - ---- Logging entry for: 2025-07-04
-2025-08-22 13:48:47 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:60 - ------ Selecting project: Project F 5-Level-Schema
-2025-08-22 13:48:48 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:63 - ------ Selecting issue: Test
-2025-08-22 13:48:48 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:67 - ------ Selecting activity: Design
-2025-08-22 13:48:48 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:71 - ------ Entering hours: 7
-2025-08-22 13:48:48 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:74 - ------ Clicking Log Time button
-2025-08-22 13:48:49 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:84 - Step 6: Submitting the timesheet
-2025-08-22 13:48:49 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:88 - ------ Verifying that the Project D 3-Level-Schema status is 'Waiting for Approval'
-2025-08-22 13:48:49 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:88 - ------ Verifying that the Project E 4-Level-Schema status is 'Waiting for Approval'
-2025-08-22 13:48:49 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:88 - ------ Verifying that the Project F 5-Level-Schema status is 'Waiting for Approval'
-2025-08-22 13:48:49 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:93 - Step 8: Logging out 2Approval
-2025-08-22 13:48:50 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:107 - Test Case 3: Verify Approval of Project D Timesheet
-2025-08-22 13:48:50 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:109 - Step 1: Logging in as 2Approval
-2025-08-22 13:48:50 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:113 - ----- : Navigating to project: Project D 3-Level-Schema
-2025-08-22 13:48:51 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:117 - ----- : Navigating to Timesheet Approval
-2025-08-22 13:48:52 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:120 - ----- : Go to Date Range of Submission
-2025-08-22 13:49:02 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:123 - ----- : Verify 'Design' and 'Development' Activity hours 
-2025-08-22 13:49:02 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:127 - ----- : Check status of own timesheet status on Approval Dashboard as approval user: 
-2025-08-22 13:49:02 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:113 - ----- : Navigating to project: Project E 4-Level-Schema
-2025-08-22 13:49:02 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:117 - ----- : Navigating to Timesheet Approval
-2025-08-22 13:49:03 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:120 - ----- : Go to Date Range of Submission
-2025-08-22 13:49:12 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:123 - ----- : Verify 'Design' and 'Development' Activity hours 
-2025-08-22 13:49:13 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:127 - ----- : Check status of own timesheet status on Approval Dashboard as approval user: 
-2025-08-22 13:49:13 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:113 - ----- : Navigating to project: Project F 5-Level-Schema
-2025-08-22 13:49:13 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:117 - ----- : Navigating to Timesheet Approval
-2025-08-22 13:49:13 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:120 - ----- : Go to Date Range of Submission
-2025-08-22 13:49:23 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:123 - ----- : Verify 'Design' and 'Development' Activity hours 
-2025-08-22 13:49:23 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:127 - ----- : Check status of own timesheet status on Approval Dashboard as approval user: 
-2025-08-22 13:49:23 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:132 - Step 2: Logging out 2Approval
-2025-08-22 13:49:24 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:147 - Test Case 3: Verify Approval of Project D Timesheet
-2025-08-22 13:49:24 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:149 - Step 1: Logging in as 3Approval
-2025-08-22 13:49:24 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:152 - Step 2: Navigating to project: Project D 3-Level-Schema
-2025-08-22 13:49:25 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:156 - Step 3: Navigating to Timesheet Approval
-2025-08-22 13:49:25 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:159 - Step 4: Go to Date Range of Submission
-2025-08-22 13:49:35 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:162 - Step 5: Verify 'Design' and 'Development' Activity hours 
-2025-08-22 13:49:35 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:166 - Step 6: Approve timesheet for: 2Approval
-2025-08-22 13:49:36 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:173 - Step 7: Logging out as Admin
-2025-08-22 13:49:36 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:176 - Step 8: Logging in as 2Approval
-2025-08-22 13:49:37 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:179 - Step 9: Navigating to Timesheet module
-2025-08-22 13:49:37 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:182 - Step 10: Expanding timesheet view
-2025-08-22 13:49:37 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:185 - Step 11: Selecting date range filter as 'Custom Range'
-2025-08-22 13:49:39 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:194 - Step 12: Logging out 2Approval
-2025-08-22 13:49:39 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:209 - Test Case 2: Verify Rejection of Project E Timesheet
-2025-08-22 13:49:39 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:211 - Step 1: Logging in as 3Approval
-2025-08-22 13:49:39 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:214 - Step 2: Navigate to project: Project E 4-Level-Schema
-2025-08-22 13:49:40 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:218 - Step 3: Navigate to Timesheet Approval
-2025-08-22 13:49:40 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:221 - Step 4: Go to Date Range of Submission
-2025-08-22 13:49:50 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:224 - Step 5: Verify 'Design' and 'Development' Activity hours 
-2025-08-22 13:49:50 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:228 - Step 6: Reject timesheet for: 2Approval
-2025-08-22 13:49:51 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:235 - Step 7: Logging out as 3Approval
-2025-08-22 13:49:51 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:239 - Step 8: Logging in as 2Approval
-2025-08-22 13:49:52 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:242 - Step 9: Navigating to Timesheet module
-2025-08-22 13:49:52 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:245 - Step 10: Expanding timesheet view
-2025-08-22 13:49:52 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:248 - Step 11: Selecting date range filter as 'Custom Range'
-2025-08-22 13:49:54 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:258 - Step 12: Logging out 2Approval
-2025-08-22 13:49:54 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:272 - Test Case 4: Verify Approval of Project A Timesheet
-2025-08-22 13:49:54 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:274 - Step 1: Logging in as admin
-2025-08-22 13:49:54 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:277 - Step 2: Navigating to project: Project F 5-Level-Schema
-2025-08-22 13:49:55 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:281 - Step 3: Navigating to Timesheet Approval
-2025-08-22 13:49:55 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:284 - Step 4: Go to Date Range of Submission
-2025-08-22 13:50:05 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:287 - Step 5: Verify 'Design' and 'Development' Activity hours 
-2025-08-22 13:50:05 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:291 - Step 6: Check approve and reject btn is enabled for : 2Approval
-2025-08-22 13:50:05 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:295 - Step 7: Logging out as 3Approval
-2025-08-22 13:50:05 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:308 - Test Case 5: Verify status of Project D E F
-2025-08-22 13:50:05 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:310 - Step 1: Logging in as 2Approval
-2025-08-22 13:50:06 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:313 - Step 2: Navigating to Timesheet module
-2025-08-22 13:50:06 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:316 - Step 3: Expanding timesheet view
-2025-08-22 13:50:06 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:319 - Step 4: Selecting date range filter as 'Custom Range'
-2025-08-22 13:50:08 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:328 - Step 5: Verifying that the Project D 3-Level-Schema status is 'Approved'
-2025-08-22 13:50:08 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:331 - Step 6: Verifying that the Project E 4-Level-Schema status is 'Rejected'
-2025-08-22 13:50:08 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:334 - Step 7: Verifying that the Project F 5-Level-Schema status is 'Waiting for Approval'
-2025-08-22 13:50:08 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:345 - Test case 6: Resubmitting rejected timesheet for a Rejected Project's Timesheet after updating
-2025-08-22 13:50:08 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:350 - Step 1: log time for project E
-2025-08-22 13:50:08 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:356 - ---- Logging entry for: 2025-07-03
-2025-08-22 13:50:09 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:358 - ------ Selecting project: Project E 4-Level-Schema
-2025-08-22 13:50:09 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:361 - ------ Selecting issue: Test
-2025-08-22 13:50:10 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:364 - ------ Selecting activity: Design
-2025-08-22 13:50:10 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:368 - ------ Entering hours: 9
-2025-08-22 13:50:10 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:371 - ------ Clicking Log Time button
-2025-08-22 13:50:10 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:356 - ---- Logging entry for: 2025-07-01
-2025-08-22 13:50:11 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:358 - ------ Selecting project: Project E 4-Level-Schema
-2025-08-22 13:50:11 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:361 - ------ Selecting issue: Test
-2025-08-22 13:50:12 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:364 - ------ Selecting activity: Development
-2025-08-22 13:50:12 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:368 - ------ Entering hours: 9
-2025-08-22 13:50:12 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:371 - ------ Clicking Log Time button
-2025-08-22 13:50:12 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:380 - Step 2: Resubmitting the timesheet
-2025-08-22 13:50:13 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:383 - Step 5: Verifying that the Project D 3-Level-Schema status is 'Approved'
-2025-08-22 13:50:13 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:386 - Step 6: Verifying that the Project E 4-Level-Schema status is 'Waiting for Approval'
-2025-08-22 13:50:13 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:389 - Step 7: Verifying that the Project F 5-Level-Schema status is 'Waiting for Approval'
-2025-08-22 13:50:13 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:392 - Step 3: Logging out user
-2025-08-22 13:50:13 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:407 - Test Case 7: Approving all resubmitted timesheets through levels
-2025-08-22 13:50:13 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:409 - Step 1: Logging in as admin
-2025-08-22 13:50:14 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:412 - Step 2: Navigating to project: Project D 3-Level-Schema
-2025-08-22 13:50:15 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:416 - Step 3: Navigating to Timesheet Approval
-2025-08-22 13:50:15 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:419 - Step 4: Go to Date Range of Submission
-2025-08-22 13:50:25 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:422 - Step 5: Verify 'Design' and 'Development' Activity hours 
-2025-08-22 13:50:25 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:427 - Step 7: Verified timesheet of: 2Approval should be already in approved state
-2025-08-22 13:50:25 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:431 - Step 8: Logging out as Admin
-2025-08-22 13:50:25 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:434 - Step 9: Logging in as 2Approval
-2025-08-22 13:50:26 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:437 - Step 10: Navigating to Timesheet module
-2025-08-22 13:50:26 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:440 - Step 11: Expanding timesheet view
-2025-08-22 13:50:26 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:443 - Step 12: Selecting date range filter as 'Custom Range'
-2025-08-22 13:50:28 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:453 - Step 13: Logging out 2Approval
-2025-08-22 13:50:28 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:456 - ----- Verify That Approver can Approve Timesheet Project D
-2025-08-22 13:50:28 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:458 - ---- Logging in as Approver:3Approval
-2025-08-22 13:50:28 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:461 - ------ Navigating to project: Project E 4-Level-Schema
-2025-08-22 13:50:29 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:465 - ------ Navigating to Timesheet Approval
-2025-08-22 13:50:29 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:468 - ------ Go to Date Range of Submission
-2025-08-22 13:50:39 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:471 - ------ Verify 'Design' and 'Development' Activity hours 
-2025-08-22 13:50:39 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:476 - ------ Approving timesheet for 2Approval
-2025-08-22 13:50:40 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:483 - ------ Logging out approver: 3Approval
-2025-08-22 13:50:40 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:487 - ------ Logging in as 2Approval
-2025-08-22 13:50:41 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:490 - ------ Navigating to Timesheet module
-2025-08-22 13:50:41 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:493 - ------ Expanding timesheet view
-2025-08-22 13:50:41 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:496 - ------ Selecting date range filter as 'Custom Range'
-2025-08-22 13:50:43 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:504 - ------ Verifying that the Project E 4-Level-Schema status is 'Waiting for Approval' after approval at level 1
-2025-08-22 13:50:43 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:514 - ------ Logging out 2Approval
-2025-08-22 13:50:43 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:458 - ---- Logging in as Approver:4Approval
-2025-08-22 13:50:43 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:461 - ------ Navigating to project: Project E 4-Level-Schema
-2025-08-22 13:50:44 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:465 - ------ Navigating to Timesheet Approval
-2025-08-22 13:50:44 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:468 - ------ Go to Date Range of Submission
-2025-08-22 13:50:54 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:471 - ------ Verify 'Design' and 'Development' Activity hours 
-2025-08-22 13:50:54 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:476 - ------ Approving timesheet for 2Approval
-2025-08-22 13:50:55 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:483 - ------ Logging out approver: 4Approval
-2025-08-22 13:50:55 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:487 - ------ Logging in as 2Approval
-2025-08-22 13:50:56 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:490 - ------ Navigating to Timesheet module
-2025-08-22 13:50:56 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:493 - ------ Expanding timesheet view
-2025-08-22 13:50:56 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:496 - ------ Selecting date range filter as 'Custom Range'
-2025-08-22 13:50:58 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:509 - ------ Verifying that the Project E 4-Level-Schema status is 'Approved' after approval at level 2
-2025-08-22 13:50:58 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:514 - ------ Logging out 2Approval
-2025-08-22 13:50:58 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:518 - ----- Verify That Approver can Approve Timesheet Project D
-2025-08-22 13:50:58 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:520 - ---- Logging in as Approver:3Approval
-2025-08-22 13:50:58 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:523 - ------ Navigating to project: Project E 4-Level-Schema
-2025-08-22 13:50:59 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:527 - ------ Navigating to Timesheet Approval
-2025-08-22 13:50:59 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:530 - ------ Go to Date Range of Submission
-2025-08-22 13:51:10 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:533 - ------ Verify 'Design' and 'Development' Activity hours 
-2025-08-22 13:51:10 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:538 - ------ Approving timesheet for 2Approval
-2025-08-22 13:51:11 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:545 - ------ Logging out approver: 3Approval
-2025-08-22 13:51:11 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:549 - ------ Logging in as 2Approval
-2025-08-22 13:51:11 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:552 - ------ Navigating to Timesheet module
-2025-08-22 13:51:12 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:555 - ------ Expanding timesheet view
-2025-08-22 13:51:12 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:558 - ------ Selecting date range filter as 'Custom Range'
-2025-08-22 13:51:14 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:566 - ------ Verifying that the Project F 5-Level-Schema status is 'Waiting for Approval' after approval at level 1
-2025-08-22 13:51:14 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:575 - ------ Logging out 2Approval
-2025-08-22 13:51:14 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:520 - ---- Logging in as Approver:4Approval
-2025-08-22 13:51:14 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:523 - ------ Navigating to project: Project E 4-Level-Schema
-2025-08-22 13:51:15 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:527 - ------ Navigating to Timesheet Approval
-2025-08-22 13:51:15 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:530 - ------ Go to Date Range of Submission
-2025-08-22 13:51:25 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:533 - ------ Verify 'Design' and 'Development' Activity hours 
-2025-08-22 13:51:25 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:538 - ------ Approving timesheet for 2Approval
-2025-08-22 13:51:26 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:545 - ------ Logging out approver: 4Approval
-2025-08-22 13:51:27 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:549 - ------ Logging in as 2Approval
-2025-08-22 13:51:27 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:552 - ------ Navigating to Timesheet module
-2025-08-22 13:51:27 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:555 - ------ Expanding timesheet view
-2025-08-22 13:51:28 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:558 - ------ Selecting date range filter as 'Custom Range'
-2025-08-22 13:51:29 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:566 - ------ Verifying that the Project F 5-Level-Schema status is 'Waiting for Approval' after approval at level 2
-2025-08-22 13:51:29 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:575 - ------ Logging out 2Approval
-2025-08-22 13:51:29 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:520 - ---- Logging in as Approver:5Approval
-2025-08-22 13:51:30 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:523 - ------ Navigating to project: Project E 4-Level-Schema
-2025-08-22 13:51:30 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:527 - ------ Navigating to Timesheet Approval
-2025-08-22 13:51:31 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:530 - ------ Go to Date Range of Submission
-2025-08-22 13:51:40 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:533 - ------ Verify 'Design' and 'Development' Activity hours 
-2025-08-22 13:51:40 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:538 - ------ Approving timesheet for 2Approval
-2025-08-22 13:51:41 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:545 - ------ Logging out approver: 5Approval
-2025-08-22 13:51:42 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:549 - ------ Logging in as 2Approval
-2025-08-22 13:51:42 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:552 - ------ Navigating to Timesheet module
-2025-08-22 13:51:43 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:555 - ------ Expanding timesheet view
-2025-08-22 13:51:43 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:558 - ------ Selecting date range filter as 'Custom Range'
-2025-08-22 13:51:44 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:571 - ------ Verifying that the Project F 5-Level-Schema status is 'Approved' after approval at level 3
-2025-08-22 13:51:44 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:575 - ------ Logging out 2Approval
-2025-08-22 13:51:44 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:588 - Test Case 8: Final verification of all timesheet statuses
-2025-08-22 13:51:44 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:590 - ------ Logging in as 2Approval
-2025-08-22 13:51:45 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:593 - ------ Navigating to Timesheet module
-2025-08-22 13:51:45 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:596 - ------ Expanding timesheet view
-2025-08-22 13:51:45 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:599 - ------ Selecting date range filter as 'Custom Range'
-2025-08-22 13:51:47 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:607 - ------ Verifying that the Project D 3-Level-Schema status is 'Approved'
-2025-08-22 13:51:47 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:607 - ------ Verifying that the Project E 4-Level-Schema status is 'Approved'
-2025-08-22 13:51:47 INFO  TC006_PartiallyRejectTimesheetOfApprovalUserForProjects:607 - ------ Verifying that the Project F 5-Level-Schema status is 'Approved'
+2025-08-22 19:20:16 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:34 - Precondition: Create new approval users, create new project with same schema, and add members.
+2025-08-22 19:20:16 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:37 - Step 1: Logging in as Admin
+2025-08-22 19:20:17 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:39 - Step 2: Click on Administrator Module
+2025-08-22 19:20:17 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:41 - Step 3: Click on User Module
+2025-08-22 19:20:18 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:44 - Step 4: Creating 3 approver users
+2025-08-22 19:20:18 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:62 - Step 5: Create project: New Project 3-Level-Schema and add members
+2025-08-22 19:20:29 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:107 - Step 6: Logging out user
+2025-08-22 19:20:29 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:121 - Test Case 1: Verify approval flow in different projects which have same Schema
+2025-08-22 19:20:29 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:124 - Step 1: Logging in as user8
+2025-08-22 19:20:30 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:127 - Step 2: Navigating to Timesheet module
+2025-08-22 19:20:30 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:130 - Step 3: Expanding timesheet view
+2025-08-22 19:20:30 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:133 - Step 4: Selecting date range filter as 'Custom Range'
+2025-08-22 19:20:32 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:144 - Step 5: Logging time entries for each day from Monday to friday
+2025-08-22 19:20:32 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:149 - ---- Logging entry for: 2025-08-04
+2025-08-22 19:20:32 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:152 - ------ Selecting project: Project D 3-Level-Schema
+2025-08-22 19:20:33 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:155 - ------ Selecting issue: Test
+2025-08-22 19:20:33 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:159 - ------ Selecting activity: Design
+2025-08-22 19:20:34 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:163 - ------ Entering hours: 6
+2025-08-22 19:20:34 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:166 - ------ Clicking Log Time button
+2025-08-22 19:20:34 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:149 - ---- Logging entry for: 2025-08-05
+2025-08-22 19:20:35 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:152 - ------ Selecting project: Project D 3-Level-Schema
+2025-08-22 19:20:35 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:155 - ------ Selecting issue: Test
+2025-08-22 19:20:36 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:159 - ------ Selecting activity: Development
+2025-08-22 19:20:36 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:163 - ------ Entering hours: 6
+2025-08-22 19:20:36 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:166 - ------ Clicking Log Time button
+2025-08-22 19:20:36 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:149 - ---- Logging entry for: 2025-08-06
+2025-08-22 19:20:38 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:152 - ------ Selecting project: Project D 3-Level-Schema
+2025-08-22 19:20:38 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:155 - ------ Selecting issue: Test
+2025-08-22 19:20:38 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:159 - ------ Selecting activity: Development
+2025-08-22 19:20:39 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:163 - ------ Entering hours: 7
+2025-08-22 19:20:39 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:166 - ------ Clicking Log Time button
+2025-08-22 19:20:39 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:149 - ---- Logging entry for: 2025-08-07
+2025-08-22 19:20:40 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:152 - ------ Selecting project: Project D 3-Level-Schema
+2025-08-22 19:20:41 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:155 - ------ Selecting issue: Test
+2025-08-22 19:20:41 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:159 - ------ Selecting activity: Development
+2025-08-22 19:20:41 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:163 - ------ Entering hours: 9
+2025-08-22 19:20:41 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:166 - ------ Clicking Log Time button
+2025-08-22 19:20:42 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:149 - ---- Logging entry for: 2025-08-08
+2025-08-22 19:20:43 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:152 - ------ Selecting project: Project D 3-Level-Schema
+2025-08-22 19:20:43 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:155 - ------ Selecting issue: Test
+2025-08-22 19:20:44 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:159 - ------ Selecting activity: Design
+2025-08-22 19:20:44 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:163 - ------ Entering hours: 7
+2025-08-22 19:20:44 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:166 - ------ Clicking Log Time button
+2025-08-22 19:20:44 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:149 - ---- Logging entry for: 2025-08-04
+2025-08-22 19:20:46 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:152 - ------ Selecting project: New Project 3-Level-Schema
+2025-08-22 19:20:46 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:155 - ------ Selecting issue: Test
+2025-08-22 19:20:47 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:159 - ------ Selecting activity: Design
+2025-08-22 19:20:47 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:163 - ------ Entering hours: 6
+2025-08-22 19:20:47 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:166 - ------ Clicking Log Time button
+2025-08-22 19:20:47 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:149 - ---- Logging entry for: 2025-08-05
+2025-08-22 19:20:49 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:152 - ------ Selecting project: New Project 3-Level-Schema
+2025-08-22 19:20:49 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:155 - ------ Selecting issue: Test
+2025-08-22 19:20:50 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:159 - ------ Selecting activity: Development
+2025-08-22 19:20:50 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:163 - ------ Entering hours: 9
+2025-08-22 19:20:51 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:166 - ------ Clicking Log Time button
+2025-08-22 19:20:51 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:149 - ---- Logging entry for: 2025-08-06
+2025-08-22 19:20:53 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:152 - ------ Selecting project: New Project 3-Level-Schema
+2025-08-22 19:20:53 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:155 - ------ Selecting issue: Test
+2025-08-22 19:20:54 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:159 - ------ Selecting activity: Development
+2025-08-22 19:20:54 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:163 - ------ Entering hours: 6
+2025-08-22 19:20:54 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:166 - ------ Clicking Log Time button
+2025-08-22 19:20:54 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:149 - ---- Logging entry for: 2025-08-07
+2025-08-22 19:20:55 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:152 - ------ Selecting project: New Project 3-Level-Schema
+2025-08-22 19:20:56 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:155 - ------ Selecting issue: Test
+2025-08-22 19:20:56 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:159 - ------ Selecting activity: Development
+2025-08-22 19:20:56 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:163 - ------ Entering hours: 9
+2025-08-22 19:20:57 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:166 - ------ Clicking Log Time button
+2025-08-22 19:20:57 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:149 - ---- Logging entry for: 2025-08-08
+2025-08-22 19:20:58 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:152 - ------ Selecting project: New Project 3-Level-Schema
+2025-08-22 19:20:59 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:155 - ------ Selecting issue: Test
+2025-08-22 19:20:59 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:159 - ------ Selecting activity: Development
+2025-08-22 19:20:59 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:163 - ------ Entering hours: 9
+2025-08-22 19:21:00 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:166 - ------ Clicking Log Time button
+2025-08-22 19:21:00 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:176 - Step 6: Submitting the timesheet
+2025-08-22 19:21:00 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:180 - ------ Verifying that the Project D 3-Level-Schema status is 'Waiting for Approval'
+2025-08-22 19:21:01 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:180 - ------ Verifying that the New Project 3-Level-Schema status is 'Waiting for Approval'
+2025-08-22 19:21:01 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:185 - Step 8: Logging out user
+2025-08-22 19:21:01 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:195 - TC002: Verify That Approver can Approve Timesheet Project D
+2025-08-22 19:21:01 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:202 - ---- Logging in as Approver:1Approval
+2025-08-22 19:21:02 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:205 - ------ Navigating to project: Project D 3-Level-Schema
+2025-08-22 19:21:02 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:209 - ------ Navigating to Timesheet Approval
+2025-08-22 19:21:03 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:212 - ------ Go to Date Range of Submission
+2025-08-22 19:21:06 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:215 - ------ Verify 'Design' and 'Development' Activity hours 
+2025-08-22 19:21:06 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:219 - ------ Approving timesheet for user8
+2025-08-22 19:21:07 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:226 - ------ Logging out approver: 1Approval
+2025-08-22 19:21:07 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:230 - ------ Logging in as user8
+2025-08-22 19:21:08 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:233 - ------ Navigating to Timesheet module
+2025-08-22 19:21:08 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:236 - ------ Expanding timesheet view
+2025-08-22 19:21:09 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:239 - ------ Selecting date range filter as 'Custom Range'
+2025-08-22 19:21:10 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:247 - ------ Verifying that the Project D 3-Level-Schema status is 'Waiting for Approval' after approval at level 1
+2025-08-22 19:21:10 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:257 - ------ Logging out user8
+2025-08-22 19:21:10 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:202 - ---- Logging in as Approver:2Approval
+2025-08-22 19:21:10 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:205 - ------ Navigating to project: Project D 3-Level-Schema
+2025-08-22 19:21:11 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:209 - ------ Navigating to Timesheet Approval
+2025-08-22 19:21:11 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:212 - ------ Go to Date Range of Submission
+2025-08-22 19:21:14 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:215 - ------ Verify 'Design' and 'Development' Activity hours 
+2025-08-22 19:21:14 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:219 - ------ Approving timesheet for user8
+2025-08-22 19:21:15 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:226 - ------ Logging out approver: 2Approval
+2025-08-22 19:21:16 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:230 - ------ Logging in as user8
+2025-08-22 19:21:16 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:233 - ------ Navigating to Timesheet module
+2025-08-22 19:21:16 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:236 - ------ Expanding timesheet view
+2025-08-22 19:21:17 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:239 - ------ Selecting date range filter as 'Custom Range'
+2025-08-22 19:21:17 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:247 - ------ Verifying that the Project D 3-Level-Schema status is 'Waiting for Approval' after approval at level 2
+2025-08-22 19:21:18 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:257 - ------ Logging out user8
+2025-08-22 19:21:18 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:202 - ---- Logging in as Approver:3Approval
+2025-08-22 19:21:18 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:205 - ------ Navigating to project: Project D 3-Level-Schema
+2025-08-22 19:21:19 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:209 - ------ Navigating to Timesheet Approval
+2025-08-22 19:21:19 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:212 - ------ Go to Date Range of Submission
+2025-08-22 19:21:22 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:215 - ------ Verify 'Design' and 'Development' Activity hours 
+2025-08-22 19:21:22 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:219 - ------ Approving timesheet for user8
+2025-08-22 19:21:23 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:226 - ------ Logging out approver: 3Approval
+2025-08-22 19:21:23 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:230 - ------ Logging in as user8
+2025-08-22 19:21:24 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:233 - ------ Navigating to Timesheet module
+2025-08-22 19:21:24 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:236 - ------ Expanding timesheet view
+2025-08-22 19:21:24 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:239 - ------ Selecting date range filter as 'Custom Range'
+2025-08-22 19:21:25 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:252 - ------ Verifying that the Project D 3-Level-Schema status is 'Approved' after approval at level 3
+2025-08-22 19:21:25 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:257 - ------ Logging out user8
+2025-08-22 19:21:26 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:268 - TC003: Verify That Approver can Approve Timesheet New Project
+2025-08-22 19:21:26 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:275 - ---- Logging in as Approver:1ApproverNew
+2025-08-22 19:21:26 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:278 - ------ Navigating to project: New Project 3-Level-Schema
+2025-08-22 19:21:27 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:282 - ------ Navigating to Timesheet Approval
+2025-08-22 19:21:27 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:285 - ------ Go to Date Range of Submission
+2025-08-22 19:21:30 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:288 - ------ Verify 'Design' and 'Development' Activity hours 
+2025-08-22 19:21:30 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:292 - ------ Approving timesheet for user8
+2025-08-22 19:21:31 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:299 - ------ Logging out approver: 1ApproverNew
+2025-08-22 19:21:31 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:303 - ------ Logging in as user8
+2025-08-22 19:21:32 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:306 - ------ Navigating to Timesheet module
+2025-08-22 19:21:32 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:309 - ------ Expanding timesheet view
+2025-08-22 19:21:32 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:312 - ------ Selecting date range filter as 'Custom Range'
+2025-08-22 19:21:33 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:320 - ------ Verifying that the New Project 3-Level-Schema status is 'Waiting for Approval' after approval at level 1
+2025-08-22 19:21:33 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:330 - ------ Logging out user8
+2025-08-22 19:21:34 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:275 - ---- Logging in as Approver:2ApproverNew
+2025-08-22 19:21:34 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:278 - ------ Navigating to project: New Project 3-Level-Schema
+2025-08-22 19:21:35 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:282 - ------ Navigating to Timesheet Approval
+2025-08-22 19:21:35 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:285 - ------ Go to Date Range of Submission
+2025-08-22 19:21:38 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:288 - ------ Verify 'Design' and 'Development' Activity hours 
+2025-08-22 19:21:38 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:292 - ------ Approving timesheet for user8
+2025-08-22 19:21:39 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:299 - ------ Logging out approver: 2ApproverNew
+2025-08-22 19:21:39 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:303 - ------ Logging in as user8
+2025-08-22 19:21:40 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:306 - ------ Navigating to Timesheet module
+2025-08-22 19:21:40 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:309 - ------ Expanding timesheet view
+2025-08-22 19:21:40 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:312 - ------ Selecting date range filter as 'Custom Range'
+2025-08-22 19:21:41 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:320 - ------ Verifying that the New Project 3-Level-Schema status is 'Waiting for Approval' after approval at level 2
+2025-08-22 19:21:41 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:330 - ------ Logging out user8
+2025-08-22 19:21:42 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:275 - ---- Logging in as Approver:3ApproverNew
+2025-08-22 19:21:42 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:278 - ------ Navigating to project: New Project 3-Level-Schema
+2025-08-22 19:21:43 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:282 - ------ Navigating to Timesheet Approval
+2025-08-22 19:21:43 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:285 - ------ Go to Date Range of Submission
+2025-08-22 19:21:46 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:288 - ------ Verify 'Design' and 'Development' Activity hours 
+2025-08-22 19:21:46 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:292 - ------ Approving timesheet for user8
+2025-08-22 19:21:47 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:299 - ------ Logging out approver: 3ApproverNew
+2025-08-22 19:21:47 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:303 - ------ Logging in as user8
+2025-08-22 19:21:48 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:306 - ------ Navigating to Timesheet module
+2025-08-22 19:21:48 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:309 - ------ Expanding timesheet view
+2025-08-22 19:21:48 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:312 - ------ Selecting date range filter as 'Custom Range'
+2025-08-22 19:21:49 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:325 - ------ Verifying that the New Project 3-Level-Schema status is 'Approved' after approval at level 3
+2025-08-22 19:21:49 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:330 - ------ Logging out user8
+2025-08-22 19:21:49 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:343 - Test Case 8: Final verification of all timesheet statuses
+2025-08-22 19:21:49 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:345 - ------ Logging in as user8
+2025-08-22 19:21:50 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:348 - ------ Navigating to Timesheet module
+2025-08-22 19:21:50 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:351 - ------ Expanding timesheet view
+2025-08-22 19:21:50 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:354 - ------ Selecting date range filter as 'Custom Range'
+2025-08-22 19:21:51 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:362 - ------ Verifying that the Project D 3-Level-Schema status is 'Approved'
+2025-08-22 19:21:51 INFO  TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema:362 - ------ Verifying that the New Project 3-Level-Schema status is 'Approved'

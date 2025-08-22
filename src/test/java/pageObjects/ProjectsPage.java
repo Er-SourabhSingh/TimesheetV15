@@ -116,7 +116,7 @@ public class ProjectsPage extends BasePage {
         if(!driver.findElements(emptyStateLocator).isEmpty()){
             return new ArrayList<>();
         }
-        By projectsLocator = By.xpath("//div//li//a[@class='project root leaf public']");
+        By projectsLocator = By.xpath("//div//li//a[contains(@class, 'project root leaf public')]");
 
         int attempts = 0;
         while (attempts < 3){

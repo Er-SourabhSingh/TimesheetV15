@@ -487,7 +487,7 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
                 logger.info("---- Logging in as Approver:" + approvalUsers[i]);
                 super.login(approvalUsers[i], "12345678");
 
-                logger.info("------ Navigating to project: " + projects[1]);
+                logger.info("------ Navigating to project: " + projects[2]);
                 headerPage.clickOnProjects();
                 projectsPage.clickOnProjectName(projects[2]);
 
@@ -539,6 +539,7 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
                 if (i == 2) {
                     logger.info("------ Verifying that the " + projects[2] + " status is 'Approved' after approval at level " + (i + 1));
                     Assert.assertTrue(timesheetPage.hasApprovedTimesheet(projects[2]));
+                    Assert.assertEquals(timesheetPage.getSubmitTimesheetBtnText(), "Timesheet Approved");
                 }
 
                 logger.info("------ Logging out " + user);
