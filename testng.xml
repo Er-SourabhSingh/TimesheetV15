@@ -22,8 +22,9 @@
             <class name="testCases.TC003_TimesheetMultiProjectWorkflowTests"/>
             <class name="testCases.TC004_TimesheetMultiProjectRejectionTests"/>
             <class name="testCases.TC005_PartiallyRejectTimesheetForProjects"/>
-            <class name="testCases.TC006_PartiallyRejectTimesheetOfApprovalUserForProjects"/>-->
-            <class name="testCases.TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema"/>
+            <class name="testCases.TC006_PartiallyRejectTimesheetOfApprovalUserForProjects"/>
+            <class name="testCases.TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema"/>-->
+            <class name="testCases.TC008_BulkTimesheetApprovalTests"/>
 
         </classes>
     </test>

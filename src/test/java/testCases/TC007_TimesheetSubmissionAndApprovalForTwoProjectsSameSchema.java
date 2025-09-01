@@ -140,7 +140,7 @@ public class TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema extend
             this.dateRanges = timesheetPage.getSelectedDateRange();
 
             List<String> days = getFirstFiveDay(this.startDate, this.endDate);
-            System.out.println(days);
+            //System.out.println(days);
             logger.info("Step 5: Logging time entries for each day from Monday to friday");
 
             if (timesheetPage.isSubmitTimesheetBtnEnabled()) {

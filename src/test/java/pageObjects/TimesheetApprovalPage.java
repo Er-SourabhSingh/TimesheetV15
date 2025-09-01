@@ -29,9 +29,30 @@ public class TimesheetApprovalPage extends BasePage{
 
     By btnApprovalSubmit = By.xpath("//button[@id='approve-modal-submit']");
 
+    By checkBoxSelectAll = By.xpath("//input[@id='select_all_checkbox']");
+
     public TimesheetApprovalPage(WebDriver driver){
         super(driver);
     }
+
+    public void selectAllUser(){
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(this.checkBoxSelectAll));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        if(element.isEnabled() && !element.isSelected()){
+            element.click();
+        }
+    }
+
+    public void selectUserCheckBoxInTable(String userName){
+        By checkBox = By.xpath("//table[@class='list issues']//tbody//tr//td[3][contains(text(),'"+userName+"')]/ancestor::tr//td[2]//input");
+
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(checkBox));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        if(element.isEnabled() && !element.isSelected()){
+            element.click();
+        }
+    }
+
 
     public String getDesignHoursOfUser(String userName){
         //By designHours = By.xpath("//table[@class='list issues']//tbody//tr//td[3]//a[contains(text(),'" + userName + "')]/ancestor::tr//td[4]");
