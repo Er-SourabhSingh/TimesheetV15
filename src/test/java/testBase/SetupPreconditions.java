@@ -272,8 +272,6 @@ public class SetupPreconditions extends BaseClass{
                 headerPage.clickOnProjectSetting();
                 projectFormPage.clickOnMemberTab();
                 List<String> approvalUsers = this.toFullNames(this.approvalUsers);
-                System.out.println(projectFormPage.getMembersList());
-                System.out.println(approvalUsers);
                 if(!projectFormPage.getMembersList().containsAll(approvalUsers)) {
                     for (int i = 0; i < this.approvalUsers.length; i++) {
                         projectFormPage.clickOnNewMemberBtn();
@@ -284,8 +282,6 @@ public class SetupPreconditions extends BaseClass{
                 }
 
                 List<String> users = this.toFullNames(this.users);
-
-                System.out.println(projectFormPage.getMembersList());
                 if(!projectFormPage.getMembersList().containsAll(users)) {
                     projectFormPage.clickOnNewMemberBtn();
                     for (int i = 0; i < this.users.length; i++) {
