@@ -239,5 +239,20 @@ public class BaseClass {
         return hours + (minutes/60.0);
     }
 
+    public List<String> toFullNames(String[] loginNames) {
+        List<String> fullNames = new ArrayList<>();
+        for (String login : loginNames) {
+            String[] parts = login.split("\\.");
+            String first = capitalize(parts[0]);
+            String last = capitalize(parts[1]);
+            fullNames.add(first + " " + last);
+        }
+        return fullNames;
+    }
 
+    public String capitalize(String str) {
+        return str == null || str.isEmpty()
+                ? str
+                : str.substring(0, 1).toUpperCase() + str.substring(1).toLowerCase();
+    }
 }
