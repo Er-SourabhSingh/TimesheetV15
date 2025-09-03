@@ -1,0 +1,133 @@
+2025-09-03 19:11:33 INFO  TC005_PartiallyRejectTimesheetForProjects:35 - Test Case 1: Verify Multiple Project Rejection
+2025-09-03 19:11:33 INFO  TC005_PartiallyRejectTimesheetForProjects:38 - Step 1: Logging in as serenity.bloom
+2025-09-03 19:11:34 INFO  TC005_PartiallyRejectTimesheetForProjects:41 - Step 2: Navigating to Timesheet module
+2025-09-03 19:11:34 INFO  TC005_PartiallyRejectTimesheetForProjects:44 - Step 3: Expanding timesheet view
+2025-09-03 19:11:35 INFO  TC005_PartiallyRejectTimesheetForProjects:47 - Step 4: Selecting date range filter as 'Custom Range'
+2025-09-03 19:11:38 INFO  TC005_PartiallyRejectTimesheetForProjects:58 - Step 5: Logging time entries for each day from Monday to friday
+2025-09-03 19:11:38 INFO  TC005_PartiallyRejectTimesheetForProjects:63 - ---- Logging entry for: 2025-06-30
+2025-09-03 19:11:38 INFO  TC005_PartiallyRejectTimesheetForProjects:66 - ------ Selecting project: Project A Default-Schema
+2025-09-03 19:11:39 INFO  TC005_PartiallyRejectTimesheetForProjects:69 - ------ Selecting issue: Test
+2025-09-03 19:11:39 INFO  TC005_PartiallyRejectTimesheetForProjects:73 - ------ Selecting activity: Development
+2025-09-03 19:11:39 INFO  TC005_PartiallyRejectTimesheetForProjects:77 - ------ Entering hours: 6
+2025-09-03 19:11:39 INFO  TC005_PartiallyRejectTimesheetForProjects:80 - ------ Clicking Log Time button
+2025-09-03 19:11:40 INFO  TC005_PartiallyRejectTimesheetForProjects:63 - ---- Logging entry for: 2025-07-01
+2025-09-03 19:11:41 INFO  TC005_PartiallyRejectTimesheetForProjects:66 - ------ Selecting project: Project A Default-Schema
+2025-09-03 19:11:41 INFO  TC005_PartiallyRejectTimesheetForProjects:69 - ------ Selecting issue: Test
+2025-09-03 19:11:42 INFO  TC005_PartiallyRejectTimesheetForProjects:73 - ------ Selecting activity: Development
+2025-09-03 19:11:42 INFO  TC005_PartiallyRejectTimesheetForProjects:77 - ------ Entering hours: 7
+2025-09-03 19:11:42 INFO  TC005_PartiallyRejectTimesheetForProjects:80 - ------ Clicking Log Time button
+2025-09-03 19:11:42 INFO  TC005_PartiallyRejectTimesheetForProjects:63 - ---- Logging entry for: 2025-07-02
+2025-09-03 19:11:44 INFO  TC005_PartiallyRejectTimesheetForProjects:66 - ------ Selecting project: Project A Default-Schema
+2025-09-03 19:11:44 INFO  TC005_PartiallyRejectTimesheetForProjects:69 - ------ Selecting issue: Test
+2025-09-03 19:11:45 INFO  TC005_PartiallyRejectTimesheetForProjects:73 - ------ Selecting activity: Design
+2025-09-03 19:11:45 INFO  TC005_PartiallyRejectTimesheetForProjects:77 - ------ Entering hours: 8
+2025-09-03 19:11:45 INFO  TC005_PartiallyRejectTimesheetForProjects:80 - ------ Clicking Log Time button
+2025-09-03 19:11:46 INFO  TC005_PartiallyRejectTimesheetForProjects:63 - ---- Logging entry for: 2025-07-03
+2025-09-03 19:11:48 INFO  TC005_PartiallyRejectTimesheetForProjects:66 - ------ Selecting project: Project A Default-Schema
+2025-09-03 19:11:48 INFO  TC005_PartiallyRejectTimesheetForProjects:69 - ------ Selecting issue: Test
+2025-09-03 19:11:49 INFO  TC005_PartiallyRejectTimesheetForProjects:73 - ------ Selecting activity: Development
+2025-09-03 19:11:49 INFO  TC005_PartiallyRejectTimesheetForProjects:77 - ------ Entering hours: 6
+2025-09-03 19:11:49 INFO  TC005_PartiallyRejectTimesheetForProjects:80 - ------ Clicking Log Time button
+2025-09-03 19:11:49 INFO  TC005_PartiallyRejectTimesheetForProjects:63 - ---- Logging entry for: 2025-07-04
+2025-09-03 19:11:51 INFO  TC005_PartiallyRejectTimesheetForProjects:66 - ------ Selecting project: Project A Default-Schema
+2025-09-03 19:11:51 INFO  TC005_PartiallyRejectTimesheetForProjects:69 - ------ Selecting issue: Test
+2025-09-03 19:11:52 INFO  TC005_PartiallyRejectTimesheetForProjects:73 - ------ Selecting activity: Development
+2025-09-03 19:11:52 INFO  TC005_PartiallyRejectTimesheetForProjects:77 - ------ Entering hours: 8
+2025-09-03 19:11:52 INFO  TC005_PartiallyRejectTimesheetForProjects:80 - ------ Clicking Log Time button
+2025-09-03 19:11:53 INFO  TC005_PartiallyRejectTimesheetForProjects:63 - ---- Logging entry for: 2025-06-30
+2025-09-03 19:11:54 INFO  TC005_PartiallyRejectTimesheetForProjects:66 - ------ Selecting project: Project C 2-Level-Schema
+2025-09-03 19:11:55 INFO  TC005_PartiallyRejectTimesheetForProjects:69 - ------ Selecting issue: Test
+2025-09-03 19:11:55 INFO  TC005_PartiallyRejectTimesheetForProjects:73 - ------ Selecting activity: Development
+2025-09-03 19:11:55 INFO  TC005_PartiallyRejectTimesheetForProjects:77 - ------ Entering hours: 6
+2025-09-03 19:11:56 INFO  TC005_PartiallyRejectTimesheetForProjects:80 - ------ Clicking Log Time button
+2025-09-03 19:11:56 INFO  TC005_PartiallyRejectTimesheetForProjects:63 - ---- Logging entry for: 2025-07-01
+2025-09-03 19:11:58 INFO  TC005_PartiallyRejectTimesheetForProjects:66 - ------ Selecting project: Project C 2-Level-Schema
+2025-09-03 19:11:58 INFO  TC005_PartiallyRejectTimesheetForProjects:69 - ------ Selecting issue: Test
+2025-09-03 19:11:58 INFO  TC005_PartiallyRejectTimesheetForProjects:73 - ------ Selecting activity: Development
+2025-09-03 19:11:59 INFO  TC005_PartiallyRejectTimesheetForProjects:77 - ------ Entering hours: 8
+2025-09-03 19:11:59 INFO  TC005_PartiallyRejectTimesheetForProjects:80 - ------ Clicking Log Time button
+2025-09-03 19:11:59 INFO  TC005_PartiallyRejectTimesheetForProjects:63 - ---- Logging entry for: 2025-07-02
+2025-09-03 19:12:00 INFO  TC005_PartiallyRejectTimesheetForProjects:66 - ------ Selecting project: Project C 2-Level-Schema
+2025-09-03 19:12:00 INFO  TC005_PartiallyRejectTimesheetForProjects:69 - ------ Selecting issue: Test
+2025-09-03 19:12:01 INFO  TC005_PartiallyRejectTimesheetForProjects:73 - ------ Selecting activity: Development
+2025-09-03 19:12:01 INFO  TC005_PartiallyRejectTimesheetForProjects:77 - ------ Entering hours: 8
+2025-09-03 19:12:01 INFO  TC005_PartiallyRejectTimesheetForProjects:80 - ------ Clicking Log Time button
+2025-09-03 19:12:02 INFO  TC005_PartiallyRejectTimesheetForProjects:63 - ---- Logging entry for: 2025-07-03
+2025-09-03 19:12:02 INFO  TC005_PartiallyRejectTimesheetForProjects:66 - ------ Selecting project: Project C 2-Level-Schema
+2025-09-03 19:12:03 INFO  TC005_PartiallyRejectTimesheetForProjects:69 - ------ Selecting issue: Test
+2025-09-03 19:12:03 INFO  TC005_PartiallyRejectTimesheetForProjects:73 - ------ Selecting activity: Design
+2025-09-03 19:12:03 INFO  TC005_PartiallyRejectTimesheetForProjects:77 - ------ Entering hours: 7
+2025-09-03 19:12:03 INFO  TC005_PartiallyRejectTimesheetForProjects:80 - ------ Clicking Log Time button
+2025-09-03 19:12:04 INFO  TC005_PartiallyRejectTimesheetForProjects:63 - ---- Logging entry for: 2025-07-04
+2025-09-03 19:12:04 INFO  TC005_PartiallyRejectTimesheetForProjects:66 - ------ Selecting project: Project C 2-Level-Schema
+2025-09-03 19:12:05 INFO  TC005_PartiallyRejectTimesheetForProjects:69 - ------ Selecting issue: Test
+2025-09-03 19:12:05 INFO  TC005_PartiallyRejectTimesheetForProjects:73 - ------ Selecting activity: Development
+2025-09-03 19:12:05 INFO  TC005_PartiallyRejectTimesheetForProjects:77 - ------ Entering hours: 6
+2025-09-03 19:12:05 INFO  TC005_PartiallyRejectTimesheetForProjects:80 - ------ Clicking Log Time button
+2025-09-03 19:12:06 INFO  TC005_PartiallyRejectTimesheetForProjects:63 - ---- Logging entry for: 2025-06-30
+2025-09-03 19:12:06 INFO  TC005_PartiallyRejectTimesheetForProjects:66 - ------ Selecting project: Project D 3-Level-Schema
+2025-09-03 19:12:07 INFO  TC005_PartiallyRejectTimesheetForProjects:69 - ------ Selecting issue: Test
+2025-09-03 19:12:07 INFO  TC005_PartiallyRejectTimesheetForProjects:73 - ------ Selecting activity: Design
+2025-09-03 19:12:07 INFO  TC005_PartiallyRejectTimesheetForProjects:77 - ------ Entering hours: 9
+2025-09-03 19:12:08 INFO  TC005_PartiallyRejectTimesheetForProjects:80 - ------ Clicking Log Time button
+2025-09-03 19:12:08 INFO  TC005_PartiallyRejectTimesheetForProjects:63 - ---- Logging entry for: 2025-07-01
+2025-09-03 19:12:09 INFO  TC005_PartiallyRejectTimesheetForProjects:66 - ------ Selecting project: Project D 3-Level-Schema
+2025-09-03 19:12:09 INFO  TC005_PartiallyRejectTimesheetForProjects:69 - ------ Selecting issue: Test
+2025-09-03 19:12:09 INFO  TC005_PartiallyRejectTimesheetForProjects:73 - ------ Selecting activity: Design
+2025-09-03 19:12:10 INFO  TC005_PartiallyRejectTimesheetForProjects:77 - ------ Entering hours: 6
+2025-09-03 19:12:10 INFO  TC005_PartiallyRejectTimesheetForProjects:80 - ------ Clicking Log Time button
+2025-09-03 19:12:10 INFO  TC005_PartiallyRejectTimesheetForProjects:63 - ---- Logging entry for: 2025-07-02
+2025-09-03 19:12:11 INFO  TC005_PartiallyRejectTimesheetForProjects:66 - ------ Selecting project: Project D 3-Level-Schema
+2025-09-03 19:12:11 INFO  TC005_PartiallyRejectTimesheetForProjects:69 - ------ Selecting issue: Test
+2025-09-03 19:12:12 INFO  TC005_PartiallyRejectTimesheetForProjects:73 - ------ Selecting activity: Development
+2025-09-03 19:12:12 INFO  TC005_PartiallyRejectTimesheetForProjects:77 - ------ Entering hours: 7
+2025-09-03 19:12:12 INFO  TC005_PartiallyRejectTimesheetForProjects:80 - ------ Clicking Log Time button
+2025-09-03 19:12:12 INFO  TC005_PartiallyRejectTimesheetForProjects:63 - ---- Logging entry for: 2025-07-03
+2025-09-03 19:12:13 INFO  TC005_PartiallyRejectTimesheetForProjects:66 - ------ Selecting project: Project D 3-Level-Schema
+2025-09-03 19:12:13 INFO  TC005_PartiallyRejectTimesheetForProjects:69 - ------ Selecting issue: Test
+2025-09-03 19:12:14 INFO  TC005_PartiallyRejectTimesheetForProjects:73 - ------ Selecting activity: Development
+2025-09-03 19:12:14 INFO  TC005_PartiallyRejectTimesheetForProjects:77 - ------ Entering hours: 7
+2025-09-03 19:12:14 INFO  TC005_PartiallyRejectTimesheetForProjects:80 - ------ Clicking Log Time button
+2025-09-03 19:12:14 INFO  TC005_PartiallyRejectTimesheetForProjects:63 - ---- Logging entry for: 2025-07-04
+2025-09-03 19:12:15 INFO  TC005_PartiallyRejectTimesheetForProjects:66 - ------ Selecting project: Project D 3-Level-Schema
+2025-09-03 19:12:15 INFO  TC005_PartiallyRejectTimesheetForProjects:69 - ------ Selecting issue: Test
+2025-09-03 19:12:16 INFO  TC005_PartiallyRejectTimesheetForProjects:73 - ------ Selecting activity: Design
+2025-09-03 19:12:16 INFO  TC005_PartiallyRejectTimesheetForProjects:77 - ------ Entering hours: 6
+2025-09-03 19:12:16 INFO  TC005_PartiallyRejectTimesheetForProjects:80 - ------ Clicking Log Time button
+2025-09-03 19:12:16 INFO  TC005_PartiallyRejectTimesheetForProjects:90 - Step 6: Submitting the timesheet
+2025-09-03 19:12:17 INFO  TC005_PartiallyRejectTimesheetForProjects:94 - ------ Verifying that the Project A Default-Schema status is 'Waiting for Approval'
+2025-09-03 19:12:17 INFO  TC005_PartiallyRejectTimesheetForProjects:94 - ------ Verifying that the Project C 2-Level-Schema status is 'Waiting for Approval'
+2025-09-03 19:12:17 INFO  TC005_PartiallyRejectTimesheetForProjects:94 - ------ Verifying that the Project D 3-Level-Schema status is 'Waiting for Approval'
+2025-09-03 19:12:17 INFO  TC005_PartiallyRejectTimesheetForProjects:99 - Step 8: Logging out user
+2025-09-03 19:12:17 INFO  TC005_PartiallyRejectTimesheetForProjects:113 - Test Case 2: Verify Rejection of Project C Timesheet
+2025-09-03 19:12:17 INFO  TC005_PartiallyRejectTimesheetForProjects:115 - Step 1: Logging in as aurora.wren
+2025-09-03 19:12:18 INFO  TC005_PartiallyRejectTimesheetForProjects:118 - Step 2: Navigate to project: Project C 2-Level-Schema
+2025-09-03 19:12:19 INFO  TC005_PartiallyRejectTimesheetForProjects:122 - Step 3: Navigate to Timesheet Approval
+2025-09-03 19:12:19 INFO  TC005_PartiallyRejectTimesheetForProjects:125 - Step 4: Go to Date Range of Submission
+2025-09-03 19:12:32 INFO  TC005_PartiallyRejectTimesheetForProjects:128 - Step 5: Verify 'Design' and 'Development' Activity hours 
+2025-09-03 19:12:32 INFO  TC005_PartiallyRejectTimesheetForProjects:132 - Step 6: Reject timesheet for: serenity.bloom
+2025-09-03 19:12:33 INFO  TC005_PartiallyRejectTimesheetForProjects:139 - Step 7: Logging out as aurora.wren
+2025-09-03 19:12:33 INFO  TC005_PartiallyRejectTimesheetForProjects:143 - Step 8: Logging in as serenity.bloom
+2025-09-03 19:12:33 INFO  TC005_PartiallyRejectTimesheetForProjects:146 - Step 9: Navigating to Timesheet module
+2025-09-03 19:12:34 INFO  TC005_PartiallyRejectTimesheetForProjects:149 - Step 10: Expanding timesheet view
+2025-09-03 19:12:34 INFO  TC005_PartiallyRejectTimesheetForProjects:152 - Step 11: Selecting date range filter as 'Custom Range'
+2025-09-03 19:12:36 INFO  TC005_PartiallyRejectTimesheetForProjects:162 - Step 12: Logging out serenity.bloom
+2025-09-03 19:12:36 INFO  TC005_PartiallyRejectTimesheetForProjects:176 - Test Case 3: Verify Approval of Project A Timesheet
+2025-09-03 19:12:36 INFO  TC005_PartiallyRejectTimesheetForProjects:178 - Step 1: Logging in as admin
+2025-09-03 19:12:36 INFO  TC005_PartiallyRejectTimesheetForProjects:181 - Step 2: Navigating to project: Project A Default-Schema
+2025-09-03 19:12:37 INFO  TC005_PartiallyRejectTimesheetForProjects:185 - Step 3: Navigating to Timesheet Approval
+2025-09-03 19:12:37 INFO  TC005_PartiallyRejectTimesheetForProjects:188 - Step 4: Go to Date Range of Submission
+2025-09-03 19:12:49 INFO  TC005_PartiallyRejectTimesheetForProjects:191 - Step 5: Verify 'Design' and 'Development' Activity hours 
+2025-09-03 19:12:49 INFO  TC005_PartiallyRejectTimesheetForProjects:195 - Step 6: Approve timesheet for: serenity.bloom
+2025-09-03 19:12:50 INFO  TC005_PartiallyRejectTimesheetForProjects:202 - Step 7: Logging out as Admin
+2025-09-03 19:12:50 INFO  TC005_PartiallyRejectTimesheetForProjects:205 - Step 8: Logging in as serenity.bloom
+2025-09-03 19:12:51 INFO  TC005_PartiallyRejectTimesheetForProjects:208 - Step 9: Navigating to Timesheet module
+2025-09-03 19:12:51 INFO  TC005_PartiallyRejectTimesheetForProjects:211 - Step 10: Expanding timesheet view
+2025-09-03 19:12:51 INFO  TC005_PartiallyRejectTimesheetForProjects:214 - Step 11: Selecting date range filter as 'Custom Range'
+2025-09-03 19:12:53 INFO  TC005_PartiallyRejectTimesheetForProjects:223 - Step 12: Logging out serenity.bloom
+2025-09-03 19:12:53 INFO  TC005_PartiallyRejectTimesheetForProjects:238 - Test Case 4: Verify Approval of Project A Timesheet
+2025-09-03 19:12:53 INFO  TC005_PartiallyRejectTimesheetForProjects:240 - Step 1: Logging in as aurora.wren
+2025-09-03 19:12:54 INFO  TC005_PartiallyRejectTimesheetForProjects:243 - Step 2: Navigating to project: Project D 3-Level-Schema
+2025-09-03 19:12:54 INFO  TC005_PartiallyRejectTimesheetForProjects:247 - Step 3: Navigating to Timesheet Approval
+2025-09-03 19:12:54 INFO  TC005_PartiallyRejectTimesheetForProjects:250 - Step 4: Go to Date Range of Submission
+2025-09-03 19:13:07 INFO  TC005_PartiallyRejectTimesheetForProjects:253 - Step 5: Verify 'Design' and 'Development' Activity hours 
