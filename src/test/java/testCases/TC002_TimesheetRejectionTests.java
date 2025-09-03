@@ -76,12 +76,12 @@ public class TC002_TimesheetRejectionTests extends BaseClass {
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0],dateRanges[1]);
 
                 if(approver.equals(rejectBy)){
-                    logger.info("------ Rejecting timesheet for user: " + submitter);
-                    timesheetApprovalPage.clickOnRejectBtn(submitter);
+                    logger.info("------ Rejecting timesheet for user: " + toFullName(submitter));
+                    timesheetApprovalPage.clickOnRejectBtn(toFullName(submitter));
                     timesheetApprovalPage.setRejectionText("Rejected by -------- " +approver);
                     timesheetApprovalPage.clickOnSubmitBtnOfRejection();
                     logger.info("------ Verifying that timesheet is marked as 'Rejected'");
-                    Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(submitter),"Rejected");
+                    Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(submitter)),"Rejected");
 
                     logger.info("------ Logging out approver: " + approver);
                     headerPage.clickOnLogout();
@@ -89,7 +89,7 @@ public class TC002_TimesheetRejectionTests extends BaseClass {
                 }
 
                 logger.info("------ Approving timesheet for user: " + submitter);
-                timesheetApprovalPage.clickOnApproveBtn(submitter);
+                timesheetApprovalPage.clickOnApproveBtn(toFullName(submitter));
 
                 timesheetApprovalPage.setApprovalText("Approved by -------- " +approver);
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
@@ -114,7 +114,7 @@ public class TC002_TimesheetRejectionTests extends BaseClass {
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0],dateRanges[1]);
 
                 logger.info("------ Verifying that timesheet is marked as 'Rejected' for approval "+approver);
-                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(submitter),"Rejected");
+                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(submitter)),"Rejected");
 
                 logger.info("------ Logging out approver: " + approver);
                 headerPage.clickOnLogout();
@@ -170,12 +170,12 @@ public class TC002_TimesheetRejectionTests extends BaseClass {
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
                 logger.info("------ Approving resubmitted timesheet for user: " + submitter);
-                timesheetApprovalPage.clickOnApproveBtn(submitter);
+                timesheetApprovalPage.clickOnApproveBtn(toFullName(submitter));
                 timesheetApprovalPage.setApprovalText("Approved after resubmission by -------- " + approver);
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
                 logger.info("------ Verifying that timesheet is now marked as 'Approved'");
-                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(submitter), "Approved");
+                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(submitter)), "Approved");
 
                 logger.info("------ Logging out approver: " + approver);
                 headerPage.clickOnLogout();

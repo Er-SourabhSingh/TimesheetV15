@@ -21,24 +21,32 @@ public class DataProviders {
     public Object[][] getRejectionFlowData() {
         return new Object[][] {
                 // 2-Level schema: Reject at level 1
-                {"Project C 2-Level-Schema", "Last Week", "user3", "1Approval", new String[]{"1Approval", "2Approval"}},
+                {"Project C 2-Level-Schema", "Last Week", "harmony.rose", "aurora.wren",
+                        new String[]{"aurora.wren", "autumn.grace"}},
 
                 // 5-Level schema: Reject at level 3
-                {"Project F 5-Level-Schema", "Last Week", "user4", "3Approval", new String[]{"1Approval", "2Approval", "3Approval", "4Approval", "5Approval"}},
+                {"Project F 5-Level-Schema", "Last Week", "isla.moon", "briar.sunset",
+                        new String[]{"aurora.wren", "autumn.grace", "briar.sunset", "celeste.dawn", "daisy.skye"}},
 
                 // 5-Level schema: Reject at level 5
-                {"Project F 5-Level-Schema", "Last Week", "3Approval", "5Approval", new String[]{"4Approval", "5Approval"}},
+                {"Project F 5-Level-Schema", "Last Week", "briar.sunset", "daisy.skye",
+                        new String[]{"celeste.dawn", "daisy.skye"}},
 
                 // 1-Level schema: Reject at only level
-                {"Project B 1-Level-Schema", "Last Week", "user2", "1Approval", new String[]{"1Approval"}},
+                {"Project B 1-Level-Schema", "Last Week", "ember.lilac", "aurora.wren",
+                        new String[]{"aurora.wren"}},
 
                 // Default schema: Approver rejects
-                {"Project A Default-Schema", "Last Week", "2Approval", "admin", new String[]{"admin"}},
+                {"Project A Default-Schema", "Last Week", "autumn.grace", "admin",
+                        new String[]{"admin"}},
 
                 // 5-Level schema: Final level (5Approval) submits; only admin can reject
-                {"Project F 5-Level-Schema", "Last Week", "5Approval", "admin", new String[]{"admin"}}
+                {"Project F 5-Level-Schema", "Last Week", "daisy.skye", "admin",
+                        new String[]{"admin"}}
         };
     }
+
+
 
 
 }
