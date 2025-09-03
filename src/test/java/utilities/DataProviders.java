@@ -6,14 +6,14 @@ public class DataProviders {
     @DataProvider(name = "schemaFlows")
     public Object[][] getSchemaFlows() {
         return new Object[][] {
-                {"Project A Default-Schema", "Current Week", "user1", new String[]{"admin"}},
-                {"Project A Default-Schema", "Current Week", "2Approval", new String[]{"admin"}},
-                {"Project B 1-Level-Schema", "Current Week", "user2", new String[]{"1Approval"}},
-                {"Project B 1-Level-Schema", "Current Week", "1Approval", new String[]{"admin"}},
-                {"Project C 2-Level-Schema", "Current Week", "user3", new String[]{"1Approval", "2Approval"}},
-                {"Project F 5-Level-Schema", "Current Week", "user4", new String[]{"1Approval", "2Approval", "3Approval", "4Approval", "5Approval"}},
-                {"Project F 5-Level-Schema", "Current Week", "3Approval", new String[]{"4Approval", "5Approval"}},
-                {"Project F 5-Level-Schema", "Current Week", "5Approval", new String[]{"admin"}}
+                //{"Project A Default-Schema", "Current Week", "ember.lilac", new String[]{"admin"}},
+                {"Project A Default-Schema", "Current Week", "autumn.grace", new String[]{"admin"}},
+                {"Project B 1-Level-Schema", "Current Week", "isla.moon", new String[]{"aurora.wren"}},
+                {"Project B 1-Level-Schema", "Current Week", "aurora.wren", new String[]{"admin"}},
+                {"Project C 2-Level-Schema", "Current Week", "ivy.skylark", new String[]{"aurora.wren", "autumn.grace"}},
+                {"Project F 5-Level-Schema", "Current Week", "nova.starling", new String[]{"aurora.wren", "autumn.grace", "briar.sunset", "celeste.dawn", "daisy.skye"}},
+                {"Project F 5-Level-Schema", "Current Week", "briar.sunset", new String[]{"celeste.dawn", "daisy.skye"}},
+                {"Project F 5-Level-Schema", "Current Week", "daisy.skye", new String[]{"admin"}}
         };
     }
 

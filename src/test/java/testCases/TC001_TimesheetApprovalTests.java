@@ -28,30 +28,32 @@ public class TC001_TimesheetApprovalTests extends BaseClass {
             timesheetPage.clickOnFilterDateRange();
             timesheetPage.selectDateRangeOption(dateRange);
             String days[] = getCurrentWeekDayNumbers();
-            logger.info("Step 5: Logging time entries for each day from Monday to Friday");
-            for(String day : days) {
-                logger.info("---- Logging entry for: " + day);
-                timesheetPage.clickOnTopRowDateCell(day);
+            if(timesheetPage.isSubmitTimesheetBtnEnabled()) {
+                logger.info("Step 5: Logging time entries for each day from Monday to Friday");
+                for (String day : days) {
+                    logger.info("---- Logging entry for: " + day);
+                    timesheetPage.clickOnTopRowDateCell(day);
 
-                logger.info("------ Selecting project: " + projectName);
-                timesheetPage.selectProjectForLogTime(projectName);
+                    logger.info("------ Selecting project: " + projectName);
+                    timesheetPage.selectProjectForLogTime(projectName);
 
-                logger.info("------ Selecting issue: Test");
-                timesheetPage.selectIssueForLogTime("Test");
+                    logger.info("------ Selecting issue: Test");
+                    timesheetPage.selectIssueForLogTime("Test");
 
-                String activity = getRandomActivity();
-                logger.info("------ Selecting activity: " + activity);
-                timesheetPage.selectActivityForLogTime(activity);
+                    String activity = getRandomActivity();
+                    logger.info("------ Selecting activity: " + activity);
+                    timesheetPage.selectActivityForLogTime(activity);
 
-                String hours = getRandomTime();
-                logger.info("------ Entering hours: " + hours);
-                timesheetPage.setSpentTimeForLogTime(hours);
+                    String hours = getRandomTime();
+                    logger.info("------ Entering hours: " + hours);
+                    timesheetPage.setSpentTimeForLogTime(hours);
 
-                logger.info("------ Clicking Log Time button");
-                timesheetPage.clickOnLogTimeBtnForLogTime();
+                    logger.info("------ Clicking Log Time button");
+                    timesheetPage.clickOnLogTimeBtnForLogTime();
+                }
+                logger.info("Step 6: Submitting the timesheet");
+                timesheetPage.clickOnSubmitTimesheetBtn();
             }
-            logger.info("Step 6: Submitting the timesheet");
-            timesheetPage.clickOnSubmitTimesheetBtn();
 
             logger.info("Step 7: Logging out user");
             headerPage.clickOnLogout();
@@ -69,11 +71,11 @@ public class TC001_TimesheetApprovalTests extends BaseClass {
                 headerPage.clickOnTimesheetApproval();
 
                 logger.info("------ Approving timesheet for user: " + user);
-                timesheetApprovalPage.clickOnApproveBtn(user);
+                timesheetApprovalPage.clickOnApproveBtn(toFullName(user));
                 timesheetApprovalPage.setApprovalText("Approved by -------- " +approver);
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
-                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(user),"Approved");
+                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(user)),"Approved");
 
                 logger.info("------ Logging out approver: " + approver);
                 headerPage.clickOnLogout();

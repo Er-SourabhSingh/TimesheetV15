@@ -250,6 +250,11 @@ public class BaseClass {
         return fullNames;
     }
 
+    public String toFullName(String loginName) {
+        String fullName[] = loginName.split("\\.");
+        return capitalize(fullName[0]) +" "+ capitalize(fullName[1]);
+    }
+
     public String capitalize(String str) {
         return str == null || str.isEmpty()
                 ? str
