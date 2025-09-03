@@ -149,27 +149,31 @@ public class ProjectFormPage extends BasePage {
 
     public List<String> getMembersList() {
         By emptyStateLocator = By.xpath("//p[@class='nodata']");
-        List<WebElement> members = new ArrayList<>();
-        if(!driver.findElements(emptyStateLocator).isEmpty()){
-            return new ArrayList<>();
-        }
-        By memberLoctor = By.xpath("//table[@class='list members']//td[1]//a");
-        int attempts = 0;
-        while (attempts < 3){
-            try{
-                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(memberLoctor));
-                members = driver.findElements(memberLoctor);
-                break;
-            }catch (StaleElementReferenceException | NoSuchElementException e){
-                attempts++;
+
+        try {
+            List<String> texts = new ArrayList<>();
+            By memberLoctor = By.xpath("//table[@class='list members']//td[1]//a");
+            List<WebElement> members = new ArrayList<>();
+            int attempts = 0;
+            while (attempts < 3) {
+                try {
+                    wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(memberLoctor));
+                    members = driver.findElements(memberLoctor);
+                    break;
+                } catch (StaleElementReferenceException | NoSuchElementException e) {
+                    attempts++;
+                }
             }
+
+            for (WebElement el : members) {
+                String text = el.getText().trim();
+                if (!text.isEmpty()) texts.add(text);
+            }
+            return texts;
+        }catch (Exception exception) {
+          return new ArrayList<>() ;
         }
-        List<String> texts = new ArrayList<>();
-        for (WebElement el: members){
-            String text = el.getText().trim();
-            if(!text.isEmpty())texts.add(text);
-        }
-        return texts;
+
     }
 
     public void clickOnProjectSaveBtn() {

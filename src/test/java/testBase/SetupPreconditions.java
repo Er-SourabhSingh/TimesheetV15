@@ -5,30 +5,39 @@ import org.testng.annotations.*;
 import pageObjects.*;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 
 public class SetupPreconditions extends BaseClass{
     String []approvalRoles = new String[]{"1Approval","2Approval","3Approval","4Approval","5Approval"};
     String []userRoles = new String[]{"Employee","Developer","Support"};
-    String [] approvalUsers = new String[]{"1Approval","2Approval","3Approval","4Approval","5Approval"};
-    String []users = new String[]{"user1","user2","user3","user4","user5","user6","user7","user8"};
+
+    String[] approvalUsers = new String[]{
+            "aurora.wren", "autumn.grace", "briar.sunset", "celeste.dawn", "daisy.skye"
+    };
+
+    String[] users = new String[]{
+            "ember.lilac", "harmony.rose", "isla.moon", "ivy.skylark",
+            "luna.meadow", "marigold.rayne", "nova.starling",
+            "opal.sparrow", "sage.willow", "selene.frost", "serenity.bloom",
+            "summer.rain"
+    };
+
     String []schemas = new String[]{"1 Level Schema", "2 Level Schema", "3 Level Schema", "4 Level Schema", "5 Level Schema"};
     String []projects = new String[]{"Project A Default-Schema", "Project B 1-Level-Schema", "Project C 2-Level-Schema", "Project D 3-Level-Schema"
                                         ,"Project E 4-Level-Schema", "Project F 5-Level-Schema"};
+
     @BeforeTest (groups = {"Sanity"})
     @Parameters({"os","browser"})
     public void setUpUserAndRoles(String os, String br) throws IOException{
         super.launch(os,br);
         super.login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));
-        this.createRoles();
+        /*this.createRoles();
         this.createUsers();
         this.enabledIssueLogTimeForOtherUser();
         this.createSchemas();
         this.createLevelInsideSchemas();
-        this.createDummyProjectsAndSelectSchema();
+        this.createDummyProjectsAndSelectSchema();*/
         this.selectMemberAndTheirRoleInsideProject();
         this.createDummyIssues();
         driver.quit();
@@ -63,9 +72,6 @@ public class SetupPreconditions extends BaseClass{
             }
 
             for(String r : this.userRoles){
-                if(rolesAndPermissionsPage.getRoleList().containsAll(Arrays.asList(this.userRoles)))
-                    break;
-
                 if(!rolesAndPermissionsPage.getRoleList().contains(r)) {
                     rolesAndPermissionsPage.clickCreateRoleBtn();
                     roleFormPage.setTxtRoleName(r);
@@ -75,6 +81,19 @@ public class SetupPreconditions extends BaseClass{
                     roleFormPage.clickOnRightBtnOfIssueTrackingField();
                     roleFormPage.clickOnRightBtnOfTimeTrackingField();
                     roleFormPage.clickOnRightBtnTracker();
+                    roleFormPage.clickOnCreateBtn();
+                }else{
+                    rolesAndPermissionsPage.clickOnRoleName(r);
+                    roleFormPage.checkViewTimesheetCheckBox();
+                    roleFormPage.checkViewIssueCheckbox();
+                    roleFormPage.checkAddIssueCheckbox();
+                    roleFormPage.checkEditIssueCheckbox();
+                    roleFormPage.checkViewSpentTimeCheckbox();
+                    roleFormPage.checkLogSpentTimeCheckbox();
+                    roleFormPage.checkEditSpentTimeCheckbox();
+                    roleFormPage.checkViewIssuesAllTrackerCheckBox();
+                    roleFormPage.checkAddIssuesAllTrackerCheckBox();
+                    roleFormPage.checkEditIssuesAllTrackerCheckBox();
                     roleFormPage.clickOnCreateBtn();
                 }
             }
@@ -102,9 +121,9 @@ public class SetupPreconditions extends BaseClass{
                 if(!usersPage.getUserList().contains(user)) {
                     usersPage.clickOnAddUserBtn();
                     userFormPage.setTxtUserLoginName(user);
-                    userFormPage.setTxtUserFirstName(user);
-                    userFormPage.setTxtUserLastName(user);
-                    userFormPage.setTxtUserEmail(user+"@gmail.com");
+                    userFormPage.setTxtUserFirstName(capitalize(user.split("\\.")[0]));
+                    userFormPage.setTxtUserLastName(capitalize(user.split("\\.")[1]));
+                    userFormPage.setTxtUserEmail(user + "@zehntech.com");
                     userFormPage.setTxtUserPassword("12345678");
                     userFormPage.setTxtConfirmationPassword("12345678");
                     userFormPage.clickOnCreate();
@@ -119,9 +138,9 @@ public class SetupPreconditions extends BaseClass{
                 if(!usersPage.getUserList().contains(user)) {
                     usersPage.clickOnAddUserBtn();
                     userFormPage.setTxtUserLoginName(user);
-                    userFormPage.setTxtUserFirstName(user);
-                    userFormPage.setTxtUserLastName(user);
-                    userFormPage.setTxtUserEmail(user+"@gmail.com");
+                    userFormPage.setTxtUserFirstName(capitalize(user.split("\\.")[0]));
+                    userFormPage.setTxtUserLastName(capitalize(user.split("\\.")[1]));
+                    userFormPage.setTxtUserEmail(user + "@zehntech.com");
                     userFormPage.setTxtUserPassword("12345678");
                     userFormPage.setTxtConfirmationPassword("12345678");
                     userFormPage.clickOnCreate();
@@ -164,7 +183,6 @@ public class SetupPreconditions extends BaseClass{
             timesheetPage.clickOnTimesheetApprovalSchema();
             for(String schema : this.schemas) {
                 logger.info("3: Check that schema is alrady created");
-                System.out.println(approvalSchema.getSchemaList());
                 if(approvalSchema.getSchemaList().containsAll(Arrays.asList(this.schemas)))
                     break;
                 if(!approvalSchema.getSchemaList().contains(schema)) {
@@ -253,18 +271,25 @@ public class SetupPreconditions extends BaseClass{
                 projectsPage.clickOnProjectName(project);
                 headerPage.clickOnProjectSetting();
                 projectFormPage.clickOnMemberTab();
-                if(!projectFormPage.getMembersList().containsAll(Arrays.asList(this.approvalUsers))) {
+                List<String> approvalUsers = this.toFullNames(this.approvalUsers);
+                System.out.println(projectFormPage.getMembersList());
+                System.out.println(approvalUsers);
+                if(!projectFormPage.getMembersList().containsAll(approvalUsers)) {
                     for (int i = 0; i < this.approvalUsers.length; i++) {
                         projectFormPage.clickOnNewMemberBtn();
-                        projectFormPage.selectMember(this.approvalUsers[i]);
+                        projectFormPage.selectMember(capitalize(this.approvalUsers[i].split("\\.")[0]) + " " + capitalize(this.approvalUsers[i].split("\\.")[1]));
                         projectFormPage.selectRole(this.approvalRoles[i]);
                         projectFormPage.clickOnAddBtnOfMember();
                     }
                 }
-                if(!projectFormPage.getMembersList().containsAll(Arrays.asList(this.users))) {
+
+                List<String> users = this.toFullNames(this.users);
+
+                System.out.println(projectFormPage.getMembersList());
+                if(!projectFormPage.getMembersList().containsAll(users)) {
                     projectFormPage.clickOnNewMemberBtn();
-                    for (int i = 0; i < users.length; i++) {
-                        projectFormPage.selectMember(users[i]);
+                    for (int i = 0; i < this.users.length; i++) {
+                        projectFormPage.selectMember(capitalize(this.users[i].split("\\.")[0]) + " " + capitalize(this.users[i].split("\\.")[1]));
                     }
                     projectFormPage.selectRole("Developer");
                     projectFormPage.clickOnAddBtnOfMember();
@@ -275,8 +300,8 @@ public class SetupPreconditions extends BaseClass{
                     projectFormPage.selectMember("Redmine Admin");
                     projectFormPage.selectRole("Manager");
                     projectFormPage.clickOnAddBtnOfMember();
-                    headerPage.clickOnProjects();
                 }
+                headerPage.clickOnProjects();
             }
         }catch (Exception e){
             logger.error(e);
@@ -310,5 +335,23 @@ public class SetupPreconditions extends BaseClass{
             Assert.fail();
         }
     }
+
+    private List<String> toFullNames(String[] loginNames) {
+        List<String> fullNames = new ArrayList<>();
+        for (String login : loginNames) {
+            String[] parts = login.split("\\.");
+            String first = capitalize(parts[0]);
+            String last = capitalize(parts[1]);
+            fullNames.add(first + " " + last);
+        }
+        return fullNames;
+    }
+
+    private String capitalize(String str) {
+        return str == null || str.isEmpty()
+                ? str
+                : str.substring(0, 1).toUpperCase() + str.substring(1).toLowerCase();
+    }
+
 
 }

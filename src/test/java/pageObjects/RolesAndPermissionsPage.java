@@ -28,6 +28,13 @@ public class RolesAndPermissionsPage extends BasePage {
         element.click();
     }
 
+    public void clickOnRoleName(String roleName){
+        By xpathRole = By.xpath("//a[normalize-space()='"+roleName+"']");
+        WebElement element = driver.findElement(xpathRole);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        element.click();
+    }
+
     public String getSuccessMsg() {
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(this.successMsg));
         return element.getText();
