@@ -15,11 +15,17 @@ import java.util.Random;
 
 public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
     String []projects = new String[]{"Project C 2-Level-Schema", "Project D 3-Level-Schema", "Project F 5-Level-Schema"};
-    String [] approvalUsers = new String[]{"1Approval","2Approval","3Approval","4Approval","5Approval"};
+    String[] approvalUsers = new String[]{
+            "aurora.wren",    // 1Approval
+            "autumn.grace",   // 2Approval
+            "briar.sunset",   // 3Approval
+            "celeste.dawn",   // 4Approval
+            "daisy.skye"      // 5Approval
+    };
     String [] dateRanges = new String[2];
 
     String startDate = "07/14/2025", endDate = "07/20/2025";
-    String user = "user4";
+    String user = "nova.starling";
 
     Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();
 
@@ -122,15 +128,15 @@ public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
                 logger.info("------ Verify 'Design' and 'Development' Activity hours ");
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user)),projectActivityHours.get(projects[0]).getOrDefault("Design",0.0));
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user)),projectActivityHours.get(projects[0]).getOrDefault("Development",0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(user))),projectActivityHours.get(projects[0]).getOrDefault("Design",0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(user))),projectActivityHours.get(projects[0]).getOrDefault("Development",0.0));
 
                 logger.info("------ Approving timesheet for "+user);
-                timesheetApprovalPage.clickOnApproveBtn(user);
+                timesheetApprovalPage.clickOnApproveBtn(toFullName(user));
                 timesheetApprovalPage.setApprovalText("Approved by -------- "+approvalUsers[i]);
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
-                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(user),"Approved");
+                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(user)),"Approved");
 
                 logger.info("------ Logging out approver: " + approvalUsers[i]);
                 headerPage.clickOnLogout();
@@ -195,15 +201,15 @@ public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
                 logger.info("----- Verify 'Design' and 'Development' Activity hours ");
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user)),projectActivityHours.get(projects[1]).getOrDefault("Design",0.0));
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user)),projectActivityHours.get(projects[1]).getOrDefault("Development",0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(user))),projectActivityHours.get(projects[1]).getOrDefault("Design",0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(user))),projectActivityHours.get(projects[1]).getOrDefault("Development",0.0));
 
                 logger.info("------ Approving timesheet for "+user);
-                timesheetApprovalPage.clickOnApproveBtn(user);
+                timesheetApprovalPage.clickOnApproveBtn(toFullName(user));
                 timesheetApprovalPage.setApprovalText("Approved by -------- "+approvalUsers[i]);
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
-                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(user),"Approved");
+                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(user)),"Approved");
 
                 logger.info("------ Logging out approver: " + approvalUsers[i]);
                 headerPage.clickOnLogout();
@@ -269,16 +275,16 @@ public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
                 logger.info("------ Verify 'Design' and 'Development' Activity hours ");
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user)), projectActivityHours.get(projects[2]).getOrDefault("Design",0.0));
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user)), projectActivityHours.get(projects[2]).getOrDefault("Development",0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(user))), projectActivityHours.get(projects[2]).getOrDefault("Design",0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(user))), projectActivityHours.get(projects[2]).getOrDefault("Development",0.0));
 
 
                 logger.info("------ Approving timesheet for "+user);
-                timesheetApprovalPage.clickOnApproveBtn(user);
+                timesheetApprovalPage.clickOnApproveBtn(toFullName(user));
                 timesheetApprovalPage.setApprovalText("Approved by -------- "+approvalUsers[i]);
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
-                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(user),"Approved");
+                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(user)),"Approved");
 
                 logger.info("------ Logging out approver: " + approvalUsers[i]);
                 headerPage.clickOnLogout();
