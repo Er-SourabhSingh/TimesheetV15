@@ -126,15 +126,15 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
             timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
             logger.info("Step 5: Verify 'Design' and 'Development' Activity hours ");
-            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(user))),projectActivityHours.get(projects[0]).getOrDefault("Design",0.0));
-            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(user))),projectActivityHours.get(projects[0]).getOrDefault("Development",0.0));
+            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[0]).getOrDefault("Design",0.0));
+            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[0]).getOrDefault("Development",0.0));
 
             logger.info("Step 6: Reject timesheet for: "+user);
-            timesheetApprovalPage.clickOnRejectBtn(toFullName(user));
+            timesheetApprovalPage.clickOnRejectBtn(toFullName(this.user));
             timesheetApprovalPage.setRejectionText("Rejected by --------- Admin");
             timesheetApprovalPage.clickOnSubmitBtnOfRejection();
 
-            Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(user)),"Rejected");
+            Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.user)),"Rejected");
 
             logger.info("Step 7: Logging out as Admin");
             headerPage.clickOnLogout();
@@ -189,15 +189,15 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
             timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
             logger.info("Step 5: Verify 'Design' and 'Development' Activity hours ");
-            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(user))),projectActivityHours.get(projects[1]).getOrDefault("Design",0.0));
-            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(user))),projectActivityHours.get(projects[1]).getOrDefault("Development",0.0));
+            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[1]).getOrDefault("Design",0.0));
+            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[1]).getOrDefault("Development",0.0));
 
             logger.info("Step 6: Reject timesheet for: "+user);
-            timesheetApprovalPage.clickOnRejectBtn(toFullName(user));
+            timesheetApprovalPage.clickOnRejectBtn(toFullName(this.user));
             timesheetApprovalPage.setRejectionText("Rejected by --------- "+approvalUsers[0]);
             timesheetApprovalPage.clickOnSubmitBtnOfRejection();
 
-            Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(user)),"Rejected");
+            Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.user)),"Rejected");
 
             logger.info("Step 7: Logging out as "+ approvalUsers[0]);
             headerPage.clickOnLogout();
@@ -253,16 +253,16 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
             timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
             logger.info("Step 5: Verify 'Design' and 'Development' Activity hours ");
-            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(user))), projectActivityHours.get(projects[2]).getOrDefault("Design",0.0));
-            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(user))), projectActivityHours.get(projects[2]).getOrDefault("Development",0.0));
+            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.user))), projectActivityHours.get(projects[2]).getOrDefault("Design",0.0));
+            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))), projectActivityHours.get(projects[2]).getOrDefault("Development",0.0));
 
 
             logger.info("Step 6: Approve at level one timesheet for: "+user);
-            timesheetApprovalPage.clickOnApproveBtn(toFullName(user));
+            timesheetApprovalPage.clickOnApproveBtn(toFullName(this.user));
             timesheetApprovalPage.setApprovalText("Approved by --------- "+approvalUsers[0]);
             timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
-            Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(user)),"Approved");
+            Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.user)),"Approved");
 
             logger.info("Step 7: Logging out as "+ approvalUsers[0]);
             headerPage.clickOnLogout();
@@ -303,15 +303,15 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
             timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
             logger.info("Step 17: Verify 'Design' and 'Development' Activity hours ");
-            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(user))), projectActivityHours.get(projects[2]).getOrDefault("Design", 0.0));
-            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(user))), projectActivityHours.get(projects[2]).getOrDefault("Development", 0.0));
+            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.user))), projectActivityHours.get(projects[2]).getOrDefault("Design", 0.0));
+            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))), projectActivityHours.get(projects[2]).getOrDefault("Development", 0.0));
 
             logger.info("Step 18: Reject timesheet for: "+user);
-            timesheetApprovalPage.clickOnRejectBtn(toFullName(user));
+            timesheetApprovalPage.clickOnRejectBtn(toFullName(this.user));
             timesheetApprovalPage.setRejectionText("Rejected by --------- "+approvalUsers[1]);
             timesheetApprovalPage.clickOnSubmitBtnOfRejection();
 
-            Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(user)),"Rejected");
+            Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.user)),"Rejected");
 
             logger.info("Step 19: Logging out as "+ approvalUsers[1]);
             headerPage.clickOnLogout();
@@ -458,15 +458,15 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
             timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
             logger.info("Step 5: Verify 'Design' and 'Development' Activity hours ");
-            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(user))),projectActivityHours.get(projects[0]).getOrDefault("Design",0.0));
-            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(user))),projectActivityHours.get(projects[0]).getOrDefault("Development",0.0));
+            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[0]).getOrDefault("Design",0.0));
+            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[0]).getOrDefault("Development",0.0));
 
             logger.info("Step 6: Approve timesheet for: " + user);
-            timesheetApprovalPage.clickOnApproveBtn(toFullName(user));
+            timesheetApprovalPage.clickOnApproveBtn(toFullName(this.user));
             timesheetApprovalPage.setApprovalText("Approve by --------- Admin");
             timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
-            Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(user)), "Approved");
+            Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.user)), "Approved");
 
             logger.info("Step 7: Logging out as Admin");
             headerPage.clickOnLogout();
@@ -509,15 +509,15 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
                 logger.info("------ Verify 'Design' and 'Development' Activity hours ");
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(user))),projectActivityHours.get(projects[1]).getOrDefault("Design",0.0));
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(user))),projectActivityHours.get(projects[1]).getOrDefault("Development",0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[1]).getOrDefault("Design",0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[1]).getOrDefault("Development",0.0));
 
                 logger.info("------ Approving timesheet for " + user);
-                timesheetApprovalPage.clickOnApproveBtn(toFullName(user));
+                timesheetApprovalPage.clickOnApproveBtn(toFullName(this.user));
                 timesheetApprovalPage.setApprovalText("Approved by --------  "+approvalUsers[i]);
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
-                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(user)), "Approved");
+                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.user)), "Approved");
 
                 logger.info("------ Logging out approver: " + approvalUsers[i]);
                 headerPage.clickOnLogout();
@@ -571,15 +571,15 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
                 logger.info("------ Verify 'Design' and 'Development' Activity hours ");
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(user))), projectActivityHours.get(projects[2]).getOrDefault("Design", 0.0));
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(user))), projectActivityHours.get(projects[2]).getOrDefault("Development", 0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.user))), projectActivityHours.get(projects[2]).getOrDefault("Design", 0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))), projectActivityHours.get(projects[2]).getOrDefault("Development", 0.0));
 
                 logger.info("------ Approving timesheet for " + user);
-                timesheetApprovalPage.clickOnApproveBtn(toFullName(user));
+                timesheetApprovalPage.clickOnApproveBtn(toFullName(this.user));
                 timesheetApprovalPage.setApprovalText("Approved by -------- "+approvalUsers[i]);
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
-                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(user)), "Approved");
+                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.user)), "Approved");
 
                 logger.info("------ Logging out approver: " + approvalUsers[i]);
                 headerPage.clickOnLogout();

@@ -213,15 +213,15 @@ public class TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema extend
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
                 logger.info("------ Verify 'Design' and 'Development' Activity hours ");
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user)), projectActivityHours.get(projects[0]).getOrDefault("Design", 0.0));
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user)), projectActivityHours.get(projects[0]).getOrDefault("Development", 0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.user))), projectActivityHours.get(projects[0]).getOrDefault("Design", 0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))), projectActivityHours.get(projects[0]).getOrDefault("Development", 0.0));
 
                 logger.info("------ Approving timesheet for " + user);
-                timesheetApprovalPage.clickOnApproveBtn(user);
+                timesheetApprovalPage.clickOnApproveBtn(toFullName(this.user));
                 timesheetApprovalPage.setApprovalText("Approved by -------- " + approvalUsers[i]);
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
-                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(user), "Approved");
+                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.user)), "Approved");
 
                 logger.info("------ Logging out approver: " + approvalUsers[i]);
                 headerPage.clickOnLogout();
@@ -286,15 +286,15 @@ public class TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema extend
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
                 logger.info("------ Verify 'Design' and 'Development' Activity hours ");
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user)), projectActivityHours.get(projects[1]).getOrDefault("Design", 0.0));
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user)), projectActivityHours.get(projects[1]).getOrDefault("Development", 0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.user))), projectActivityHours.get(projects[1]).getOrDefault("Design", 0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))), projectActivityHours.get(projects[1]).getOrDefault("Development", 0.0));
 
                 logger.info("------ Approving timesheet for " + user);
-                timesheetApprovalPage.clickOnApproveBtn(user);
+                timesheetApprovalPage.clickOnApproveBtn(toFullName(this.user));
                 timesheetApprovalPage.setApprovalText("Approved by -------- " + newApprovalUsers[i]);
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
-                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(user), "Approved");
+                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.user)), "Approved");
 
                 logger.info("------ Logging out approver: " + newApprovalUsers[i]);
                 headerPage.clickOnLogout();

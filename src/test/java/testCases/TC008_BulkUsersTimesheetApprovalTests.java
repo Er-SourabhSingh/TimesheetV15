@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TC008_BulkTimesheetApprovalTests extends BaseClass {
+public class TC008_BulkUsersTimesheetApprovalTests extends BaseClass {
 
     String [] approvalUsers = new String[]{"1Approval","2Approval","3Approval","4Approval","5Approval"};
     String []users = new String[]{"user1","user2","user3","user4","user5"};
@@ -30,7 +30,7 @@ public class TC008_BulkTimesheetApprovalTests extends BaseClass {
 
         try {
 
-            for (String user : users) {
+            for (String user : this.users) {
                 logger.info("Step 1: Logging in as " + user);
                 super.login(user, "12345678");
 
@@ -127,26 +127,26 @@ public class TC008_BulkTimesheetApprovalTests extends BaseClass {
 
                 logger.info("------ Go to Date Range of Submission");
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
-                for(String user : users) {
+                for(String user : this.users) {
                     logger.info("------ Verify 'Design' and 'Development' Activity hours ");
-                    Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user)), userProjectActivityHours.get(user).get(project).getOrDefault("Design", 0.0));
-                    Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user)), userProjectActivityHours.get(user).get(project).getOrDefault("Development", 0.0));
+                    Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(user))), userProjectActivityHours.get(user).get(project).getOrDefault("Design", 0.0));
+                    Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(user))), userProjectActivityHours.get(user).get(project).getOrDefault("Development", 0.0));
                 }
 
-                logger.info("------ Approving timesheet for " + Arrays.asList(users));
+                logger.info("------ Approving timesheet for " + Arrays.asList(this.users));
                 timesheetApprovalPage.selectAllUser();
-                timesheetApprovalPage.clickOnApproveBtn(users[0]);
+                timesheetApprovalPage.clickOnApproveBtn(this.users[0]);
                 timesheetApprovalPage.setApprovalText("Approved by -------- " + approvalUsers[i]);
 
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
-                for(String user : users) {
+                for(String user : this.users) {
                     Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(user), "Approved");
                 }
 
                 logger.info("------ Logging out approver: " + approvalUsers[i]);
                 headerPage.clickOnLogout();
 
-                for(String user : users) {
+                for(String user : this.users) {
                     logger.info("------ Logging in as " + user);
                     super.login(user, "12345678");
 
@@ -203,26 +203,26 @@ public class TC008_BulkTimesheetApprovalTests extends BaseClass {
 
             logger.info("------ Go to Date Range of Submission");
             timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
-            for(String user : users) {
+            for(String user : this.users) {
                 logger.info("------ Verify 'Design' and 'Development' Activity hours ");
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(user)), userProjectActivityHours.get(user).get(project).getOrDefault("Design", 0.0));
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(user)), userProjectActivityHours.get(user).get(project).getOrDefault("Development", 0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(user))), userProjectActivityHours.get(user).get(project).getOrDefault("Design", 0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(user))), userProjectActivityHours.get(user).get(project).getOrDefault("Development", 0.0));
             }
 
             logger.info("------ Rejecting timesheet for " + Arrays.asList(users));
             timesheetApprovalPage.selectAllUser();
-            timesheetApprovalPage.clickOnRejectBtn(users[0]);
+            timesheetApprovalPage.clickOnRejectBtn(this.users[0]);
             timesheetApprovalPage.setRejectionText("Rejected by -------- " + approvalUsers[4]);
 
             timesheetApprovalPage.clickOnSubmitBtnOfRejection();
-            for(String user : users) {
-                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(user), "Rejected");
+            for(String user : this.users) {
+                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(user)), "Rejected");
             }
 
             logger.info("------ Logging out approver: " + approvalUsers[4]);
             headerPage.clickOnLogout();
 
-            for(String user : users) {
+            for(String user : this.users) {
                 logger.info("------ Logging in as " + user);
                 super.login(user, "12345678");
 
