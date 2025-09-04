@@ -128,7 +128,7 @@ public class TC006_PartiallyRejectTimesheetOfApprovalUserForProjects extends Bas
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.approvalUser))), projectActivityHours.get(project).getOrDefault("Design", 0.0));
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.approvalUser))), projectActivityHours.get(project).getOrDefault("Development", 0.0));
 
-                logger.info("----- : Check status of own timesheet status on Approval Dashboard as approval user: ");
+                logger.info("----- : Check status of own timesheet status on Approval Dashboard as approval submitterUser: ");
                 Assert.assertEquals(timesheetApprovalPage.getTextStatusOfUserTimesheet(toFullName(this.approvalUser)), "Waiting for Approval");
 
             }
@@ -393,7 +393,7 @@ public class TC006_PartiallyRejectTimesheetOfApprovalUserForProjects extends Bas
             logger.info("Step 7: Verifying that the " + projects[2] + " status is 'Waiting for Approval'");
             Assert.assertTrue(timesheetPage.hasPendingTimesheet(projects[2]));
 
-            logger.info("Step 3: Logging out user");
+            logger.info("Step 3: Logging out submitterUser");
             headerPage.clickOnLogout();
         }catch (Exception e){
             logger.error(e);

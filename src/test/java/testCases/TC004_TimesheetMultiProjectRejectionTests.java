@@ -96,7 +96,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
                 }
             }
 
-            logger.info("Step 8: Logging out user");
+            logger.info("Step 8: Logging out submitterUser");
             headerPage.clickOnLogout();
         } catch (Exception e) {
             logger.error(e);
@@ -428,7 +428,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
                 Assert.assertTrue(timesheetPage.hasPendingTimesheet(project));
             }
 
-            logger.info("Step 3: Logging out user");
+            logger.info("Step 3: Logging out submitterUser");
             headerPage.clickOnLogout();
         } catch (Exception e) {
             logger.error(e);

@@ -96,7 +96,7 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
                 }
             }
 
-            logger.info("Step 8: Logging out user");
+            logger.info("Step 8: Logging out submitterUser");
             headerPage.clickOnLogout();
         } catch (Exception e) {
             logger.error(e);
@@ -356,7 +356,7 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
             logger.info("Step 7: Verifying that the " + projects[2] + " status is 'Waiting for Approval'");
             Assert.assertTrue(timesheetPage.hasPendingTimesheet(projects[2]));
 
-            logger.info("Step 3: Logging out user");
+            logger.info("Step 3: Logging out submitterUser");
             headerPage.clickOnLogout();
         }catch (Exception e){
             logger.error(e);

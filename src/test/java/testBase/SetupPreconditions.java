@@ -8,7 +8,10 @@ import java.io.IOException;
 import java.util.*;
 
 
-public class SetupPreconditions extends BaseClass{
+public class
+
+
+SetupPreconditions extends BaseClass{
     String []approvalRoles = new String[]{"1Approval","2Approval","3Approval","4Approval","5Approval"};
     String []userRoles = new String[]{"Employee","Developer","Support"};
 

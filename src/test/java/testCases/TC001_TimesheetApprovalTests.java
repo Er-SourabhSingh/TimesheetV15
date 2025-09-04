@@ -15,7 +15,7 @@ public class TC001_TimesheetApprovalTests extends BaseClass {
         ProjectsPage projectsPage = new ProjectsPage(driver);
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
         try{
-            logger.info("Step 1: Logging in as user " + user);
+            logger.info("Step 1: Logging in as submitterUser " + user);
             super.login(user,"12345678");
 
             logger.info("Step 2: Navigating to Timesheet module");
@@ -55,7 +55,7 @@ public class TC001_TimesheetApprovalTests extends BaseClass {
                 timesheetPage.clickOnSubmitTimesheetBtn();
             }
 
-            logger.info("Step 7: Logging out user");
+            logger.info("Step 7: Logging out submitterUser");
             headerPage.clickOnLogout();
 
             logger.info("Step 8: Sequential approval process begins");
@@ -70,7 +70,7 @@ public class TC001_TimesheetApprovalTests extends BaseClass {
                 logger.info("------ Navigating to Timesheet Approval");
                 headerPage.clickOnTimesheetApproval();
 
-                logger.info("------ Approving timesheet for user: " + user);
+                logger.info("------ Approving timesheet for submitterUser: " + user);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(user));
                 timesheetApprovalPage.setApprovalText("Approved by -------- " +approver);
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
@@ -81,7 +81,7 @@ public class TC001_TimesheetApprovalTests extends BaseClass {
                 headerPage.clickOnLogout();
             }
 
-            logger.info("Step 9: Logging in as user " + user);
+            logger.info("Step 9: Logging in as submitterUser " + user);
             super.login(user,"12345678");
 
             logger.info("Step 10: Navigating to Timesheet module");
@@ -98,7 +98,7 @@ public class TC001_TimesheetApprovalTests extends BaseClass {
             Assert.assertFalse(timesheetPage.isSubmitTimesheetBtnEnabled());
             Assert.assertEquals(timesheetPage.getSubmitTimesheetBtnText(),"Timesheet Approved");
 
-            logger.info("Step 14: Logging out user");
+            logger.info("Step 14: Logging out submitterUser");
             headerPage.clickOnLogout();
         }catch (Exception e){
             logger.error(e);

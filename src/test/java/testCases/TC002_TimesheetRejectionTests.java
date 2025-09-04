@@ -15,7 +15,7 @@ public class TC002_TimesheetRejectionTests extends BaseClass {
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
         try{
-            logger.info("Step 1: Logging in as user " + submitter);
+            logger.info("Step 1: Logging in as submitterUser " + submitter);
             super.login(submitter,"12345678");
 
             logger.info("Step 2: Navigating to Timesheet module");
@@ -56,7 +56,7 @@ public class TC002_TimesheetRejectionTests extends BaseClass {
             logger.info("Step 6: Submitting the timesheet");
             timesheetPage.clickOnSubmitTimesheetBtn();
 
-            logger.info("Step 7: Logging out user");
+            logger.info("Step 7: Logging out submitterUser");
             headerPage.clickOnLogout();
 
 
@@ -76,7 +76,7 @@ public class TC002_TimesheetRejectionTests extends BaseClass {
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0],dateRanges[1]);
 
                 if(approver.equals(rejectBy)){
-                    logger.info("------ Rejecting timesheet for user: " + toFullName(submitter));
+                    logger.info("------ Rejecting timesheet for submitterUser: " + toFullName(submitter));
                     timesheetApprovalPage.clickOnRejectBtn(toFullName(submitter));
                     timesheetApprovalPage.setRejectionText("Rejected by -------- " +approver);
                     timesheetApprovalPage.clickOnSubmitBtnOfRejection();
@@ -88,7 +88,7 @@ public class TC002_TimesheetRejectionTests extends BaseClass {
                     break;
                 }
 
-                logger.info("------ Approving timesheet for user: " + submitter);
+                logger.info("------ Approving timesheet for submitterUser: " + submitter);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(submitter));
 
                 timesheetApprovalPage.setApprovalText("Approved by -------- " +approver);
@@ -134,7 +134,7 @@ public class TC002_TimesheetRejectionTests extends BaseClass {
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
 
         try {
-            logger.info("Step 1: Login as user " + submitter + " to resubmit timesheet");
+            logger.info("Step 1: Login as submitterUser " + submitter + " to resubmit timesheet");
             super.login(submitter, "12345678");
 
             logger.info("Step 2: Navigating to Timesheet module");
@@ -169,7 +169,7 @@ public class TC002_TimesheetRejectionTests extends BaseClass {
                 logger.info("------ Go to Date Range of Submission");
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
-                logger.info("------ Approving resubmitted timesheet for user: " + submitter);
+                logger.info("------ Approving resubmitted timesheet for submitterUser: " + submitter);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(submitter));
                 timesheetApprovalPage.setApprovalText("Approved after resubmission by -------- " + approver);
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
@@ -181,7 +181,7 @@ public class TC002_TimesheetRejectionTests extends BaseClass {
                 headerPage.clickOnLogout();
             }
 
-            logger.info("Step 8: Login as user " + submitter);
+            logger.info("Step 8: Login as submitterUser " + submitter);
             super.login(submitter, "12345678");
 
             logger.info("Step 9: Navigating to Timesheet module");

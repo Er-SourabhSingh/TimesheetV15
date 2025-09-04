@@ -33,7 +33,7 @@ public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
     public void testSubmitTimesheetForProjectsCDF(){
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
-        logger.info("Test Case 1: Verify user can submit multiple project's timesheet and Approved");
+        logger.info("Test Case 1: Verify submitterUser can submit multiple project's timesheet and Approved");
         try{
             logger.info("Step 1: Logging in as "+user);
             super.login(user,"12345678");
@@ -96,7 +96,7 @@ public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
                 }
             }
 
-            logger.info("Step 8: Logging out user");
+            logger.info("Step 8: Logging out submitterUser");
             headerPage.clickOnLogout();
 
         }catch (Exception e){
