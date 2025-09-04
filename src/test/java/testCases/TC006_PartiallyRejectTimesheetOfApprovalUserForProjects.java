@@ -129,7 +129,7 @@ public class TC006_PartiallyRejectTimesheetOfApprovalUserForProjects extends Bas
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.approvalUser))), projectActivityHours.get(project).getOrDefault("Development", 0.0));
 
                 logger.info("----- : Check status of own timesheet status on Approval Dashboard as approval user: ");
-                Assert.assertEquals(timesheetApprovalPage.getTextStatusOfUserTimesheet(toFullName(toFullName(this.approvalUser))), "Waiting for Approval");
+                Assert.assertEquals(timesheetApprovalPage.getTextStatusOfUserTimesheet(toFullName(this.approvalUser)), "Waiting for Approval");
 
             }
 
