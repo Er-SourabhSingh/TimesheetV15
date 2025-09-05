@@ -6,7 +6,7 @@ public class DataProviders {
     @DataProvider(name = "schemaFlows")
     public Object[][] getSchemaFlows() {
         return new Object[][] {
-                //{"Project A Default-Schema", "Current Week", "ember.lilac", new String[]{"admin"}},
+                {"Project A Default-Schema", "Current Week", "ember.lilac", new String[]{"admin"}},
                 {"Project A Default-Schema", "Current Week", "autumn.grace", new String[]{"admin"}},
                 {"Project B 1-Level-Schema", "Current Week", "isla.moon", new String[]{"aurora.wren"}},
                 {"Project B 1-Level-Schema", "Current Week", "aurora.wren", new String[]{"admin"}},

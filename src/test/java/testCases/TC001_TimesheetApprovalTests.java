@@ -6,6 +6,9 @@ import pageObjects.*;
 import testBase.BaseClass;
 import utilities.DataProviders;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TC001_TimesheetApprovalTests extends BaseClass {
 
     @Test(priority = 1, groups = {"Data Driven"}, dataProvider = "schemaFlows", dataProviderClass = DataProviders.class)
@@ -14,6 +17,7 @@ public class TC001_TimesheetApprovalTests extends BaseClass {
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
+        HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
         try{
             logger.info("Step 1: Logging in as submitterUser " + user);
             super.login(user,"12345678");
@@ -76,6 +80,21 @@ public class TC001_TimesheetApprovalTests extends BaseClass {
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(user)),"Approved");
+
+                //checking histroy
+                logger.info("------ Clicking on show btn of : " + user + "Timesheet History");
+                timesheetApprovalPage.clickOnShowHistoryOfUserTimesheet(toFullName(user));
+                List<String> history = new ArrayList<>();
+                history.add("Project Name : " +projectName);
+                history.add("Status : Approved");
+                history.add("Submitted By : " + toFullName(user));
+                if(approver.equals("admin")){
+                    history.add("Approved By : Redmine Admin");
+                }else {
+                    history.add("Approved By : " + toFullName(approver));
+                }
+                history.add("Approval Comment : Approved by -------- " +approver);
+                Assert.assertTrue(historyApprovalPage.getLastUpdatedHistory().containsAll(history));
 
                 logger.info("------ Logging out approver: " + approver);
                 headerPage.clickOnLogout();

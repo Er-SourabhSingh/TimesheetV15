@@ -6,6 +6,9 @@ import pageObjects.*;
 import testBase.BaseClass;
 import utilities.DataProviders;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TC002_TimesheetRejectionTests extends BaseClass {
 
     @Test(priority = 1, groups = {"Data Driven"}, dataProvider = "rejectionFlow", dataProviderClass = DataProviders.class)
@@ -83,6 +86,19 @@ public class TC002_TimesheetRejectionTests extends BaseClass {
                     logger.info("------ Verifying that timesheet is marked as 'Rejected'");
                     Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(submitter)),"Rejected");
 
+                    //checking histroy
+                    logger.info("------ Clicking on show btn of : " + submitter + "Timesheet History");
+                    timesheetApprovalPage.clickOnShowHistoryOfUserTimesheet(toFullName(submitter));
+                    List<String> history = new ArrayList<>();
+                    history.add("Project Name : " +projectName);
+                    history.add("Status : Rejected");
+                    history.add("Submitted By : " + toFullName(submitter));
+                    if(approver.equals("admin")){
+                        history.add("Rejected By : Redmine Admin");
+                    }else {
+                        history.add("Rejected By : " + toFullName(approver));
+                    }
+
                     logger.info("------ Logging out approver: " + approver);
                     headerPage.clickOnLogout();
                     break;
@@ -93,6 +109,22 @@ public class TC002_TimesheetRejectionTests extends BaseClass {
 
                 timesheetApprovalPage.setApprovalText("Approved by -------- " +approver);
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
+
+                logger.info("------ Verifying that timesheet is marked as 'Approved'");
+                Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(submitter)),"Approved");
+
+                //checking histroy
+                logger.info("------ Clicking on show btn of : " + submitter + "Timesheet History");
+                timesheetApprovalPage.clickOnShowHistoryOfUserTimesheet(toFullName(submitter));
+                List<String> history = new ArrayList<>();
+                history.add("Project Name : " +projectName);
+                history.add("Status : Approved");
+                history.add("Submitted By : " + toFullName(submitter));
+                if(approver.equals("admin")){
+                    history.add("Approved By : Redmine Admin");
+                }else {
+                    history.add("Approved By : " + toFullName(approver));
+                }
 
                 logger.info("------ Logging out approver: " + approver);
                 headerPage.clickOnLogout();
@@ -176,6 +208,19 @@ public class TC002_TimesheetRejectionTests extends BaseClass {
 
                 logger.info("------ Verifying that timesheet is now marked as 'Approved'");
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(submitter)), "Approved");
+
+                //checking histroy
+                logger.info("------ Clicking on show btn of : " + submitter + "Timesheet History");
+                timesheetApprovalPage.clickOnShowHistoryOfUserTimesheet(toFullName(submitter));
+                List<String> history = new ArrayList<>();
+                history.add("Project Name : " +projectName);
+                history.add("Status : Approved");
+                history.add("Submitted By : " + toFullName(submitter));
+                if(approver.equals("admin")){
+                    history.add("Approved By : Redmine Admin");
+                }else {
+                    history.add("Approved By : " + toFullName(approver));
+                }
 
                 logger.info("------ Logging out approver: " + approver);
                 headerPage.clickOnLogout();

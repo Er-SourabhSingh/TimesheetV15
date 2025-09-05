@@ -17,14 +17,14 @@
         <parameter name="browser" value="chrome"/>
         <classes>
            <!-- <class name="testBase.SetupPreconditions"/>
-            <class name="testCases.TC001_TimesheetApprovalTests"/>
+            <class name="testCases.TC001_TimesheetApprovalTests"/>-->
             <class name="testCases.TC002_TimesheetRejectionTests"/>
-            <class name="testCases.TC003_TimesheetMultiProjectWorkflowTests"/>
+            <!--<class name="testCases.TC003_TimesheetMultiProjectWorkflowTests"/>
             <class name="testCases.TC004_TimesheetMultiProjectRejectionTests"/>
             <class name="testCases.TC005_PartiallyRejectTimesheetForProjects"/>
             <class name="testCases.TC006_PartiallyRejectTimesheetOfApprovalUserForProjects"/>
-            <class name="testCases.TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema"/>-->
-            <class name="testCases.TC008_BulkUsersTimesheetApprovalTests"/>
+            <class name="testCases.TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema"/>
+            <class name="testCases.TC008_BulkUsersTimesheetApprovalTests"/>-->
 
         </classes>
     </test>

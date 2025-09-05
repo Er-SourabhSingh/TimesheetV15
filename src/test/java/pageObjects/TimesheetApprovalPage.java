@@ -140,6 +140,7 @@ public class TimesheetApprovalPage extends BasePage{
         //By lnkShow = By.xpath("//table[@class='list issues']//tbody//tr//td[3]//a[contains(text(),'" + userName + "')]/ancestor::tr//td[9]");
         By lnkShow = By.xpath("//table[@class='list issues']//tbody//tr//td[3][contains(text(),'" + userName + "')]/ancestor::tr//td[9]");
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(lnkShow));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         element.click();
     }
 
