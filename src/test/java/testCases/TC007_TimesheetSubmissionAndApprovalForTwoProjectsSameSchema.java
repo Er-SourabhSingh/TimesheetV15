@@ -71,7 +71,7 @@ public class TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema extend
         try {
 
             logger.info("Step 1: Logging in as Admin");
-            super.login("admin", "12345678");
+            super.login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));
             logger.info("Step 2: Click on Administrator Module");
             headerPage.clickOnAdministrator();
             logger.info("Step 3: Click on User Module");
@@ -140,7 +140,7 @@ public class TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema extend
                 }
             }
 
-            logger.info("Step 6: Logging out submitterUser");
+            logger.info("Step 6: Logging out");
             headerPage.clickOnLogout();
 
 

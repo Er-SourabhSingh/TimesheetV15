@@ -9,15 +9,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class TimesheetConfiguration extends BasePage{
-    /*@FindBy (xpath = "//input[@id='settings_unassigned_issues']")
-    WebElement checkboxUnassignedUser;
-
-    @FindBy (xpath = "//input[@name='commit']")
-    WebElement btnApply;*/
 
     By checkboxUnassignedUser = By.xpath("//input[@id='settings_unassigned_issues']");
 
     By btnApply = By.xpath("//input[@name='commit']");
+
+    By txtAutoApprovalTime = By.xpath("//input[@id='settings_auto_approval_timesheet_time']");
 
     public TimesheetConfiguration(WebDriver driver){
         super(driver);
@@ -34,6 +31,14 @@ public class TimesheetConfiguration extends BasePage{
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(this.btnApply));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         element.click();
+    }
+
+    public void setTxtAutoApprovalTime(String time){
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(this.txtAutoApprovalTime));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        element.clear();
+        element.sendKeys(time);
+
     }
 
 }

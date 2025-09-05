@@ -411,7 +411,7 @@ public class TC006_PartiallyRejectTimesheetOfApprovalUserForProjects extends Bas
         logger.info("Test Case 7: Approving all resubmitted timesheets through levels");
         try {
             logger.info("Step 1: Logging in as admin"); // or login with 2approval or login with 3approval
-            super.login("admin", "12345678");
+            super.login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));
 
             logger.info("Step 2: Navigating to project: " + projects[0]);
             headerPage.clickOnProjects();

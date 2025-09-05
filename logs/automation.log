@@ -1,0 +1,45 @@
+2025-09-05 16:39:14 INFO  TC009_TimesheetAutoApprovalTest:54 - Precondition: Create Approval schema and 5 levels, create new project with same schema, and add members.
+2025-09-05 16:39:14 INFO  TC009_TimesheetAutoApprovalTest:57 - Step 1: Logging in as Admin
+2025-09-05 16:39:14 INFO  TC009_TimesheetAutoApprovalTest:59 - Step 2: Click on Timesheet Module
+2025-09-05 16:39:15 INFO  TC009_TimesheetAutoApprovalTest:62 - 3: Click on timesheet module in header
+2025-09-05 16:39:16 INFO  TC009_TimesheetAutoApprovalTest:64 - 4: Click on timesheet approval schema sub module inside Timesheet module
+2025-09-05 16:39:16 INFO  TC009_TimesheetAutoApprovalTest:67 - 5: Click on timesheet approval schema sub module inside Timesheet module
+2025-09-05 16:39:16 INFO  TC009_TimesheetAutoApprovalTest:70 - 6: Check that schema is already created
+2025-09-05 16:39:17 INFO  TC009_TimesheetAutoApprovalTest:73 - Click on add new schema btn
+2025-09-05 16:39:17 INFO  TC009_TimesheetAutoApprovalTest:75 - Write schema name
+2025-09-05 16:39:17 INFO  TC009_TimesheetAutoApprovalTest:77 - Click on Create schema
+2025-09-05 16:39:17 INFO  TC009_TimesheetAutoApprovalTest:81 - 7: Open schema: Schema 5 auto-approval
+2025-09-05 16:39:18 INFO  TC009_TimesheetAutoApprovalTest:88 - Click on Add Approval level btn
+2025-09-05 16:39:18 INFO  TC009_TimesheetAutoApprovalTest:90 - Set level name Level 1
+2025-09-05 16:39:18 INFO  TC009_TimesheetAutoApprovalTest:92 - Select Approval Role: 1Approval
+2025-09-05 16:39:18 INFO  TC009_TimesheetAutoApprovalTest:94 - Select Approval Level: 1
+2025-09-05 16:39:18 INFO  TC009_TimesheetAutoApprovalTest:96 - Check Auto Approval
+2025-09-05 16:39:19 INFO  TC009_TimesheetAutoApprovalTest:98 - Click on Create Approval Level
+2025-09-05 16:39:19 INFO  TC009_TimesheetAutoApprovalTest:88 - Click on Add Approval level btn
+2025-09-05 16:39:19 INFO  TC009_TimesheetAutoApprovalTest:90 - Set level name Level 2
+2025-09-05 16:39:20 INFO  TC009_TimesheetAutoApprovalTest:92 - Select Approval Role: 2Approval
+2025-09-05 16:39:20 INFO  TC009_TimesheetAutoApprovalTest:94 - Select Approval Level: 2
+2025-09-05 16:39:20 INFO  TC009_TimesheetAutoApprovalTest:96 - Check Auto Approval
+2025-09-05 16:39:20 INFO  TC009_TimesheetAutoApprovalTest:98 - Click on Create Approval Level
+2025-09-05 16:39:30 INFO  TC009_TimesheetAutoApprovalTest:88 - Click on Add Approval level btn
+2025-09-05 16:39:30 INFO  TC009_TimesheetAutoApprovalTest:90 - Set level name Level 3
+2025-09-05 16:39:31 INFO  TC009_TimesheetAutoApprovalTest:92 - Select Approval Role: 3Approval
+2025-09-05 16:39:31 INFO  TC009_TimesheetAutoApprovalTest:94 - Select Approval Level: 3
+2025-09-05 16:39:31 INFO  TC009_TimesheetAutoApprovalTest:96 - Check Auto Approval
+2025-09-05 16:39:31 INFO  TC009_TimesheetAutoApprovalTest:98 - Click on Create Approval Level
+2025-09-05 16:39:41 INFO  TC009_TimesheetAutoApprovalTest:88 - Click on Add Approval level btn
+2025-09-05 16:39:41 INFO  TC009_TimesheetAutoApprovalTest:90 - Set level name Level 4
+2025-09-05 16:39:42 INFO  TC009_TimesheetAutoApprovalTest:92 - Select Approval Role: 4Approval
+2025-09-05 16:39:42 INFO  TC009_TimesheetAutoApprovalTest:94 - Select Approval Level: 4
+2025-09-05 16:39:42 INFO  TC009_TimesheetAutoApprovalTest:96 - Check Auto Approval
+2025-09-05 16:39:42 INFO  TC009_TimesheetAutoApprovalTest:98 - Click on Create Approval Level
+2025-09-05 16:39:52 INFO  TC009_TimesheetAutoApprovalTest:88 - Click on Add Approval level btn
+2025-09-05 16:39:52 INFO  TC009_TimesheetAutoApprovalTest:90 - Set level name Level 5
+2025-09-05 16:39:53 INFO  TC009_TimesheetAutoApprovalTest:92 - Select Approval Role: 5Approval
+2025-09-05 16:39:53 INFO  TC009_TimesheetAutoApprovalTest:94 - Select Approval Level: 5
+2025-09-05 16:39:53 INFO  TC009_TimesheetAutoApprovalTest:96 - Check Auto Approval
+2025-09-05 16:39:53 INFO  TC009_TimesheetAutoApprovalTest:98 - Click on Create Approval Level
+2025-09-05 16:39:53 INFO  TC009_TimesheetAutoApprovalTest:103 - 8: go back page of approval schema level
+2025-09-05 16:39:53 INFO  TC009_TimesheetAutoApprovalTest:107 - 9: Create project: New Project 5-Level-Schema and add members
+2025-09-05 16:40:37 INFO  TC009_TimesheetAutoApprovalTest:142 - 9: Set time for Auto approval
+2025-09-05 16:40:39 INFO  TC009_TimesheetAutoApprovalTest:149 - Step 10: Logging out

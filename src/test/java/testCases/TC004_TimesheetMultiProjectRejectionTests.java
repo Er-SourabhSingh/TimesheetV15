@@ -113,7 +113,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
         logger.info("Test Case 2: Verify Rejection of Project A Timesheet");
         try{
             logger.info("Step 1: Logging in as admin");
-            super.login("admin", "12345678");
+            super.login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));
 
             logger.info("Step 2: Navigating to project: " + projects[0]);
             headerPage.clickOnProjects();
@@ -445,7 +445,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
         logger.info("Test Case 7: Approving all resubmitted timesheets through levels");
         try {
             logger.info("Step 1: Logging in as admin");
-            super.login("admin", "12345678");
+            super.login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));
 
             logger.info("Step 2: Navigating to project: " + projects[0]);
             headerPage.clickOnProjects();

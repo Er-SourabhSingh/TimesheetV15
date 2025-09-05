@@ -6,27 +6,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HeaderPage extends BasePage {
 
-    /*@FindBy(xpath = "//a[contains(@class,'timesheets')]")
-    WebElement headerTimesheetTab;*/
-
-    /*@FindBy(xpath = "//a[@class='administration']")
-    WebElement headerAdministrationTab;*/
-
-    /*@FindBy(xpath = "//div[@id='top-menu']//a[normalize-space()='Projects']")
-    WebElement headerProjectsTab;*/
-
-    /*@FindBy(xpath = "//a[@class='logout']")
-    WebElement linkLogout;*/
-
-    /*@FindBy(xpath = "//a[@class='issues' or @class='issues selected']")
-    WebElement subMenuIssuesTab;*/
-
-    /*@FindBy(xpath = "//a[@class='time-entries' or @class='time-entries selected']")
-    WebElement subMenuSpentTimeTab;*/
-
-    /*@FindBy(xpath = "//a[@class='settings' or @class='settings selected']")
-    WebElement subMenuProjectsSettingTab;*/
-
     By headerTimesheetTab = By.xpath("//a[contains(@class,'timesheets')]");
 
     By headerAdministrationTab = By.xpath("//a[@class='administration']");
@@ -65,18 +44,21 @@ public class HeaderPage extends BasePage {
     public void clickOnIssues() {
         /*this.subMenuIssuesTab.click();*/
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(this.subMenuIssuesTab));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         element.click();
     }
 
     public void clickOnSpentTime() {
         /*this.subMenuSpentTimeTab.click();*/
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(this.subMenuSpentTimeTab));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         element.click();
     }
 
     public void clickOnAdministrator() {
         /*this.headerAdministrationTab.click();*/
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(this.headerAdministrationTab));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         element.click();
     }
 
@@ -97,17 +79,20 @@ public class HeaderPage extends BasePage {
     public void clickOnProjectSetting() {
         /*this.subMenuProjectsSettingTab.click();*/
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(this.subMenuProjectsSettingTab));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         element.click();
     }
 
     public void clickOnTimesheet(){
         /*this.headerTimesheetTab.click();*/
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(this.headerTimesheetTab));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         element.click();
     }
 
     public void clickOnTimesheetApproval(){
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(this.subMenuTimesheetApprovalTab));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         element.click();
     }
 

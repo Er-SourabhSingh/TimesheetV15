@@ -35,12 +35,12 @@ SetupPreconditions extends BaseClass{
     public void setUpUserAndRoles(String os, String br) throws IOException{
         super.launch(os,br);
         super.login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));
-        /*this.createRoles();
+        this.createRoles();
         this.createUsers();
         this.enabledIssueLogTimeForOtherUser();
         this.createSchemas();
         this.createLevelInsideSchemas();
-        this.createDummyProjectsAndSelectSchema();*/
+        this.createDummyProjectsAndSelectSchema();
         this.selectMemberAndTheirRoleInsideProject();
         this.createDummyIssues();
         driver.quit();
@@ -185,7 +185,7 @@ SetupPreconditions extends BaseClass{
             logger.info("2: Click on timesheet approval schema sub module inside Timesheet module");
             timesheetPage.clickOnTimesheetApprovalSchema();
             for(String schema : this.schemas) {
-                logger.info("3: Check that schema is alrady created");
+                logger.info("3: Check that schema is already created");
                 if(approvalSchema.getSchemaList().containsAll(Arrays.asList(this.schemas)))
                     break;
                 if(!approvalSchema.getSchemaList().contains(schema)) {
