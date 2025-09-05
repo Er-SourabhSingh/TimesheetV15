@@ -238,7 +238,7 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
         try{
-            logger.info("----- Verify That auot approval functionality");
+            logger.info("----- Verify That auto approval functionality");
             for(int i = 0; i < approvalUsers.length; i++) {
                 logger.info("---- Logging in as Approver:" + approvalUsers[i]);
                 super.login(approvalUsers[i], "12345678");
