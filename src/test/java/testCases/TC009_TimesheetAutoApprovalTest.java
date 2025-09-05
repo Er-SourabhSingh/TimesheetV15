@@ -50,7 +50,7 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
         IssueFormPage issueFormPage = new IssueFormPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         TimesheetApprovalSchema approvalSchema = new TimesheetApprovalSchema(driver);
-        logger.info("Precondition: Create Approval schema and 5 levels, create new project with same schema, and add members.");
+        logger.info("Precondition: Create Approval schema and 5 levels with auto approval, create new project with same schema, and add members.");
         try {
 
             logger.info("Step 1: Logging in as Admin");
@@ -159,7 +159,7 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
     public void testSubmitTimesheetForNewProject(){
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
-        logger.info("Test Case 1: Verify approval flow in different projects which have same Schema");
+        logger.info("Test Case 1: Verify use can submit timesheet for new project");
 
         try {
             logger.info("Step 1: Logging in as " + this.submitterUser);
@@ -238,12 +238,11 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
         try{
-            logger.info("----- Verify That Approver can Approve Timesheet Project F");
+            logger.info("----- Verify That auot approval functionality");
             for(int i = 0; i < approvalUsers.length; i++) {
-                Thread.sleep(150000); // 120,000 ms = 2 minutes
                 logger.info("---- Logging in as Approver:" + approvalUsers[i]);
                 super.login(approvalUsers[i], "12345678");
-
+                Thread.sleep(150000); // 150,000 ms = 2.5 minutes
                 logger.info("------ Navigating to project: " + this.project);
                 headerPage.clickOnProjects();
                 projectsPage.clickOnProjectName(this.project);
