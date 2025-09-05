@@ -62,7 +62,7 @@ public class RoleFormPage extends BasePage {
     public void selectWorkflow() {
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(this.dropDownCopyWorkflow));
         Select select = new Select(element);
-        select.selectByValue("3");
+        select.selectByVisibleText("Anonymous");
     }
 
     public void clickOnRightBtnOfProjectField() {

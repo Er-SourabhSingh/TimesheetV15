@@ -34,7 +34,7 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
 
     String submitterUser = "opal.sparrow"; // user8 replaced
 
-    String startDate = "08/04/2025", endDate = "08/10/2025";
+    String startDate = "08/18/2025", endDate = "08/24/2025";
     String [] dateRanges = new String[2];
     Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();
 
@@ -242,7 +242,7 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
             for(int i = 0; i < approvalUsers.length; i++) {
                 logger.info("---- Logging in as Approver:" + approvalUsers[i]);
                 super.login(approvalUsers[i], "12345678");
-                Thread.sleep(150000); // 150,000 ms = 2.5 minutes
+                Thread.sleep(125000); // 125,000 ms = 2 min 5 sec
                 logger.info("------ Navigating to project: " + this.project);
                 headerPage.clickOnProjects();
                 projectsPage.clickOnProjectName(this.project);
@@ -267,7 +267,7 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
                 history.add("Status : Approved");
                 history.add("Submitted By : " + toFullName(this.submitterUser));
                 history.add("Approved By : Auto Approved" );
-                history.add("Approval Comment : Auto Approved");
+                history.add("Approval Comment : Auto-approved");
                 Assert.assertTrue(historyApprovalPage.getLastUpdatedHistory().containsAll(history));
 
                 logger.info("------ Logging out approver: " + approvalUsers[i]);

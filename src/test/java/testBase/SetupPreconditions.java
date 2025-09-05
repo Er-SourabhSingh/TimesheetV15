@@ -38,11 +38,11 @@ SetupPreconditions extends BaseClass{
         this.createRoles();
         this.createUsers();
         this.enabledIssueLogTimeForOtherUser();
-        this.createSchemas();
-        this.createLevelInsideSchemas();
-        this.createDummyProjectsAndSelectSchema();
-        this.selectMemberAndTheirRoleInsideProject();
-        this.createDummyIssues();
+        //this.createSchemas();
+        //this.createLevelInsideSchemas();
+        //this.createDummyProjectsAndSelectSchema();
+        //this.selectMemberAndTheirRoleInsideProject();
+        //this.createDummyIssues();
         driver.quit();
     }
 
