@@ -1,9 +1,6 @@
 package pageObjects;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.ArrayList;
@@ -32,4 +29,20 @@ public class HistoryApprovalPage extends BasePage{
         return listHistory;
     }
 
+
+    public List<String> getUpdatedHistoryByApproverUser(String name){
+        List<String> listHistory = new ArrayList<>();
+        try {
+            By xpathOfUpdatedBy = By.xpath("//div[@class='changelog_list'][1]//h4//a[text()='"+name+"']/ancestor::div[@class='changelog_list']//li");
+            List<WebElement> dataList = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(xpathOfUpdatedBy));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", driver.findElement(By.xpath("//div[@class='changelog_list'][1]//h4//a[text()='"+name+"']/ancestor::div[@class='changelog_list']")));
+            for (WebElement data : dataList) {
+                listHistory.add(data.getText().trim());
+            }
+        } catch (StaleElementReferenceException e) {
+            return new ArrayList<>();
+        }
+
+        return listHistory;
+    }
 }

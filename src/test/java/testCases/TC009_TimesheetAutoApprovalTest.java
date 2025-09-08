@@ -30,7 +30,12 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
             "5Approval"
     };
 
-
+    String[] users = new String[]{
+            "ember.lilac", "harmony.rose", "isla.moon", "ivy.skylark",
+            "luna.meadow", "marigold.rayne", "nova.starling",
+            "opal.sparrow", "sage.willow", "selene.frost", "serenity.bloom",
+            "summer.rain"
+    };
 
     String submitterUser = "opal.sparrow"; // user8 replaced
 
@@ -121,13 +126,46 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
                         projectFormPage.clickOnAddBtnOfMember();
                     }
                 }
-                if(!projectFormPage.getMembersList().contains(this.submitterUser)) {
+
+                List<String> users = this.toFullNames(this.users);
+                if(!projectFormPage.getMembersList().containsAll(users)) {
                     projectFormPage.clickOnNewMemberBtn();
-                    projectFormPage.selectMember(toFullName(this.submitterUser));
+                    for (int i = 0; i < this.users.length; i++) {
+                        projectFormPage.selectMember(capitalize(this.users[i].split("\\.")[0]) + " " + capitalize(this.users[i].split("\\.")[1]));
+                    }
                     projectFormPage.selectRole("Developer");
                     projectFormPage.clickOnAddBtnOfMember();
                 }
 
+                headerPage.clickOnIssues();
+
+                if(!issuePage.getSubjectNamesOfIssuesList().contains("Test")) {
+                    issuePage.clickOnNewIssueBtn();
+                    issueFormPage.setTxtSubject("Test");
+                    issueFormPage.clickOnCreateBtn();
+                }
+            }else{
+                projectsPage.clickOnProjectName(this.project);
+                headerPage.clickOnProjectSetting();
+                projectFormPage.clickOnMemberTab();
+                if(!projectFormPage.getMembersList().containsAll(Arrays.asList(this.approvalUsers))) {
+                    for (int i = 0; i < this.approvalUsers.length; i++) {
+                        projectFormPage.clickOnNewMemberBtn();
+                        projectFormPage.selectMember(toFullName(this.approvalUsers[i]));
+                        projectFormPage.selectRole(this.approvalRoles[i]);
+                        projectFormPage.clickOnAddBtnOfMember();
+                    }
+                }
+
+                List<String> users = this.toFullNames(this.users);
+                if(!projectFormPage.getMembersList().containsAll(users)) {
+                    projectFormPage.clickOnNewMemberBtn();
+                    for (int i = 0; i < this.users.length; i++) {
+                        projectFormPage.selectMember(capitalize(this.users[i].split("\\.")[0]) + " " + capitalize(this.users[i].split("\\.")[1]));
+                    }
+                    projectFormPage.selectRole("Developer");
+                    projectFormPage.clickOnAddBtnOfMember();
+                }
 
                 headerPage.clickOnIssues();
 
