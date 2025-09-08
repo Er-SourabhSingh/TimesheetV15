@@ -1,6 +1,7 @@
 package testCases;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -12,24 +13,30 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TC010_TimesheetManualApprovalBeforeAutoApproved extends  TC009_TimesheetAutoApprovalTest{
+public class TC010_TimesheetManualApprovalBeforeAutoApproved extends  BaseClass{
 
-
-    String submitterUser = "marigold.rayne"; // user8 replaced
-
+    String[] approvalUsers = {
+            "aurora.wren",    // 1Approval
+            "autumn.grace",   // 2Approval
+            "briar.sunset",   // 3Approval
+            "celeste.dawn",   // 4Approval
+            "daisy.skye"      // 5Approval
+    };
+    String submitterUser = "isla.moon"; // user8 replaced
+    String project = "New Project 5-Level-Schema";
     String startDate = "08/18/2025", endDate = "08/24/2025";
     String [] dateRanges = new String[2];
     Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();
 
-    @BeforeTest
-    public void testSubmitTimesheetForNewProject(){
+    @Test (priority = 1, groups = {"Master","Regression"})
+    public void testSubmitTimesheetOfMarigoldRayneForNewProject(){
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         logger.info("Test Case 1: Verify use can submit timesheet for new project");
 
         try {
             logger.info("Step 1: Logging in as " + this.submitterUser);
-            super.login(this.submitterUser, "12345678");
+            this.login(this.submitterUser, "12345678");
 
             logger.info("Step 2: Navigating to Timesheet module");
             headerPage.clickOnTimesheet();
@@ -96,7 +103,7 @@ public class TC010_TimesheetManualApprovalBeforeAutoApproved extends  TC009_Time
         }
     }
 
-    @Test(priority = 1, groups = {"Master","Regression"})
+    @Test(priority = 2, groups = {"Master","Regression"} , dependsOnMethods = {"testSubmitTimesheetOfMarigoldRayneForNewProject"})
     public void testApproveUserTimesheetBeforeAutoApproved(){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
@@ -104,38 +111,38 @@ public class TC010_TimesheetManualApprovalBeforeAutoApproved extends  TC009_Time
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         try{
             logger.info("----- Verify That Approver can Approve Timesheet Before Auto Approver get Trigger");
-            for(int i = 0; i < super.approvalUsers.length; i++) {
-                logger.info("---- Logging in as Approver:" + super.approvalUsers[i]);
-                super.login(super.approvalUsers[i], "12345678");
+            for(int i = 0; i < this.approvalUsers.length; i++) {
+                logger.info("---- Logging in as Approver:" + this.approvalUsers[i]);
+                this.login(this.approvalUsers[i], "12345678");
 
-                logger.info("------ Navigating to project: " + super.project);
+                logger.info("------ Navigating to project: " + this.project);
                 headerPage.clickOnProjects();
-                projectsPage.clickOnProjectName(super.project);
+                projectsPage.clickOnProjectName(this.project);
 
                 logger.info("------ Navigating to Timesheet Approval");
                 headerPage.clickOnTimesheetApproval();
 
                 logger.info("------ Go to Date Range of Submission");
-                timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
+                timesheetApprovalPage.navigateToTargetDateRange(this.dateRanges[0], this.dateRanges[1]);
 
                 logger.info("------ Verify 'Design' and 'Development' Activity hours ");
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(super.project).getOrDefault("Design",0.0));
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(super.project).getOrDefault("Development",0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(this.project).getOrDefault("Design",0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(this.project).getOrDefault("Development",0.0));
 
 
                 logger.info("------ Approving timesheet for "+ this.submitterUser);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(this.submitterUser));
-                timesheetApprovalPage.setApprovalText("Approved by -------- "+approvalUsers[i]);
+                timesheetApprovalPage.setApprovalText("Approved by -------- "+ toFullName(this.approvalUsers[i]));
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.submitterUser)),"Approved");
 
-                logger.info("------ Logging out approver: " + approvalUsers[i]);
+                logger.info("------ Logging out approver: " + this.approvalUsers[i]);
                 headerPage.clickOnLogout();
 
 
-                logger.info("------ Logging in as "+this.submitterUser);
-                super.login(this.submitterUser,"12345678");
+               /* logger.info("------ Logging in as "+this.submitterUser);
+                this.login(this.submitterUser,"12345678");
 
                 logger.info("------ Navigating to Timesheet module");
                 headerPage.clickOnTimesheet();
@@ -151,17 +158,17 @@ public class TC010_TimesheetManualApprovalBeforeAutoApproved extends  TC009_Time
                 timesheetPage.clickOnDateRangeApplyBtn();
 
                 if(i <= 3 && !(i < 0)){
-                    logger.info("------ Verifying that the " + super.project + " status is 'Waiting for Approval' after approval at level " + (i+1));
-                    Assert.assertTrue(timesheetPage.hasPendingTimesheet(super.project));
+                    logger.info("------ Verifying that the " + this.project + " status is 'Waiting for Approval' after approval at level " + (i+1));
+                    Assert.assertTrue(timesheetPage.hasPendingTimesheet(this.project));
                     Assert.assertEquals(timesheetPage.getSubmitTimesheetBtnText(),"Waiting for Approval");
                 }
                 if(i==4){
-                    logger.info("------ Verifying that the " + super.project + " status is 'Approved' after approval at level" + (i+1));
-                    Assert.assertTrue(timesheetPage.hasApprovedTimesheet(super.project));
+                    logger.info("------ Verifying that the " + this.project + " status is 'Approved' after approval at level" + (i+1));
+                    Assert.assertTrue(timesheetPage.hasApprovedTimesheet(this.project));
                 }
 
                 logger.info("------ Logging out "+this.submitterUser);
-                headerPage.clickOnLogout();
+                headerPage.clickOnLogout();*/
             }
 
         }catch (Exception e){
@@ -170,19 +177,18 @@ public class TC010_TimesheetManualApprovalBeforeAutoApproved extends  TC009_Time
         }
     }
 
-    @Test(priority = 2, groups = {"Master", "Regression"}, dependsOnMethods = {"testApproveUserTimesheetBeforeAutoApproved"})
+    @Test(priority = 3, groups = {"Master", "Regression"}, dependsOnMethods = {"testApproveUserTimesheetBeforeAutoApproved"})
     public void verifyHistoryOfManualApproval(){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
-        TimesheetPage timesheetPage = new TimesheetPage(driver);
         HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
         try{
             logger.info("----- Verify That History of Manual approver");
-            for(int i = 0; i < super.approvalUsers.length; i++) {
-                logger.info("---- Logging in as Approver:" + super.approvalUsers[i]);
-                super.login(approvalUsers[i], "12345678");
-                Thread.sleep(125000); // 125,000 ms = 2 min 5 sec
+            for(int i = 0; i < this.approvalUsers.length; i++) {
+                logger.info("---- Logging in as Approver:" + this.approvalUsers[i]);
+                this.login(approvalUsers[i], "12345678");
+                //Thread.sleep(125000); // 125,000 ms = 2 min 5 sec
                 logger.info("------ Navigating to project: " + this.project);
                 headerPage.clickOnProjects();
                 projectsPage.clickOnProjectName(this.project);
@@ -191,7 +197,7 @@ public class TC010_TimesheetManualApprovalBeforeAutoApproved extends  TC009_Time
                 headerPage.clickOnTimesheetApproval();
 
                 logger.info("------ Go to Date Range of Submission");
-                timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
+                timesheetApprovalPage.navigateToTargetDateRange(this.dateRanges[0], this.dateRanges[1]);
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.submitterUser)),"Approved");
 
@@ -199,14 +205,14 @@ public class TC010_TimesheetManualApprovalBeforeAutoApproved extends  TC009_Time
                 logger.info("------ Clicking on show btn of : " + this.submitterUser + "Timesheet History");
                 timesheetApprovalPage.clickOnShowHistoryOfUserTimesheet(toFullName(this.submitterUser));
                 List<String> history = new ArrayList<>();
-                history.add("Project Name : " +super.project);
+                history.add("Project Name : " +this.project);
                 history.add("Status : Approved");
                 history.add("Submitted By : " + toFullName(this.submitterUser));
-                history.add("Approved By : " + toFullName(super.approvalUsers[i]));
-                history.add("Approval Comment : Approved by -------- "  + toFullName(super.approvalUsers[i]));
-                Assert.assertTrue(historyApprovalPage.getLastUpdatedHistory().containsAll(history));
+                history.add("Approved By : " + toFullName(this.approvalUsers[i]));
+                history.add("Approval Comment : Approved by -------- "  + toFullName(this.approvalUsers[i]));
+                Assert.assertTrue(historyApprovalPage.getLastUpdatedHistoryByUser(toFullName(this.approvalUsers[i])).containsAll(history));
 
-                logger.info("------ Logging out approver: " + approvalUsers[i]);
+                logger.info("------ Logging out approver: " + this.approvalUsers[i]);
                 headerPage.clickOnLogout();
 
             }

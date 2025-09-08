@@ -30,19 +30,30 @@ public class HistoryApprovalPage extends BasePage{
     }
 
 
-    public List<String> getUpdatedHistoryByApproverUser(String name){
+
+    public List<String> getLastUpdatedHistoryByUser(String name) {
         List<String> listHistory = new ArrayList<>();
         try {
-            By xpathOfUpdatedBy = By.xpath("//div[@class='changelog_list'][1]//h4//a[text()='"+name+"']/ancestor::div[@class='changelog_list']//li");
-            List<WebElement> dataList = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(xpathOfUpdatedBy));
-            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", driver.findElement(By.xpath("//div[@class='changelog_list'][1]//h4//a[text()='"+name+"']/ancestor::div[@class='changelog_list']")));
-            for (WebElement data : dataList) {
-                listHistory.add(data.getText().trim());
+            List<WebElement> userBlocks = driver.findElements(
+                    By.xpath("//div[@class='changelog_list']//h4//a[text()='" + name + "']/ancestor::div[@class='changelog_list']")
+            );
+
+            if (!userBlocks.isEmpty()) {
+                WebElement lastBlock = userBlocks.get(userBlocks.size() - 1);
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", lastBlock);
+
+                List<WebElement> dataList = lastBlock.findElements(By.tagName("li"));
+                for (WebElement data : dataList) {
+                    listHistory.add(data.getText().trim());
+                }
             }
         } catch (StaleElementReferenceException e) {
-            return new ArrayList<>();
-        }
+            throw new StaleElementReferenceException("Stale");
 
+        }
         return listHistory;
     }
+
+
+
 }

@@ -1,0 +1,144 @@
+2025-09-08 15:52:19 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:128 - ------ Verify 'Design' and 'Development' Activity hours 
+2025-09-08 15:52:19 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:133 - ------ Approving timesheet for summer.rain
+2025-09-08 15:52:21 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:140 - ------ Logging out approver: celeste.dawn
+2025-09-08 15:52:21 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:144 - ------ Logging in as summer.rain
+2025-09-08 15:52:22 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:147 - ------ Navigating to Timesheet module
+2025-09-08 15:52:22 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:150 - ------ Expanding timesheet view
+2025-09-08 15:52:22 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:153 - ------ Selecting date range filter as 'Custom Range'
+2025-09-08 15:52:23 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:161 - ------ Verifying that the New Project 5-Level-Schema status is 'Waiting for Approval' after approval at level 4
+2025-09-08 15:52:23 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:170 - ------ Logging out summer.rain
+2025-09-08 15:52:24 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:115 - ---- Logging in as Approver:daisy.skye
+2025-09-08 15:52:25 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:118 - ------ Navigating to project: New Project 5-Level-Schema
+2025-09-08 15:52:25 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:122 - ------ Navigating to Timesheet Approval
+2025-09-08 15:52:26 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:125 - ------ Go to Date Range of Submission
+2025-09-08 15:52:31 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:128 - ------ Verify 'Design' and 'Development' Activity hours 
+2025-09-08 15:52:31 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:133 - ------ Approving timesheet for summer.rain
+2025-09-08 15:52:32 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:140 - ------ Logging out approver: daisy.skye
+2025-09-08 15:52:33 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:144 - ------ Logging in as summer.rain
+2025-09-08 15:52:33 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:147 - ------ Navigating to Timesheet module
+2025-09-08 15:52:34 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:150 - ------ Expanding timesheet view
+2025-09-08 15:52:34 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:153 - ------ Selecting date range filter as 'Custom Range'
+2025-09-08 15:52:35 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:166 - ------ Verifying that the New Project 5-Level-Schema status is 'Approved' after approval at level5
+2025-09-08 15:52:35 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:170 - ------ Logging out summer.rain
+2025-09-08 15:52:35 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:187 - ----- Verify That History of Manual approver
+2025-09-08 15:52:35 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:189 - ---- Logging in as Approver:aurora.wren
+2025-09-08 15:52:36 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:192 - ------ Navigating to project: New Project 5-Level-Schema
+2025-09-08 15:52:37 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:196 - ------ Navigating to Timesheet Approval
+2025-09-08 15:52:37 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:199 - ------ Go to Date Range of Submission
+2025-09-08 15:52:42 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:205 - ------ Clicking on show btn of : summer.rainTimesheet History
+2025-09-08 15:54:26 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:35 - Test Case 1: Verify use can submit timesheet for new project
+2025-09-08 15:54:26 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:38 - Step 1: Logging in as isla.moon
+2025-09-08 15:54:27 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:41 - Step 2: Navigating to Timesheet module
+2025-09-08 15:54:29 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:44 - Step 3: Expanding timesheet view
+2025-09-08 15:54:29 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:47 - Step 4: Selecting date range filter as 'Custom Range'
+2025-09-08 15:54:31 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:58 - Step 5: Logging time entries for each day from Monday to friday
+2025-09-08 15:54:31 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:62 - ---- Logging entry for: 2025-08-18
+2025-09-08 15:54:32 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:65 - ------ Selecting project: New Project 5-Level-Schema
+2025-09-08 15:54:32 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:68 - ------ Selecting issue: Test
+2025-09-08 15:54:33 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:72 - ------ Selecting activity: Design
+2025-09-08 15:54:33 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:76 - ------ Entering hours: 8
+2025-09-08 15:54:33 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:79 - ------ Clicking Log Time button
+2025-09-08 15:54:34 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:62 - ---- Logging entry for: 2025-08-19
+2025-09-08 15:54:34 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:65 - ------ Selecting project: New Project 5-Level-Schema
+2025-09-08 15:54:35 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:68 - ------ Selecting issue: Test
+2025-09-08 15:54:35 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:72 - ------ Selecting activity: Development
+2025-09-08 15:54:36 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:76 - ------ Entering hours: 7
+2025-09-08 15:54:36 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:79 - ------ Clicking Log Time button
+2025-09-08 15:54:36 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:62 - ---- Logging entry for: 2025-08-20
+2025-09-08 15:54:37 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:65 - ------ Selecting project: New Project 5-Level-Schema
+2025-09-08 15:54:37 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:68 - ------ Selecting issue: Test
+2025-09-08 15:54:38 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:72 - ------ Selecting activity: Development
+2025-09-08 15:54:38 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:76 - ------ Entering hours: 9
+2025-09-08 15:54:38 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:79 - ------ Clicking Log Time button
+2025-09-08 15:54:39 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:62 - ---- Logging entry for: 2025-08-21
+2025-09-08 15:54:39 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:65 - ------ Selecting project: New Project 5-Level-Schema
+2025-09-08 15:54:40 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:68 - ------ Selecting issue: Test
+2025-09-08 15:54:40 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:72 - ------ Selecting activity: Design
+2025-09-08 15:54:41 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:76 - ------ Entering hours: 6
+2025-09-08 15:54:41 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:79 - ------ Clicking Log Time button
+2025-09-08 15:54:41 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:62 - ---- Logging entry for: 2025-08-22
+2025-09-08 15:54:42 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:65 - ------ Selecting project: New Project 5-Level-Schema
+2025-09-08 15:54:42 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:68 - ------ Selecting issue: Test
+2025-09-08 15:54:43 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:72 - ------ Selecting activity: Development
+2025-09-08 15:54:43 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:76 - ------ Entering hours: 6
+2025-09-08 15:54:43 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:79 - ------ Clicking Log Time button
+2025-09-08 15:54:43 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:89 - Step 6: Submitting the timesheet
+2025-09-08 15:54:44 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:93 - ------ Verifying that the New Project 5-Level-Schema status is 'Waiting for Approval'
+2025-09-08 15:54:44 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:98 - Step 8: Logging out submitterUser
+2025-09-08 15:54:44 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:113 - ----- Verify That Approver can Approve Timesheet Before Auto Approver get Trigger
+2025-09-08 15:54:44 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:115 - ---- Logging in as Approver:aurora.wren
+2025-09-08 15:54:45 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:118 - ------ Navigating to project: New Project 5-Level-Schema
+2025-09-08 15:54:46 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:122 - ------ Navigating to Timesheet Approval
+2025-09-08 15:54:47 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:125 - ------ Go to Date Range of Submission
+2025-09-08 15:54:51 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:128 - ------ Verify 'Design' and 'Development' Activity hours 
+2025-09-08 15:54:52 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:187 - ----- Verify That History of Manual approver
+2025-09-08 15:54:52 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:189 - ---- Logging in as Approver:aurora.wren
+2025-09-08 15:56:12 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:35 - Test Case 1: Verify use can submit timesheet for new project
+2025-09-08 15:56:12 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:38 - Step 1: Logging in as isla.moon
+2025-09-08 15:56:13 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:41 - Step 2: Navigating to Timesheet module
+2025-09-08 15:56:15 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:44 - Step 3: Expanding timesheet view
+2025-09-08 15:56:15 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:47 - Step 4: Selecting date range filter as 'Custom Range'
+2025-09-08 15:56:17 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:58 - Step 5: Logging time entries for each day from Monday to friday
+2025-09-08 15:56:17 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:98 - Step 8: Logging out submitterUser
+2025-09-08 15:56:17 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:113 - ----- Verify That Approver can Approve Timesheet Before Auto Approver get Trigger
+2025-09-08 15:56:17 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:115 - ---- Logging in as Approver:aurora.wren
+2025-09-08 15:56:18 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:118 - ------ Navigating to project: New Project 5-Level-Schema
+2025-09-08 15:56:19 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:122 - ------ Navigating to Timesheet Approval
+2025-09-08 15:56:20 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:125 - ------ Go to Date Range of Submission
+2025-09-08 15:56:24 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:133 - ------ Approving timesheet for isla.moon
+2025-09-08 15:56:26 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:140 - ------ Logging out approver: aurora.wren
+2025-09-08 15:56:26 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:115 - ---- Logging in as Approver:autumn.grace
+2025-09-08 15:56:27 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:118 - ------ Navigating to project: New Project 5-Level-Schema
+2025-09-08 15:56:28 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:122 - ------ Navigating to Timesheet Approval
+2025-09-08 15:56:28 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:125 - ------ Go to Date Range of Submission
+2025-09-08 15:56:33 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:133 - ------ Approving timesheet for isla.moon
+2025-09-08 15:56:34 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:140 - ------ Logging out approver: autumn.grace
+2025-09-08 15:56:35 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:115 - ---- Logging in as Approver:briar.sunset
+2025-09-08 15:56:35 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:118 - ------ Navigating to project: New Project 5-Level-Schema
+2025-09-08 15:56:36 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:122 - ------ Navigating to Timesheet Approval
+2025-09-08 15:56:36 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:125 - ------ Go to Date Range of Submission
+2025-09-08 15:56:41 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:133 - ------ Approving timesheet for isla.moon
+2025-09-08 15:56:43 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:140 - ------ Logging out approver: briar.sunset
+2025-09-08 15:56:43 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:115 - ---- Logging in as Approver:celeste.dawn
+2025-09-08 15:56:44 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:118 - ------ Navigating to project: New Project 5-Level-Schema
+2025-09-08 15:56:44 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:122 - ------ Navigating to Timesheet Approval
+2025-09-08 15:56:45 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:125 - ------ Go to Date Range of Submission
+2025-09-08 15:56:50 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:133 - ------ Approving timesheet for isla.moon
+2025-09-08 15:56:51 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:140 - ------ Logging out approver: celeste.dawn
+2025-09-08 15:56:52 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:115 - ---- Logging in as Approver:daisy.skye
+2025-09-08 15:56:52 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:118 - ------ Navigating to project: New Project 5-Level-Schema
+2025-09-08 15:56:53 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:122 - ------ Navigating to Timesheet Approval
+2025-09-08 15:56:54 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:125 - ------ Go to Date Range of Submission
+2025-09-08 15:56:58 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:133 - ------ Approving timesheet for isla.moon
+2025-09-08 15:57:01 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:140 - ------ Logging out approver: daisy.skye
+2025-09-08 15:57:01 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:187 - ----- Verify That History of Manual approver
+2025-09-08 15:57:01 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:189 - ---- Logging in as Approver:aurora.wren
+2025-09-08 15:57:02 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:192 - ------ Navigating to project: New Project 5-Level-Schema
+2025-09-08 15:57:03 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:196 - ------ Navigating to Timesheet Approval
+2025-09-08 15:57:03 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:199 - ------ Go to Date Range of Submission
+2025-09-08 15:57:08 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:205 - ------ Clicking on show btn of : isla.moonTimesheet History
+2025-09-08 15:57:08 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:215 - ------ Logging out approver: aurora.wren
+2025-09-08 15:57:09 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:189 - ---- Logging in as Approver:autumn.grace
+2025-09-08 15:57:09 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:192 - ------ Navigating to project: New Project 5-Level-Schema
+2025-09-08 15:57:10 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:196 - ------ Navigating to Timesheet Approval
+2025-09-08 15:57:10 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:199 - ------ Go to Date Range of Submission
+2025-09-08 15:57:15 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:205 - ------ Clicking on show btn of : isla.moonTimesheet History
+2025-09-08 15:57:16 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:215 - ------ Logging out approver: autumn.grace
+2025-09-08 15:57:16 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:189 - ---- Logging in as Approver:briar.sunset
+2025-09-08 15:57:17 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:192 - ------ Navigating to project: New Project 5-Level-Schema
+2025-09-08 15:57:17 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:196 - ------ Navigating to Timesheet Approval
+2025-09-08 15:57:18 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:199 - ------ Go to Date Range of Submission
+2025-09-08 15:57:23 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:205 - ------ Clicking on show btn of : isla.moonTimesheet History
+2025-09-08 15:57:23 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:215 - ------ Logging out approver: briar.sunset
+2025-09-08 15:57:23 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:189 - ---- Logging in as Approver:celeste.dawn
+2025-09-08 15:57:24 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:192 - ------ Navigating to project: New Project 5-Level-Schema
+2025-09-08 15:57:25 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:196 - ------ Navigating to Timesheet Approval
+2025-09-08 15:57:25 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:199 - ------ Go to Date Range of Submission
+2025-09-08 15:57:30 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:205 - ------ Clicking on show btn of : isla.moonTimesheet History
+2025-09-08 15:57:30 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:215 - ------ Logging out approver: celeste.dawn
+2025-09-08 15:57:31 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:189 - ---- Logging in as Approver:daisy.skye
+2025-09-08 15:57:31 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:192 - ------ Navigating to project: New Project 5-Level-Schema
+2025-09-08 15:57:32 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:196 - ------ Navigating to Timesheet Approval
+2025-09-08 15:57:32 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:199 - ------ Go to Date Range of Submission
+2025-09-08 15:57:37 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:205 - ------ Clicking on show btn of : isla.moonTimesheet History
+2025-09-08 15:57:38 INFO  TC010_TimesheetManualApprovalBeforeAutoApproved:215 - ------ Logging out approver: daisy.skye

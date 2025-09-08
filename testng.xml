@@ -16,7 +16,7 @@
         <parameter name="os" value="window"/>
         <parameter name="browser" value="chrome"/>
         <classes>
-           <class name="testBase.SetupPreconditions"/>
+          <!-- <class name="testBase.SetupPreconditions"/>-->
             <!--  <class name="testCases.TC001_TimesheetApprovalTests"/>
              <class name="testCases.TC002_TimesheetRejectionTests"/>
              <class name="testCases.TC003_TimesheetMultiProjectWorkflowTests"/>
