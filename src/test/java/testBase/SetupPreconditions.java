@@ -13,11 +13,9 @@ public class
 
 SetupPreconditions extends BaseClass{
 
-
-
-    @BeforeTest (groups = {"Sanity","Master","Regression"})
-    @Parameters({"os", "browser", "approvalFlow"})
-    public void preconditions(String os, String br, String flowType) throws IOException{
+    @BeforeTest (groups = {"Sanity","Master","Regression"},alwaysRun = true)
+    @Parameters({"os", "browser", "approvalflow"})
+    public void setupPreconditions(String os, String br, String flowType) throws IOException{
         super.launch(os,br);
         if(flowType != null) {
             switch(flowType.toLowerCase()) {
@@ -27,9 +25,9 @@ SetupPreconditions extends BaseClass{
                 case "sameschema":
                     setupTwoProjectsSameSchema();
                     break;
-               /* case "auto":
+                case "auto":
                     setupAutoFlow();
-                    break;*/
+                    break;
                 default:
                     throw new IllegalArgumentException("Unknown flow type: " + flowType);
             }
@@ -53,20 +51,125 @@ SetupPreconditions extends BaseClass{
                 "summer.rain"
         };
 
-        String []schemas = new String[]{"1 Level Schema", "2 Level Schema", "3 Level Schema", "4 Level Schema", "5 Level Schema"};
-        String []projects = new String[]{"Project A Default-Schema", "Project B 1-Level-Schema", "Project C 2-Level-Schema", "Project D 3-Level-Schema"
-                ,"Project E 4-Level-Schema", "Project F 5-Level-Schema"};
+        LinkedHashMap<String, Integer> schemaLevelMap = new LinkedHashMap<>(); // Keeps insertion order
+        schemaLevelMap.put("1 Level Schema", 1);
+        schemaLevelMap.put("2 Level Schema", 2);
+        schemaLevelMap.put("3 Level Schema", 3);
+        schemaLevelMap.put("4 Level Schema", 4);
+        schemaLevelMap.put("5 Level Schema", 5);
+
+        LinkedHashMap<String, String> projectSchemaMap = new LinkedHashMap<>();
+        projectSchemaMap.put("Project A Default-Schema", "Default Approval Schema");
+        projectSchemaMap.put("Project B 1-Level-Schema", "1 Level Schema");
+        projectSchemaMap.put("Project C 2-Level-Schema", "2 Level Schema");
+        projectSchemaMap.put("Project D 3-Level-Schema", "3 Level Schema");
+        projectSchemaMap.put("Project E 4-Level-Schema", "4 Level Schema");
+        projectSchemaMap.put("Project F 5-Level-Schema", "5 Level Schema");
 
         super.login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));
         this.createRoles(approvalRoles, userRoles);
         this.createUsers(approvalUsers, users);
         this.enabledIssueLogTimeForOtherUser();
-        this.createSchemas(schemas);
-        this.createLevelInsideSchemas(schemas,approvalRoles);
-        this.createDummyProjectsAndSelectSchema(projects,schemas);
-        this.selectMemberAndTheirRoleInsideProject(projects, approvalUsers, approvalRoles, users);
-        this.createDummyIssues(projects);
+        this.createSchemas(schemaLevelMap);
+        this.createLevelInsideSchemas(schemaLevelMap,approvalRoles);
+        this.createDummyProjectsAndSelectSchema(projectSchemaMap);
+        this.selectMemberAndTheirRoleInsideProject(projectSchemaMap, approvalUsers, approvalRoles, users);
+        this.createDummyIssues(projectSchemaMap);
         driver.quit();
+    }
+
+    private void setupTwoProjectsSameSchema(){
+        String[] newApprovalUsers = {
+                "ivy.skylark",    // New 1ApproverNew
+                "luna.meadow",    // New 2ApproverNew
+                "marigold.rayne"  // New 3ApproverNew
+        };
+
+        String[] approvalRoles = {
+                "1Approval",
+                "2Approval",
+                "3Approval",
+                "4Approval",
+                "5Approval"
+        };
+
+        String[] users = {
+                "ember.lilac",
+                "harmony.rose",
+                "isla.moon",
+                "nova.starling",
+                "opal.sparrow",
+                "sage.willow",
+                "selene.frost",
+                "serenity.bloom",
+                "summer.rain"
+        };
+
+        String []userRoles = new String[]{"Employee","Developer","Support"};
+
+        LinkedHashMap<String, Integer> schemaLevelMap = new LinkedHashMap<>(); // Keeps insertion order
+        schemaLevelMap.put("3 Level Schema", 3);
+
+        LinkedHashMap<String, String> projectSchemaMap = new LinkedHashMap<>();
+        projectSchemaMap.put("New Project 3-Level-Schema", "3 Level Schema");
+        projectSchemaMap.put("Project D 3-Level-Schema", "3 Level Schema");
+
+        super.login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));
+        this.createRoles(approvalRoles, userRoles);
+        this.createUsers(newApprovalUsers, users);
+        this.enabledIssueLogTimeForOtherUser();
+        this.createSchemas(schemaLevelMap);
+        this.createLevelInsideSchemas(schemaLevelMap,approvalRoles);
+        this.createDummyProjectsAndSelectSchema(projectSchemaMap);
+        this.selectMemberAndTheirRoleInsideProject(projectSchemaMap, newApprovalUsers, approvalRoles, users);
+        this.createDummyIssues(projectSchemaMap);
+        driver.quit();
+    }
+
+    private void setupAutoFlow(){
+        String[] approvalUsers = {
+                "aurora.wren",    // 1Approval
+                "autumn.grace",   // 2Approval
+                "briar.sunset",   // 3Approval
+                "celeste.dawn",   // 4Approval
+                "daisy.skye"      // 5Approval
+        };
+
+        LinkedHashMap<String, Integer> schemaLevelMap = new LinkedHashMap<>(); // Keeps insertion order
+        schemaLevelMap.put("Schema 5 auto-approval", 5);
+
+        LinkedHashMap<String, String> projectSchemaMap = new LinkedHashMap<>();
+        projectSchemaMap.put("New Project 5-Level-Schema", "Schema 5 auto-approval");
+
+
+        String[] approvalRoles = {
+                "1Approval",
+                "2Approval",
+                "3Approval",
+                "4Approval",
+                "5Approval"
+        };
+
+        String[] users = new String[]{
+                "ember.lilac", "harmony.rose", "isla.moon", "ivy.skylark",
+                "luna.meadow", "marigold.rayne", "nova.starling",
+                "opal.sparrow", "sage.willow", "selene.frost", "serenity.bloom",
+                "summer.rain"
+        };
+
+        String []userRoles = new String[]{"Employee","Developer","Support"};
+
+        super.login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));
+        this.createRoles(approvalRoles, userRoles);
+        this.createUsers(approvalUsers, users);
+        this.enabledIssueLogTimeForOtherUser();
+        this.createSchemas(schemaLevelMap);
+        this.createLevelInsideSchemas(schemaLevelMap,approvalRoles);
+        this.createDummyProjectsAndSelectSchema(projectSchemaMap);
+        this.selectMemberAndTheirRoleInsideProject(projectSchemaMap, approvalUsers, approvalRoles, users);
+        this.createDummyIssues(projectSchemaMap);
+        driver.quit();
+
     }
 
     private void createRoles(String[] approvalRoles, String[] userRoles){
@@ -197,7 +300,7 @@ SetupPreconditions extends BaseClass{
         }
     }
 
-    private void createSchemas(String[] schemas){
+    private void createSchemas(LinkedHashMap<String, Integer> schemas){
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         TimesheetApprovalSchema approvalSchema = new TimesheetApprovalSchema(driver);
@@ -207,15 +310,16 @@ SetupPreconditions extends BaseClass{
             headerPage.clickOnTimesheet();
             logger.info("2: Click on timesheet approval schema sub module inside Timesheet module");
             timesheetPage.clickOnTimesheetApprovalSchema();
-            for(String schema : schemas) {
+            for(Map.Entry<String, Integer> entry : schemas.entrySet()) {
+                String schemaName = entry.getKey();
                 logger.info("3: Check that schema is already created");
                 if(approvalSchema.getSchemaList().containsAll(Arrays.asList(schemas)))
                     break;
-                if(!approvalSchema.getSchemaList().contains(schema)) {
+                if(!approvalSchema.getSchemaList().contains(schemaName)) {
                     logger.info("Click on add new schema btn");
                     approvalSchema.clickOnAddNewSchemaBTn();
                     logger.info("Write schema name");
-                    approvalSchema.setSchemaName(schema);
+                    approvalSchema.setSchemaName(schemaName);
                     logger.info("Click on Create schema");
                     approvalSchema.clickOnCreateSchema();
                 }
@@ -226,26 +330,27 @@ SetupPreconditions extends BaseClass{
         }
     }
 
-    private void createLevelInsideSchemas(String[] schemas, String[] approvalRoles){
+    private void createLevelInsideSchemas(LinkedHashMap<String, Integer> schemas, String[] approvalRoles){
         Map<Integer,String> levels = new HashMap<>();
         levels.put(1, "Level One"); levels.put(2, "Level Two"); levels.put(3,"Level Three"); levels.put(4,"Level Four"); levels.put(5,"Level Five");
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         TimesheetApprovalSchema approvalSchema = new TimesheetApprovalSchema(driver);
         logger.info("----- Create levels inside schema -----");
         try {
-            for(int i=1; i<=schemas.length; i++) {
-                logger.info("Open schema "+schemas[i-1]);
-                approvalSchema.clickOnSchemaToOpen(schemas[i-1]);
-                for(int j=1; j<=i; j++){
-                    if(approvalSchema.getListOfLevels().contains(levels.get(i)))
+            for(Map.Entry<String, Integer> entry : schemas.entrySet()) {
+                logger.info("Open schema "+entry.getKey());
+                int levelCount = entry.getValue();
+                approvalSchema.clickOnSchemaToOpen(entry.getKey());
+                for(int j=0; j<levelCount; j++){
+                    if(approvalSchema.getListOfLevels().contains(levels.get(levelCount)))
                         break;
-                    if(!approvalSchema.getListOfLevels().contains(levels.get(j))) {
+                    if(!approvalSchema.getListOfLevels().contains(levels.get(j + 1))) {
                         logger.info("Click on Add Approval level btn");
                         approvalSchema.clickOnAddApprovalLevelBtn();
                         logger.info("Set level name Level " + Integer.toString(j));
                         approvalSchema.setApprovalLevelName("Level " + Integer.toString(j));
-                        logger.info("Select Approval Role: " + approvalRoles[j - 1]);
-                        approvalSchema.selectApprovalRole(approvalRoles[j - 1]);
+                        logger.info("Select Approval Role: " + approvalRoles[j]);
+                        approvalSchema.selectApprovalRole(approvalRoles[j]);
                         logger.info("Select Approval Level: " + Integer.toString(j));
                         approvalSchema.selectApprovalLevel(Integer.toString(j));
                         logger.info("Click on Create Approval Level");
@@ -261,24 +366,20 @@ SetupPreconditions extends BaseClass{
         }
     }
 
-    private void createDummyProjectsAndSelectSchema(String[] projects, String[] schemas){
+    private void createDummyProjectsAndSelectSchema(LinkedHashMap<String, String> projectSchemaMap){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
         ProjectFormPage projectFormPage = new ProjectFormPage(driver);
         try{
             int i = 0;
             headerPage.clickOnProjects();
-
-
-            for (String project : projects) {
+            for (Map.Entry<String, String> entry : projectSchemaMap.entrySet()) {
+                String project = entry.getKey();
+                String schema = entry.getValue();
                 if(!projectsPage.getProjectsName().contains(project)){
                     projectsPage.clickOnAddProjectBtn();
                     projectFormPage.setTxtProjectName(project);
-                    if (project.equals("Project A Default-Schema")) {
-                        projectFormPage.selectTimesheetSchema("Default Approval Schema");
-                    } else {
-                        projectFormPage.selectTimesheetSchema(schemas[i++]);
-                    }
+                    projectFormPage.selectTimesheetSchema(schema);
                     projectFormPage.checkCheckBoxTimesheetApproval();
                     projectFormPage.clickOnCreate();
                     headerPage.clickOnProjects();
@@ -292,13 +393,14 @@ SetupPreconditions extends BaseClass{
         }
     }
 
-    private void selectMemberAndTheirRoleInsideProject(String[] projects, String[] approvalUsers, String[] approvalRoles, String[] users){
+    private void selectMemberAndTheirRoleInsideProject(LinkedHashMap<String, String> projectSchemaMap, String[] approvalUsers, String[] approvalRoles, String[] users){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
         ProjectFormPage projectFormPage = new ProjectFormPage(driver);
         try{
             headerPage.clickOnProjects();
-            for(String project : projects){
+            for(Map.Entry<String, String> entry : projectSchemaMap.entrySet()){
+                String project = entry.getKey();
                 projectsPage.clickOnProjectName(project);
                 headerPage.clickOnProjectSetting();
                 projectFormPage.clickOnMemberTab();
@@ -336,7 +438,7 @@ SetupPreconditions extends BaseClass{
         }
     }
 
-    private void createDummyIssues(String[] projects){
+    private void createDummyIssues(LinkedHashMap<String, String> projectSchemaMap){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
         IssuePage issuePage = new IssuePage(driver);
@@ -344,7 +446,8 @@ SetupPreconditions extends BaseClass{
         try{
             headerPage.clickOnProjects();
 
-            for(String project : projects){
+            for(Map.Entry<String, String> entry : projectSchemaMap.entrySet()){
+                String project = entry.getKey();
                 projectsPage.clickOnProjectName(project);
                 headerPage.clickOnIssues();
 
@@ -362,60 +465,5 @@ SetupPreconditions extends BaseClass{
             Assert.fail();
         }
     }
-
-    private void setupTwoProjectsSameSchema(){
-        String[] newApprovalUsers = {
-                "ivy.skylark",    // New 1ApproverNew
-                "luna.meadow",    // New 2ApproverNew
-                "marigold.rayne"  // New 3ApproverNew
-        };
-
-        /*String[] approvalUsers = {
-                "aurora.wren",    // 1Approval
-                "autumn.grace",   // 2Approval
-                "briar.sunset",   // 3Approval
-                "celeste.dawn",   // 4Approval
-                "daisy.skye"      // 5Approval
-        };*/
-
-        String projects[] = {"New Project 3-Level-Schema"};
-        String Schema = "3 Level Schema";
-
-        String[] approvalRoles = {
-                "1Approval",
-                "2Approval",
-                "3Approval",
-                "4Approval",
-                "5Approval"
-        };
-
-        String[] users = {
-                "ember.lilac",
-                "harmony.rose",
-                "isla.moon",
-                "nova.starling",
-                "opal.sparrow",
-                "sage.willow",
-                "selene.frost",
-                "serenity.bloom",
-                "summer.rain"
-        };
-
-        String []schemas = new String[]{"3 Level Schema"};
-
-        String []userRoles = new String[]{"Employee","Developer","Support"};
-
-        super.login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));
-        this.createRoles(approvalRoles, userRoles);
-        this.createUsers(newApprovalUsers, users);
-        this.enabledIssueLogTimeForOtherUser();
-        this.createSchemas(schemas);
-        this.createLevelInsideSchemas(schemas,approvalRoles);
-        this.createDummyProjectsAndSelectSchema(projects,schemas);
-        this.selectMemberAndTheirRoleInsideProject(projects, newApprovalUsers, approvalRoles, users);
-        this.createDummyIssues(projects);
-        driver.quit();
-    }
-
 
 }

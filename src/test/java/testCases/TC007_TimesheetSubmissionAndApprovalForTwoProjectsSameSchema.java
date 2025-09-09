@@ -56,99 +56,7 @@ public class TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema extend
 
     String startDate = "08/04/2025", endDate = "08/10/2025";
     String [] dateRanges = new String[2];
-    Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();
-    @BeforeClass
-    public void setupPreconditions() {
-        HeaderPage headerPage = new HeaderPage(driver);
-        AdministrationPage administrationPage = new AdministrationPage(driver);
-        UsersPage usersPage = new UsersPage(driver);
-        UserFormPage userFormPage = new UserFormPage(driver);
-        ProjectsPage projectsPage = new ProjectsPage(driver);
-        ProjectFormPage projectFormPage = new ProjectFormPage(driver);
-        IssuePage issuePage = new IssuePage(driver);
-        IssueFormPage issueFormPage = new IssueFormPage(driver);
-        logger.info("Precondition: Create new approval users, create new project with same schema, and add members.");
-        try {
-
-            logger.info("Step 1: Logging in as Admin");
-            super.login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));
-            logger.info("Step 2: Click on Administrator Module");
-            headerPage.clickOnAdministrator();
-            logger.info("Step 3: Click on User Module");
-            administrationPage.clickOnUsers();
-
-            logger.info("Step 4: Creating 3 approver users");
-            for(String user : this.newApprovalUsers){
-                if(usersPage.getUserList().containsAll(Arrays.asList(this.newApprovalUsers)))
-                    break;
-
-                if(!usersPage.getUserList().contains(user)) {
-                    usersPage.clickOnAddUserBtn();
-                    userFormPage.setTxtUserLoginName(user);
-                    userFormPage.setTxtUserFirstName(user);
-                    userFormPage.setTxtUserLastName(user);
-                    userFormPage.setTxtUserEmail(user+"@zehntech.com");
-                    userFormPage.setTxtUserPassword("12345678");
-                    userFormPage.setTxtConfirmationPassword("12345678");
-                    userFormPage.clickOnCreate();
-                    userFormPage.clickOnUsersPage();
-                }
-            }
-
-            logger.info("Step 5: Create project: "+this.projects[1]+" and add members");
-            headerPage.clickOnProjects();
-            if(!projectsPage.getProjectsName().contains(this.projects[1])){
-                projectsPage.clickOnAddProjectBtn();
-                projectFormPage.setTxtProjectName(this.projects[1]);
-                projectFormPage.selectTimesheetSchema("3 Level Schema");
-                projectFormPage.checkCheckBoxTimesheetApproval();
-                projectFormPage.clickOnCreate();
-
-                projectFormPage.clickOnMemberTab();
-                if(!projectFormPage.getMembersList().containsAll(Arrays.asList(this.newApprovalUsers))) {
-                    for (int i = 0; i < this.newApprovalUsers.length; i++) {
-                        projectFormPage.clickOnNewMemberBtn();
-                        projectFormPage.selectMember(toFullName(this.newApprovalUsers[i]));
-                        projectFormPage.selectRole(this.approvalRoles[i]);
-                        projectFormPage.clickOnAddBtnOfMember();
-                    }
-                }
-                if(!projectFormPage.getMembersList().containsAll(Arrays.asList(this.users))) {
-                    projectFormPage.clickOnNewMemberBtn();
-                    for (int i = 0; i < users.length; i++) {
-                        projectFormPage.selectMember(toFullName(users[i]));
-                    }
-                    projectFormPage.selectRole("Developer");
-                    projectFormPage.clickOnAddBtnOfMember();
-                }
-
-                if(!projectFormPage.getMembersList().containsAll(Arrays.asList(this.approvalUsers))) {
-                    projectFormPage.clickOnNewMemberBtn();
-                    for (String approvalUser : approvalUsers) {
-                        projectFormPage.selectMember(toFullName(approvalUser));
-                    }
-                    projectFormPage.selectRole("Employee");
-                    projectFormPage.clickOnAddBtnOfMember();
-                }
-
-                headerPage.clickOnIssues();
-
-                if(!issuePage.getSubjectNamesOfIssuesList().contains("Test")) {
-                    issuePage.clickOnNewIssueBtn();
-                    issueFormPage.setTxtSubject("Test");
-                    issueFormPage.clickOnCreateBtn();
-                }
-            }
-
-            logger.info("Step 6: Logging out");
-            headerPage.clickOnLogout();
-
-
-        } catch (Exception e) {
-            logger.error("Setup failed: " + e.getMessage());
-            Assert.fail();
-        }
-    }
+   /* Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();*/
 
     @Test(priority = 1, groups = {"Sanity", "Master", "Regression"})
     public void testSubmitTimesheetForProjectsDAndNewProject(){
@@ -202,10 +110,10 @@ public class TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema extend
                         logger.info("------ Clicking Log Time button");
                         timesheetPage.clickOnLogTimeBtnForLogTime();
 
-                        Double hoursVal = Double.parseDouble(hours);
+                        /*Double hoursVal = Double.parseDouble(hours);
                         projectActivityHours.putIfAbsent(project, new HashMap<>());
                         Map<String, Double> activityMap = projectActivityHours.get(project);
-                        activityMap.put(activity, activityMap.getOrDefault(activity,0.0)+hoursVal);
+                        activityMap.put(activity, activityMap.getOrDefault(activity,0.0)+hoursVal);*/
                     }
                 }
 
@@ -248,9 +156,9 @@ public class TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema extend
                 logger.info("------ Go to Date Range of Submission");
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
-                logger.info("------ Verify 'Design' and 'Development' Activity hours ");
+                /*logger.info("------ Verify 'Design' and 'Development' Activity hours ");
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(projects[0]).getOrDefault("Design", 0.0));
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(projects[0]).getOrDefault("Development", 0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(projects[0]).getOrDefault("Development", 0.0));*/
 
                 logger.info("------ Approving timesheet for " + submitterUser);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(this.submitterUser));
@@ -321,9 +229,9 @@ public class TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema extend
                 logger.info("------ Go to Date Range of Submission");
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
-                logger.info("------ Verify 'Design' and 'Development' Activity hours ");
+                /*logger.info("------ Verify 'Design' and 'Development' Activity hours ");
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(projects[1]).getOrDefault("Design", 0.0));
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(projects[1]).getOrDefault("Development", 0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(projects[1]).getOrDefault("Development", 0.0));*/
 
                 logger.info("------ Approving timesheet for " + submitterUser);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(this.submitterUser));

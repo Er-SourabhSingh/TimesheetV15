@@ -15,7 +15,7 @@
     <test thread-count="5" parallel="none" name="TimeSheetManual">
         <parameter name="os" value="window"/>
         <parameter name="browser" value="chrome"/>
-        <parameter name="approvalFlow" value="manual"/>
+        <parameter name="approvalflow" value="manual"/>
         <classes>
              <class name="testBase.SetupPreconditions"/>
              <class name="testCases.TC001_TimesheetApprovalTests"/>
@@ -32,7 +32,7 @@
     <test thread-count="5" parallel="none" name="SameSchemaInTwoProject">
         <parameter name="os" value="window"/>
         <parameter name="browser" value="chrome"/>
-        <parameter name="approvalFlow" value="SameSchema"/>
+        <parameter name="approvalflow" value="sameschema"/>
         <classes>
             <class name="testCases.TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema"/>
 
@@ -42,7 +42,7 @@
     <test thread-count="5" parallel="none" name="TimesheetAutoApproval">
         <parameter name="os" value="window"/>
         <parameter name="browser" value="chrome"/>
-        <parameter name="approvalFlow" value="manual"/>
+        <parameter name="approvalflow" value="auto"/>
         <classes>
             <class name="testCases.TC009_TimesheetAutoApprovalTest"/>
             <class name="testCases.TC010_TimesheetManualApprovalBeforeAutoApproved"/>

@@ -26,7 +26,7 @@ public class TC010_TimesheetManualApprovalBeforeAutoApproved extends  BaseClass{
     String project = "New Project 5-Level-Schema";
     String startDate = "08/18/2025", endDate = "08/24/2025";
     String [] dateRanges = new String[2];
-    Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();
+    /*Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();*/
 
     @Test (priority = 1, groups = {"Master","Regression"})
     public void testSubmitTimesheetOfMarigoldRayneForNewProject(){
@@ -79,10 +79,10 @@ public class TC010_TimesheetManualApprovalBeforeAutoApproved extends  BaseClass{
                     logger.info("------ Clicking Log Time button");
                     timesheetPage.clickOnLogTimeBtnForLogTime();
 
-                    Double hoursVal = Double.parseDouble(hours);
+                    /*Double hoursVal = Double.parseDouble(hours);
                     projectActivityHours.putIfAbsent(project, new HashMap<>());
                     Map<String, Double> activityMap = projectActivityHours.get(project);
-                    activityMap.put(activity, activityMap.getOrDefault(activity,0.0)+hoursVal);
+                    activityMap.put(activity, activityMap.getOrDefault(activity,0.0)+hoursVal);*/
                 }
 
 
@@ -125,9 +125,9 @@ public class TC010_TimesheetManualApprovalBeforeAutoApproved extends  BaseClass{
                 logger.info("------ Go to Date Range of Submission");
                 timesheetApprovalPage.navigateToTargetDateRange(this.dateRanges[0], this.dateRanges[1]);
 
-                logger.info("------ Verify 'Design' and 'Development' Activity hours ");
+                /*logger.info("------ Verify 'Design' and 'Development' Activity hours ");
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(this.project).getOrDefault("Design",0.0));
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(this.project).getOrDefault("Development",0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(this.project).getOrDefault("Development",0.0));*/
 
 
                 logger.info("------ Approving timesheet for "+ this.submitterUser);

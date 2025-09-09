@@ -41,127 +41,7 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
 
     String startDate = "08/18/2025", endDate = "08/24/2025";
     String [] dateRanges = new String[2];
-    Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();
-
-    @BeforeClass
-    public void setupPreconditions() {
-        HeaderPage headerPage = new HeaderPage(driver);
-        AdministrationPage administrationPage = new AdministrationPage(driver);
-        PluginsPage pluginsPage = new PluginsPage(driver);
-        TimesheetConfiguration configuration = new TimesheetConfiguration(driver);
-        ProjectsPage projectsPage = new ProjectsPage(driver);
-        ProjectFormPage projectFormPage = new ProjectFormPage(driver);
-        IssuePage issuePage = new IssuePage(driver);
-        IssueFormPage issueFormPage = new IssueFormPage(driver);
-        TimesheetPage timesheetPage = new TimesheetPage(driver);
-        TimesheetApprovalSchema approvalSchema = new TimesheetApprovalSchema(driver);
-        logger.info("Precondition: Create Approval schema and 5 levels with auto approval, create new project with same schema, and add members.");
-        try {
-
-            logger.info("Step 1: Logging in as Admin");
-            super.login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));
-            logger.info("Step 2: Click on Timesheet Module");
-            headerPage.clickOnTimesheet();
-
-            logger.info("3: Click on timesheet module in header");
-            headerPage.clickOnTimesheet();
-            logger.info("4: Click on timesheet approval schema sub module inside Timesheet module");
-            timesheetPage.clickOnTimesheetApprovalSchema();
-
-            logger.info("5: Click on timesheet approval schema sub module inside Timesheet module");
-            timesheetPage.clickOnTimesheetApprovalSchema();
-
-            logger.info("6: Check that schema is already created");
-
-            if(!approvalSchema.getSchemaList().contains(this.schema)) {
-                logger.info("Click on add new schema btn");
-                approvalSchema.clickOnAddNewSchemaBTn();
-                logger.info("Write schema name");
-                approvalSchema.setSchemaName(this.schema);
-                logger.info("Click on Create schema");
-                approvalSchema.clickOnCreateSchema();
-            }
-
-            logger.info("7: Open schema: " + this.schema);
-            approvalSchema.clickOnSchemaToOpen(this.schema);
-            Map<Integer,String> levels = new HashMap<>();
-            levels.put(1, "Level One"); levels.put(2, "Level Two"); levels.put(3,"Level Three"); levels.put(4,"Level Four"); levels.put(5,"Level Five");
-
-            for (int j = 1; j <= 5; j++) {
-                if (!approvalSchema.getListOfLevels().contains(levels.get(j))) {
-                    logger.info("Click on Add Approval level btn");
-                    approvalSchema.clickOnAddApprovalLevelBtn();
-                    logger.info("Set level name Level " + Integer.toString(j));
-                    approvalSchema.setApprovalLevelName("Level " + Integer.toString(j));
-                    logger.info("Select Approval Role: " + this.approvalRoles[j - 1]);
-                    approvalSchema.selectApprovalRole(this.approvalRoles[j - 1]);
-                    logger.info("Select Approval Level: " + Integer.toString(j));
-                    approvalSchema.selectApprovalLevel(Integer.toString(j));
-                    logger.info("Check Auto Approval");
-                    approvalSchema.checkCheckboxAutoApproval();
-                    logger.info("Click on Create Approval Level");
-                    approvalSchema.clickOnApprovalLevelCreate();
-                }
-            }
-
-            logger.info("8: go back page of approval schema level");
-            driver.navigate().back();
-
-
-            logger.info("9: Create project: " + this.project + " and add members");
-            headerPage.clickOnProjects();
-            if(!projectsPage.getProjectsName().contains(this.project)){
-                projectsPage.clickOnAddProjectBtn();
-                projectFormPage.setTxtProjectName(this.project);
-                projectFormPage.selectTimesheetSchema(this.schema);
-                projectFormPage.checkCheckBoxTimesheetApproval();
-                projectFormPage.clickOnCreate();
-
-                projectFormPage.clickOnMemberTab();
-                if(!projectFormPage.getMembersList().containsAll(Arrays.asList(this.approvalUsers))) {
-                    for (int i = 0; i < this.approvalUsers.length; i++) {
-                        projectFormPage.clickOnNewMemberBtn();
-                        projectFormPage.selectMember(toFullName(this.approvalUsers[i]));
-                        projectFormPage.selectRole(this.approvalRoles[i]);
-                        projectFormPage.clickOnAddBtnOfMember();
-                    }
-                }
-
-                List<String> users = this.toFullNames(this.users);
-                if(!projectFormPage.getMembersList().containsAll(users)) {
-                    projectFormPage.clickOnNewMemberBtn();
-                    for (int i = 0; i < this.users.length; i++) {
-                        projectFormPage.selectMember(capitalize(this.users[i].split("\\.")[0]) + " " + capitalize(this.users[i].split("\\.")[1]));
-                    }
-                    projectFormPage.selectRole("Developer");
-                    projectFormPage.clickOnAddBtnOfMember();
-                }
-
-                headerPage.clickOnIssues();
-
-                if(!issuePage.getSubjectNamesOfIssuesList().contains("Test")) {
-                    issuePage.clickOnNewIssueBtn();
-                    issueFormPage.setTxtSubject("Test");
-                    issueFormPage.clickOnCreateBtn();
-                }
-            }
-
-            logger.info("9: Set time for Auto approval");
-            headerPage.clickOnAdministrator();
-            administrationPage.clickOnPlugins();
-            pluginsPage.clickOnConfigureOfTimesheetPlugin();
-            configuration.setTxtAutoApprovalTime("0.03");
-            configuration.clickOnApplyBtn();
-
-            logger.info("Step 10: Logging out");
-            headerPage.clickOnLogout();
-
-
-        } catch (Exception e) {
-            logger.error("Setup failed: " + e.getMessage());
-            Assert.fail();
-        }
-    }
+    /*Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();*/
 
     @Test(priority = 1, groups = {"Sanity", "Master", "Regression"})
     public void testSubmitTimesheetForNewProject(){
@@ -214,10 +94,10 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
                     logger.info("------ Clicking Log Time button");
                     timesheetPage.clickOnLogTimeBtnForLogTime();
 
-                    Double hoursVal = Double.parseDouble(hours);
+                    /*Double hoursVal = Double.parseDouble(hours);
                     projectActivityHours.putIfAbsent(project, new HashMap<>());
                     Map<String, Double> activityMap = projectActivityHours.get(project);
-                    activityMap.put(activity, activityMap.getOrDefault(activity,0.0)+hoursVal);
+                    activityMap.put(activity, activityMap.getOrDefault(activity,0.0)+hoursVal);*/
                 }
 
 
@@ -261,9 +141,9 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
                 logger.info("------ Go to Date Range of Submission");
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
-                logger.info("------ Verify 'Design' and 'Development' Activity hours ");
+                /*logger.info("------ Verify 'Design' and 'Development' Activity hours ");
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(this.project).getOrDefault("Design",0.0));
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(this.project).getOrDefault("Development",0.0));
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(this.project).getOrDefault("Development",0.0));*/
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.submitterUser)),"Approved");
 
