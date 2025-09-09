@@ -51,12 +51,12 @@ SetupPreconditions extends BaseClass{
                 "summer.rain"
         };
 
-        LinkedHashMap<String, Integer> schemaLevelMap = new LinkedHashMap<>(); // Keeps insertion order
-        schemaLevelMap.put("1 Level Schema", 1);
-        schemaLevelMap.put("2 Level Schema", 2);
-        schemaLevelMap.put("3 Level Schema", 3);
-        schemaLevelMap.put("4 Level Schema", 4);
-        schemaLevelMap.put("5 Level Schema", 5);
+        LinkedHashMap<String, List<Boolean>> schemaLevelMap = new LinkedHashMap<>(); // Keeps insertion order
+        schemaLevelMap.put("1 Level Schema", Arrays.asList(false));
+        schemaLevelMap.put("2 Level Schema", Arrays.asList(false, false));
+        schemaLevelMap.put("3 Level Schema", Arrays.asList(false, false, false));
+        schemaLevelMap.put("4 Level Schema", Arrays.asList(false, false, false, false));
+        schemaLevelMap.put("5 Level Schema", Arrays.asList(false, false, false, false, false));
 
         LinkedHashMap<String, String> projectSchemaMap = new LinkedHashMap<>();
         projectSchemaMap.put("Project A Default-Schema", "Default Approval Schema");
@@ -107,8 +107,8 @@ SetupPreconditions extends BaseClass{
 
         String []userRoles = new String[]{"Employee","Developer","Support"};
 
-        LinkedHashMap<String, Integer> schemaLevelMap = new LinkedHashMap<>(); // Keeps insertion order
-        schemaLevelMap.put("3 Level Schema", 3);
+        LinkedHashMap<String, List<Boolean>> schemaLevelMap = new LinkedHashMap<>(); // Keeps insertion order
+        schemaLevelMap.put("3 Level Schema", Arrays.asList(false, false, false));
 
         LinkedHashMap<String, String> projectSchemaMap = new LinkedHashMap<>();
         projectSchemaMap.put("New Project 3-Level-Schema", "3 Level Schema");
@@ -135,8 +135,8 @@ SetupPreconditions extends BaseClass{
                 "daisy.skye"      // 5Approval
         };
 
-        LinkedHashMap<String, Integer> schemaLevelMap = new LinkedHashMap<>(); // Keeps insertion order
-        schemaLevelMap.put("Schema 5 auto-approval", 5);
+        LinkedHashMap<String, List<Boolean>> schemaLevelMap = new LinkedHashMap<>(); // Keeps insertion order
+        schemaLevelMap.put("Schema 5 auto-approval", Arrays.asList(true, true, true, true, true));
 
         LinkedHashMap<String, String> projectSchemaMap = new LinkedHashMap<>();
         projectSchemaMap.put("New Project 5-Level-Schema", "Schema 5 auto-approval");
@@ -318,7 +318,7 @@ SetupPreconditions extends BaseClass{
         }
     }
 
-    private void createSchemas(LinkedHashMap<String, Integer> schemas){
+    private void createSchemas(LinkedHashMap<String, List<Boolean>> schemas){
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         TimesheetApprovalSchema approvalSchema = new TimesheetApprovalSchema(driver);
@@ -328,7 +328,7 @@ SetupPreconditions extends BaseClass{
             headerPage.clickOnTimesheet();
             logger.info("2: Click on timesheet approval schema sub module inside Timesheet module");
             timesheetPage.clickOnTimesheetApprovalSchema();
-            for(Map.Entry<String, Integer> entry : schemas.entrySet()) {
+            for(Map.Entry<String, List<Boolean>> entry : schemas.entrySet()) {
                 String schemaName = entry.getKey();
                 logger.info("3: Check that schema is already created");
                 /*if(approvalSchema.getSchemaList().containsAll(Arrays.asList(schemas)))
@@ -348,29 +348,35 @@ SetupPreconditions extends BaseClass{
         }
     }
 
-    private void createLevelInsideSchemas(LinkedHashMap<String, Integer> schemaLevelMap, String[] approvalRoles){
+    private void createLevelInsideSchemas(LinkedHashMap<String, List<Boolean>> schemaLevelMap, String[] approvalRoles){
         Map<Integer,String> levels = new HashMap<>();
         levels.put(1, "Level One"); levels.put(2, "Level Two"); levels.put(3,"Level Three"); levels.put(4,"Level Four"); levels.put(5,"Level Five");
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         TimesheetApprovalSchema approvalSchema = new TimesheetApprovalSchema(driver);
         logger.info("----- Create levels inside schema -----");
         try {
-            for(Map.Entry<String, Integer> entry : schemaLevelMap.entrySet()) {
+            for(Map.Entry<String, List<Boolean>> entry : schemaLevelMap.entrySet()) {
                 logger.info("Open schema "+entry.getKey());
-                int levelCount = entry.getValue();
                 approvalSchema.clickOnSchemaToOpen(entry.getKey());
+                List<Boolean> autoApprovalFlags = entry.getValue();
+                int levelCount = autoApprovalFlags.size();
                 for(int j=0; j<levelCount; j++){
                     if(approvalSchema.getListOfLevels().contains(levels.get(levelCount)))
                         break;
                     if(!approvalSchema.getListOfLevels().contains(levels.get(j + 1))) {
                         logger.info("Click on Add Approval level btn");
                         approvalSchema.clickOnAddApprovalLevelBtn();
-                        logger.info("Set level name Level " + Integer.toString(j));
+                        logger.info("Set level name Level " + Integer.toString(j + 1));
                         approvalSchema.setApprovalLevelName("Level " + Integer.toString(j + 1));
                         logger.info("Select Approval Role: " + approvalRoles[j]);
                         approvalSchema.selectApprovalRole(approvalRoles[j]);
-                        logger.info("Select Approval Level: " + Integer.toString(j));
-                        approvalSchema.selectApprovalLevel(Integer.toString(j));
+                        logger.info("Select Approval Level: " + Integer.toString(j + 1));
+                        approvalSchema.selectApprovalLevel(Integer.toString(j + 1));
+
+                        if(autoApprovalFlags.get(j)){
+                            logger.info("Check Auto Approval Checkbox: " + Integer.toString(j + 1));
+                            approvalSchema.checkCheckboxAutoApproval();
+                        }
                         logger.info("Click on Create Approval Level");
                         approvalSchema.clickOnApprovalLevelCreate();
                     }
