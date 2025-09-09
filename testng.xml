@@ -34,8 +34,8 @@
         <parameter name="browser" value="chrome"/>
         <parameter name="approvalflow" value="sameschema"/>
         <classes>
+            <class name="testBase.SetupPreconditions"/>
             <class name="testCases.TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema"/>
-
         </classes>
     </test>
 
@@ -44,6 +44,7 @@
         <parameter name="browser" value="chrome"/>
         <parameter name="approvalflow" value="auto"/>
         <classes>
+            <class name="testBase.SetupPreconditions"/>
             <class name="testCases.TC009_TimesheetAutoApprovalTest"/>
             <class name="testCases.TC010_TimesheetManualApprovalBeforeAutoApproved"/>
         </classes>

@@ -163,6 +163,7 @@ SetupPreconditions extends BaseClass{
         this.createRoles(approvalRoles, userRoles);
         this.createUsers(approvalUsers, users);
         this.enabledIssueLogTimeForOtherUser();
+        this.setAutApprovalTime("0.03");
         this.createSchemas(schemaLevelMap);
         this.createLevelInsideSchemas(schemaLevelMap,approvalRoles);
         this.createDummyProjectsAndSelectSchema(projectSchemaMap);
@@ -300,6 +301,23 @@ SetupPreconditions extends BaseClass{
         }
     }
 
+    private void setAutApprovalTime(String time){
+        HeaderPage headerPage = new HeaderPage(driver);
+        AdministrationPage administrationPage = new AdministrationPage(driver);
+        PluginsPage pluginsPage = new PluginsPage(driver);
+        TimesheetConfiguration configuration = new TimesheetConfiguration(driver);
+
+        try {
+            headerPage.clickOnAdministrator();
+            administrationPage.clickOnPlugins();
+            pluginsPage.clickOnConfigureOfTimesheetPlugin();
+            configuration.setTxtAutoApprovalTime(time);
+            configuration.clickOnApplyBtn();
+        } catch (RuntimeException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     private void createSchemas(LinkedHashMap<String, Integer> schemas){
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
@@ -313,8 +331,8 @@ SetupPreconditions extends BaseClass{
             for(Map.Entry<String, Integer> entry : schemas.entrySet()) {
                 String schemaName = entry.getKey();
                 logger.info("3: Check that schema is already created");
-                if(approvalSchema.getSchemaList().containsAll(Arrays.asList(schemas)))
-                    break;
+                /*if(approvalSchema.getSchemaList().containsAll(Arrays.asList(schemas)))
+                    break;*/
                 if(!approvalSchema.getSchemaList().contains(schemaName)) {
                     logger.info("Click on add new schema btn");
                     approvalSchema.clickOnAddNewSchemaBTn();
@@ -330,14 +348,14 @@ SetupPreconditions extends BaseClass{
         }
     }
 
-    private void createLevelInsideSchemas(LinkedHashMap<String, Integer> schemas, String[] approvalRoles){
+    private void createLevelInsideSchemas(LinkedHashMap<String, Integer> schemaLevelMap, String[] approvalRoles){
         Map<Integer,String> levels = new HashMap<>();
         levels.put(1, "Level One"); levels.put(2, "Level Two"); levels.put(3,"Level Three"); levels.put(4,"Level Four"); levels.put(5,"Level Five");
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         TimesheetApprovalSchema approvalSchema = new TimesheetApprovalSchema(driver);
         logger.info("----- Create levels inside schema -----");
         try {
-            for(Map.Entry<String, Integer> entry : schemas.entrySet()) {
+            for(Map.Entry<String, Integer> entry : schemaLevelMap.entrySet()) {
                 logger.info("Open schema "+entry.getKey());
                 int levelCount = entry.getValue();
                 approvalSchema.clickOnSchemaToOpen(entry.getKey());
@@ -348,7 +366,7 @@ SetupPreconditions extends BaseClass{
                         logger.info("Click on Add Approval level btn");
                         approvalSchema.clickOnAddApprovalLevelBtn();
                         logger.info("Set level name Level " + Integer.toString(j));
-                        approvalSchema.setApprovalLevelName("Level " + Integer.toString(j));
+                        approvalSchema.setApprovalLevelName("Level " + Integer.toString(j + 1));
                         logger.info("Select Approval Role: " + approvalRoles[j]);
                         approvalSchema.selectApprovalRole(approvalRoles[j]);
                         logger.info("Select Approval Level: " + Integer.toString(j));
