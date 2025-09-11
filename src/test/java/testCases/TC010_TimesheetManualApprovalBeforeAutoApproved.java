@@ -185,10 +185,10 @@ public class TC010_TimesheetManualApprovalBeforeAutoApproved extends  BaseClass{
         HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
         try{
             logger.info("----- Verify That History of Manual approver");
-            for(int i = 0; i < this.approvalUsers.length; i++) {
+            for(int i = 0; i < this.approvalUsers.length ; i++) {
                 logger.info("---- Logging in as Approver:" + this.approvalUsers[i]);
                 this.login(approvalUsers[i], "12345678");
-                //Thread.sleep(125000); // 125,000 ms = 2 min 5 sec
+
                 logger.info("------ Navigating to project: " + this.project);
                 headerPage.clickOnProjects();
                 projectsPage.clickOnProjectName(this.project);
@@ -211,6 +211,11 @@ public class TC010_TimesheetManualApprovalBeforeAutoApproved extends  BaseClass{
                 history.add("Approved By : " + toFullName(this.approvalUsers[i]));
                 history.add("Approval Comment : Approved by -------- "  + toFullName(this.approvalUsers[i]));
                 Assert.assertTrue(historyApprovalPage.getLastUpdatedHistoryByUser(toFullName(this.approvalUsers[i])).containsAll(history));
+
+                if(i == this.approvalUsers.length - 1){
+                    Thread.sleep(10 * 60 * 1000); // 10 mint
+                    Assert.assertTrue(historyApprovalPage.getLastUpdatedHistory().containsAll(history));
+                }
 
                 logger.info("------ Logging out approver: " + this.approvalUsers[i]);
                 headerPage.clickOnLogout();
