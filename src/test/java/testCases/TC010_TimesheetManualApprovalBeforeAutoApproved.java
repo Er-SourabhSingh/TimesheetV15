@@ -22,7 +22,7 @@ public class TC010_TimesheetManualApprovalBeforeAutoApproved extends  BaseClass{
             "celeste.dawn",   // 4Approval
             "daisy.skye"      // 5Approval
     };
-    String submitterUser = "isla.moon"; // user8 replaced
+    String submitterUser = "marigold.rayne"; // user8 replaced
     String project = "New Project 5-Level-Schema";
     String startDate = "08/18/2025", endDate = "08/24/2025";
     String [] dateRanges = new String[2];
