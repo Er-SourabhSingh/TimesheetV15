@@ -98,7 +98,7 @@ public class TC011_TimesheetManualRejectionBeforeAutoApproved extends BaseClass 
     }
 
     @Test(priority = 2, groups = {"Master","Regression"}, dependsOnMethods = {"testSubmitTimesheetOfSerenityBloomForNewProject"})
-    public void testRejectProjectCAtLevel1(){
+    public void testRejectSubmittedTimesheetOfSerenityBloom(){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
@@ -162,7 +162,7 @@ public class TC011_TimesheetManualRejectionBeforeAutoApproved extends BaseClass 
         }
     }
 
-    @Test(priority = 3, groups = {"Master", "Regression"}, dependsOnMethods = {"testApproveUserTimesheetBeforeAutoApproved"})
+    @Test(priority = 3, groups = {"Master", "Regression"}, dependsOnMethods = {"testRejectSubmittedTimesheetOfSerenityBloom"})
     public void verifyRejectedHistory(){
         logger.info("Test Case 2: Verify History After 10 mint wait No auto apporval action taken");
         HeaderPage headerPage = new HeaderPage(driver);
