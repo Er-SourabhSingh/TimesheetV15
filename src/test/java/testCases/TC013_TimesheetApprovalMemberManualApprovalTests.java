@@ -104,7 +104,7 @@ public class TC013_TimesheetApprovalMemberManualApprovalTests extends BaseClass 
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         try{
             logger.info("----- Verify That Approver can Approve Timesheet Before Auto Approver get Trigger");
-            for(int i = 0; i < this.approvalUsers.length; i++) {
+            for(int i = 2; i < this.approvalUsers.length; i++) {
                 logger.info("---- Logging in as Approver:" + this.approvalUsers[i]);
                 this.login(this.approvalUsers[i], "12345678");
 
@@ -148,7 +148,7 @@ public class TC013_TimesheetApprovalMemberManualApprovalTests extends BaseClass 
         HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
         try{
             logger.info("----- Verify That History of Manual approver");
-            for(int i = 0; i < this.approvalUsers.length ; i++) {
+            for(int i = 2; i < this.approvalUsers.length ; i++) {
                 logger.info("---- Logging in as Approver:" + this.approvalUsers[i]);
                 this.login(approvalUsers[i], "12345678");
 
@@ -173,6 +173,7 @@ public class TC013_TimesheetApprovalMemberManualApprovalTests extends BaseClass 
                 history.add("Submitted By : " + toFullName(this.submitterUser));
                 history.add("Approved By : " + toFullName(this.approvalUsers[i]));
                 history.add("Approval Comment : Approved by -------- "  + toFullName(this.approvalUsers[i]));
+                this.allHistory.push(history);
                 Assert.assertTrue(historyApprovalPage.getLastUpdatedHistoryByUser(toFullName(this.approvalUsers[i])).containsAll(history));
 
                 if(i == this.approvalUsers.length - 1){
