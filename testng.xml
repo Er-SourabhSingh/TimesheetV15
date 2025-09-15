@@ -49,6 +49,8 @@
             <class name="testCases.TC010_TimesheetManualApprovalTests"/>-->
             <class name="testCases.TC011_TimesheetManualRejectionTests"/>
             <class name="testCases.TC012_TimesheetApprovalMemberAutoApprovalTests"/>
+            <class name="testCases.TC013_TimesheetApprovalMemberManualApprovalTests"/>
+            <class name="testCases.TC014_TimesheetApprovalMemberManualRejectionTests"/>
         </classes>
     </test>
 
