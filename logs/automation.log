@@ -1,0 +1,142 @@
+2025-09-15 18:32:32 INFO  TC009_TimesheetAutoApprovalTest:36 - Test Case 1: Verify user can submit timesheet for new project
+2025-09-15 18:32:32 INFO  TC009_TimesheetAutoApprovalTest:39 - Step 1: Logging in as summer.rain
+2025-09-15 18:32:33 INFO  TC009_TimesheetAutoApprovalTest:42 - Step 2: Navigating to Timesheet module
+2025-09-15 18:32:35 INFO  TC009_TimesheetAutoApprovalTest:45 - Step 3: Expanding timesheet view
+2025-09-15 18:32:35 INFO  TC009_TimesheetAutoApprovalTest:48 - Step 4: Selecting date range filter as 'Custom Range'
+2025-09-15 18:32:37 INFO  TC009_TimesheetAutoApprovalTest:59 - Step 5: Logging time entries for each day from Monday to friday
+2025-09-15 18:32:37 INFO  TC009_TimesheetAutoApprovalTest:63 - ---- Logging entry for: 2025-08-18
+2025-09-15 18:32:38 INFO  TC009_TimesheetAutoApprovalTest:66 - ------ Selecting project: New Project 5-Level-Schema
+2025-09-15 18:32:38 INFO  TC009_TimesheetAutoApprovalTest:69 - ------ Selecting issue: Test
+2025-09-15 18:32:39 INFO  TC009_TimesheetAutoApprovalTest:73 - ------ Selecting activity: Development
+2025-09-15 18:32:39 INFO  TC009_TimesheetAutoApprovalTest:77 - ------ Entering hours: 8
+2025-09-15 18:32:39 INFO  TC009_TimesheetAutoApprovalTest:80 - ------ Clicking Log Time button
+2025-09-15 18:32:40 INFO  TC009_TimesheetAutoApprovalTest:63 - ---- Logging entry for: 2025-08-19
+2025-09-15 18:32:41 INFO  TC009_TimesheetAutoApprovalTest:66 - ------ Selecting project: New Project 5-Level-Schema
+2025-09-15 18:32:42 INFO  TC009_TimesheetAutoApprovalTest:69 - ------ Selecting issue: Test
+2025-09-15 18:32:43 INFO  TC009_TimesheetAutoApprovalTest:73 - ------ Selecting activity: Development
+2025-09-15 18:32:43 INFO  TC009_TimesheetAutoApprovalTest:77 - ------ Entering hours: 8
+2025-09-15 18:32:43 INFO  TC009_TimesheetAutoApprovalTest:80 - ------ Clicking Log Time button
+2025-09-15 18:32:43 INFO  TC009_TimesheetAutoApprovalTest:63 - ---- Logging entry for: 2025-08-20
+2025-09-15 18:32:45 INFO  TC009_TimesheetAutoApprovalTest:66 - ------ Selecting project: New Project 5-Level-Schema
+2025-09-15 18:32:46 INFO  TC009_TimesheetAutoApprovalTest:69 - ------ Selecting issue: Test
+2025-09-15 18:32:46 INFO  TC009_TimesheetAutoApprovalTest:73 - ------ Selecting activity: Design
+2025-09-15 18:32:46 INFO  TC009_TimesheetAutoApprovalTest:77 - ------ Entering hours: 7
+2025-09-15 18:32:46 INFO  TC009_TimesheetAutoApprovalTest:80 - ------ Clicking Log Time button
+2025-09-15 18:32:47 INFO  TC009_TimesheetAutoApprovalTest:63 - ---- Logging entry for: 2025-08-21
+2025-09-15 18:32:48 INFO  TC009_TimesheetAutoApprovalTest:66 - ------ Selecting project: New Project 5-Level-Schema
+2025-09-15 18:32:48 INFO  TC009_TimesheetAutoApprovalTest:69 - ------ Selecting issue: Test
+2025-09-15 18:32:49 INFO  TC009_TimesheetAutoApprovalTest:73 - ------ Selecting activity: Design
+2025-09-15 18:32:49 INFO  TC009_TimesheetAutoApprovalTest:77 - ------ Entering hours: 9
+2025-09-15 18:32:49 INFO  TC009_TimesheetAutoApprovalTest:80 - ------ Clicking Log Time button
+2025-09-15 18:32:49 INFO  TC009_TimesheetAutoApprovalTest:63 - ---- Logging entry for: 2025-08-22
+2025-09-15 18:32:50 INFO  TC009_TimesheetAutoApprovalTest:66 - ------ Selecting project: New Project 5-Level-Schema
+2025-09-15 18:32:50 INFO  TC009_TimesheetAutoApprovalTest:69 - ------ Selecting issue: Test
+2025-09-15 18:32:51 INFO  TC009_TimesheetAutoApprovalTest:73 - ------ Selecting activity: Design
+2025-09-15 18:32:51 INFO  TC009_TimesheetAutoApprovalTest:77 - ------ Entering hours: 8
+2025-09-15 18:32:51 INFO  TC009_TimesheetAutoApprovalTest:80 - ------ Clicking Log Time button
+2025-09-15 18:32:51 INFO  TC009_TimesheetAutoApprovalTest:90 - Step 6: Submitting the timesheet
+2025-09-15 18:32:52 INFO  TC009_TimesheetAutoApprovalTest:94 - ------ Verifying that the New Project 5-Level-Schema status is 'Waiting for Approval'
+2025-09-15 18:32:52 INFO  TC009_TimesheetAutoApprovalTest:99 - Step 8: Logging out submitterUser
+2025-09-15 18:32:52 INFO  TC009_TimesheetAutoApprovalTest:115 - ----- Verify That auto approval functionality
+2025-09-15 18:32:52 INFO  TC009_TimesheetAutoApprovalTest:117 - ---- Logging in as Approver:aurora.wren
+2025-09-15 18:34:58 INFO  TC009_TimesheetAutoApprovalTest:120 - ------ Navigating to project: New Project 5-Level-Schema
+2025-09-15 18:34:59 INFO  TC009_TimesheetAutoApprovalTest:124 - ------ Navigating to Timesheet Approval
+2025-09-15 18:35:00 INFO  TC009_TimesheetAutoApprovalTest:127 - ------ Go to Date Range of Submission
+2025-09-15 18:35:07 INFO  TC009_TimesheetAutoApprovalTest:137 - ------ Clicking on show btn of : summer.rainTimesheet History
+2025-09-15 18:35:08 ERROR TC009_TimesheetAutoApprovalTest:182 - org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression (//div[@class='timesheet_details']//div[contains(@class,'changelog_list')][1]//li because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '(//div[@class='timesheet_details']//div[contains(@class,'changelog_list')][1]//li' is not a valid XPath expression.
+  (Session info: chrome=140.0.7339.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [152ef311fefdca301806c96ffbbecaa3, findElements {value=(//div[@class='timesheet_details']//div[contains(@class,'changelog_list')][1]//li, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\SOURAB~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58565}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58565/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 152ef311fefdca301806c96ffbbecaa3
+2025-09-15 18:39:59 INFO  TC009_TimesheetAutoApprovalTest:36 - Test Case 1: Verify user can submit timesheet for new project
+2025-09-15 18:39:59 INFO  TC009_TimesheetAutoApprovalTest:39 - Step 1: Logging in as isla.moon
+2025-09-15 18:40:00 INFO  TC009_TimesheetAutoApprovalTest:42 - Step 2: Navigating to Timesheet module
+2025-09-15 18:40:02 INFO  TC009_TimesheetAutoApprovalTest:45 - Step 3: Expanding timesheet view
+2025-09-15 18:40:02 INFO  TC009_TimesheetAutoApprovalTest:48 - Step 4: Selecting date range filter as 'Custom Range'
+2025-09-15 18:40:04 INFO  TC009_TimesheetAutoApprovalTest:59 - Step 5: Logging time entries for each day from Monday to friday
+2025-09-15 18:40:04 INFO  TC009_TimesheetAutoApprovalTest:63 - ---- Logging entry for: 2025-08-18
+2025-09-15 18:40:05 INFO  TC009_TimesheetAutoApprovalTest:66 - ------ Selecting project: New Project 5-Level-Schema
+2025-09-15 18:40:06 INFO  TC009_TimesheetAutoApprovalTest:69 - ------ Selecting issue: Test
+2025-09-15 18:40:07 INFO  TC009_TimesheetAutoApprovalTest:73 - ------ Selecting activity: Development
+2025-09-15 18:40:07 INFO  TC009_TimesheetAutoApprovalTest:77 - ------ Entering hours: 8
+2025-09-15 18:40:07 INFO  TC009_TimesheetAutoApprovalTest:80 - ------ Clicking Log Time button
+2025-09-15 18:40:07 INFO  TC009_TimesheetAutoApprovalTest:63 - ---- Logging entry for: 2025-08-19
+2025-09-15 18:40:08 INFO  TC009_TimesheetAutoApprovalTest:66 - ------ Selecting project: New Project 5-Level-Schema
+2025-09-15 18:40:09 INFO  TC009_TimesheetAutoApprovalTest:69 - ------ Selecting issue: Test
+2025-09-15 18:40:09 INFO  TC009_TimesheetAutoApprovalTest:73 - ------ Selecting activity: Design
+2025-09-15 18:40:10 INFO  TC009_TimesheetAutoApprovalTest:77 - ------ Entering hours: 7
+2025-09-15 18:40:10 INFO  TC009_TimesheetAutoApprovalTest:80 - ------ Clicking Log Time button
+2025-09-15 18:40:10 INFO  TC009_TimesheetAutoApprovalTest:63 - ---- Logging entry for: 2025-08-20
+2025-09-15 18:40:11 INFO  TC009_TimesheetAutoApprovalTest:66 - ------ Selecting project: New Project 5-Level-Schema
+2025-09-15 18:40:11 INFO  TC009_TimesheetAutoApprovalTest:69 - ------ Selecting issue: Test
+2025-09-15 18:40:12 INFO  TC009_TimesheetAutoApprovalTest:73 - ------ Selecting activity: Design
+2025-09-15 18:40:12 INFO  TC009_TimesheetAutoApprovalTest:77 - ------ Entering hours: 6
+2025-09-15 18:40:12 INFO  TC009_TimesheetAutoApprovalTest:80 - ------ Clicking Log Time button
+2025-09-15 18:40:13 INFO  TC009_TimesheetAutoApprovalTest:63 - ---- Logging entry for: 2025-08-21
+2025-09-15 18:40:13 INFO  TC009_TimesheetAutoApprovalTest:66 - ------ Selecting project: New Project 5-Level-Schema
+2025-09-15 18:40:14 INFO  TC009_TimesheetAutoApprovalTest:69 - ------ Selecting issue: Test
+2025-09-15 18:40:15 INFO  TC009_TimesheetAutoApprovalTest:73 - ------ Selecting activity: Development
+2025-09-15 18:40:15 INFO  TC009_TimesheetAutoApprovalTest:77 - ------ Entering hours: 7
+2025-09-15 18:40:15 INFO  TC009_TimesheetAutoApprovalTest:80 - ------ Clicking Log Time button
+2025-09-15 18:40:15 INFO  TC009_TimesheetAutoApprovalTest:63 - ---- Logging entry for: 2025-08-22
+2025-09-15 18:40:16 INFO  TC009_TimesheetAutoApprovalTest:66 - ------ Selecting project: New Project 5-Level-Schema
+2025-09-15 18:40:16 INFO  TC009_TimesheetAutoApprovalTest:69 - ------ Selecting issue: Test
+2025-09-15 18:40:17 INFO  TC009_TimesheetAutoApprovalTest:73 - ------ Selecting activity: Design
+2025-09-15 18:40:17 INFO  TC009_TimesheetAutoApprovalTest:77 - ------ Entering hours: 6
+2025-09-15 18:40:17 INFO  TC009_TimesheetAutoApprovalTest:80 - ------ Clicking Log Time button
+2025-09-15 18:40:18 INFO  TC009_TimesheetAutoApprovalTest:90 - Step 6: Submitting the timesheet
+2025-09-15 18:40:18 INFO  TC009_TimesheetAutoApprovalTest:94 - ------ Verifying that the New Project 5-Level-Schema status is 'Waiting for Approval'
+2025-09-15 18:40:18 INFO  TC009_TimesheetAutoApprovalTest:99 - Step 8: Logging out submitterUser
+2025-09-15 18:40:18 INFO  TC009_TimesheetAutoApprovalTest:115 - ----- Verify That auto approval functionality
+2025-09-15 18:40:18 INFO  TC009_TimesheetAutoApprovalTest:117 - ---- Logging in as Approver:aurora.wren
+2025-09-15 18:42:24 INFO  TC009_TimesheetAutoApprovalTest:120 - ------ Navigating to project: New Project 5-Level-Schema
+2025-09-15 18:42:25 INFO  TC009_TimesheetAutoApprovalTest:124 - ------ Navigating to Timesheet Approval
+2025-09-15 18:42:26 INFO  TC009_TimesheetAutoApprovalTest:127 - ------ Go to Date Range of Submission
+2025-09-15 18:42:33 INFO  TC009_TimesheetAutoApprovalTest:137 - ------ Clicking on show btn of : isla.moonTimesheet History
+2025-09-15 18:42:34 INFO  TC009_TimesheetAutoApprovalTest:148 - ------ Logging out approver: aurora.wren
+2025-09-15 18:42:34 INFO  TC009_TimesheetAutoApprovalTest:152 - ------ Logging in as isla.moon
+2025-09-15 18:42:35 INFO  TC009_TimesheetAutoApprovalTest:155 - ------ Navigating to Timesheet module
+2025-09-15 18:42:36 INFO  TC009_TimesheetAutoApprovalTest:158 - ------ Expanding timesheet view
+2025-09-15 18:42:36 INFO  TC009_TimesheetAutoApprovalTest:161 - ------ Selecting date range filter as 'Custom Range'
+2025-09-15 18:42:37 INFO  TC009_TimesheetAutoApprovalTest:169 - ------ Verifying that the New Project 5-Level-Schema status is 'Waiting for Approval' after approval at level 1
+2025-09-15 18:42:37 INFO  TC009_TimesheetAutoApprovalTest:178 - ------ Logging out isla.moon
+2025-09-15 18:42:37 INFO  TC009_TimesheetAutoApprovalTest:117 - ---- Logging in as Approver:autumn.grace
+2025-09-15 18:44:43 INFO  TC009_TimesheetAutoApprovalTest:120 - ------ Navigating to project: New Project 5-Level-Schema
+2025-09-15 18:44:44 INFO  TC009_TimesheetAutoApprovalTest:124 - ------ Navigating to Timesheet Approval
+2025-09-15 18:44:44 INFO  TC009_TimesheetAutoApprovalTest:127 - ------ Go to Date Range of Submission
+2025-09-15 18:44:52 INFO  TC009_TimesheetAutoApprovalTest:137 - ------ Clicking on show btn of : isla.moonTimesheet History
+2025-09-15 18:44:52 INFO  TC009_TimesheetAutoApprovalTest:148 - ------ Logging out approver: autumn.grace
+2025-09-15 18:44:52 INFO  TC009_TimesheetAutoApprovalTest:152 - ------ Logging in as isla.moon
+2025-09-15 18:44:53 INFO  TC009_TimesheetAutoApprovalTest:155 - ------ Navigating to Timesheet module
+2025-09-15 18:44:54 INFO  TC009_TimesheetAutoApprovalTest:158 - ------ Expanding timesheet view
+2025-09-15 18:44:54 INFO  TC009_TimesheetAutoApprovalTest:161 - ------ Selecting date range filter as 'Custom Range'
+2025-09-15 18:44:55 INFO  TC009_TimesheetAutoApprovalTest:169 - ------ Verifying that the New Project 5-Level-Schema status is 'Waiting for Approval' after approval at level 2
+2025-09-15 18:44:55 INFO  TC009_TimesheetAutoApprovalTest:178 - ------ Logging out isla.moon
+2025-09-15 18:44:55 INFO  TC009_TimesheetAutoApprovalTest:117 - ---- Logging in as Approver:briar.sunset
+2025-09-15 18:47:01 INFO  TC009_TimesheetAutoApprovalTest:120 - ------ Navigating to project: New Project 5-Level-Schema
+2025-09-15 18:47:02 INFO  TC009_TimesheetAutoApprovalTest:124 - ------ Navigating to Timesheet Approval
+2025-09-15 18:47:03 INFO  TC009_TimesheetAutoApprovalTest:127 - ------ Go to Date Range of Submission
+2025-09-15 18:47:10 INFO  TC009_TimesheetAutoApprovalTest:137 - ------ Clicking on show btn of : isla.moonTimesheet History
+2025-09-15 18:47:11 INFO  TC009_TimesheetAutoApprovalTest:148 - ------ Logging out approver: briar.sunset
+2025-09-15 18:47:11 INFO  TC009_TimesheetAutoApprovalTest:152 - ------ Logging in as isla.moon
+2025-09-15 18:47:12 INFO  TC009_TimesheetAutoApprovalTest:155 - ------ Navigating to Timesheet module
+2025-09-15 18:47:13 INFO  TC009_TimesheetAutoApprovalTest:158 - ------ Expanding timesheet view
+2025-09-15 18:47:13 INFO  TC009_TimesheetAutoApprovalTest:161 - ------ Selecting date range filter as 'Custom Range'
+2025-09-15 18:47:14 INFO  TC009_TimesheetAutoApprovalTest:169 - ------ Verifying that the New Project 5-Level-Schema status is 'Waiting for Approval' after approval at level 3
+2025-09-15 18:47:14 INFO  TC009_TimesheetAutoApprovalTest:178 - ------ Logging out isla.moon
+2025-09-15 18:47:14 INFO  TC009_TimesheetAutoApprovalTest:117 - ---- Logging in as Approver:celeste.dawn
+2025-09-15 18:49:20 INFO  TC009_TimesheetAutoApprovalTest:120 - ------ Navigating to project: New Project 5-Level-Schema
+2025-09-15 18:49:21 INFO  TC009_TimesheetAutoApprovalTest:124 - ------ Navigating to Timesheet Approval
+2025-09-15 18:49:21 INFO  TC009_TimesheetAutoApprovalTest:127 - ------ Go to Date Range of Submission
+2025-09-15 18:49:28 INFO  TC009_TimesheetAutoApprovalTest:137 - ------ Clicking on show btn of : isla.moonTimesheet History
+2025-09-15 18:49:29 INFO  TC009_TimesheetAutoApprovalTest:148 - ------ Logging out approver: celeste.dawn
+2025-09-15 18:49:29 INFO  TC009_TimesheetAutoApprovalTest:152 - ------ Logging in as isla.moon
+2025-09-15 18:49:30 INFO  TC009_TimesheetAutoApprovalTest:155 - ------ Navigating to Timesheet module
+2025-09-15 18:49:30 INFO  TC009_TimesheetAutoApprovalTest:158 - ------ Expanding timesheet view
+2025-09-15 18:49:30 INFO  TC009_TimesheetAutoApprovalTest:161 - ------ Selecting date range filter as 'Custom Range'
+2025-09-15 18:49:31 INFO  TC009_TimesheetAutoApprovalTest:169 - ------ Verifying that the New Project 5-Level-Schema status is 'Waiting for Approval' after approval at level 4

@@ -8,7 +8,7 @@ import java.util.List;
 
 public class HistoryApprovalPage extends BasePage{
 
-    By xpathOfHistoryLists = By.xpath("(//div[@class='timesheet_details']//div[contains(@class,'changelog_list')][1]//li");
+    By xpathOfHistoryLists = By.xpath("//div[@class='timesheet_details']//div[contains(@class,'changelog_list')][1]//li");
 
     public HistoryApprovalPage(WebDriver driver){
         super(driver);
