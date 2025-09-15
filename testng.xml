@@ -45,8 +45,8 @@
         <parameter name="approvalflow" value="auto"/>
         <classes>
             <class name="testBase.SetupPreconditions"/>
-            <!--<class name="testCases.TC009_TimesheetAutoApprovalTest"/>
-            <class name="testCases.TC010_TimesheetManualApprovalTests"/>-->
+            <class name="testCases.TC009_TimesheetAutoApprovalTest"/>
+            <class name="testCases.TC010_TimesheetManualApprovalTests"/>
             <class name="testCases.TC011_TimesheetManualRejectionTests"/>
             <class name="testCases.TC012_TimesheetApprovalMemberAutoApprovalTests"/>
             <class name="testCases.TC013_TimesheetApprovalMemberManualApprovalTests"/>

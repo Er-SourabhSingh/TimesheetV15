@@ -20,20 +20,6 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
 
     String schema = "Schema 5 auto-approval";
 
-    String[] approvalRoles = {
-            "1Approval",
-            "2Approval",
-            "3Approval",
-            "4Approval",
-            "5Approval"
-    };
-
-    String[] users = new String[]{
-            "ember.lilac", "harmony.rose", "isla.moon", "ivy.skylark",
-            "luna.meadow", "marigold.rayne", "nova.starling",
-            "opal.sparrow", "sage.willow", "selene.frost", "serenity.bloom",
-            "summer.rain"
-    };
 
     String submitterUser = "opal.sparrow"; // user8 replaced
 
