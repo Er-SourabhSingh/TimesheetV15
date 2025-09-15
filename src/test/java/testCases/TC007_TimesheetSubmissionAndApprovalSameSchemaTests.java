@@ -1,17 +1,15 @@
 package testCases;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pageObjects.*;
 import testBase.BaseClass;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema extends BaseClass {
+public class TC007_TimesheetSubmissionAndApprovalSameSchemaTests extends BaseClass {
     String[] newApprovalUsers = {
             "ivy.skylark",    // New 1ApproverNew
             "luna.meadow",    // New 2ApproverNew

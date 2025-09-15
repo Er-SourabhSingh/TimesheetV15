@@ -22,9 +22,9 @@
              <class name="testCases.TC002_TimesheetRejectionTests"/>
              <class name="testCases.TC003_TimesheetMultiProjectWorkflowTests"/>
              <class name="testCases.TC004_TimesheetMultiProjectRejectionTests"/>
-             <class name="testCases.TC005_PartiallyRejectTimesheetForProjects"/>
-             <class name="testCases.TC006_PartiallyRejectTimesheetOfApprovalUserForProjects"/>
-             <class name="testCases.TC008_BulkUsersTimesheetApprovalAndRejectionTests"/>
+             <class name="testCases.TC005_TimesheetPartialRejectionForProjectsTests"/>
+             <class name="testCases.TC006_TimesheetPartialRejectionForApprovalUserTests"/>
+             <class name="testCases.TC008_BulkTimesheetApprovalAndRejectionTests"/>
 
         </classes>
     </test>
@@ -35,7 +35,7 @@
         <parameter name="approvalflow" value="sameschema"/>
         <classes>
             <class name="testBase.SetupPreconditions"/>
-            <class name="testCases.TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema"/>
+            <class name="testCases.TC007_TimesheetSubmissionAndApprovalSameSchemaTests"/>
         </classes>
     </test>-->
 
@@ -45,8 +45,10 @@
         <parameter name="approvalflow" value="auto"/>
         <classes>
             <class name="testBase.SetupPreconditions"/>
-            <class name="testCases.TC009_TimesheetAutoApprovalTest"/>
-            <class name="testCases.TC010_TimesheetManualApprovalBeforeAutoApproved"/>
+            <!--<class name="testCases.TC009_TimesheetAutoApprovalTest"/>
+            <class name="testCases.TC010_TimesheetManualApprovalTests"/>-->
+            <class name="testCases.TC011_TimesheetManualRejectionTests"/>
+            <class name="testCases.TC012_TimesheetApprovalMemberAutoApprovalTests"/>
         </classes>
     </test>
 

@@ -8,7 +8,7 @@ import java.util.List;
 
 public class HistoryApprovalPage extends BasePage{
 
-    By xpathOfHistoryLists = By.xpath("(//div[@class='timesheet_details']//div[contains(@class,'changelog_list')])[1]//li");
+    By xpathOfHistoryLists = By.xpath("(//div[@class='timesheet_details']//div[contains(@class,'changelog_list')][1]//li");
 
     public HistoryApprovalPage(WebDriver driver){
         super(driver);
@@ -52,6 +52,31 @@ public class HistoryApprovalPage extends BasePage{
 
         }
         return listHistory;
+    }
+
+    public List<List<String>> getTimesheetApprovalDetails(){
+        List<List<String>> allChangeLogs = new ArrayList<>();
+
+        try{
+            List<WebElement> changeLogs = driver.findElements(By.xpath("//div[@class='timesheet_details']//div[contains(@class,'changelog_list')]"));
+
+            if(!changeLogs.isEmpty()){
+                for(WebElement block : changeLogs){
+                    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", block);
+                    List<String> detailList = new ArrayList<>();
+                    List<WebElement> listItems = block.findElements(By.tagName("li"));
+                    for(WebElement li : listItems){
+                        detailList.add(li.getText());
+                    }
+                    allChangeLogs.add(detailList);
+                }
+            }
+        }catch (StaleElementReferenceException e){
+            // Retry once before throwing
+            System.out.println("Stale element detected, retrying...");
+            return getTimesheetApprovalDetails();
+        }
+        return allChangeLogs;
     }
 
 

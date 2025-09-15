@@ -5,12 +5,9 @@ import org.testng.annotations.Test;
 import pageObjects.*;
 import testBase.BaseClass;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
-public class TC011_TimesheetManualRejectionBeforeAutoApproved extends BaseClass {
+public class TC011_TimesheetManualRejectionTests extends BaseClass {
     String[] approvalUsers = {
             "aurora.wren",    // 1Approval
             "autumn.grace",   // 2Approval
@@ -23,12 +20,12 @@ public class TC011_TimesheetManualRejectionBeforeAutoApproved extends BaseClass 
     String startDate = "08/18/2025", endDate = "08/24/2025";
     String [] dateRanges = new String[2];
     Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();
-
+    Stack<List<String>> allHistory = new Stack<>();
     @Test(priority = 1, groups = {"Master","Regression"})
     public void testSubmitTimesheetOfSerenityBloomForNewProject(){
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
-        logger.info("Test Case 1: Verify use can submit timesheet for new project");
+        logger.info("Test Case 1: Verify user can submit timesheet for new project");
 
         try {
             logger.info("Step 1: Logging in as " + this.submitterUser);
@@ -199,10 +196,59 @@ public class TC011_TimesheetManualRejectionBeforeAutoApproved extends BaseClass 
             history.add("Submitted By : " + toFullName(this.submitterUser));
             history.add("Rejected By : " + toFullName(this.approvalUsers[0]));
             history.add("Rejected Comment : Rejected by --------- "  + toFullName(this.approvalUsers[0]));
+            this.allHistory.push(history);
             Assert.assertTrue(historyApprovalPage.getLastUpdatedHistory().containsAll(history));
             logger.info("------ Logging out approver: " + this.approvalUsers[0]);
             headerPage.clickOnLogout();
 
+
+        }catch (Exception e){
+            logger.error(e);
+            Assert.fail();
+        }
+    }
+
+    @Test(priority = 4, groups = {"Master", "Regression"}, dependsOnMethods = {"verifyRejectedHistory"})
+    public void testAllHistoryOfApproval(){
+        HeaderPage headerPage = new HeaderPage(driver);
+        ProjectsPage projectsPage = new ProjectsPage(driver);
+        TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
+        TimesheetPage timesheetPage = new TimesheetPage(driver);
+        HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
+        try{
+            logger.info("----- Verify That auto approval functionality");
+
+            logger.info("---- Logging in as Admin");
+            super.login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));
+
+            logger.info("------ Navigating to project: " + this.project);
+            headerPage.clickOnProjects();
+            projectsPage.clickOnProjectName(this.project);
+
+            logger.info("------ Navigating to Timesheet Approval");
+            headerPage.clickOnTimesheetApproval();
+
+            logger.info("------ Go to Date Range of Submission");
+            timesheetApprovalPage.navigateToTargetDateRange(this.dateRanges[0], this.dateRanges[1]);
+
+            Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.submitterUser)),"Approved");
+
+            logger.info("------ Clicking on show btn of : " + this.submitterUser + "Timesheet History");
+            timesheetApprovalPage.clickOnShowHistoryOfUserTimesheet(toFullName(this.submitterUser));
+
+            //checking histroy
+            List<List<String>> changelogDetails = historyApprovalPage.getTimesheetApprovalDetails();
+            Assert.assertTrue(changelogDetails.size() == this.allHistory.size());
+
+            for(List<String> block : changelogDetails) {
+                if(!this.allHistory.isEmpty()) {
+                    List<String> history = this.allHistory.peek();
+                    Assert.assertTrue(block.containsAll(history));
+                    this.allHistory.pop();
+                }
+            }
+
+            headerPage.clickOnLogout();
 
         }catch (Exception e){
             logger.error(e);
