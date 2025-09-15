@@ -179,7 +179,7 @@ public class TC008_BulkUsersTimesheetApprovalAndRejectionTests extends BaseClass
                     timesheetPage.selectEndDate(endDate);
                     timesheetPage.clickOnDateRangeApplyBtn();
 
-                    if (i <= 4 && !(i < 0)) {
+                    if (i <= 4) {
                         logger.info("------ Verifying that the " + project + " status is 'Waiting for Approval' after approval at level " + (i + 1));
                         Assert.assertTrue(timesheetPage.hasPendingTimesheet(project));
                         Assert.assertEquals(timesheetPage.getSubmitTimesheetBtnText(), "Waiting for Approval");

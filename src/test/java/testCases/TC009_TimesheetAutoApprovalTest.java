@@ -178,7 +178,7 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
                 timesheetPage.selectEndDate(endDate);
                 timesheetPage.clickOnDateRangeApplyBtn();
 
-                if(i <= 3 && !(i < 0)){
+                if(i <= 3){
                     logger.info("------ Verifying that the " + this.project + " status is 'Waiting for Approval' after approval at level " + (i+1));
                     Assert.assertTrue(timesheetPage.hasPendingTimesheet(this.project));
                     Assert.assertEquals(timesheetPage.getSubmitTimesheetBtnText(),"Waiting for Approval");

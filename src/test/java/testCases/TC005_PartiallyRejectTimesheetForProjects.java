@@ -464,7 +464,7 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
                 timesheetPage.selectEndDate(endDate);
                 timesheetPage.clickOnDateRangeApplyBtn();
 
-                if (i == 0 && !(i < 0)) {
+                if (i == 0) {
                     logger.info("------ Verifying that the " + projects[1] + " status is 'Waiting for Approval' after approval at level " + (i + 1));
                     Assert.assertTrue(timesheetPage.hasPendingTimesheet(projects[1]));
                     Assert.assertEquals(timesheetPage.getSubmitTimesheetBtnText(), "Waiting for Approval");
@@ -525,7 +525,7 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
                 timesheetPage.selectEndDate(endDate);
                 timesheetPage.clickOnDateRangeApplyBtn();
 
-                if (i <= 1 && !(i < 0)) {
+                if (i <= 1) {
                     logger.info("------ Verifying that the " + projects[2] + " status is 'Waiting for Approval' after approval at level " + (i + 1));
                     Assert.assertTrue(timesheetPage.hasPendingTimesheet(projects[2]));
                     Assert.assertEquals(timesheetPage.getSubmitTimesheetBtnText(), "Waiting for Approval");
