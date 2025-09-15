@@ -41,7 +41,7 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
 
     String startDate = "08/18/2025", endDate = "08/24/2025";
     String [] dateRanges = new String[2];
-    /*Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();*/
+    Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();
 
     @Test(priority = 1, groups = {"Sanity", "Master", "Regression"})
     public void testSubmitTimesheetForNewProject(){
@@ -94,10 +94,10 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
                     logger.info("------ Clicking Log Time button");
                     timesheetPage.clickOnLogTimeBtnForLogTime();
 
-                    /*Double hoursVal = Double.parseDouble(hours);
+                    Double hoursVal = Double.parseDouble(hours);
                     projectActivityHours.putIfAbsent(project, new HashMap<>());
                     Map<String, Double> activityMap = projectActivityHours.get(project);
-                    activityMap.put(activity, activityMap.getOrDefault(activity,0.0)+hoursVal);*/
+                    activityMap.put(activity, activityMap.getOrDefault(activity,0.0)+hoursVal);
                 }
 
 
@@ -141,9 +141,9 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
                 logger.info("------ Go to Date Range of Submission");
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
-                /*logger.info("------ Verify 'Design' and 'Development' Activity hours ");
+                logger.info("------ Verify 'Design' and 'Development' Activity hours ");
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(this.project).getOrDefault("Design",0.0));
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(this.project).getOrDefault("Development",0.0));*/
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(this.project).getOrDefault("Development",0.0));
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.submitterUser)),"Approved");
 

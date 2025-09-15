@@ -56,7 +56,7 @@ public class TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema extend
 
     String startDate = "08/04/2025", endDate = "08/10/2025";
     String [] dateRanges = new String[2];
-   /* Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();*/
+    Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();
 
     @Test(priority = 1, groups = {"Sanity", "Master", "Regression"})
     public void testSubmitTimesheetForProjectsDAndNewProject(){
@@ -110,10 +110,10 @@ public class TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema extend
                         logger.info("------ Clicking Log Time button");
                         timesheetPage.clickOnLogTimeBtnForLogTime();
 
-                        /*Double hoursVal = Double.parseDouble(hours);
+                        Double hoursVal = Double.parseDouble(hours);
                         projectActivityHours.putIfAbsent(project, new HashMap<>());
                         Map<String, Double> activityMap = projectActivityHours.get(project);
-                        activityMap.put(activity, activityMap.getOrDefault(activity,0.0)+hoursVal);*/
+                        activityMap.put(activity, activityMap.getOrDefault(activity,0.0)+hoursVal);
                     }
                 }
 
@@ -156,9 +156,9 @@ public class TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema extend
                 logger.info("------ Go to Date Range of Submission");
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
-                /*logger.info("------ Verify 'Design' and 'Development' Activity hours ");
+                logger.info("------ Verify 'Design' and 'Development' Activity hours ");
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(projects[0]).getOrDefault("Design", 0.0));
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(projects[0]).getOrDefault("Development", 0.0));*/
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(projects[0]).getOrDefault("Development", 0.0));
 
                 logger.info("------ Approving timesheet for " + submitterUser);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(this.submitterUser));
@@ -229,9 +229,9 @@ public class TC007_TimesheetSubmissionAndApprovalForTwoProjectsSameSchema extend
                 logger.info("------ Go to Date Range of Submission");
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
-                /*logger.info("------ Verify 'Design' and 'Development' Activity hours ");
+                logger.info("------ Verify 'Design' and 'Development' Activity hours ");
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(projects[1]).getOrDefault("Design", 0.0));
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(projects[1]).getOrDefault("Development", 0.0));*/
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(projects[1]).getOrDefault("Development", 0.0));
 
                 logger.info("------ Approving timesheet for " + submitterUser);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(this.submitterUser));

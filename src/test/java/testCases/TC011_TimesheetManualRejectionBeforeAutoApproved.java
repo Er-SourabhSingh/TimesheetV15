@@ -6,7 +6,9 @@ import pageObjects.*;
 import testBase.BaseClass;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class TC011_TimesheetManualRejectionBeforeAutoApproved extends BaseClass {
     String[] approvalUsers = {
@@ -20,7 +22,7 @@ public class TC011_TimesheetManualRejectionBeforeAutoApproved extends BaseClass 
     String project = "New Project 5-Level-Schema";
     String startDate = "08/18/2025", endDate = "08/24/2025";
     String [] dateRanges = new String[2];
-    /*Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();*/
+    Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();
 
     @Test(priority = 1, groups = {"Master","Regression"})
     public void testSubmitTimesheetOfSerenityBloomForNewProject(){
@@ -73,10 +75,10 @@ public class TC011_TimesheetManualRejectionBeforeAutoApproved extends BaseClass 
                     logger.info("------ Clicking Log Time button");
                     timesheetPage.clickOnLogTimeBtnForLogTime();
 
-                    /*Double hoursVal = Double.parseDouble(hours);
+                    Double hoursVal = Double.parseDouble(hours);
                     projectActivityHours.putIfAbsent(project, new HashMap<>());
                     Map<String, Double> activityMap = projectActivityHours.get(project);
-                    activityMap.put(activity, activityMap.getOrDefault(activity,0.0)+hoursVal);*/
+                    activityMap.put(activity, activityMap.getOrDefault(activity,0.0)+hoursVal);
                 }
 
 
@@ -118,9 +120,9 @@ public class TC011_TimesheetManualRejectionBeforeAutoApproved extends BaseClass 
             logger.info("Step 4: Go to Date Range of Submission");
             timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
-            /*logger.info("Step 5: Verify 'Design' and 'Development' Activity hours ");
-            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[1]).getOrDefault("Design",0.0));
-            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[1]).getOrDefault("Development",0.0));*/
+            logger.info("Step 5: Verify 'Design' and 'Development' Activity hours ");
+            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.submitterUser))),projectActivityHours.get(this.project).getOrDefault("Design",0.0));
+            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.submitterUser))),projectActivityHours.get(this.project).getOrDefault("Development",0.0));
 
             logger.info("Step 6: Reject timesheet for: "+this.submitterUser);
             timesheetApprovalPage.clickOnRejectBtn(toFullName(this.submitterUser));
@@ -173,7 +175,7 @@ public class TC011_TimesheetManualRejectionBeforeAutoApproved extends BaseClass 
             logger.info("----- Verify That History of Manual approver");
 
             logger.info("---- Logging in as Approver:" + this.approvalUsers[0]);
-            this.login(approvalUsers[0], "12345678");
+            this.login(approvalUsers[4], "12345678");
             Thread.sleep(10 * 60 * 1000);
 
             logger.info("------ Navigating to project: " + this.project);

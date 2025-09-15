@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TC008_BulkUsersTimesheetApprovalTests extends BaseClass {
+public class TC008_BulkUsersTimesheetApprovalAndRejectionTests extends BaseClass {
 
     // Actual approval users
     String[] approvalUsers = new String[]{
@@ -36,7 +36,7 @@ public class TC008_BulkUsersTimesheetApprovalTests extends BaseClass {
     String project = "Project F 5-Level-Schema";
     String startDate = "08/11/2025", endDate = "08/17/2025";
     String [] dateRanges = new String[2];
-    /*Map<String, Map<String , Map<String, Double>>> userProjectActivityHours = new HashMap<>();*/
+    Map<String, Map<String , Map<String, Double>>> userProjectActivityHours = new HashMap<>();
 
     @Test(priority = 1, groups = {"Master", "Sanity", "Regression"})
     public void testSubmitTimesheetsForMultipleUsers() {
@@ -91,7 +91,7 @@ public class TC008_BulkUsersTimesheetApprovalTests extends BaseClass {
                         logger.info("------ Clicking Log Time button");
                         timesheetPage.clickOnLogTimeBtnForLogTime();
 
-                        /*Double hoursVal = Double.parseDouble(hours);
+                        Double hoursVal = Double.parseDouble(hours);
 
                         userProjectActivityHours.putIfAbsent(user, new HashMap<>());
 
@@ -99,7 +99,7 @@ public class TC008_BulkUsersTimesheetApprovalTests extends BaseClass {
 
                         Map<String, Double> activityMap = userProjectActivityHours.get(user).get(project);
 
-                        activityMap.put(activity, activityMap.getOrDefault(activity, 0.0) + hoursVal);*/
+                        activityMap.put(activity, activityMap.getOrDefault(activity, 0.0) + hoursVal);
 
                     }
 
@@ -143,11 +143,11 @@ public class TC008_BulkUsersTimesheetApprovalTests extends BaseClass {
 
                 logger.info("------ Go to Date Range of Submission");
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
-                /*for(String user : this.users) {
+                for(String user : this.users) {
                     logger.info("------ Verify 'Design' and 'Development' Activity hours of user :" + toFullName(user));
                     Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(user))), userProjectActivityHours.get(user).get(project).getOrDefault("Design", 0.0));
                     Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(user))), userProjectActivityHours.get(user).get(project).getOrDefault("Development", 0.0));
-                }*/
+                }
 
                 logger.info("------ Approving timesheet for " + Arrays.asList(this.users));
                 timesheetApprovalPage.selectAllUser();
@@ -219,11 +219,11 @@ public class TC008_BulkUsersTimesheetApprovalTests extends BaseClass {
 
             logger.info("------ Go to Date Range of Submission");
             timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
-            /*for(String user : this.users) {
+            for(String user : this.users) {
                 logger.info("------ Verify 'Design' and 'Development' Activity hours ");
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(user))), userProjectActivityHours.get(user).get(project).getOrDefault("Design", 0.0));
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(user))), userProjectActivityHours.get(user).get(project).getOrDefault("Development", 0.0));
-            }*/
+            }
 
             logger.info("------ Rejecting timesheet for " + Arrays.asList(this.users));
             timesheetApprovalPage.selectAllUser();

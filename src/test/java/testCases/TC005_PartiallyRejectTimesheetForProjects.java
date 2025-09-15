@@ -26,7 +26,7 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
     String startDate = "06/30/2025", endDate = "07/06/2025";
     String user = "serenity.bloom";
 
-   /* Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();*/
+    Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();
 
     @Test(priority = 1, groups = {"Master", "Sanity", "Regression"})
     public void testSubmitTimesheetForProjectsACD() {
@@ -80,10 +80,10 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
                         logger.info("------ Clicking Log Time button");
                         timesheetPage.clickOnLogTimeBtnForLogTime();
 
-                        /*Double hoursVal = Double.parseDouble(hours);
+                        Double hoursVal = Double.parseDouble(hours);
                         projectActivityHours.putIfAbsent(project, new HashMap<>());
                         Map<String, Double> activityMap = projectActivityHours.get(project);
-                        activityMap.put(activity, activityMap.getOrDefault(activity,0.0)+hoursVal);*/
+                        activityMap.put(activity, activityMap.getOrDefault(activity,0.0)+hoursVal);
                     }
                 }
 
@@ -125,9 +125,9 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
             logger.info("Step 4: Go to Date Range of Submission");
             timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
-            /*logger.info("Step 5: Verify 'Design' and 'Development' Activity hours ");
+            logger.info("Step 5: Verify 'Design' and 'Development' Activity hours ");
             Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.user))), projectActivityHours.get(projects[1]).getOrDefault("Design", 0.0));
-            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))), projectActivityHours.get(projects[1]).getOrDefault("Development", 0.0));*/
+            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))), projectActivityHours.get(projects[1]).getOrDefault("Development", 0.0));
 
             logger.info("Step 6: Reject timesheet for: " + user);
             timesheetApprovalPage.clickOnRejectBtn(toFullName(this.user));
@@ -188,9 +188,9 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
             logger.info("Step 4: Go to Date Range of Submission");
             timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
-            /*logger.info("Step 5: Verify 'Design' and 'Development' Activity hours ");
+            logger.info("Step 5: Verify 'Design' and 'Development' Activity hours ");
             Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[0]).getOrDefault("Design",0.0));
-            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[0]).getOrDefault("Development",0.0));*/
+            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[0]).getOrDefault("Development",0.0));
 
             logger.info("Step 6: Approve timesheet for: "+user);
             timesheetApprovalPage.clickOnApproveBtn(toFullName(this.user));
@@ -250,9 +250,9 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
             logger.info("Step 4: Go to Date Range of Submission");
             timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
-            /*logger.info("Step 5: Verify 'Design' and 'Development' Activity hours ");
+            logger.info("Step 5: Verify 'Design' and 'Development' Activity hours ");
             Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[2]).getOrDefault("Design",0.0),"Design");
-            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[2]).getOrDefault("Development",0.0),"Development");*/
+            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[2]).getOrDefault("Development",0.0),"Development");
 
             logger.info("Step 6: Check approve and reject btn is enabled for : "+user);
             Assert.assertTrue(timesheetApprovalPage.isApproveBtnEnabled(toFullName(this.user)));
@@ -337,10 +337,10 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
                     logger.info("------ Clicking Log Time button");
                     timesheetPage.clickOnLogTimeBtnForLogTime();
 
-                    /*Double hoursVal = Double.parseDouble(hours);
+                    Double hoursVal = Double.parseDouble(hours);
                     projectActivityHours.putIfAbsent(projects[1], new HashMap<>());
                     Map<String, Double> activityMap = projectActivityHours.get(projects[1]);
-                    activityMap.put(activity, activityMap.getOrDefault(activity, 0.0) + hoursVal);*/
+                    activityMap.put(activity, activityMap.getOrDefault(activity, 0.0) + hoursVal);
                 }
             }
             logger.info("Step 2: Resubmitting the timesheet");
@@ -385,9 +385,9 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
             logger.info("Step 4: Go to Date Range of Submission");
             timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
-            /*logger.info("Step 5: Verify 'Design' and 'Development' Activity hours ");
+            logger.info("Step 5: Verify 'Design' and 'Development' Activity hours ");
             Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[0]).getOrDefault("Design",0.0));
-            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[0]).getOrDefault("Development",0.0));*/
+            Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[0]).getOrDefault("Development",0.0));
 
             logger.info("Step 7: Verified timesheet of: " + user +" should be already in approved state");
 
@@ -433,9 +433,9 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
                 logger.info("------ Go to Date Range of Submission");
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
-                /*logger.info("------ Verify 'Design' and 'Development' Activity hours ");
+                logger.info("------ Verify 'Design' and 'Development' Activity hours ");
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[1]).getOrDefault("Design",0.0));
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[1]).getOrDefault("Development",0.0));*/
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))),projectActivityHours.get(projects[1]).getOrDefault("Development",0.0));
 
                 logger.info("------ Approving timesheet for " + user);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(this.user));
@@ -494,9 +494,9 @@ public class TC005_PartiallyRejectTimesheetForProjects extends BaseClass {
                 logger.info("------ Go to Date Range of Submission");
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
-                /*logger.info("------ Verify 'Design' and 'Development' Activity hours ");
+                logger.info("------ Verify 'Design' and 'Development' Activity hours ");
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.user))), projectActivityHours.get(projects[2]).getOrDefault("Design", 0.0));
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))), projectActivityHours.get(projects[2]).getOrDefault("Development", 0.0));*/
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.user))), projectActivityHours.get(projects[2]).getOrDefault("Development", 0.0));
 
                 logger.info("------ Approving timesheet for " + user);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(this.user));
