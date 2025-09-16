@@ -138,7 +138,7 @@ public class TC011_TimesheetManualRejectionTests extends BaseClass {
             Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.submitterUser)),"Rejected");
 
             //checking history
-            logger.info("------ Clicking on show btn of : " + this.submitterUser + "Timesheet History");
+            logger.info("------ Clicking on show btn of : " + this.submitterUser + " Timesheet History");
             timesheetApprovalPage.clickOnShowHistoryOfUserTimesheet(toFullName(this.submitterUser));
             List<String> history = new ArrayList<>();
             history.add("Project Name : " + this.project);
@@ -192,7 +192,7 @@ public class TC011_TimesheetManualRejectionTests extends BaseClass {
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
         HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
         try{
-            logger.info("----- Verify That auto approval functionality");
+            logger.info("Test Case 3: Verify All History of user");
 
             logger.info("---- Logging in as Admin");
             super.login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));

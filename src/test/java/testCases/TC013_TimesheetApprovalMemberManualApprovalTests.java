@@ -32,7 +32,7 @@ public class TC013_TimesheetApprovalMemberManualApprovalTests extends BaseClass 
     public void testSubmitTimesheetOfAutumnGraceForNewProject(){
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
-        logger.info("Test Case 1: Verify User can submit timesheet for new project");
+        logger.info("Test Case 1: Verify Apporval user can submit timesheet for new project");
 
         try {
             logger.info("Step 1: Logging in as " + this.submitterUser);
@@ -154,7 +154,7 @@ public class TC013_TimesheetApprovalMemberManualApprovalTests extends BaseClass 
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
         HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
         try{
-            logger.info("----- Verify That History of Manual approver");
+            logger.info("Test Case 3: Verify That History of Manual approver");
             for(int i = 2; i < this.approvalUsers.length ; i++) {
                 logger.info("---- Logging in as Approver:" + this.approvalUsers[i]);
                 this.login(approvalUsers[i], "12345678");
@@ -207,7 +207,7 @@ public class TC013_TimesheetApprovalMemberManualApprovalTests extends BaseClass 
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
         try{
-            logger.info("----- Verify That auto approval functionality");
+            logger.info("Test Case 4: Verify All History of user");
 
             logger.info("---- Logging in as Admin");
             super.login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));

@@ -102,10 +102,9 @@ public class TC012_TimesheetApprovalMemberAutoApprovalTests extends BaseClass {
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
-        TimesheetPage timesheetPage = new TimesheetPage(driver);
         HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
         try{
-            logger.info("----- Verify That auto approval functionality");
+            logger.info("Test Case 2: Verify That auto approval functionality");
             for(int i = 1; i < approvalUsers.length; i++) {
                 logger.info("---- Logging in as Approver:" + approvalUsers[i]);
                 super.login(approvalUsers[i], "12345678");
@@ -157,7 +156,7 @@ public class TC012_TimesheetApprovalMemberAutoApprovalTests extends BaseClass {
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
         try{
-            logger.info("----- Verify That auto approval functionality");
+            logger.info("Test Case 3: Verify All History of user");
 
             logger.info("---- Logging in as Admin");
             super.login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));

@@ -110,7 +110,7 @@ public class TC010_TimesheetManualApprovalTests extends  BaseClass{
         ProjectsPage projectsPage = new ProjectsPage(driver);
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
         try{
-            logger.info("----- Verify That Approver can Approve Timesheet Before Auto Approver get Trigger");
+            logger.info("Test Case 2: Verify That Approver can Approve Timesheet Before Auto Approver get Trigger");
             for(int i = 0; i < this.approvalUsers.length; i++) {
                 logger.info("---- Logging in as Approver:" + this.approvalUsers[i]);
                 this.login(this.approvalUsers[i], "12345678");
@@ -154,7 +154,7 @@ public class TC010_TimesheetManualApprovalTests extends  BaseClass{
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
         HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
         try{
-            logger.info("----- Verify That History of Manual approver");
+            logger.info("Test Case 3: Verify That History of Manual approver");
             for(int i = 0; i < this.approvalUsers.length ; i++) {
                 logger.info("---- Logging in as Approver:" + this.approvalUsers[i]);
                 this.login(approvalUsers[i], "12345678");
@@ -207,7 +207,7 @@ public class TC010_TimesheetManualApprovalTests extends  BaseClass{
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
         HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
         try{
-            logger.info("----- Verify That auto approval functionality");
+            logger.info("Test Case 4: Verify All History of user");
 
             logger.info("---- Logging in as Admin");
             super.login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));

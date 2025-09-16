@@ -32,7 +32,7 @@ public class TC014_TimesheetApprovalMemberManualRejectionTests extends BaseClass
     public void testSubmitTimesheetOfBriarSunsetForNewProject(){
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
-        logger.info("Test Case 1: Verify user can submit timesheet for new project");
+        logger.info("Test Case 1: Verify Approval user can submit timesheet for new project");
 
         try {
             logger.info("Step 1: Logging in as " + this.submitterUser);
@@ -110,7 +110,7 @@ public class TC014_TimesheetApprovalMemberManualRejectionTests extends BaseClass
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
-        logger.info("Test Case 2: Verify Rejection of Before Auto Approval");
+        logger.info("Test Case 2: Verify Rejection Before Auto Approval");
         try{
             logger.info("Step 1: Logging in as "+ approvalUsers[3]);
             super.login(approvalUsers[3], "12345678");
@@ -168,7 +168,7 @@ public class TC014_TimesheetApprovalMemberManualRejectionTests extends BaseClass
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
         try{
-            logger.info("----- Verify That auto approval functionality");
+            logger.info("Test Case 3: Verify All History of user");
 
             logger.info("---- Logging in as Admin");
             super.login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));
@@ -188,7 +188,7 @@ public class TC014_TimesheetApprovalMemberManualRejectionTests extends BaseClass
             logger.info("------ Clicking on show btn of : " + this.submitterUser + "Timesheet History");
             timesheetApprovalPage.clickOnShowHistoryOfUserTimesheet(toFullName(this.submitterUser));
 
-            //checking histroy
+            //checking history
             List<List<String>> changelogDetails = historyApprovalPage.getTimesheetApprovalDetails();
             Assert.assertTrue(changelogDetails.size() == this.allHistory.size());
 
