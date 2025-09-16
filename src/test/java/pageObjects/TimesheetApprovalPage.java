@@ -1,19 +1,23 @@
 package pageObjects;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public class TimesheetApprovalPage extends BasePage{
     By lnkPrevious = By.xpath("//a[@id='previous_link']");
 
     By lnkNext = By.xpath("//a[@id='next_link']");
+
+    By txtSearch = By.xpath("//input[@id='searchUser']");
+
+    By dropDownProject = By.xpath("//select[@id='tree-select-input-project']");
 
     By dateRange = By.xpath("//div[@class='links-left']//span");
 
@@ -33,6 +37,31 @@ public class TimesheetApprovalPage extends BasePage{
 
     public TimesheetApprovalPage(WebDriver driver){
         super(driver);
+    }
+
+    public void setTextSearch(String userName){
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(this.txtSearch));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        element.clear();
+        element.sendKeys(userName);
+    }
+
+    public void clickEnterBtn(){
+        Actions actions = new Actions(driver);
+        actions.sendKeys(Keys.ENTER).perform();
+    }
+
+    public List<String> getAllUser(){
+        List<String> users = new ArrayList<>();
+        By usersXpath = By.xpath("//table[@class='list issues']//tbody//tr//td[3]");
+
+        List<WebElement> userList = driver.findElements(usersXpath);
+
+        for(WebElement user : userList){
+            users.add(user.getText());
+        }
+
+        return users;
     }
 
     public void selectAllUser(){
@@ -218,4 +247,19 @@ public class TimesheetApprovalPage extends BasePage{
         }
     }
 
+    public boolean verifyDateRange(String expectedStartDate, String expectedEnDate){
+        DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("d MMM yy", Locale.ENGLISH);
+        DateTimeFormatter fullFormatter = DateTimeFormatter.ofPattern("dd MMMM yyyy", Locale.ENGLISH);
+
+        LocalDate expectedStart = LocalDate.parse(expectedStartDate.trim(),inputFormatter);
+        LocalDate expectedEnd = LocalDate.parse(expectedEnDate.trim(), inputFormatter);
+
+        String expectedRange = expectedStart.format(fullFormatter) + " - " +expectedEnd.format(fullFormatter);
+
+        String fullText = wait.until(ExpectedConditions.visibilityOfElementLocated(this.dateRange)).getText().trim();
+
+        String cleanedText = fullText.replaceAll("\\s*Previous\\s*|\\s*Next\\s*", "").trim();
+
+        return cleanedText.equals(expectedRange);
+    }
 }
