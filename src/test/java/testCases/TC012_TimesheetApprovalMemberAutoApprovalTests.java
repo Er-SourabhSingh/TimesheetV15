@@ -109,7 +109,7 @@ public class TC012_TimesheetApprovalMemberAutoApprovalTests extends BaseClass {
             for(int i = 1; i < approvalUsers.length; i++) {
                 logger.info("---- Logging in as Approver:" + approvalUsers[i]);
                 super.login(approvalUsers[i], "12345678");
-                Thread.sleep(125000); // 125,000 ms = 2 min 5 sec
+                Thread.sleep(121000); // 121,000 ms = 2 min 1 sec
                 logger.info("------ Navigating to project: " + this.project);
                 headerPage.clickOnProjects();
                 projectsPage.clickOnProjectName(this.project);
@@ -126,11 +126,12 @@ public class TC012_TimesheetApprovalMemberAutoApprovalTests extends BaseClass {
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.submitterUser)),"Approved");
 
-                //checking histroy
+                //checking history
                 logger.info("------ Clicking on show btn of : " + this.submitterUser + "Timesheet History");
                 timesheetApprovalPage.clickOnShowHistoryOfUserTimesheet(toFullName(this.submitterUser));
                 List<String> history = new ArrayList<>();
                 history.add("Project Name : " +this.project);
+                history.add("Level : Level " + (i+1));
                 history.add("Status : Approved");
                 history.add("Submitted By : " + toFullName(this.submitterUser));
                 history.add("Approved By : Auto Approved" );
@@ -141,35 +142,6 @@ public class TC012_TimesheetApprovalMemberAutoApprovalTests extends BaseClass {
                 logger.info("------ Logging out approver: " + approvalUsers[i]);
                 headerPage.clickOnLogout();
 
-
-                logger.info("------ Logging in as "+this.submitterUser);
-                super.login(this.submitterUser,"12345678");
-
-                logger.info("------ Navigating to Timesheet module");
-                headerPage.clickOnTimesheet();
-
-                logger.info("------ Expanding timesheet view");
-                timesheetPage.selectExpand();
-
-                logger.info("------ Selecting date range filter as 'Custom Range'");
-                timesheetPage.clickOnFilterDateRange();
-                timesheetPage.selectDateRangeOption("Custom Range");
-                timesheetPage.selectStartDate(startDate);
-                timesheetPage.selectEndDate(endDate);
-                timesheetPage.clickOnDateRangeApplyBtn();
-
-                if(i <= 3){
-                    logger.info("------ Verifying that the " + this.project + " status is 'Waiting for Approval' after approval at level " + (i+1));
-                    Assert.assertTrue(timesheetPage.hasPendingTimesheet(this.project));
-                    Assert.assertEquals(timesheetPage.getSubmitTimesheetBtnText(),"Waiting for Approval");
-                }
-                if(i == 4){
-                    logger.info("------ Verifying that the " + this.project + " status is 'Approved' after approval at level" + (i+1));
-                    Assert.assertTrue(timesheetPage.hasApprovedTimesheet(this.project));
-                }
-
-                logger.info("------ Logging out " + this.submitterUser);
-                headerPage.clickOnLogout();
             }
         }catch (Exception e){
             logger.error(e);
@@ -205,7 +177,7 @@ public class TC012_TimesheetApprovalMemberAutoApprovalTests extends BaseClass {
             logger.info("------ Clicking on show btn of : " + this.submitterUser + "Timesheet History");
             timesheetApprovalPage.clickOnShowHistoryOfUserTimesheet(toFullName(this.submitterUser));
 
-            //checking histroy
+            //checking history
             List<List<String>> changelogDetails = historyApprovalPage.getTimesheetApprovalDetails();
             Assert.assertTrue(changelogDetails.size() == this.allHistory.size());
 

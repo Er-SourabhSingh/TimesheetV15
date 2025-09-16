@@ -152,7 +152,7 @@ public class TC008_BulkTimesheetApprovalAndRejectionTests extends BaseClass {
                 logger.info("------ Approving timesheet for " + Arrays.asList(this.users));
                 timesheetApprovalPage.selectAllUser();
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(this.users[0]));
-                timesheetApprovalPage.setApprovalText("Approved by -------- " + approvalUsers[i]);
+                timesheetApprovalPage.setApprovalText("Approved by -------- " + toFullName(approvalUsers[i]));
 
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
                 for(String user : this.users) {
@@ -228,7 +228,7 @@ public class TC008_BulkTimesheetApprovalAndRejectionTests extends BaseClass {
             logger.info("------ Rejecting timesheet for " + Arrays.asList(this.users));
             timesheetApprovalPage.selectAllUser();
             timesheetApprovalPage.clickOnRejectBtn(toFullName(this.users[0]));
-            timesheetApprovalPage.setRejectionText("Rejected by -------- " + approvalUsers[4]);
+            timesheetApprovalPage.setRejectionText("Rejected by -------- " + toFullName(approvalUsers[4]));
 
             timesheetApprovalPage.clickOnSubmitBtnOfRejection();
             for(String user : this.users) {

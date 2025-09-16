@@ -76,7 +76,7 @@ public class TC001_TimesheetApprovalTests extends BaseClass {
 
                 logger.info("------ Approving timesheet for submitterUser: " + user);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(user));
-                timesheetApprovalPage.setApprovalText("Approved by -------- " +approver);
+                timesheetApprovalPage.setApprovalText("Approved by -------- " +toFullName(approver));
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(user)),"Approved");

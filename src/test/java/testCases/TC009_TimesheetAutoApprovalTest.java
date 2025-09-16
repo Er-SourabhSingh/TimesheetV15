@@ -21,11 +21,11 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
     String schema = "Schema 5 auto-approval";
 
 
-    String submitterUser = "isla.moon"; // user8 replaced
+    String submitterUser = "luna.meadow"; // user8 replaced
 
     String startDate = "08/18/2025", endDate = "08/24/2025";
     String [] dateRanges = new String[2];
-    /*Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();*/
+    Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();
 
     Stack<List<String>> allHistory = new Stack<>();
 
@@ -80,10 +80,10 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
                     logger.info("------ Clicking Log Time button");
                     timesheetPage.clickOnLogTimeBtnForLogTime();
 
-                    /*Double hoursVal = Double.parseDouble(hours);
+                    Double hoursVal = Double.parseDouble(hours);
                     projectActivityHours.putIfAbsent(project, new HashMap<>());
                     Map<String, Double> activityMap = projectActivityHours.get(project);
-                    activityMap.put(activity, activityMap.getOrDefault(activity,0.0)+hoursVal);*/
+                    activityMap.put(activity, activityMap.getOrDefault(activity,0.0)+hoursVal);
                 }
 
 
@@ -116,7 +116,7 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
             for(int i = 0; i < approvalUsers.length; i++) {
                 logger.info("---- Logging in as Approver:" + approvalUsers[i]);
                 super.login(approvalUsers[i], "12345678");
-                Thread.sleep(125000); // 125,000 ms = 2 min 5 sec
+                Thread.sleep(121000); // 121,000 ms = 2 min 1 sec
                 logger.info("------ Navigating to project: " + this.project);
                 headerPage.clickOnProjects();
                 projectsPage.clickOnProjectName(this.project);
@@ -127,17 +127,18 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
                 logger.info("------ Go to Date Range of Submission");
                 timesheetApprovalPage.navigateToTargetDateRange(dateRanges[0], dateRanges[1]);
 
-                /*logger.info("------ Verify 'Design' and 'Development' Activity hours ");
+                logger.info("------ Verify 'Design' and 'Development' Activity hours ");
                 Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDesignHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(this.project).getOrDefault("Design",0.0));
-                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(this.project).getOrDefault("Development",0.0));*/
+                Assert.assertEquals(convertTimeToDecimal(timesheetApprovalPage.getDevelopmentHoursOfUser(toFullName(this.submitterUser))), projectActivityHours.get(this.project).getOrDefault("Development",0.0));
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.submitterUser)),"Approved");
 
-                //checking histroy
+                //checking history
                 logger.info("------ Clicking on show btn of : " + this.submitterUser + "Timesheet History");
                 timesheetApprovalPage.clickOnShowHistoryOfUserTimesheet(toFullName(this.submitterUser));
                 List<String> history = new ArrayList<>();
                 history.add("Project Name : " +this.project);
+                history.add("Level : Level " + (i+1));
                 history.add("Status : Approved");
                 history.add("Submitted By : " + toFullName(this.submitterUser));
                 history.add("Approved By : Auto Approved");
@@ -184,7 +185,7 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
             logger.info("------ Clicking on show btn of : " + this.submitterUser + "Timesheet History");
             timesheetApprovalPage.clickOnShowHistoryOfUserTimesheet(toFullName(this.submitterUser));
 
-            //checking histroy
+            //checking history
             List<List<String>> changelogDetails = historyApprovalPage.getTimesheetApprovalDetails();
             Assert.assertTrue(changelogDetails.size() == this.allHistory.size());
 

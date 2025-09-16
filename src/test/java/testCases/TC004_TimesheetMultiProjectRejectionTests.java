@@ -194,7 +194,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
 
             logger.info("Step 6: Reject timesheet for: "+user);
             timesheetApprovalPage.clickOnRejectBtn(toFullName(this.user));
-            timesheetApprovalPage.setRejectionText("Rejected by --------- "+approvalUsers[0]);
+            timesheetApprovalPage.setRejectionText("Rejected by --------- "+toFullName(approvalUsers[0]));
             timesheetApprovalPage.clickOnSubmitBtnOfRejection();
 
             Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.user)),"Rejected");
@@ -259,7 +259,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
 
             logger.info("Step 6: Approve at level one timesheet for: "+user);
             timesheetApprovalPage.clickOnApproveBtn(toFullName(this.user));
-            timesheetApprovalPage.setApprovalText("Approved by --------- "+approvalUsers[0]);
+            timesheetApprovalPage.setApprovalText("Approved by --------- "+ toFullName(approvalUsers[0]));
             timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
             Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.user)),"Approved");
@@ -308,7 +308,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
 
             logger.info("Step 18: Reject timesheet for: "+user);
             timesheetApprovalPage.clickOnRejectBtn(toFullName(this.user));
-            timesheetApprovalPage.setRejectionText("Rejected by --------- "+approvalUsers[1]);
+            timesheetApprovalPage.setRejectionText("Rejected by --------- "+toFullName(approvalUsers[1]));
             timesheetApprovalPage.clickOnSubmitBtnOfRejection();
 
             Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.user)),"Rejected");
@@ -514,7 +514,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
 
                 logger.info("------ Approving timesheet for " + user);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(this.user));
-                timesheetApprovalPage.setApprovalText("Approved by --------  "+approvalUsers[i]);
+                timesheetApprovalPage.setApprovalText("Approved by --------  "+ toFullName(approvalUsers[i]));
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.user)), "Approved");
@@ -576,7 +576,7 @@ public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
 
                 logger.info("------ Approving timesheet for " + user);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(this.user));
-                timesheetApprovalPage.setApprovalText("Approved by -------- "+approvalUsers[i]);
+                timesheetApprovalPage.setApprovalText("Approved by -------- "+ toFullName(approvalUsers[i]));
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.user)), "Approved");

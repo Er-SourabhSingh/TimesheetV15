@@ -81,7 +81,7 @@ public class TC002_TimesheetRejectionTests extends BaseClass {
                 if(approver.equals(rejectBy)){
                     logger.info("------ Rejecting timesheet for submitterUser: " + toFullName(submitter));
                     timesheetApprovalPage.clickOnRejectBtn(toFullName(submitter));
-                    timesheetApprovalPage.setRejectionText("Rejected by -------- " +approver);
+                    timesheetApprovalPage.setRejectionText("Rejected by -------- " +toFullName(approver));
                     timesheetApprovalPage.clickOnSubmitBtnOfRejection();
                     logger.info("------ Verifying that timesheet is marked as 'Rejected'");
                     Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(submitter)),"Rejected");
@@ -107,7 +107,7 @@ public class TC002_TimesheetRejectionTests extends BaseClass {
                 logger.info("------ Approving timesheet for submitterUser: " + submitter);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(submitter));
 
-                timesheetApprovalPage.setApprovalText("Approved by -------- " +approver);
+                timesheetApprovalPage.setApprovalText("Approved by -------- " + toFullName(approver));
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
                 logger.info("------ Verifying that timesheet is marked as 'Approved'");
@@ -203,7 +203,7 @@ public class TC002_TimesheetRejectionTests extends BaseClass {
 
                 logger.info("------ Approving resubmitted timesheet for submitterUser: " + submitter);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(submitter));
-                timesheetApprovalPage.setApprovalText("Approved after resubmission by -------- " + approver);
+                timesheetApprovalPage.setApprovalText("Approved after resubmission by -------- " + toFullName(approver));
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
                 logger.info("------ Verifying that timesheet is now marked as 'Approved'");

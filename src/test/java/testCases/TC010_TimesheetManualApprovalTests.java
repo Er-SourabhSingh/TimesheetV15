@@ -16,6 +16,13 @@ public class TC010_TimesheetManualApprovalTests extends  BaseClass{
             "celeste.dawn",   // 4Approval
             "daisy.skye"      // 5Approval
     };
+    String[] approvalRoles = {
+            "1Approval",
+            "2Approval",
+            "3Approval",
+            "4Approval",
+            "5Approval"
+    };
     String submitterUser = "marigold.rayne"; // user8 replaced
     String project = "New Project 5-Level-Schema";
     String startDate = "08/18/2025", endDate = "08/24/2025";
@@ -102,7 +109,6 @@ public class TC010_TimesheetManualApprovalTests extends  BaseClass{
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
-        TimesheetPage timesheetPage = new TimesheetPage(driver);
         try{
             logger.info("----- Verify That Approver can Approve Timesheet Before Auto Approver get Trigger");
             for(int i = 0; i < this.approvalUsers.length; i++) {
@@ -165,12 +171,13 @@ public class TC010_TimesheetManualApprovalTests extends  BaseClass{
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.submitterUser)),"Approved");
 
-                //checking histroy
+                //checking history
                 logger.info("------ Clicking on show btn of : " + this.submitterUser + "Timesheet History");
                 timesheetApprovalPage.clickOnShowHistoryOfUserTimesheet(toFullName(this.submitterUser));
                 List<String> history = new ArrayList<>();
                 history.add("Project Name : " +this.project);
                 history.add("Status : Approved");
+                history.add("Level : Level "+ (i+1) +" (" + this.approvalRoles[i]+")");
                 history.add("Submitted By : " + toFullName(this.submitterUser));
                 history.add("Approved By : " + toFullName(this.approvalUsers[i]));
                 history.add("Approval Comment : Approved by -------- "  + toFullName(this.approvalUsers[i]));
@@ -179,6 +186,7 @@ public class TC010_TimesheetManualApprovalTests extends  BaseClass{
 
                 if(i == this.approvalUsers.length - 1){
                     Thread.sleep(10 * 60 * 1000); // 10 mint
+                    driver.navigate().refresh();
                     Assert.assertTrue(historyApprovalPage.getLastUpdatedHistory().containsAll(history));
                 }
 
@@ -197,7 +205,6 @@ public class TC010_TimesheetManualApprovalTests extends  BaseClass{
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
-        TimesheetPage timesheetPage = new TimesheetPage(driver);
         HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
         try{
             logger.info("----- Verify That auto approval functionality");
@@ -220,7 +227,7 @@ public class TC010_TimesheetManualApprovalTests extends  BaseClass{
             logger.info("------ Clicking on show btn of : " + this.submitterUser + "Timesheet History");
             timesheetApprovalPage.clickOnShowHistoryOfUserTimesheet(toFullName(this.submitterUser));
 
-            //checking histroy
+            //checking history
             List<List<String>> changelogDetails = historyApprovalPage.getTimesheetApprovalDetails();
             Assert.assertTrue(changelogDetails.size() == this.allHistory.size());
 

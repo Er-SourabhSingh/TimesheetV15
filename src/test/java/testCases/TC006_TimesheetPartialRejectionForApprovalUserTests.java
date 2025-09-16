@@ -169,7 +169,7 @@ public class TC006_TimesheetPartialRejectionForApprovalUserTests extends BaseCla
 
             logger.info("Step 6: Approve timesheet for: "+approvalUser);
             timesheetApprovalPage.clickOnApproveBtn(toFullName(this.approvalUser));
-            timesheetApprovalPage.setApprovalText("Approved by --------- " + approvalUsers[0]);
+            timesheetApprovalPage.setApprovalText("Approved by --------- " + toFullName(approvalUsers[0]));
             timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
             Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.approvalUser)),"Approved");
@@ -231,7 +231,7 @@ public class TC006_TimesheetPartialRejectionForApprovalUserTests extends BaseCla
 
             logger.info("Step 6: Reject timesheet for: " + approvalUser);
             timesheetApprovalPage.clickOnRejectBtn(toFullName(this.approvalUser));
-            timesheetApprovalPage.setRejectionText("Rejected by --------- " + approvalUsers[0]);
+            timesheetApprovalPage.setRejectionText("Rejected by --------- " + toFullName(approvalUsers[0]));
             timesheetApprovalPage.clickOnSubmitBtnOfRejection();
 
             Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.approvalUser)), "Rejected");
@@ -477,7 +477,7 @@ public class TC006_TimesheetPartialRejectionForApprovalUserTests extends BaseCla
 
                 logger.info("------ Approving timesheet for " + approvalUser);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(this.approvalUser));
-                timesheetApprovalPage.setApprovalText("Approved by --------  "+approvalUsers[i]);
+                timesheetApprovalPage.setApprovalText("Approved by --------  "+ toFullName(approvalUsers[i]));
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.approvalUser)), "Approved");
@@ -538,7 +538,7 @@ public class TC006_TimesheetPartialRejectionForApprovalUserTests extends BaseCla
 
                 logger.info("------ Approving timesheet for " + approvalUser);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(this.approvalUser));
-                timesheetApprovalPage.setApprovalText("Approved by -------- "+approvalUsers[i]);
+                timesheetApprovalPage.setApprovalText("Approved by -------- "+ toFullName(approvalUsers[i]));
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.approvalUser)), "Approved");

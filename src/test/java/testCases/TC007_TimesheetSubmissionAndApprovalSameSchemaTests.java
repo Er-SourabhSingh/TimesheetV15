@@ -160,7 +160,7 @@ public class TC007_TimesheetSubmissionAndApprovalSameSchemaTests extends BaseCla
 
                 logger.info("------ Approving timesheet for " + submitterUser);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(this.submitterUser));
-                timesheetApprovalPage.setApprovalText("Approved by -------- " + approvalUsers[i]);
+                timesheetApprovalPage.setApprovalText("Approved by -------- " + toFullName(approvalUsers[i]));
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.submitterUser)), "Approved");
@@ -233,7 +233,7 @@ public class TC007_TimesheetSubmissionAndApprovalSameSchemaTests extends BaseCla
 
                 logger.info("------ Approving timesheet for " + submitterUser);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(this.submitterUser));
-                timesheetApprovalPage.setApprovalText("Approved by -------- " + newApprovalUsers[i]);
+                timesheetApprovalPage.setApprovalText("Approved by -------- " + toFullName(newApprovalUsers[i]));
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.submitterUser)), "Approved");

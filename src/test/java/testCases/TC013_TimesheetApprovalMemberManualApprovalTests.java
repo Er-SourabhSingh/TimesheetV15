@@ -15,6 +15,13 @@ public class TC013_TimesheetApprovalMemberManualApprovalTests extends BaseClass 
             "celeste.dawn",   // 4Approval
             "daisy.skye"      // 5Approval
     };
+    String[] approvalRoles = {
+            "1Approval",
+            "2Approval",
+            "3Approval",
+            "4Approval",
+            "5Approval"
+    };
     String submitterUser = "autumn.grace"; // user8 replaced
     String project = "New Project 5-Level-Schema";
     String startDate = "08/18/2025", endDate = "08/24/2025";
@@ -96,7 +103,7 @@ public class TC013_TimesheetApprovalMemberManualApprovalTests extends BaseClass 
         }
     }
 
-    @Test(priority = 2, groups = {"Master","Regression"} , dependsOnMethods = {"testSubmitTimesheetOfMarigoldRayneForNewProject"})
+    @Test(priority = 2, groups = {"Master","Regression"} , dependsOnMethods = {"testSubmitTimesheetOfAutumnGraceForNewProject"})
     public void testApproveUserTimesheetBeforeAutoApproved(){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
@@ -164,11 +171,12 @@ public class TC013_TimesheetApprovalMemberManualApprovalTests extends BaseClass 
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.submitterUser)),"Approved");
 
-                //checking histroy
+                //checking history
                 logger.info("------ Clicking on show btn of : " + this.submitterUser + "Timesheet History");
                 timesheetApprovalPage.clickOnShowHistoryOfUserTimesheet(toFullName(this.submitterUser));
                 List<String> history = new ArrayList<>();
                 history.add("Project Name : " +this.project);
+                history.add("Level : Level "+ (i+1) +" (" + this.approvalRoles[i]+")");
                 history.add("Status : Approved");
                 history.add("Submitted By : " + toFullName(this.submitterUser));
                 history.add("Approved By : " + toFullName(this.approvalUsers[i]));
@@ -219,7 +227,7 @@ public class TC013_TimesheetApprovalMemberManualApprovalTests extends BaseClass 
             logger.info("------ Clicking on show btn of : " + this.submitterUser + "Timesheet History");
             timesheetApprovalPage.clickOnShowHistoryOfUserTimesheet(toFullName(this.submitterUser));
 
-            //checking histroy
+            //checking history
             List<List<String>> changelogDetails = historyApprovalPage.getTimesheetApprovalDetails();
             Assert.assertTrue(changelogDetails.size() == this.allHistory.size());
 

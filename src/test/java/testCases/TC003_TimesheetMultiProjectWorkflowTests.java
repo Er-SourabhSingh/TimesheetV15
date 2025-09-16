@@ -133,7 +133,7 @@ public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
 
                 logger.info("------ Approving timesheet for "+user);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(this.user));
-                timesheetApprovalPage.setApprovalText("Approved by -------- "+approvalUsers[i]);
+                timesheetApprovalPage.setApprovalText("Approved by -------- "+ toFullName(approvalUsers[i]));
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.user)),"Approved");
@@ -206,7 +206,7 @@ public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
 
                 logger.info("------ Approving timesheet for "+user);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(this.user));
-                timesheetApprovalPage.setApprovalText("Approved by -------- "+approvalUsers[i]);
+                timesheetApprovalPage.setApprovalText("Approved by -------- "+ toFullName(approvalUsers[i]));
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.user)),"Approved");
@@ -281,7 +281,7 @@ public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
 
                 logger.info("------ Approving timesheet for "+user);
                 timesheetApprovalPage.clickOnApproveBtn(toFullName(this.user));
-                timesheetApprovalPage.setApprovalText("Approved by -------- "+approvalUsers[i]);
+                timesheetApprovalPage.setApprovalText("Approved by -------- "+ toFullName(approvalUsers[i]));
                 timesheetApprovalPage.clickOnSubmitBtnOfApproval();
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.user)),"Approved");
