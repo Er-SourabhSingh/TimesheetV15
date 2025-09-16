@@ -3,6 +3,7 @@ package pageObjects;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -63,6 +64,38 @@ public class TimesheetApprovalPage extends BasePage{
 
         return users;
     }
+
+    public void selectProject(String projectName){
+        WebElement dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(this.dropDownProject));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", dropdown);
+        Select select = new Select(dropdown);
+        select.selectByVisibleText(projectName);
+    }
+
+    public List<String> getProjectOptions(String projectName){
+        WebElement dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(this.dropDownProject));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", dropdown);
+        Select select = new Select(dropdown);
+        List<String> optionList = new ArrayList<>();
+        List<WebElement> options = select.getOptions();
+
+        for(WebElement option : options){
+            optionList.add(option.getText().trim());
+        }
+
+        return optionList;
+    }
+
+    public boolean isProjectSelected(String projectName){
+        WebElement dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(this.dropDownProject));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", dropdown);
+        Select select = new Select(dropdown);
+
+        String selectedText = select.getFirstSelectedOption().getText().trim();
+
+        return selectedText.equalsIgnoreCase(projectName);
+    }
+
 
     public void selectAllUser(){
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(this.checkBoxSelectAll));

@@ -1,0 +1,54 @@
+2025-09-16 18:33:59 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:29 - Test Case 1: Verify the search functionality in current date range and Project A Default-Schema as admin
+2025-09-16 18:33:59 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:31 - step 1: login as admin
+2025-09-16 18:33:59 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:34 - step 2: go to Timesheet module
+2025-09-16 18:34:00 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:37 - step 3: go to Timesheet Approval Dashboard module
+2025-09-16 18:34:00 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:40 - step 4: search for opal.sparrow
+2025-09-16 18:34:01 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:44 - step 5: select Project A Default-Schema
+2025-09-16 18:34:01 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:47 - step 6: Check Filter Data
+2025-09-16 18:34:01 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:54 - step 7: Logging out as admin
+2025-09-16 18:34:02 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:68 - Test Case 2: Verify the search functionality in Past date range and Project B 1-Level-Schema  as admin
+2025-09-16 18:34:02 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:70 - step 1: login as admin
+2025-09-16 18:34:02 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:73 - step 2: go to Timesheet module
+2025-09-16 18:34:03 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:76 - step 3: go to Timesheet Approval Dashboard module
+2025-09-16 18:34:03 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:79 - step 4: go to date Range 08 September 2025 - 14 September 2025
+2025-09-16 18:34:05 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:82 - step 5: Search for sage.willow
+2025-09-16 18:34:05 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:86 - step 6: select Project B 1-Level-Schema
+2025-09-16 18:34:05 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:89 - step 6: Check Filter Data
+2025-09-16 18:34:05 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:96 - step 7: Check Date range after filtered data
+2025-09-16 18:34:05 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:116 - Test Case 3: Verify the search functionality in current date range and accross different project as admin
+2025-09-16 18:34:05 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:118 - step 1: login as admin
+2025-09-16 18:34:08 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:121 - step 2: go to Timesheet module
+2025-09-16 18:34:08 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:124 - step 3: go to Timesheet Approval Dashboard module
+2025-09-16 18:34:08 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:127 - step 4: Search for serenity.bloom
+2025-09-16 18:34:09 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:132 - ----- : select Project A Default-Schema
+2025-09-16 18:34:09 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:134 - ----- : Check Filter Data
+2025-09-16 18:34:09 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:132 - ----- : select Project B 1-Level-Schema
+2025-09-16 18:34:10 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:134 - ----- : Check Filter Data
+2025-09-16 18:34:10 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:143 - step 6: Logging out as admin
+2025-09-16 18:35:28 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:29 - Test Case 1: Verify the search functionality in current date range and Project A Default-Schema as admin
+2025-09-16 18:35:28 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:31 - step 1: login as admin
+2025-09-16 18:35:28 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:34 - step 2: go to Timesheet module
+2025-09-16 18:35:29 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:37 - step 3: go to Timesheet Approval Dashboard module
+2025-09-16 18:35:29 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:40 - step 4: search for opal.sparrow
+2025-09-16 18:35:30 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:44 - step 5: select Project A Default-Schema
+2025-09-16 18:35:30 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:47 - step 6: Check Filter Data
+2025-09-16 18:35:30 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:54 - step 7: Logging out as admin
+2025-09-16 18:35:31 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:68 - Test Case 2: Verify the search functionality in Past date range and Project B 1-Level-Schema  as admin
+2025-09-16 18:35:31 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:70 - step 1: login as admin
+2025-09-16 18:35:31 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:73 - step 2: go to Timesheet module
+2025-09-16 18:35:31 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:76 - step 3: go to Timesheet Approval Dashboard module
+2025-09-16 18:35:32 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:79 - step 4: go to date Range 08 September 2025 - 14 September 2025
+2025-09-16 18:35:34 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:82 - step 5: Search for sage.willow
+2025-09-16 18:35:34 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:86 - step 6: select Project B 1-Level-Schema
+2025-09-16 18:35:34 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:89 - step 6: Check Filter Data
+2025-09-16 18:35:34 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:101 - step 8: Logging out as admin
+2025-09-16 18:35:34 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:116 - Test Case 3: Verify the search functionality in current date range and accross different project as admin
+2025-09-16 18:35:34 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:118 - step 1: login as admin
+2025-09-16 18:35:35 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:121 - step 2: go to Timesheet module
+2025-09-16 18:35:35 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:124 - step 3: go to Timesheet Approval Dashboard module
+2025-09-16 18:35:35 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:127 - step 4: Search for serenity.bloom
+2025-09-16 18:35:36 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:132 - ----- : select Project A Default-Schema
+2025-09-16 18:35:36 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:134 - ----- : Check Filter Data
+2025-09-16 18:35:36 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:132 - ----- : select Project B 1-Level-Schema
+2025-09-16 18:35:37 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:134 - ----- : Check Filter Data
+2025-09-16 18:35:37 INFO  TC015_TimesheetApprovalDashboardBasicFunctionalityTests:143 - step 6: Logging out as admin

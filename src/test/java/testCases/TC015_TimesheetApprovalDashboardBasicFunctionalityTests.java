@@ -26,7 +26,7 @@ class TC015_TimesheetApprovalDashboardBasicFunctionalityTests extends BaseClass 
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
-        logger.info("Test Case 1: Verify the search functionality in current date range as admin");
+        logger.info("Test Case 1: Verify the search functionality in current date range and " + projects[0] + " as admin");
         try{
             logger.info("step 1: login as admin");
             login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));
@@ -37,18 +37,21 @@ class TC015_TimesheetApprovalDashboardBasicFunctionalityTests extends BaseClass 
             logger.info("step 3: go to Timesheet Approval Dashboard module");
             timesheetPage.clickOnTimesheetApprovalDashboard();
 
-            logger.info("step 4: Search for " + users[0]);
+            logger.info("step 4: search for " + users[0]);
             timesheetApprovalPage.setTextSearch(toFullName(users[0]));
             timesheetApprovalPage.clickEnterBtn();
 
-            logger.info("step 5: Check Filter Data");
+            logger.info("step 5: select " + projects[0]);
+            timesheetApprovalPage.selectProject(projects[0]);
+
+            logger.info("step 6: Check Filter Data");
             List<String> filterUsers = timesheetApprovalPage.getAllUser();
 
             for(String user: filterUsers){
                 Assert.assertTrue(user.equals(toFullName(users[0])));
             }
 
-            logger.info("step 6: Logging out as admin");
+            logger.info("step 7: Logging out as admin");
             headerPage.clickOnLogout();
 
         }catch (Exception e){
@@ -62,7 +65,7 @@ class TC015_TimesheetApprovalDashboardBasicFunctionalityTests extends BaseClass 
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
-        logger.info("Test Case 1: Verify the search functionality in Past date range as admin");
+        logger.info("Test Case 2: Verify the search functionality in Past date range and " + projects[1] + "  as admin");
         try{
             logger.info("step 1: login as admin");
             login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));
@@ -79,6 +82,9 @@ class TC015_TimesheetApprovalDashboardBasicFunctionalityTests extends BaseClass 
             logger.info("step 5: Search for " + users[1]);
             timesheetApprovalPage.setTextSearch(toFullName(users[1]));
             timesheetApprovalPage.clickEnterBtn();
+
+            logger.info("step 6: select " + projects[1]);
+            timesheetApprovalPage.selectProject(projects[1]);
 
             logger.info("step 6: Check Filter Data");
             List<String> filterUsers = timesheetApprovalPage.getAllUser();
@@ -101,6 +107,47 @@ class TC015_TimesheetApprovalDashboardBasicFunctionalityTests extends BaseClass 
         }
     }
 
+    @Test(priority = 3, groups = {"Master","Sanity"})
+    public void verifySearchFunctionalityDifferntProjectAsAdmin(){
+
+        HeaderPage headerPage = new HeaderPage(driver);
+        TimesheetPage timesheetPage = new TimesheetPage(driver);
+        TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
+        logger.info("Test Case 3: Verify the search functionality in current date range and accross different project as admin");
+        try{
+            logger.info("step 1: login as admin");
+            login(properties.getProperty("adminUser"), properties.getProperty("adminPassword"));
+
+            logger.info("step 2: go to Timesheet module");
+            headerPage.clickOnTimesheet();
+
+            logger.info("step 3: go to Timesheet Approval Dashboard module");
+            timesheetPage.clickOnTimesheetApprovalDashboard();
+
+            logger.info("step 4: Search for " + users[3]);
+            timesheetApprovalPage.setTextSearch(toFullName(users[3]));
+            timesheetApprovalPage.clickEnterBtn();
+
+            for(String project : projects) {
+                logger.info("----- : select " + project);
+                timesheetApprovalPage.selectProject(project);
+                logger.info("----- : Check Filter Data");
+                List<String> filterUsers = timesheetApprovalPage.getAllUser();
+
+                for (String user : filterUsers) {
+                    Assert.assertTrue(user.equals(toFullName(users[3])));
+                }
+
+            }
+
+            logger.info("step 6: Logging out as admin");
+            headerPage.clickOnLogout();
+
+        }catch (Exception e){
+            logger.error(e);
+            Assert.fail();
+        }
+    }
 
 
 
