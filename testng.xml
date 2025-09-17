@@ -17,19 +17,19 @@
         <parameter name="browser" value="chrome"/>
         <parameter name="approvalflow" value="manual"/>
         <classes>
-             <!--<class name="testBase.SetupPreconditions"/>
+             <class name="testBase.SetupPreconditions"/>
              <class name="testCases.TC001_TimesheetApprovalTests"/>
              <class name="testCases.TC002_TimesheetRejectionTests"/>
              <class name="testCases.TC003_TimesheetMultiProjectWorkflowTests"/>
              <class name="testCases.TC004_TimesheetMultiProjectRejectionTests"/>
              <class name="testCases.TC005_TimesheetPartialRejectionForProjectsTests"/>
              <class name="testCases.TC006_TimesheetPartialRejectionForApprovalUserTests"/>
-             <class name="testCases.TC008_BulkTimesheetApprovalAndRejectionTests"/>-->
+             <class name="testCases.TC008_BulkTimesheetApprovalAndRejectionTests"/>
              <class name="testCases.TC015_TimesheetApprovalDashboardBasicFunctionalityTests"/>
         </classes>
     </test>
 
-    <!--<test thread-count="5" parallel="none" name="SameSchemaInTwoProject">
+    <test thread-count="5" parallel="none" name="SameSchemaInTwoProject">
          <parameter name="os" value="window"/>
          <parameter name="browser" value="chrome"/>
          <parameter name="approvalflow" value="sameschema"/>
@@ -37,9 +37,9 @@
              <class name="testBase.SetupPreconditions"/>
              <class name="testCases.TC007_TimesheetSubmissionAndApprovalSameSchemaTests"/>
          </classes>
-     </test>-->
+     </test>
 
-    <!--<test thread-count="5" parallel="none" name="TimesheetAutoApproval">
+    <test thread-count="5" parallel="none" name="TimesheetAutoApproval">
         <parameter name="os" value="window"/>
         <parameter name="browser" value="chrome"/>
         <parameter name="approvalflow" value="auto"/>
@@ -52,7 +52,7 @@
             <class name="testCases.TC013_TimesheetApprovalMemberManualApprovalTests"/>
             <class name="testCases.TC014_TimesheetApprovalMemberManualRejectionTests"/>
         </classes>
-    </test>-->
+    </test>
 
 
 </suite>
