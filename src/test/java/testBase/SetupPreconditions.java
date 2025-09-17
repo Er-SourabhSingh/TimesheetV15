@@ -79,6 +79,7 @@ SetupPreconditions extends BaseClass{
     }
 
     private void setupTwoProjectsSameSchema(){
+        System.out.println("Running Set Up Two Project Same Schema Preconditions...");
         String[] newApprovalUsers = {
                 "ivy.skylark",    // New 1ApproverNew
                 "luna.meadow",    // New 2ApproverNew
@@ -127,6 +128,7 @@ SetupPreconditions extends BaseClass{
     }
 
     private void setupAutoFlow(){
+        System.out.println("Running Auto Flow Preconditions...");
         String[] approvalUsers = {
                 "aurora.wren",    // 1Approval
                 "autumn.grace",   // 2Approval

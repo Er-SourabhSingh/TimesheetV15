@@ -22,6 +22,8 @@ public class TimesheetApprovalPage extends BasePage{
 
     By dateRange = By.xpath("//div[@class='links-left']//span");
 
+    By noDataXpath = By.xpath("//p[@class='nodata']");
+
     By txtRejectionComment = By.xpath("//input[@id='rejection-comment']");
 
     By btnRejectionCancel = By.xpath("//button[@class='reject-modal-cancel']");
@@ -38,6 +40,12 @@ public class TimesheetApprovalPage extends BasePage{
 
     public TimesheetApprovalPage(WebDriver driver){
         super(driver);
+    }
+
+
+    public boolean isNoDataDisplay(){
+        WebElement noDataMsd = driver.findElement(this.noDataXpath);
+        return noDataMsd.isDisplayed() && noDataMsd.getText().equals("No data to display");
     }
 
     public void setTextSearch(String userName){
@@ -72,7 +80,7 @@ public class TimesheetApprovalPage extends BasePage{
         select.selectByVisibleText(projectName);
     }
 
-    public List<String> getProjectOptions(String projectName){
+    public List<String> getProjectOptions(){
         WebElement dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(this.dropDownProject));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", dropdown);
         Select select = new Select(dropdown);
