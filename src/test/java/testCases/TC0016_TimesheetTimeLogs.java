@@ -10,15 +10,20 @@ import java.util.*;
 
 public class TC0016_TimesheetTimeLogs extends BaseClass {
     String[] users = {
-            //"aurora.wren",
-            //"autumn.grace",   // 2Approval
-            //"briar.sunset",   // 3Approval
+            "aurora.wren",
+            "autumn.grace",   // 2Approval
+            "briar.sunset",   // 3Approval
             "celeste.dawn",   // 4Approval
-            /*"daisy.skye"      // 5Approval*/
+            "daisy.skye",     // 5Approval
+
+            "ember.lilac", "harmony.rose", "isla.moon", "ivy.skylark",
+            "luna.meadow", "marigold.rayne", "nova.starling",
+            "opal.sparrow", "sage.willow", "selene.frost", "serenity.bloom",
+            "summer.rain" , "luna.blossom", "violet.ember", "willow.belle"
     };
 
 
-    String startDate = "10/01/2025", endDate = "10/31/2025";
+    String startDate = "11/01/2025", endDate = "11/30/2025";
 
     Map<String, Map<String,Map<String, Map<String, Double>>>> userProjectIssueActivityHours = new HashMap<>();
 
@@ -46,12 +51,10 @@ public class TC0016_TimesheetTimeLogs extends BaseClass {
                 timesheetPage.selectEndDate(this.endDate);
                 timesheetPage.clickOnDateRangeApplyBtn();
 
-                // this.dateRanges = timesheetPage.getSelectedDateRange();
-
                 List<String> days = getMonthDates(this.startDate, this.endDate);
                 logger.info("Step 5: Logging time entries for each day from Monday to friday");
 
-                System.out.println(days.size());
+                //System.out.println(days.size());
 
                 if (timesheetPage.isSubmitTimesheetBtnEnabled()) {
 
@@ -80,22 +83,35 @@ public class TC0016_TimesheetTimeLogs extends BaseClass {
 
 
                         Double hoursVal = Double.parseDouble(hours);
-                        userProjectIssueActivityHours.putIfAbsent(user, new HashMap<>());
-                        userProjectIssueActivityHours.get(user).putIfAbsent(project, new HashMap<>());
-                        userProjectIssueActivityHours.get(user).get(project).putIfAbsent(issueId, new HashMap<>());
-                        Map<String, Double> activityMap = userProjectIssueActivityHours.get(user).get(project).get(issueId);
+                        this.userProjectIssueActivityHours.putIfAbsent(user, new HashMap<>());
+                        this.userProjectIssueActivityHours.get(user).putIfAbsent(project, new HashMap<>());
+                        this.userProjectIssueActivityHours.get(user).get(project).putIfAbsent(issueId, new HashMap<>());
+                        Map<String, Double> activityMap = this.userProjectIssueActivityHours.get(user).get(project).get(issueId);
                         activityMap.put(activity, activityMap.getOrDefault(activity, 0.0) + hoursVal);
                     }
 
                 }
+                logger.info("Step 6: Logging out submitterUser");
+                headerPage.clickOnLogout();
+            }
 
+            for(String user : this.userProjectIssueActivityHours.keySet()){
+                System.out.println("User: "+user);
+                Map<String, Map<String, Map<String, Double>>> projects = this.userProjectIssueActivityHours.get(user);
 
+                for(String project: projects.keySet()){
+                    System.out.println("  Project: "+project);
+                    Map<String, Map<String, Double>> issues = projects.get(project);
 
+                    for(String issue : issues.keySet()){
+                        System.out.println("    Issue: "+issue);
+                        Map<String, Double> activities = issues.get(issue);
 
-
-
-                /*logger.info("Step 6: Logging out submitterUser");
-                headerPage.clickOnLogout();*/
+                        for(String activity : activities.keySet()){
+                            System.out.println("      Activity: " + activity + " -> Hours: " + activities.get(activity));
+                        }
+                    }
+                }
             }
 
         }catch (Exception e){
