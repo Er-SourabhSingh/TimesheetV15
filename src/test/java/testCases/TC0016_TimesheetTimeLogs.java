@@ -25,7 +25,7 @@ public class TC0016_TimesheetTimeLogs extends BaseClass {
 
     String startDate = "11/01/2025", endDate = "11/30/2025";
 
-    Map<String, Map<String,Map<String, Map<String, Double>>>> userProjectIssueActivityHours = new HashMap<>();
+    Map<String, Map<String, Map<String,Map<String, Map<String, Double>>>>> userDayProjectIssueActivityHours = new HashMap<>();
 
 
     @Test(priority = 1)
@@ -83,10 +83,11 @@ public class TC0016_TimesheetTimeLogs extends BaseClass {
 
 
                         Double hoursVal = Double.parseDouble(hours);
-                        this.userProjectIssueActivityHours.putIfAbsent(user, new HashMap<>());
-                        this.userProjectIssueActivityHours.get(user).putIfAbsent(project, new HashMap<>());
-                        this.userProjectIssueActivityHours.get(user).get(project).putIfAbsent(issueId, new HashMap<>());
-                        Map<String, Double> activityMap = this.userProjectIssueActivityHours.get(user).get(project).get(issueId);
+                        this.userDayProjectIssueActivityHours.putIfAbsent(user, new HashMap<>());
+                        this.userDayProjectIssueActivityHours.get(user).putIfAbsent(day, new HashMap<>());
+                        this.userDayProjectIssueActivityHours.get(user).get(day).putIfAbsent(project, new HashMap<>());
+                        this.userDayProjectIssueActivityHours.get(user).get(day).get(project).putIfAbsent(issueId, new HashMap<>());
+                        Map<String, Double> activityMap = this.userDayProjectIssueActivityHours.get(user).get(day).get(project).get(issueId);
                         activityMap.put(activity, activityMap.getOrDefault(activity, 0.0) + hoursVal);
                     }
 
@@ -95,24 +96,38 @@ public class TC0016_TimesheetTimeLogs extends BaseClass {
                 headerPage.clickOnLogout();
             }
 
-            for(String user : this.userProjectIssueActivityHours.keySet()){
-                System.out.println("User: "+user);
-                Map<String, Map<String, Map<String, Double>>> projects = this.userProjectIssueActivityHours.get(user);
+            List<String[]> rows = new ArrayList<>();
 
-                for(String project: projects.keySet()){
-                    System.out.println("  Project: "+project);
-                    Map<String, Map<String, Double>> issues = projects.get(project);
+            for (String user : this.userDayProjectIssueActivityHours.keySet()) {
+                Map<String, Map<String, Map<String, Map<String, Double>>>> days = this.userDayProjectIssueActivityHours.get(user);
 
-                    for(String issue : issues.keySet()){
-                        System.out.println("    Issue: "+issue);
-                        Map<String, Double> activities = issues.get(issue);
+                for (String day : days.keySet()) {
+                    Map<String, Map<String, Map<String, Double>>> projects = days.get(day);
 
-                        for(String activity : activities.keySet()){
-                            System.out.println("      Activity: " + activity + " -> Hours: " + activities.get(activity));
+                    for (String project : projects.keySet()) {
+                        Map<String, Map<String, Double>> issues = projects.get(project);
+
+                        for (String issue : issues.keySet()) {
+                            Map<String, Double> activities = issues.get(issue);
+
+                            for (String activity : activities.keySet()) {
+                                Double hours = activities.get(activity);
+
+                                // Save as row (you could also directly write to Excel here)
+                                rows.add(new String[]{user, day, project, issue, activity, hours.toString()});
+                            }
                         }
                     }
                 }
             }
+
+// Print as a table
+            System.out.printf("%-15s %-12s %-12s %-12s %-15s %-5s%n", "User", "Day", "Project", "Issue", "Activity", "Hours");
+            for (String[] row : rows) {
+                System.out.printf("%-15s %-12s %-12s %-12s %-15s %-5s%n", row[0], row[1], row[2], row[3], row[4], row[5]);
+            }
+
+
 
         }catch (Exception e){
             logger.error(e);
