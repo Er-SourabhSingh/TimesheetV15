@@ -12,7 +12,7 @@
         <listener class-name="utilities.ExtentReportManager"/>
     </listeners>
 
-    <test thread-count="5" parallel="none" name="TimeSheetManual">
+    <!--<test thread-count="5" parallel="none" name="TimeSheetManual">
         <parameter name="os" value="window"/>
         <parameter name="browser" value="chrome"/>
         <parameter name="approvalflow" value="manual"/>
@@ -52,7 +52,16 @@
             <class name="testCases.TC013_TimesheetApprovalMemberManualApprovalTests"/>
             <class name="testCases.TC014_TimesheetApprovalMemberManualRejectionTests"/>
         </classes>
-    </test>
+    </test>-->
 
+    <test thread-count="5" parallel="none" name="TimeSheetManual">
+        <parameter name="os" value="window"/>
+        <parameter name="browser" value="chrome"/>
+        <parameter name="approvalflow" value="manual"/>
+        <classes>
+            <class name="testCases.TC0016_TimesheetTimeLogs"/>
+
+        </classes>
+    </test>
 
 </suite>

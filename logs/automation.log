@@ -1,12 +1,604 @@
-2025-09-17 14:48:36 INFO  SetupPreconditions:327 - ----- Create schemas -----
-2025-09-17 14:48:36 INFO  SetupPreconditions:329 - 1: Click on timesheet module in header
-2025-09-17 14:48:36 INFO  SetupPreconditions:331 - 2: Click on timesheet approval schema sub module inside Timesheet module
-2025-09-17 14:48:36 INFO  SetupPreconditions:335 - 3: Check that schema is already created
-2025-09-17 14:48:37 INFO  SetupPreconditions:335 - 3: Check that schema is already created
-2025-09-17 14:48:37 INFO  SetupPreconditions:335 - 3: Check that schema is already created
-2025-09-17 14:48:38 INFO  SetupPreconditions:335 - 3: Check that schema is already created
-2025-09-17 14:48:38 INFO  SetupPreconditions:335 - 3: Check that schema is already created
-2025-09-17 14:48:38 INFO  SetupPreconditions:358 - ----- Create levels inside schema -----
-2025-09-17 14:48:38 INFO  SetupPreconditions:361 - Open schema 1 Level Schema
-2025-09-17 14:48:49 INFO  SetupPreconditions:386 - go back page of approval schema level
-2025-09-17 14:48:49 INFO  SetupPreconditions:361 - Open schema 2 Level Schema
+2025-10-03 12:48:27 INFO  TC0016_TimesheetTimeLogs:30 - Test Case 1: Verify submitterUser can submit multiple project's timesheet and Approved
+2025-10-03 12:48:27 INFO  TC0016_TimesheetTimeLogs:33 - Step 1: Logging in as aurora.wren
+2025-10-03 12:48:28 INFO  TC0016_TimesheetTimeLogs:36 - Step 2: Navigating to Timesheet module
+2025-10-03 12:48:28 INFO  TC0016_TimesheetTimeLogs:39 - Step 3: Expanding timesheet view
+2025-10-03 12:48:29 INFO  TC0016_TimesheetTimeLogs:42 - Step 4: Selecting date range filter as 'Custom Range'
+2025-10-03 12:48:29 INFO  TC0016_TimesheetTimeLogs:52 - Step 5: Logging time entries for each day from Monday to friday
+2025-10-03 12:48:29 INFO  TC0016_TimesheetTimeLogs:57 - ---- Logging entry for: 2025-10-01
+2025-10-03 12:48:30 ERROR TC0016_TimesheetTimeLogs:94 - org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been "select" but was "div"
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: driver.version: unknown
+2025-10-03 12:50:13 INFO  TC0016_TimesheetTimeLogs:30 - Test Case 1: Verify submitterUser can submit multiple project's timesheet and Approved
+2025-10-03 12:50:13 INFO  TC0016_TimesheetTimeLogs:33 - Step 1: Logging in as aurora.wren
+2025-10-03 12:50:14 INFO  TC0016_TimesheetTimeLogs:36 - Step 2: Navigating to Timesheet module
+2025-10-03 12:50:15 INFO  TC0016_TimesheetTimeLogs:39 - Step 3: Expanding timesheet view
+2025-10-03 12:50:15 INFO  TC0016_TimesheetTimeLogs:42 - Step 4: Selecting date range filter as 'Custom Range'
+2025-10-03 12:50:16 INFO  TC0016_TimesheetTimeLogs:52 - Step 5: Logging time entries for each day from Monday to friday
+2025-10-03 12:50:16 INFO  TC0016_TimesheetTimeLogs:57 - ---- Logging entry for: 2025-10-01
+2025-10-03 12:54:33 INFO  TC0016_TimesheetTimeLogs:30 - Test Case 1: Verify submitterUser can submit multiple project's timesheet and Approved
+2025-10-03 12:54:33 INFO  TC0016_TimesheetTimeLogs:33 - Step 1: Logging in as aurora.wren
+2025-10-03 12:54:34 INFO  TC0016_TimesheetTimeLogs:36 - Step 2: Navigating to Timesheet module
+2025-10-03 12:54:35 INFO  TC0016_TimesheetTimeLogs:39 - Step 3: Expanding timesheet view
+2025-10-03 12:54:35 INFO  TC0016_TimesheetTimeLogs:42 - Step 4: Selecting date range filter as 'Custom Range'
+2025-10-03 12:54:36 INFO  TC0016_TimesheetTimeLogs:52 - Step 5: Logging time entries for each day from Monday to friday
+2025-10-03 12:54:36 INFO  TC0016_TimesheetTimeLogs:57 - ---- Logging entry for: 2025-10-01
+2025-10-03 12:58:46 INFO  TC0016_TimesheetTimeLogs:30 - Test Case 1: Verify submitterUser can submit multiple project's timesheet and Approved
+2025-10-03 12:58:46 INFO  TC0016_TimesheetTimeLogs:33 - Step 1: Logging in as aurora.wren
+2025-10-03 12:58:47 INFO  TC0016_TimesheetTimeLogs:36 - Step 2: Navigating to Timesheet module
+2025-10-03 12:58:48 INFO  TC0016_TimesheetTimeLogs:39 - Step 3: Expanding timesheet view
+2025-10-03 12:58:48 INFO  TC0016_TimesheetTimeLogs:42 - Step 4: Selecting date range filter as 'Custom Range'
+2025-10-03 12:59:08 INFO  TC0016_TimesheetTimeLogs:30 - Test Case 1: Verify submitterUser can submit multiple project's timesheet and Approved
+2025-10-03 12:59:08 INFO  TC0016_TimesheetTimeLogs:33 - Step 1: Logging in as aurora.wren
+2025-10-03 12:59:08 INFO  TC0016_TimesheetTimeLogs:36 - Step 2: Navigating to Timesheet module
+2025-10-03 12:59:09 INFO  TC0016_TimesheetTimeLogs:39 - Step 3: Expanding timesheet view
+2025-10-03 12:59:09 INFO  TC0016_TimesheetTimeLogs:42 - Step 4: Selecting date range filter as 'Custom Range'
+2025-10-03 12:59:10 INFO  TC0016_TimesheetTimeLogs:52 - Step 5: Logging time entries for each day from Monday to friday
+2025-10-03 12:59:10 INFO  TC0016_TimesheetTimeLogs:57 - ---- Logging entry for: 2025-10-01
+2025-10-03 12:59:21 INFO  TC0016_TimesheetTimeLogs:61 - ------ Selecting project: Project B 1-Level-Schema
+2025-10-03 12:59:22 INFO  TC0016_TimesheetTimeLogs:65 - ------ Selecting issue: #9
+2025-10-03 12:59:23 INFO  TC0016_TimesheetTimeLogs:69 - ------ Selecting activity: Design
+2025-10-03 12:59:23 INFO  TC0016_TimesheetTimeLogs:73 - ------ Entering hours: 7
+2025-10-03 12:59:23 INFO  TC0016_TimesheetTimeLogs:76 - ------ Clicking Log Time button
+2025-10-03 12:59:25 INFO  TC0016_TimesheetTimeLogs:57 - ---- Logging entry for: 2025-10-02
+2025-10-03 12:59:36 INFO  TC0016_TimesheetTimeLogs:61 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 12:59:37 INFO  TC0016_TimesheetTimeLogs:65 - ------ Selecting issue: #12
+2025-10-03 12:59:37 INFO  TC0016_TimesheetTimeLogs:69 - ------ Selecting activity: Design
+2025-10-03 12:59:37 INFO  TC0016_TimesheetTimeLogs:73 - ------ Entering hours: 7
+2025-10-03 12:59:38 INFO  TC0016_TimesheetTimeLogs:76 - ------ Clicking Log Time button
+2025-10-03 12:59:38 INFO  TC0016_TimesheetTimeLogs:57 - ---- Logging entry for: 2025-10-03
+2025-10-03 13:00:11 INFO  TC0016_TimesheetTimeLogs:61 - ------ Selecting project: Project C 2-Level-Schema
+2025-10-03 13:00:12 INFO  TC0016_TimesheetTimeLogs:65 - ------ Selecting issue: #3
+2025-10-03 13:00:12 INFO  TC0016_TimesheetTimeLogs:69 - ------ Selecting activity: Development
+2025-10-03 13:00:12 INFO  TC0016_TimesheetTimeLogs:73 - ------ Entering hours: 9
+2025-10-03 13:00:13 INFO  TC0016_TimesheetTimeLogs:76 - ------ Clicking Log Time button
+2025-10-03 13:00:13 INFO  TC0016_TimesheetTimeLogs:57 - ---- Logging entry for: 2025-10-04
+2025-10-03 13:00:25 INFO  TC0016_TimesheetTimeLogs:61 - ------ Selecting project: New Project 3-Level-Schema
+2025-10-03 13:00:25 INFO  TC0016_TimesheetTimeLogs:65 - ------ Selecting issue: #7
+2025-10-03 13:00:26 INFO  TC0016_TimesheetTimeLogs:69 - ------ Selecting activity: Development
+2025-10-03 13:00:26 INFO  TC0016_TimesheetTimeLogs:73 - ------ Entering hours: 6
+2025-10-03 13:00:26 INFO  TC0016_TimesheetTimeLogs:76 - ------ Clicking Log Time button
+2025-10-03 13:00:26 INFO  TC0016_TimesheetTimeLogs:57 - ---- Logging entry for: 2025-10-05
+2025-10-03 13:00:38 INFO  TC0016_TimesheetTimeLogs:61 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:00:39 INFO  TC0016_TimesheetTimeLogs:65 - ------ Selecting issue: #4
+2025-10-03 13:00:40 INFO  TC0016_TimesheetTimeLogs:69 - ------ Selecting activity: Development
+2025-10-03 13:00:40 INFO  TC0016_TimesheetTimeLogs:73 - ------ Entering hours: 8
+2025-10-03 13:00:40 INFO  TC0016_TimesheetTimeLogs:76 - ------ Clicking Log Time button
+2025-10-03 13:06:56 INFO  TC0016_TimesheetTimeLogs:30 - Test Case 1: Verify submitterUser can submit multiple project's timesheet and Approved
+2025-10-03 13:06:56 INFO  TC0016_TimesheetTimeLogs:33 - Step 1: Logging in as aurora.wren
+2025-10-03 13:06:57 INFO  TC0016_TimesheetTimeLogs:36 - Step 2: Navigating to Timesheet module
+2025-10-03 13:06:58 INFO  TC0016_TimesheetTimeLogs:39 - Step 3: Expanding timesheet view
+2025-10-03 13:06:58 INFO  TC0016_TimesheetTimeLogs:42 - Step 4: Selecting date range filter as 'Custom Range'
+2025-10-03 13:06:59 INFO  TC0016_TimesheetTimeLogs:52 - Step 5: Logging time entries for each day from Monday to friday
+2025-10-03 13:06:59 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-01
+2025-10-03 13:07:00 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:07:01 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #12
+2025-10-03 13:07:01 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:07:02 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:07:02 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:07:02 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-02
+2025-10-03 13:07:04 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project B 1-Level-Schema
+2025-10-03 13:08:20 INFO  TC0016_TimesheetTimeLogs:30 - Test Case 1: Verify submitterUser can submit multiple project's timesheet and Approved
+2025-10-03 13:08:20 INFO  TC0016_TimesheetTimeLogs:33 - Step 1: Logging in as autumn.grace
+2025-10-03 13:08:21 INFO  TC0016_TimesheetTimeLogs:36 - Step 2: Navigating to Timesheet module
+2025-10-03 13:08:22 INFO  TC0016_TimesheetTimeLogs:39 - Step 3: Expanding timesheet view
+2025-10-03 13:08:22 INFO  TC0016_TimesheetTimeLogs:42 - Step 4: Selecting date range filter as 'Custom Range'
+2025-10-03 13:08:23 INFO  TC0016_TimesheetTimeLogs:52 - Step 5: Logging time entries for each day from Monday to friday
+2025-10-03 13:08:23 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-01
+2025-10-03 13:08:24 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project C 2-Level-Schema
+2025-10-03 13:08:25 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #3
+2025-10-03 13:08:26 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:08:26 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:08:26 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:08:27 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-02
+2025-10-03 13:08:29 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:08:30 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #4
+2025-10-03 13:08:31 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:08:31 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 7
+2025-10-03 13:08:31 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:08:32 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-03
+2025-10-03 13:08:55 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: New Project 3-Level-Schema
+2025-10-03 13:08:56 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #7
+2025-10-03 13:08:56 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:08:56 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:08:57 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:08:57 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-04
+2025-10-03 13:08:59 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:08:59 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #4
+2025-10-03 13:09:00 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:09:00 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 7
+2025-10-03 13:09:00 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:09:00 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-05
+2025-10-03 13:09:02 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project B 1-Level-Schema
+2025-10-03 13:09:03 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #9
+2025-10-03 13:09:03 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:09:04 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 7
+2025-10-03 13:09:04 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:09:04 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-06
+2025-10-03 13:09:06 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project B 1-Level-Schema
+2025-10-03 13:09:06 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #9
+2025-10-03 13:09:07 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:09:07 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:09:07 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:09:08 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-07
+2025-10-03 13:09:09 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project C 2-Level-Schema
+2025-10-03 13:09:10 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #11
+2025-10-03 13:09:10 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:09:11 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:09:11 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:09:11 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-08
+2025-10-03 13:09:13 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project F 5-Level-Schema
+2025-10-03 13:09:14 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #6
+2025-10-03 13:09:14 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:09:14 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 8
+2025-10-03 13:09:14 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:09:15 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-09
+2025-10-03 13:09:38 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project F 5-Level-Schema
+2025-10-03 13:09:39 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #6
+2025-10-03 13:09:40 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:09:40 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:09:40 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:09:40 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-10
+2025-10-03 13:09:43 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: New Project 3-Level-Schema
+2025-10-03 13:09:44 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #7
+2025-10-03 13:09:44 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:09:45 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 7
+2025-10-03 13:09:45 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:09:45 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-11
+2025-10-03 13:09:46 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:09:47 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #12
+2025-10-03 13:09:48 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:09:48 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:09:48 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:09:48 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-12
+2025-10-03 13:09:50 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:09:50 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #12
+2025-10-03 13:09:51 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:09:51 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:09:51 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:09:51 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-13
+2025-10-03 13:09:53 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project A Default-Schema
+2025-10-03 13:09:54 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #8
+2025-10-03 13:09:55 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:09:55 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 7
+2025-10-03 13:09:55 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:09:55 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-14
+2025-10-03 13:09:56 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project F 5-Level-Schema
+2025-10-03 13:09:57 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #6
+2025-10-03 13:09:58 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:09:58 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:09:58 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:09:58 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-15
+2025-10-03 13:10:00 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project A Default-Schema
+2025-10-03 13:10:00 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #1
+2025-10-03 13:10:01 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:10:01 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:10:01 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:10:02 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-16
+2025-10-03 13:10:03 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:10:04 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #12
+2025-10-03 13:10:04 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:10:04 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:10:04 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:10:05 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-17
+2025-10-03 13:10:06 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project C 2-Level-Schema
+2025-10-03 13:10:07 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #3
+2025-10-03 13:10:08 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:10:08 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:10:08 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:10:08 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-18
+2025-10-03 13:10:09 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project B 1-Level-Schema
+2025-10-03 13:10:10 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #2
+2025-10-03 13:10:11 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:10:11 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:10:11 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:10:12 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-19
+2025-10-03 13:10:13 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project B 1-Level-Schema
+2025-10-03 13:10:13 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #2
+2025-10-03 13:10:14 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:10:14 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:10:14 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:10:15 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-20
+2025-10-03 13:10:16 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project B 1-Level-Schema
+2025-10-03 13:10:17 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #2
+2025-10-03 13:10:17 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:10:18 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:10:18 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:10:18 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-21
+2025-10-03 13:10:19 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project A Default-Schema
+2025-10-03 13:10:20 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #8
+2025-10-03 13:10:21 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:10:21 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:10:21 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:10:22 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-22
+2025-10-03 13:10:23 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project E 4-Level-Schema
+2025-10-03 13:10:24 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #5
+2025-10-03 13:10:24 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:10:24 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:10:24 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:10:25 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-23
+2025-10-03 13:10:26 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project B 1-Level-Schema
+2025-10-03 13:10:27 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #2
+2025-10-03 13:10:28 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:10:28 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 8
+2025-10-03 13:10:28 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:10:28 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-24
+2025-10-03 13:10:30 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project F 5-Level-Schema
+2025-10-03 13:10:30 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #6
+2025-10-03 13:10:31 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:10:31 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:10:31 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:10:32 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-25
+2025-10-03 13:10:33 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project C 2-Level-Schema
+2025-10-03 13:10:34 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #3
+2025-10-03 13:10:34 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:10:34 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 8
+2025-10-03 13:10:35 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:10:35 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-26
+2025-10-03 13:10:36 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project C 2-Level-Schema
+2025-10-03 13:10:37 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #3
+2025-10-03 13:10:38 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:10:38 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 7
+2025-10-03 13:10:38 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:10:39 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-27
+2025-10-03 13:10:40 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: New Project 3-Level-Schema
+2025-10-03 13:10:41 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #7
+2025-10-03 13:10:41 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:10:41 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 7
+2025-10-03 13:10:42 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:10:42 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-28
+2025-10-03 13:10:43 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: New Project 3-Level-Schema
+2025-10-03 13:10:44 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #10
+2025-10-03 13:10:45 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:10:45 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:10:45 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:10:46 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-29
+2025-10-03 13:10:47 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project A Default-Schema
+2025-10-03 13:10:48 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #1
+2025-10-03 13:10:48 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:10:48 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 7
+2025-10-03 13:10:49 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:10:49 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-30
+2025-10-03 13:10:50 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project C 2-Level-Schema
+2025-10-03 13:10:51 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #3
+2025-10-03 13:10:52 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:10:52 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 8
+2025-10-03 13:10:52 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:10:53 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-31
+2025-10-03 13:10:54 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project B 1-Level-Schema
+2025-10-03 13:10:55 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #2
+2025-10-03 13:10:55 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:10:56 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:10:56 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:11:39 INFO  TC0016_TimesheetTimeLogs:30 - Test Case 1: Verify submitterUser can submit multiple project's timesheet and Approved
+2025-10-03 13:11:39 INFO  TC0016_TimesheetTimeLogs:33 - Step 1: Logging in as briar.sunset
+2025-10-03 13:11:40 INFO  TC0016_TimesheetTimeLogs:36 - Step 2: Navigating to Timesheet module
+2025-10-03 13:11:40 INFO  TC0016_TimesheetTimeLogs:39 - Step 3: Expanding timesheet view
+2025-10-03 13:11:41 INFO  TC0016_TimesheetTimeLogs:42 - Step 4: Selecting date range filter as 'Custom Range'
+2025-10-03 13:11:41 INFO  TC0016_TimesheetTimeLogs:52 - Step 5: Logging time entries for each day from Monday to friday
+2025-10-03 13:11:41 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-01
+2025-10-03 13:11:43 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project E 4-Level-Schema
+2025-10-03 13:11:44 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #5
+2025-10-03 13:11:45 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:11:45 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:11:45 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:11:45 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-02
+2025-10-03 13:11:47 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:11:47 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #4
+2025-10-03 13:11:48 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:11:48 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:11:48 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:11:49 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-03
+2025-10-03 13:12:12 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:12:13 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #12
+2025-10-03 13:12:13 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:12:13 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 7
+2025-10-03 13:12:13 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:12:14 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-04
+2025-10-03 13:12:15 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project E 4-Level-Schema
+2025-10-03 13:12:16 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #5
+2025-10-03 13:12:17 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:12:17 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:12:17 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:12:17 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-05
+2025-10-03 13:12:19 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: New Project 3-Level-Schema
+2025-10-03 13:12:20 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #7
+2025-10-03 13:12:20 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:12:20 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:12:20 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:12:21 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-06
+2025-10-03 13:12:23 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project E 4-Level-Schema
+2025-10-03 13:12:23 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #5
+2025-10-03 13:12:24 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:12:24 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 8
+2025-10-03 13:12:24 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:12:24 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-07
+2025-10-03 13:12:26 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project F 5-Level-Schema
+2025-10-03 13:12:27 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #6
+2025-10-03 13:12:28 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:12:28 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 8
+2025-10-03 13:12:28 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:12:28 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-08
+2025-10-03 13:12:31 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project F 5-Level-Schema
+2025-10-03 13:12:31 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #6
+2025-10-03 13:12:32 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:12:32 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:12:32 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:12:32 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-09
+2025-10-03 13:13:36 ERROR TC0016_TimesheetTimeLogs:96 - java.lang.RuntimeException: Failed to click on top row date cell or log time popup did not appear after multiple attempts for day: 2025-10-09
+2025-10-03 13:16:40 INFO  TC0016_TimesheetTimeLogs:30 - Test Case 1: Verify submitterUser can submit multiple project's timesheet and Approved
+2025-10-03 13:16:40 INFO  TC0016_TimesheetTimeLogs:33 - Step 1: Logging in as briar.sunset
+2025-10-03 13:16:40 INFO  TC0016_TimesheetTimeLogs:36 - Step 2: Navigating to Timesheet module
+2025-10-03 13:16:41 INFO  TC0016_TimesheetTimeLogs:39 - Step 3: Expanding timesheet view
+2025-10-03 13:16:41 INFO  TC0016_TimesheetTimeLogs:42 - Step 4: Selecting date range filter as 'Custom Range'
+2025-10-03 13:16:42 INFO  TC0016_TimesheetTimeLogs:52 - Step 5: Logging time entries for each day from Monday to friday
+2025-10-03 13:16:42 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-01
+2025-10-03 13:17:16 ERROR TC0016_TimesheetTimeLogs:96 - org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=140.0.7339.208)
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a99e3b35c28b7d294db6ff43f0694e04, findElement {using=xpath, value=//div[@class='modal' and not(contains(@style, 'display: none'))]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\SOURAB~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65123}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65123/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a99e3b35c28b7d294db6ff43f0694e04
+2025-10-03 13:18:10 INFO  TC0016_TimesheetTimeLogs:30 - Test Case 1: Verify submitterUser can submit multiple project's timesheet and Approved
+2025-10-03 13:18:10 INFO  TC0016_TimesheetTimeLogs:33 - Step 1: Logging in as celeste.dawn
+2025-10-03 13:18:10 INFO  TC0016_TimesheetTimeLogs:36 - Step 2: Navigating to Timesheet module
+2025-10-03 13:18:12 INFO  TC0016_TimesheetTimeLogs:39 - Step 3: Expanding timesheet view
+2025-10-03 13:18:12 INFO  TC0016_TimesheetTimeLogs:42 - Step 4: Selecting date range filter as 'Custom Range'
+2025-10-03 13:18:12 INFO  TC0016_TimesheetTimeLogs:52 - Step 5: Logging time entries for each day from Monday to friday
+2025-10-03 13:18:12 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-01
+2025-10-03 13:18:14 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:18:15 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #12
+2025-10-03 13:18:15 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:18:15 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 8
+2025-10-03 13:18:15 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:18:16 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-02
+2025-10-03 13:18:18 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project A Default-Schema
+2025-10-03 13:18:19 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #8
+2025-10-03 13:18:19 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:18:20 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:18:20 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:18:20 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-03
+2025-10-03 13:18:43 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project F 5-Level-Schema
+2025-10-03 13:18:44 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #6
+2025-10-03 13:18:45 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:18:45 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 8
+2025-10-03 13:18:45 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:18:46 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-04
+2025-10-03 13:18:48 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project E 4-Level-Schema
+2025-10-03 13:18:48 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #5
+2025-10-03 13:18:49 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:18:50 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 8
+2025-10-03 13:18:50 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:18:50 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-05
+2025-10-03 13:18:52 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project B 1-Level-Schema
+2025-10-03 13:18:53 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #9
+2025-10-03 13:18:53 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:18:53 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:18:53 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:18:55 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-06
+2025-10-03 13:18:57 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project A Default-Schema
+2025-10-03 13:18:58 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #8
+2025-10-03 13:18:59 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:18:59 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 7
+2025-10-03 13:18:59 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:19:01 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-07
+2025-10-03 13:19:03 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project C 2-Level-Schema
+2025-10-03 13:19:04 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #11
+2025-10-03 13:19:05 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:19:05 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:19:05 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:19:05 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-08
+2025-10-03 13:19:08 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project C 2-Level-Schema
+2025-10-03 13:19:08 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #11
+2025-10-03 13:19:09 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:19:09 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 8
+2025-10-03 13:19:09 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:19:10 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-09
+2025-10-03 13:19:12 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:19:13 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #12
+2025-10-03 13:19:13 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:19:13 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 7
+2025-10-03 13:19:13 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:19:14 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-10
+2025-10-03 13:19:15 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project A Default-Schema
+2025-10-03 13:19:16 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #1
+2025-10-03 13:19:16 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:19:17 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:19:17 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:19:17 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-11
+2025-10-03 13:20:21 ERROR TC0016_TimesheetTimeLogs:96 - java.lang.RuntimeException: Failed to click on top row date cell or log time popup did not appear after multiple attempts for day: 2025-10-11
+2025-10-03 13:25:18 INFO  TC0016_TimesheetTimeLogs:30 - Test Case 1: Verify submitterUser can submit multiple project's timesheet and Approved
+2025-10-03 13:25:18 INFO  TC0016_TimesheetTimeLogs:33 - Step 1: Logging in as celeste.dawn
+2025-10-03 13:25:18 INFO  TC0016_TimesheetTimeLogs:36 - Step 2: Navigating to Timesheet module
+2025-10-03 13:25:19 INFO  TC0016_TimesheetTimeLogs:39 - Step 3: Expanding timesheet view
+2025-10-03 13:25:19 INFO  TC0016_TimesheetTimeLogs:42 - Step 4: Selecting date range filter as 'Custom Range'
+2025-10-03 13:25:20 INFO  TC0016_TimesheetTimeLogs:52 - Step 5: Logging time entries for each day from Monday to friday
+2025-10-03 13:25:20 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-01
+2025-10-03 13:25:21 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:25:22 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #12
+2025-10-03 13:25:23 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:25:23 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:25:23 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:25:23 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-02
+2025-10-03 13:25:25 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project B 1-Level-Schema
+2025-10-03 13:25:26 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #2
+2025-10-03 13:25:26 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:25:27 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 8
+2025-10-03 13:25:27 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:25:27 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-03
+2025-10-03 13:25:50 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:25:51 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #4
+2025-10-03 13:25:51 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:25:52 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:25:52 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:25:52 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-04
+2025-10-03 13:25:54 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project C 2-Level-Schema
+2025-10-03 13:25:54 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #11
+2025-10-03 13:25:55 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:25:55 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:25:55 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:25:55 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-05
+2025-10-03 13:25:57 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:25:58 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #12
+2025-10-03 13:25:58 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:25:59 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 8
+2025-10-03 13:25:59 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:25:59 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-06
+2025-10-03 13:26:01 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: New Project 3-Level-Schema
+2025-10-03 13:26:02 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #7
+2025-10-03 13:26:02 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:26:02 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:26:02 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:26:03 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-07
+2025-10-03 13:26:04 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project E 4-Level-Schema
+2025-10-03 13:26:05 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #5
+2025-10-03 13:26:06 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:26:06 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:26:06 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:26:06 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-08
+2025-10-03 13:26:08 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: New Project 3-Level-Schema
+2025-10-03 13:26:09 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #10
+2025-10-03 13:26:09 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:26:09 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:26:10 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:26:10 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-09
+2025-10-03 13:26:12 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project B 1-Level-Schema
+2025-10-03 13:26:12 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #2
+2025-10-03 13:26:13 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:26:13 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:26:13 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:26:14 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-10
+2025-10-03 13:26:16 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project A Default-Schema
+2025-10-03 13:26:17 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #8
+2025-10-03 13:26:17 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:26:17 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 8
+2025-10-03 13:26:17 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:26:18 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-11
+2025-10-03 13:26:20 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project E 4-Level-Schema
+2025-10-03 13:26:21 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #5
+2025-10-03 13:26:21 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:26:22 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 8
+2025-10-03 13:26:22 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:26:22 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-12
+2025-10-03 13:26:24 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: New Project 3-Level-Schema
+2025-10-03 13:26:26 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #10
+2025-10-03 13:26:26 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:26:26 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 7
+2025-10-03 13:26:26 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:26:27 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-13
+2025-10-03 13:26:29 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:26:30 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #12
+2025-10-03 13:26:30 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:26:30 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 8
+2025-10-03 13:26:31 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:26:31 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-14
+2025-10-03 13:26:33 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project F 5-Level-Schema
+2025-10-03 13:26:34 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #6
+2025-10-03 13:26:35 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:26:35 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:26:35 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:26:35 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-15
+2025-10-03 13:26:38 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:26:38 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #12
+2025-10-03 13:26:39 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:26:39 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:26:39 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:26:39 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-16
+2025-10-03 13:26:42 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:26:43 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #12
+2025-10-03 13:26:43 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:26:43 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:26:43 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:26:44 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-17
+2025-10-03 13:26:45 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:26:46 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #4
+2025-10-03 13:26:46 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:26:46 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:26:46 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:26:47 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-18
+2025-10-03 13:26:48 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project E 4-Level-Schema
+2025-10-03 13:26:49 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #5
+2025-10-03 13:26:49 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:26:49 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:26:49 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:26:50 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-19
+2025-10-03 13:26:51 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project A Default-Schema
+2025-10-03 13:26:52 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #1
+2025-10-03 13:26:52 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:26:53 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 8
+2025-10-03 13:26:53 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:26:53 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-20
+2025-10-03 13:26:54 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project F 5-Level-Schema
+2025-10-03 13:26:55 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #6
+2025-10-03 13:26:56 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:26:56 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:26:56 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:26:56 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-21
+2025-10-03 13:26:58 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:26:59 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #12
+2025-10-03 13:26:59 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:26:59 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:26:59 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:27:00 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-22
+2025-10-03 13:27:01 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: New Project 3-Level-Schema
+2025-10-03 13:27:02 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #10
+2025-10-03 13:27:02 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:27:03 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 8
+2025-10-03 13:27:03 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:27:03 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-23
+2025-10-03 13:27:04 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project F 5-Level-Schema
+2025-10-03 13:27:05 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #6
+2025-10-03 13:27:06 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:27:06 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 8
+2025-10-03 13:27:06 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:27:07 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-24
+2025-10-03 13:27:08 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project C 2-Level-Schema
+2025-10-03 13:27:09 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #3
+2025-10-03 13:27:09 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:27:09 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 8
+2025-10-03 13:27:09 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:27:10 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-25
+2025-10-03 13:27:11 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project A Default-Schema
+2025-10-03 13:27:12 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #8
+2025-10-03 13:27:12 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:27:13 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:27:13 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:27:13 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-26
+2025-10-03 13:27:14 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project D 3-Level-Schema
+2025-10-03 13:27:15 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #12
+2025-10-03 13:27:16 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:27:16 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:27:16 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:27:17 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-27
+2025-10-03 13:27:18 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project E 4-Level-Schema
+2025-10-03 13:27:19 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #5
+2025-10-03 13:27:19 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:27:19 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:27:20 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:27:20 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-28
+2025-10-03 13:27:21 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project C 2-Level-Schema
+2025-10-03 13:27:22 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #3
+2025-10-03 13:27:23 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Design
+2025-10-03 13:27:23 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 9
+2025-10-03 13:27:23 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:27:24 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-29
+2025-10-03 13:27:25 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project E 4-Level-Schema
+2025-10-03 13:27:26 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #5
+2025-10-03 13:27:26 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:27:26 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:27:26 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:27:27 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-30
+2025-10-03 13:27:28 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: Project A Default-Schema
+2025-10-03 13:27:29 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #1
+2025-10-03 13:27:30 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:27:30 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 7
+2025-10-03 13:27:30 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
+2025-10-03 13:27:30 INFO  TC0016_TimesheetTimeLogs:59 - ---- Logging entry for: 2025-10-31
+2025-10-03 13:27:32 INFO  TC0016_TimesheetTimeLogs:62 - ------ Selecting project: New Project 3-Level-Schema
+2025-10-03 13:27:33 INFO  TC0016_TimesheetTimeLogs:66 - ------ Selecting issue: #7
+2025-10-03 13:27:33 INFO  TC0016_TimesheetTimeLogs:70 - ------ Selecting activity: Development
+2025-10-03 13:27:33 INFO  TC0016_TimesheetTimeLogs:74 - ------ Entering hours: 6
+2025-10-03 13:27:33 INFO  TC0016_TimesheetTimeLogs:77 - ------ Clicking Log Time button
