@@ -61,7 +61,6 @@ public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
                     for (String day : days) {
                         logger.info("---- Logging entry for: " + day);
                         timesheetPage.clickOnTopRowDateCell(day);
-                        Random random = new Random();
                         logger.info("------ Selecting project: " + project);
                         timesheetPage.selectProjectForLogTime(project);
 

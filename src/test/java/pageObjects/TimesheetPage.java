@@ -213,6 +213,9 @@ public class TimesheetPage extends BasePage {
                                 "if (todayMarker) todayMarker.style.display = 'none';"
                 );
                 WebElement element = wait.until(ExpectedConditions.elementToBeClickable(cellDate));
+                ((JavascriptExecutor) driver).executeScript(
+                        "arguments[0].scrollIntoView({block: 'nearest', inline: 'center'});", element
+                );
                 new Actions(driver).moveToElement(element).pause(Duration.ofMillis(500)).click().perform();
 
                 wait.until(ExpectedConditions.visibilityOfElementLocated(logTimeModal));
@@ -252,6 +255,20 @@ public class TimesheetPage extends BasePage {
         }
     }
 
+    public List<String> getProjectOptionsForLogTime(){
+        WebElement projectDropdown = wait.until(ExpectedConditions.elementToBeClickable(this.projectDropdownOfLogTime));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", projectDropdown);
+        projectDropdown.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#project-drop .list ul")));
+        List<WebElement> options = driver.findElements(By.cssSelector("#project-drop .list ul li.option"));
+        List<String> projects = new ArrayList<>();
+        for (WebElement op : options) {
+            projects.add(op.getText().trim());
+        }
+        projectDropdown.click();
+        return projects;
+    }
+
     public void selectIssueForLogTime(String desiredIssue) {
         WebElement issueDropdown = wait.until(ExpectedConditions.elementToBeClickable(this.issueDropdownOfLogTime));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", issueDropdown);
@@ -262,11 +279,27 @@ public class TimesheetPage extends BasePage {
         List<WebElement> options = driver.findElements(By.cssSelector("#issue-drop .list ul li.option"));
 
         for (WebElement option : options) {
-            if (option.getText().trim().replaceAll("^#\\d+", "").trim().equals(desiredIssue)) {
+            String idText = option.findElement(By.cssSelector(".task_id")).getText().trim();
+            if (idText.equals(desiredIssue)) {
                 option.click();
                 break;
             }
         }
+    }
+
+    public List<String> getIssueIDForLogTime(){
+        WebElement issueDropdown = wait.until(ExpectedConditions.elementToBeClickable(this.issueDropdownOfLogTime));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", issueDropdown);  // need to implement to get project ids and also implement to select issue on the basis of ids
+        issueDropdown.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#issue-drop .list ul")));
+        List<WebElement> options = driver.findElements(By.cssSelector("#issue-drop .list ul li.option"));
+        List<String> issueIds = new ArrayList<>();
+        for (WebElement op : options) {
+            String idText = op.findElement(By.cssSelector(".task_id")).getText().trim();
+            issueIds.add(idText);
+        }
+        issueDropdown.click();
+        return issueIds;
     }
 
     public void selectActivityForLogTime(String desiredActivity) {
@@ -276,7 +309,7 @@ public class TimesheetPage extends BasePage {
         select.selectByVisibleText(desiredActivity);
     }
 
-    public List<String> getActivitiesOfLogTime() {
+    public List<String> getActivitiesOpetionForLogTime() {
         WebElement activityDropdown = wait.until(ExpectedConditions.elementToBeClickable(this.activityDropdownOfLogTime));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", activityDropdown);
         Select select = new Select(activityDropdown);
@@ -290,7 +323,6 @@ public class TimesheetPage extends BasePage {
     }
 
     public void setDateForLogTime(String date) {
-
         WebElement calendar = wait.until(ExpectedConditions.elementToBeClickable(this.dateOfLogTime));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", calendar);
         calendar.click();

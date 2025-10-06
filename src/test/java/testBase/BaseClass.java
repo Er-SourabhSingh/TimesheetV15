@@ -129,10 +129,10 @@ public class BaseClass {
         driver.manage().window().maximize();
     }
 
-    @AfterClass(groups = {"Sanity", "Master", "Regression"})
+    /*@AfterClass(groups = {"Sanity", "Master", "Regression"})
     public void tearDown() {
         driver.quit();
-    }
+    }*/
 
     public String captureScreen(String tName) throws IOException {
         String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
@@ -205,10 +205,29 @@ public class BaseClass {
         return days;
     }
 
+    public List<String> getMonthDates(String start, String end){
+        DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        DateTimeFormatter dayFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
+        LocalDate startDate = LocalDate.parse(start, inputFormatter);
+        LocalDate endDate = LocalDate.parse(end, inputFormatter);
+
+        List<String> days = new ArrayList<>();
+
+        while(!startDate.isAfter(endDate)){
+            days.add(startDate.format(dayFormatter));
+            startDate = startDate.plusDays(1);
+
+        }
+        return days;
+    }
+
+
+
     public String getRandomActivity() throws Exception{
             TimesheetPage timesheetPage = new TimesheetPage(driver);
 
-            List<String> activities = timesheetPage.getActivitiesOfLogTime();
+            List<String> activities = timesheetPage.getActivitiesOpetionForLogTime();
 
             // Optional: remove placeholder options like "-- Please Select --"
             activities.removeIf(activity -> activity.trim().isEmpty() || activity.toLowerCase().contains("select"));
@@ -220,6 +239,40 @@ public class BaseClass {
             int index = ThreadLocalRandom.current().nextInt(activities.size());
             return activities.get(index);
 
+    }
+
+    public String getRandomProject() throws Exception{
+        TimesheetPage timesheetPage = new TimesheetPage(driver);
+
+        List<String> projects = timesheetPage.getProjectOptionsForLogTime();
+
+        // Optional: remove placeholder options like "-- Please Select --"
+        projects.removeIf(activity -> activity.trim().isEmpty() || activity.toLowerCase().contains("select"));
+
+        if (projects.isEmpty()) {
+            throw new IllegalStateException("No valid activities found in the dropdown.");
+        }
+
+        int index = ThreadLocalRandom.current().nextInt(projects.size());
+        return projects.get(index);
+
+    }
+
+
+    public String getRandomIssue(){
+        TimesheetPage timesheetPage = new TimesheetPage(driver);
+
+        List<String> issues = timesheetPage.getIssueIDForLogTime();
+
+        // Optional: remove placeholder options like "-- Please Select --"
+        issues.removeIf(activity -> activity.trim().isEmpty() || activity.toLowerCase().contains("select"));
+
+        if (issues.isEmpty()) {
+            throw new IllegalStateException("No valid activities found in the dropdown.");
+        }
+
+        int index = ThreadLocalRandom.current().nextInt(issues.size());
+        return issues.get(index);
     }
 
 
