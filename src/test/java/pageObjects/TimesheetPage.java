@@ -97,8 +97,7 @@ public class TimesheetPage extends BasePage {
     public String[] getSelectedDateRange() {
         WebElement dateRangeElement = wait.until(ExpectedConditions.visibilityOfElementLocated(this.dateRangeAndFilter));
         String dateRangeText = dateRangeElement.getText().trim();
-        String[] dateParts = dateRangeText.split("-");
-        return dateParts;
+        return dateRangeText.split("-");
     }
 
     public void selectDateRangeOption(String optionText) {
@@ -287,7 +286,7 @@ public class TimesheetPage extends BasePage {
         }
     }
 
-    public List<String> getIssueIDForLogTime(){
+    public List<String> getIssueIDOptionsForLogTime(){
         WebElement issueDropdown = wait.until(ExpectedConditions.elementToBeClickable(this.issueDropdownOfLogTime));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", issueDropdown);  // need to implement to get project ids and also implement to select issue on the basis of ids
         issueDropdown.click();
@@ -309,7 +308,7 @@ public class TimesheetPage extends BasePage {
         select.selectByVisibleText(desiredActivity);
     }
 
-    public List<String> getActivitiesOpetionForLogTime() {
+    public List<String> getActivityOptionsForLogTime() {
         WebElement activityDropdown = wait.until(ExpectedConditions.elementToBeClickable(this.activityDropdownOfLogTime));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", activityDropdown);
         Select select = new Select(activityDropdown);
@@ -322,11 +321,12 @@ public class TimesheetPage extends BasePage {
 
     }
 
-    public void setDateForLogTime(String date) {
+   /* public void setDateForLogTime(String date) {
         WebElement calendar = wait.until(ExpectedConditions.elementToBeClickable(this.dateOfLogTime));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", calendar);
+        //need to implement
         calendar.click();
-    }
+    }*/
 
     public void setSpentTimeForLogTime(String hours) {
         WebElement spentTime = wait.until(ExpectedConditions.presenceOfElementLocated(this.spentTimeOfLogTime));

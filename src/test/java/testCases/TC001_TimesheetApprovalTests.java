@@ -12,7 +12,7 @@ import java.util.List;
 public class TC001_TimesheetApprovalTests extends BaseClass {
 
     @Test(priority = 1, groups = {"Data Driven"}, dataProvider = "schemaFlows", dataProviderClass = DataProviders.class)
-    public void testTimesheetApprovalFlow(String projectName, String dateRange, String user, String approvers[]){
+    public void testTimesheetApprovalFlow(String projectName, String dateRange, String user, String[] approvers){
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
@@ -31,7 +31,7 @@ public class TC001_TimesheetApprovalTests extends BaseClass {
             logger.info("Step 4: Selecting date range filter as 'Current Week'");
             timesheetPage.clickOnFilterDateRange();
             timesheetPage.selectDateRangeOption(dateRange);
-            String days[] = getCurrentWeekDayNumbers();
+            String[] days = getCurrentWeekDayNumbers();
             if(timesheetPage.isSubmitTimesheetBtnEnabled()) {
                 logger.info("Step 5: Logging time entries for each day from Monday to Friday");
                 for (String day : days) {
@@ -81,7 +81,7 @@ public class TC001_TimesheetApprovalTests extends BaseClass {
 
                 Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(user)),"Approved");
 
-                //checking histroy
+                //checking history
                 logger.info("------ Clicking on show btn of : " + user + "Timesheet History");
                 timesheetApprovalPage.clickOnShowHistoryOfUserTimesheet(toFullName(user));
                 List<String> history = new ArrayList<>();

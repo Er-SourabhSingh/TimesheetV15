@@ -15,7 +15,6 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import pageObjects.LoginPage;
@@ -227,7 +226,7 @@ public class BaseClass {
     public String getRandomActivity() throws Exception{
             TimesheetPage timesheetPage = new TimesheetPage(driver);
 
-            List<String> activities = timesheetPage.getActivitiesOpetionForLogTime();
+            List<String> activities = timesheetPage.getActivityOptionsForLogTime();
 
             // Optional: remove placeholder options like "-- Please Select --"
             activities.removeIf(activity -> activity.trim().isEmpty() || activity.toLowerCase().contains("select"));
@@ -262,7 +261,7 @@ public class BaseClass {
     public String getRandomIssue(){
         TimesheetPage timesheetPage = new TimesheetPage(driver);
 
-        List<String> issues = timesheetPage.getIssueIDForLogTime();
+        List<String> issues = timesheetPage.getIssueIDOptionsForLogTime();
 
         // Optional: remove placeholder options like "-- Please Select --"
         issues.removeIf(activity -> activity.trim().isEmpty() || activity.toLowerCase().contains("select"));
