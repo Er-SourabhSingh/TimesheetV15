@@ -48,9 +48,22 @@ public class TimesheetPage extends BasePage {
 
     By btnCancelOfLogTime = By.xpath("//button[@class='button-cross']");
 
+
+    By teamDropdownXpath = By.id("tree-select-input");
+
     public TimesheetPage(WebDriver driver) {
         super(driver);
         //wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    }
+
+    public void selectTimesheetView(String optionName) {
+        WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(this.teamDropdownXpath));
+        dropdown.click();
+
+        WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//div[@id='tree-select-dropdown']//div[normalize-space(text())='" + optionName + "']"))
+        );
+        option.click();
     }
 
     public void clickOnSubmitTimesheetBtn() {
@@ -418,13 +431,16 @@ public class TimesheetPage extends BasePage {
                     ".//following-sibling::div[contains(@class,'zt-gantt-child-row') and @zt-gantt-task-id='i" + cleanIssueId + "']"
             ));
 
-
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", userRow);
             String taskParentId = childRow.getAttribute("zt-gantt-data-task-id");
 
             // 3. Get left position of date cell
             WebElement dateCell = driver.findElement(By.xpath("//div[@zt-gantt-cell-date='" + date + "']"));
+
+            By cellDate = By.xpath("//div[contains(@zt-gantt-cell-date,'" + date + "')]");
             ((JavascriptExecutor) driver).executeScript(
-                    "arguments[0].parentElement.scrollLeft = arguments[0].offsetLeft;", dateCell);
+                    "arguments[0].scrollIntoView({block: 'nearest', inline: 'center'});", cellDate
+            );
 
             double targetLeft = Double.parseDouble(
                     dateCell.getAttribute("style").replace("\n", "")
@@ -436,6 +452,11 @@ public class TimesheetPage extends BasePage {
                     "//div[@id='zt-gantt-bars-area']//div[@zt-gantt-taskbar-id='" + cleanIssueId +
                             "' and @task-parent='" + taskParentId + "']"
             ));
+
+            ((JavascriptExecutor) driver).executeScript(
+                    "arguments[0].parentElement.scrollLeft = arguments[0].offsetLeft;", taskBar
+            );
+
 
             // 5. Iterate all .task-content-inner cells and match left position
             List<WebElement> cells = taskBar.findElements(By.xpath(".//div[contains(@class,'task-content-inner')]"));
@@ -453,5 +474,12 @@ public class TimesheetPage extends BasePage {
         }
         return null; // Not found
     }
+
+
+
+
+
+
+
 
 }

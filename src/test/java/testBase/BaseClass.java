@@ -312,4 +312,15 @@ public class BaseClass {
                 ? str
                 : str.substring(0, 1).toUpperCase() + str.substring(1).toLowerCase();
     }
+
+    public double convertTimeStringToDouble(String timeStr) {
+        if (timeStr == null || timeStr.isEmpty()) return 0.0;
+
+        String[] parts = timeStr.split(":");
+        int hours = Integer.parseInt(parts[0]);
+        int minutes = parts.length > 1 ? Integer.parseInt(parts[1]) : 0;
+
+        return hours + (minutes / 60.0);
+    }
+
 }
