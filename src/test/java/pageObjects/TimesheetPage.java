@@ -394,4 +394,64 @@ public class TimesheetPage extends BasePage {
         return statuses.values().stream().allMatch(status-> status.equalsIgnoreCase("Rejected"));
     }
 
+
+    /**
+     * Get logged hours for a specific user, issue, and date
+     * @param username User name (e.g., "Redmine Admin")
+     * @param issueId Task bar issue ID (e.g., "i10_Design")
+     * @param date Date string (e.g., "2025-10-06")
+     * @return Logged hours as String, or null if not found
+     */
+
+    public String getLoggedHours(String username, String issueId, String activity, String date) {
+        try {
+
+            String cleanIssueId = "i" + issueId.replace("#", "") + activity;
+            // 1. Locate user row
+            WebElement userRow = driver.findElement(By.xpath(
+                    "//div[contains(@class,'zt-gantt-row-item') and not(contains(@class,'zt-gantt-child-row'))]" +
+                            "//div[text()='" + username + "']/ancestor::div[contains(@class,'zt-gantt-row-item')]"
+            ));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", userRow);
+            // 2. Locate child row for the issue
+            WebElement childRow = userRow.findElement(By.xpath(
+                    ".//following-sibling::div[contains(@class,'zt-gantt-child-row') and @zt-gantt-task-id='i" + cleanIssueId + "']"
+            ));
+
+
+            String taskParentId = childRow.getAttribute("zt-gantt-data-task-id");
+
+            // 3. Get left position of date cell
+            WebElement dateCell = driver.findElement(By.xpath("//div[@zt-gantt-cell-date='" + date + "']"));
+            ((JavascriptExecutor) driver).executeScript(
+                    "arguments[0].parentElement.scrollLeft = arguments[0].offsetLeft;", dateCell);
+
+            double targetLeft = Double.parseDouble(
+                    dateCell.getAttribute("style").replace("\n", "")
+                            .split("left:")[1].split("px")[0].trim()
+            );
+
+            // 4. Locate task bar for this issue under this user
+            WebElement taskBar = driver.findElement(By.xpath(
+                    "//div[@id='zt-gantt-bars-area']//div[@zt-gantt-taskbar-id='" + cleanIssueId +
+                            "' and @task-parent='" + taskParentId + "']"
+            ));
+
+            // 5. Iterate all .task-content-inner cells and match left position
+            List<WebElement> cells = taskBar.findElements(By.xpath(".//div[contains(@class,'task-content-inner')]"));
+            for (WebElement cell : cells) {
+                double cellLeft = Double.parseDouble(
+                        cell.getAttribute("style").replace("\n", "")
+                                .split("left:")[1].split("px")[0].trim()
+                );
+                if (Math.abs(cellLeft - targetLeft) < 2) {
+                    return cell.getText().trim();
+                }
+            }
+        } catch (NoSuchElementException | NumberFormatException | StaleElementReferenceException e) {
+            e.printStackTrace();
+        }
+        return null; // Not found
+    }
+
 }

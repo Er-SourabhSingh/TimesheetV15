@@ -1,5 +1,7 @@
 package testCases;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.HeaderPage;
@@ -121,7 +123,7 @@ public class TC0016_TimesheetTimeLogs extends BaseClass {
                 }
             }
 
-// Print as a table
+
             System.out.printf("%-15s %-12s %-12s %-12s %-15s %-5s%n", "User", "Day", "Project", "Issue", "Activity", "Hours");
             for (String[] row : rows) {
                 System.out.printf("%-15s %-12s %-12s %-12s %-15s %-5s%n", row[0], row[1], row[2], row[3], row[4], row[5]);
@@ -134,4 +136,7 @@ public class TC0016_TimesheetTimeLogs extends BaseClass {
         }
     }
 
+
 }
+
+//div[contains(@class,'task-content-inner') and ancestor::div[contains(@class,'zt-gantt-task-cell') and @zt-gantt-cell-date='2025-10-06'] and ancestor::div[contains(@class,'zt-gantt-row-item') and .//div[contains(@class,'zt-gantt-cell-data') and normalize-space(text())='Redmine Admin']] and ancestor::div[contains(@class,'zt-gantt-child-row') and @zt-gantt-task-id='i10_Design' and .//div[@data-column-index='1' and normalize-space(text())='Design']]]
