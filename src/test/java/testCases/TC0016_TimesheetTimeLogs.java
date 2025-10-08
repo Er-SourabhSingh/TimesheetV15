@@ -12,8 +12,8 @@ import java.util.*;
 
 public class TC0016_TimesheetTimeLogs extends BaseClass {
     String[] users = {
-            //"aurora.wren",
-            "autumn.grace",   // 2Approval
+            "aurora.wren",
+            //"autumn.grace",   // 2Approval
             /*"briar.sunset",   // 3Approval
             "celeste.dawn",   // 4Approval
             "daisy.skye",     // 5Approval
@@ -27,16 +27,32 @@ public class TC0016_TimesheetTimeLogs extends BaseClass {
 
     String startDate = "11/01/2025", endDate = "11/30/2025";
 
-    Map<String, Map<String, Map<String,Map<String, Map<String, Double>>>>> userDateProjectIssueActivityHours = new HashMap<>();
-
-
     @Test(priority = 1)
-    public void logTimesOnTimesheet(){
+    public void logTimesOnTimesheet() {
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         logger.info("Test Case 1: Verify submitterUser can submit multiple project's timesheet and Approved");
-        try{
-            for(String user : this.users) {
+
+        String path = ".\\testData\\TimesheetLogs.xlsx";
+        String sheetName = "Logs";
+        ExcelUtility excel = new ExcelUtility(path);
+
+        try {
+            // Ensure testData folder exists
+            File folder = new File(".\\testData\\");
+            if (!folder.exists()) folder.mkdir();
+
+            // Create header row only once
+            excel.setCellData(sheetName, 0, 0, "User");
+            excel.setCellData(sheetName, 0, 1, "Day");
+            excel.setCellData(sheetName, 0, 2, "Project");
+            excel.setCellData(sheetName, 0, 3, "Issue");
+            excel.setCellData(sheetName, 0, 4, "Activity");
+            excel.setCellData(sheetName, 0, 5, "Hours");
+
+            int rowNum = 1; // Excel row counter
+
+            for (String user : this.users) {
                 logger.info("Step 1: Logging in as " + user);
                 super.login(user, "12345678");
 
@@ -54,21 +70,19 @@ public class TC0016_TimesheetTimeLogs extends BaseClass {
                 timesheetPage.clickOnDateRangeApplyBtn();
 
                 List<String> days = getMonthDates(this.startDate, this.endDate);
-                logger.info("Step 5: Logging time entries for each day from Monday to friday");
-
-                //System.out.println(days.size());
+                logger.info("Step 5: Logging time entries for each day from Monday to Friday");
 
                 if (timesheetPage.isSubmitTimesheetBtnEnabled()) {
-
                     for (String day : days) {
                         logger.info("---- Logging entry for: " + day);
                         timesheetPage.clickOnTopRowDateCell(day);
+
                         String project = super.getRandomProject();
                         logger.info("------ Selecting project: " + project);
                         timesheetPage.selectProjectForLogTime(project);
 
                         String issueId = super.getRandomIssue();
-                        logger.info("------ Selecting issue: "+ issueId);
+                        logger.info("------ Selecting issue: " + issueId);
                         timesheetPage.selectIssueForLogTime(issueId);
 
                         String activity = super.getRandomActivity();
@@ -82,90 +96,25 @@ public class TC0016_TimesheetTimeLogs extends BaseClass {
                         logger.info("------ Clicking Log Time button");
                         timesheetPage.clickOnLogTimeBtnForLogTime();
 
+                        // ✅ Directly write to Excel
+                        excel.setCellData(sheetName, rowNum, 0, user);
+                        excel.setCellData(sheetName, rowNum, 1, day);
+                        excel.setCellData(sheetName, rowNum, 2, project);
+                        excel.setCellData(sheetName, rowNum, 3, issueId);
+                        excel.setCellData(sheetName, rowNum, 4, activity);
+                        excel.setCellData(sheetName, rowNum, 5, hours);
 
-
-                        Double hoursVal = Double.parseDouble(hours);
-                        this.userDateProjectIssueActivityHours.putIfAbsent(user, new HashMap<>());
-                        this.userDateProjectIssueActivityHours.get(user).putIfAbsent(day, new HashMap<>());
-                        this.userDateProjectIssueActivityHours.get(user).get(day).putIfAbsent(project, new HashMap<>());
-                        this.userDateProjectIssueActivityHours.get(user).get(day).get(project).putIfAbsent(issueId, new HashMap<>());
-                        Map<String, Double> activityMap = this.userDateProjectIssueActivityHours.get(user).get(day).get(project).get(issueId);
-                        activityMap.put(activity, activityMap.getOrDefault(activity, 0.0) + hoursVal);
+                        rowNum++;
                     }
-
                 }
+
                 logger.info("Step 6: Logging out submitterUser");
                 headerPage.clickOnLogout();
             }
 
-            List<String[]> rows = new ArrayList<>();
+            System.out.println("✅ Timesheet data written directly to Excel: " + path);
 
-            for (String user : this.userDateProjectIssueActivityHours.keySet()) {
-                Map<String, Map<String, Map<String, Map<String, Double>>>> dates = this.userDateProjectIssueActivityHours.get(user);
-
-                for (String day : dates.keySet()) {
-                    Map<String, Map<String, Map<String, Double>>> projects = dates.get(day);
-
-                    for (String project : projects.keySet()) {
-                        Map<String, Map<String, Double>> issues = projects.get(project);
-
-                        for (String issue : issues.keySet()) {
-                            Map<String, Double> activities = issues.get(issue);
-
-                            for (String activity : activities.keySet()) {
-                                Double hours = activities.get(activity);
-
-                                // Save as row (you could also directly write to Excel here)
-                                rows.add(new String[]{user, day, project, issue, activity, hours.toString()});
-                            }
-                        }
-                    }
-                }
-            }
-
-
-            System.out.printf("%-15s %-12s %-12s %-12s %-15s %-5s%n", "User", "Day", "Project", "Issue", "Activity", "Hours");
-            for (String[] row : rows) {
-                System.out.printf("%-15s %-12s %-12s %-12s %-15s %-5s%n", row[0], row[1], row[2], row[3], row[4], row[5]);
-            }
-
-            try {
-                // Ensure testData folder exists
-                File folder = new File(".\\testData\\");
-                if (!folder.exists()) {
-                    folder.mkdir();
-                }
-
-                String path = ".\\testData\\TimesheetLogs.xlsx";
-                ExcelUtility excel = new ExcelUtility(path);
-                String sheetName = "Logs";
-
-                // Write header row
-                excel.setCellData(sheetName, 0, 0, "User");
-                excel.setCellData(sheetName, 0, 1, "Day");
-                excel.setCellData(sheetName, 0, 2, "Project");
-                excel.setCellData(sheetName, 0, 3, "Issue");
-                excel.setCellData(sheetName, 0, 4, "Activity");
-                excel.setCellData(sheetName, 0, 5, "Hours");
-
-                // Write each logged row to Excel
-                int rowNum = 1;
-                for (String[] row : rows) {
-                    for (int colNum = 0; colNum < row.length; colNum++) {
-                        excel.setCellData(sheetName, rowNum, colNum, row[colNum]);
-                    }
-                    rowNum++;
-                }
-
-                System.out.println("Timesheet data written successfully to: " + path);
-
-            } catch (Exception e) {
-                System.err.println("Failed to write data to Excel: " + e.getMessage());
-                e.printStackTrace();
-            }
-
-
-        }catch (Exception e){
+        } catch (Exception e) {
             logger.error(e);
             Assert.fail();
         }
@@ -204,13 +153,11 @@ public class TC0016_TimesheetTimeLogs extends BaseClass {
             ExcelUtility excel = new ExcelUtility(filePath);
 
 
-            String targetDate = "2025-10-06"; // can also parameterize this later
+
 
             // Step 1: Read all rows from Excel
-            /*List<String> days = super.getMonthDates(this.startDate,this.endDate);
-
+            List<String> days = super.getMonthDates(this.startDate,this.endDate);
                 int rowCount = excel.getRowCount(sheetName);
-                boolean foundInExcel = false;
                 for (int i = 1; i <= rowCount; i++) {
                     String excelUser = excel.getCellData(sheetName, i, 0);
                     String excelDate = excel.getCellData(sheetName, i, 1);
@@ -221,24 +168,19 @@ public class TC0016_TimesheetTimeLogs extends BaseClass {
 
                     // Match user and date
 
-                        double expectedHours = Double.parseDouble(excelHoursStr.trim());
+                    double expectedHours = Double.parseDouble(excelHoursStr.trim());
 
-                        // Get actual hours from UI via page object
-                        Double actualHours = super.convertTimeStringToDouble(timesheetPage.getLoggedHours(super.toFullName(excelUser), excelDate, excelIssue, excelActivity));*/
-                        Double actualHours = super.convertTimeStringToDouble(timesheetPage.getLoggedHours(super.toFullName("autumn.grace"), "#214", "Design","2025-11-15"));
+                    // Get actual hours from UI via page object
+                    double actualHours = super.convertTimeStringToDouble(timesheetPage.getLoggedHours(super.toFullName(excelUser), excelIssue, excelActivity, excelDate));
+                    //double actualHours = super.convertTimeStringToDouble(timesheetPage.getLoggedHours(super.toFullName("autumn.grace"), "#214", "Design","2025-11-15"));
 
-                        System.out.println( " | "+ actualHours);
+                    System.out.println(expectedHours+" | "+ actualHours);
 
-                        // Validate
-                       /* Assert.assertEquals(actualHours, expectedHours,
-                                "Mismatch for user " + excelUser + " on " + excelDate +
-                                        " (" + excelProject + " | " + excelIssue + " | " + excelActivity + ")");*/
-                    /*}*/
-
-
-                // If date not found in Excel for that user, you can log it
-
-
+                    // Validate
+                    Assert.assertEquals(actualHours, expectedHours,
+                            "Mismatch for user " + excelUser + " on " + excelDate +
+                                    " (" + excelProject + " | " + excelIssue + " | " + excelActivity + ")");
+                    }
 
         }catch (Exception e){
             logger.error(e);
@@ -248,5 +190,3 @@ public class TC0016_TimesheetTimeLogs extends BaseClass {
 
 
 }
-
-//div[contains(@class,'task-content-inner') and ancestor::div[contains(@class,'zt-gantt-task-cell') and @zt-gantt-cell-date='2025-10-06'] and ancestor::div[contains(@class,'zt-gantt-row-item') and .//div[contains(@class,'zt-gantt-cell-data') and normalize-space(text())='Redmine Admin']] and ancestor::div[contains(@class,'zt-gantt-child-row') and @zt-gantt-task-id='i10_Design' and .//div[@data-column-index='1' and normalize-space(text())='Design']]]

@@ -418,28 +418,30 @@ public class TimesheetPage extends BasePage {
 
     public String getLoggedHours(String username, String issueId, String activity, String date) {
         try {
+            // 1. Prepare clean issue ID
+            String cleanIssueId = "i" + issueId.replace("#", "") + "_" + activity;
+            System.out.println(username + " | " + cleanIssueId + " | " + date);
 
-            String cleanIssueId = "i" + issueId.replace("#", "") + activity;
-            // 1. Locate user row
+            // 2. Locate user row
             WebElement userRow = driver.findElement(By.xpath(
                     "//div[contains(@class,'zt-gantt-row-item') and not(contains(@class,'zt-gantt-child-row'))]" +
                             "//div[text()='" + username + "']/ancestor::div[contains(@class,'zt-gantt-row-item')]"
             ));
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", userRow);
-            // 2. Locate child row for the issue
-            WebElement childRow = userRow.findElement(By.xpath(
-                    ".//following-sibling::div[contains(@class,'zt-gantt-child-row') and @zt-gantt-task-id='i" + cleanIssueId + "']"
-            ));
+            System.out.println("User row text: " + userRow.getText());
 
-            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", userRow);
+            // 3. Locate child row for the issue under this user
+            WebElement childRow = userRow.findElement(By.xpath(
+                    ".//following-sibling::div[contains(@class,'zt-gantt-child-row') and contains(@zt-gantt-task-id,'" + cleanIssueId + "')]"
+            ));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", childRow);
+
             String taskParentId = childRow.getAttribute("zt-gantt-data-task-id");
 
-            // 3. Get left position of date cell
+            // 4. Locate the date cell
             WebElement dateCell = driver.findElement(By.xpath("//div[@zt-gantt-cell-date='" + date + "']"));
-
-            By cellDate = By.xpath("//div[contains(@zt-gantt-cell-date,'" + date + "')]");
             ((JavascriptExecutor) driver).executeScript(
-                    "arguments[0].scrollIntoView({block: 'nearest', inline: 'center'});", cellDate
+                    "arguments[0].scrollIntoView({block: 'nearest', inline: 'center'});", dateCell
             );
 
             double targetLeft = Double.parseDouble(
@@ -447,18 +449,18 @@ public class TimesheetPage extends BasePage {
                             .split("left:")[1].split("px")[0].trim()
             );
 
-            // 4. Locate task bar for this issue under this user
+            System.out.println("Target "+targetLeft);
+
+            // 5. Locate the task bar for this issue
             WebElement taskBar = driver.findElement(By.xpath(
                     "//div[@id='zt-gantt-bars-area']//div[@zt-gantt-taskbar-id='" + cleanIssueId +
                             "' and @task-parent='" + taskParentId + "']"
             ));
-
             ((JavascriptExecutor) driver).executeScript(
                     "arguments[0].parentElement.scrollLeft = arguments[0].offsetLeft;", taskBar
             );
 
-
-            // 5. Iterate all .task-content-inner cells and match left position
+            // 6. Iterate all cells to find the one matching the date's left position
             List<WebElement> cells = taskBar.findElements(By.xpath(".//div[contains(@class,'task-content-inner')]"));
             for (WebElement cell : cells) {
                 double cellLeft = Double.parseDouble(
@@ -466,12 +468,14 @@ public class TimesheetPage extends BasePage {
                                 .split("left:")[1].split("px")[0].trim()
                 );
                 if (Math.abs(cellLeft - targetLeft) < 2) {
-                    return cell.getText().trim();
+                    return cell.getText().trim(); // Found the logged hours
                 }
             }
+
         } catch (NoSuchElementException | NumberFormatException | StaleElementReferenceException e) {
             e.printStackTrace();
         }
+
         return null; // Not found
     }
 
@@ -480,6 +484,5 @@ public class TimesheetPage extends BasePage {
 
 
 
-
-
+//div[contains(@class,'zt-gantt-row-item') and not(contains(@class,'zt-gantt-child-row'))]//div[text()='Aurora Wren']/ancestor::div[contains(@class,'zt-gantt-row-item')]/following-sibling::div[contains(@zt-gantt-task-id,'i268_Design')]
 }
