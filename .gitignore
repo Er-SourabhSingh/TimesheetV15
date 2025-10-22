@@ -36,3 +36,4 @@ build/
 
 ### Mac OS ###
 .DS_Store
+/cript should ensure that time logging, submission, approval, and rejection processes work correctly for each project according to the defined approval schema and user roles.

@@ -108,7 +108,7 @@ public class BaseClass {
                     //edgeOptions.addArguments("--disable-gpu"); // Disable GPU for better performance
                     edgeOptions.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
                     edgeOptions.setExperimentalOption("useAutomationExtension", false);
-                    WebDriver driver = new EdgeDriver(edgeOptions);
+                    driver = new EdgeDriver(edgeOptions);
                     break;
                 case "firefox":
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
