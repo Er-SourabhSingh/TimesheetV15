@@ -60,8 +60,8 @@ public class AdminProjectsPage extends BasePage {
         WebElement warning = wait.until(ExpectedConditions.visibilityOfElementLocated(this.warningTxt));
         String text = warning.getText();
         String identifier = text.substring(text.indexOf("(") + 1, text.indexOf(")"));
-        WebElement filedElement = wait.until(ExpectedConditions.visibilityOfElementLocated(this.txtConfirmField));
-        filedElement.sendKeys(identifier);
+        WebElement txtConfirmField = wait.until(ExpectedConditions.visibilityOfElementLocated(this.txtConfirmField));
+        txtConfirmField.sendKeys(identifier);
     }
 
     public void clickOnConfirmDeleteBTn() {

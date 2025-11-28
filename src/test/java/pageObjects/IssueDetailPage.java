@@ -25,12 +25,14 @@ public class IssueDetailPage extends BasePage {
 
     By successMessage = By.xpath("//div[@id='flash_notice']");
 
-    By btnEdit = By.xpath("//div[@id='errorExplanation']");
+    By errorMessage = By.xpath("//div[@id='errorExplanation']");
+
+    By btnEdit = By.xpath("//a[@accesskey='e']");
 
 
     public IssueDetailPage(WebDriver driver) {
         super(driver);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+       // wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
     public String getIssueStatus() {
@@ -45,6 +47,16 @@ public class IssueDetailPage extends BasePage {
     public String getSuccessMessage() {
         try {
             WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(this.successMessage));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+            return element.getText();
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    public String getErrorMessage(){
+        try {
+            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(this.errorMessage));
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
             return element.getText();
         } catch (Exception e) {
