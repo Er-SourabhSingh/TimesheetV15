@@ -7,37 +7,30 @@ import testBase.BaseClass;
 
 import java.util.*;
 
-public class TC009_TimesheetAutoApprovalTest extends BaseClass {
+public class TC012_VerifyMemberAutoApprovalInTimesheet extends BaseClass {
     String[] approvalUsers = {
-            "aurora.wren",    // 1Approval
+            "aurora.wren",
             "autumn.grace",   // 2Approval
             "briar.sunset",   // 3Approval
             "celeste.dawn",   // 4Approval
             "daisy.skye"      // 5Approval
     };
-
+    String submitterUser = "aurora.wren"; // user8 replaced
     String project = "New Project 5-Level-Schema";
-
-    String schema = "Schema 5 auto-approval";
-
-
-    String submitterUser = "luna.meadow"; // user8 replaced
-
     String startDate = "08/18/2025", endDate = "08/24/2025";
     String [] dateRanges = new String[2];
     Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();
-
     Stack<List<String>> allHistory = new Stack<>();
 
-    @Test(priority = 1, groups = {"Sanity", "Master", "Regression"})
-    public void testSubmitTimesheetForNewProject(){
+    @Test(priority = 1, groups = {"Master","Regression"})
+    public void testSubmitTimesheetOfAuroraWrenForNewProject(){ //Approval 1
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         logger.info("Test Case 1: Verify user can submit timesheet for new project");
 
         try {
             logger.info("Step 1: Logging in as " + this.submitterUser);
-            super.login(this.submitterUser, "12345678");
+            this.login(this.submitterUser, "12345678");
 
             logger.info("Step 2: Navigating to Timesheet module");
             headerPage.clickOnTimesheet();
@@ -104,16 +97,15 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
         }
     }
 
-    @Test(priority = 2, groups = {"Master", "Regression"}, dependsOnMethods = {"testSubmitTimesheetForNewProject"})
+    @Test(priority = 2, groups = {"Master", "Regression"}, dependsOnMethods = {"testSubmitTimesheetOfAuroraWrenForNewProject"})
     public void testAutoApproval(){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
-        TimesheetPage timesheetPage = new TimesheetPage(driver);
         HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
         try{
             logger.info("Test Case 2: Verify That auto approval functionality");
-            for(int i = 0; i < approvalUsers.length; i++) {
+            for(int i = 1; i < approvalUsers.length; i++) {
                 logger.info("---- Logging in as Approver:" + approvalUsers[i]);
                 super.login(approvalUsers[i], "12345678");
                 Thread.sleep(121000); // 121,000 ms = 2 min 1 sec
@@ -141,14 +133,13 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
                 history.add("Level : Level " + (i+1));
                 history.add("Status : Approved");
                 history.add("Submitted By : " + toFullName(this.submitterUser));
-                history.add("Approved By : Auto Approved");
+                history.add("Approved By : Auto Approved" );
                 history.add("Approval Comment : Auto-approved");
                 this.allHistory.push(history);
                 Assert.assertTrue(historyApprovalPage.getLastUpdatedHistory().containsAll(history));
 
                 logger.info("------ Logging out approver: " + approvalUsers[i]);
                 headerPage.clickOnLogout();
-
 
             }
         }catch (Exception e){
@@ -199,12 +190,9 @@ public class TC009_TimesheetAutoApprovalTest extends BaseClass {
 
             headerPage.clickOnLogout();
 
-
         }catch (Exception e){
             logger.error(e);
             Assert.fail();
         }
     }
-
-
 }

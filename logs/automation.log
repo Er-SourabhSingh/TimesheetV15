@@ -1,0 +1,896 @@
+2026-02-02 16:07:32 INFO  TC0016_TimesheetTimeLogs:29 - Test Case 1: Verify submitterUser can submit multiple project's timesheet and Approved
+2026-02-02 16:07:33 INFO  TC0016_TimesheetTimeLogs:51 - Step 1: Logging in as aurora.wren
+2026-02-02 16:07:34 INFO  TC0016_TimesheetTimeLogs:54 - Step 2: Navigating to Timesheet module
+2026-02-02 16:07:36 INFO  TC0016_TimesheetTimeLogs:57 - Step 3: Expanding timesheet view
+2026-02-02 16:07:36 INFO  TC0016_TimesheetTimeLogs:60 - Step 4: Selecting date range filter as 'Custom Range'
+2026-02-02 16:07:38 INFO  TC0016_TimesheetTimeLogs:68 - Step 5: Logging time entries for each day from Monday to Friday
+2026-02-02 16:07:38 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-01
+2026-02-02 16:07:40 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Education and training3
+2026-02-02 16:07:43 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #65
+2026-02-02 16:07:45 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:07:45 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:07:46 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:07:48 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-02
+2026-02-02 16:07:49 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Education and training3
+2026-02-02 16:07:51 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #193
+2026-02-02 16:07:52 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:07:53 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:07:53 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:07:54 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-03
+2026-02-02 16:07:56 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Flux Gantt Project
+2026-02-02 16:07:58 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #268
+2026-02-02 16:07:59 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:07:59 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:08:00 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:08:01 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-04
+2026-02-02 16:08:02 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:08:05 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #72
+2026-02-02 16:08:07 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:08:07 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:08:07 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:08:08 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-05
+2026-02-02 16:08:10 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:08:12 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #22
+2026-02-02 16:08:14 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:08:14 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:08:14 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:08:15 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-06
+2026-02-02 16:08:16 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Agile Board Project
+2026-02-02 16:08:18 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #243
+2026-02-02 16:08:19 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:08:19 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:08:19 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:08:20 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-07
+2026-02-02 16:08:22 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Helpdesk Service Desk
+2026-02-02 16:08:23 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #230
+2026-02-02 16:08:24 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:08:24 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:08:25 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:08:25 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-08
+2026-02-02 16:08:27 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:08:30 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #207
+2026-02-02 16:08:31 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:08:31 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:08:31 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:08:32 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-09
+2026-02-02 16:08:34 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Education and training3
+2026-02-02 16:08:36 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #16
+2026-02-02 16:08:38 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:08:39 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:08:39 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:08:39 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-10
+2026-02-02 16:08:41 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Education and training3
+2026-02-02 16:08:44 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #135
+2026-02-02 16:08:45 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:08:45 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:08:45 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:08:46 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-11
+2026-02-02 16:08:48 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:08:50 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #76
+2026-02-02 16:08:52 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:08:52 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:08:53 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:08:54 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-12
+2026-02-02 16:08:55 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: MVP build for PaySheet Application
+2026-02-02 16:08:57 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #173
+2026-02-02 16:08:59 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:08:59 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:08:59 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:09:00 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-13
+2026-02-02 16:09:01 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:09:04 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #5
+2026-02-02 16:09:06 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:09:07 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:09:07 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:09:07 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-14
+2026-02-02 16:09:09 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:09:12 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #71
+2026-02-02 16:09:14 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:09:14 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:09:14 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:09:15 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-15
+2026-02-02 16:09:16 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Mobile app development1
+2026-02-02 16:09:19 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #113
+2026-02-02 16:09:21 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:09:21 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:09:21 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:09:22 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-16
+2026-02-02 16:09:24 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Mobile app development1
+2026-02-02 16:09:26 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #154
+2026-02-02 16:09:28 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:09:28 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:09:28 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:09:29 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-17
+2026-02-02 16:09:31 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Flux Gantt Project
+2026-02-02 16:09:33 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #269
+2026-02-02 16:09:34 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:09:34 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:09:34 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:09:35 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-18
+2026-02-02 16:09:36 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Mobile app development1
+2026-02-02 16:09:39 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #64
+2026-02-02 16:09:41 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:09:41 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:09:41 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:09:42 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-19
+2026-02-02 16:09:44 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: HR management2
+2026-02-02 16:09:46 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #190
+2026-02-02 16:09:47 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:09:47 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:09:47 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:09:48 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-20
+2026-02-02 16:09:50 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Agile Board Project
+2026-02-02 16:09:52 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #259
+2026-02-02 16:09:52 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:09:53 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:09:53 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:09:54 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-21
+2026-02-02 16:09:56 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:09:59 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #100
+2026-02-02 16:10:00 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:10:00 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:10:01 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:10:02 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-22
+2026-02-02 16:10:04 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Education and training3
+2026-02-02 16:10:07 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #195
+2026-02-02 16:10:08 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:10:08 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:10:08 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:10:09 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-23
+2026-02-02 16:10:11 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Helpdesk Service Desk
+2026-02-02 16:10:12 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #233
+2026-02-02 16:10:13 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:10:13 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:10:13 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:10:15 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-24
+2026-02-02 16:10:16 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Mobile app development1
+2026-02-02 16:10:19 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #184
+2026-02-02 16:10:20 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:10:20 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:10:20 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:10:21 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-25
+2026-02-02 16:10:23 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Agile Board Project
+2026-02-02 16:10:24 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #241
+2026-02-02 16:10:25 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:10:25 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:10:25 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:10:26 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-26
+2026-02-02 16:10:28 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Flux Gantt Project
+2026-02-02 16:10:30 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #251
+2026-02-02 16:10:31 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:10:31 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:10:32 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:10:32 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-27
+2026-02-02 16:10:34 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:10:36 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #46
+2026-02-02 16:10:37 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:10:38 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:10:38 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:10:38 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-28
+2026-02-02 16:10:40 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:10:43 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #5
+2026-02-02 16:10:45 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:10:45 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:10:45 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:10:46 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-29
+2026-02-02 16:10:48 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Mobile app development1
+2026-02-02 16:10:50 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #68
+2026-02-02 16:10:52 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:10:52 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:10:52 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:10:53 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-30
+2026-02-02 16:10:55 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:10:58 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #112
+2026-02-02 16:10:59 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:11:00 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:11:00 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:11:00 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-31
+2026-02-02 16:11:02 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:11:04 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #137
+2026-02-02 16:11:05 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:11:06 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:11:06 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:11:06 INFO  TC0016_TimesheetTimeLogs:51 - Step 1: Logging in as ember.lilac
+2026-02-02 16:11:47 INFO  TC0016_TimesheetTimeLogs:29 - Test Case 1: Verify submitterUser can submit multiple project's timesheet and Approved
+2026-02-02 16:11:48 INFO  TC0016_TimesheetTimeLogs:51 - Step 1: Logging in as ember.lilac
+2026-02-02 16:11:49 INFO  TC0016_TimesheetTimeLogs:54 - Step 2: Navigating to Timesheet module
+2026-02-02 16:11:51 INFO  TC0016_TimesheetTimeLogs:57 - Step 3: Expanding timesheet view
+2026-02-02 16:11:51 INFO  TC0016_TimesheetTimeLogs:60 - Step 4: Selecting date range filter as 'Custom Range'
+2026-02-02 16:11:54 INFO  TC0016_TimesheetTimeLogs:68 - Step 5: Logging time entries for each day from Monday to Friday
+2026-02-02 16:11:54 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-01
+2026-02-02 16:11:55 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: MVP build for PaySheet Application
+2026-02-02 16:11:58 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #144
+2026-02-02 16:12:00 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:12:00 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:12:00 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:12:02 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-02
+2026-02-02 16:12:04 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:12:07 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #210
+2026-02-02 16:12:11 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:12:11 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:12:11 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:12:12 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-03
+2026-02-02 16:12:13 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: HR management2
+2026-02-02 16:12:16 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #12
+2026-02-02 16:12:18 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:12:18 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:12:18 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:12:19 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-04
+2026-02-02 16:12:20 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: MVP build for PaySheet Application
+2026-02-02 16:12:22 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #50
+2026-02-02 16:12:24 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:12:24 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:12:24 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:12:25 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-05
+2026-02-02 16:12:26 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:12:28 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #47
+2026-02-02 16:12:30 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:12:30 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:12:30 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:12:31 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-06
+2026-02-02 16:12:32 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Agile Board Project
+2026-02-02 16:12:34 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #260
+2026-02-02 16:12:35 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:12:35 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:12:35 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:12:36 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-07
+2026-02-02 16:12:38 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Education and training3
+2026-02-02 16:12:40 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #65
+2026-02-02 16:12:42 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:12:42 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:12:42 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:12:43 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-08
+2026-02-02 16:12:44 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Flux Gantt Project
+2026-02-02 16:12:46 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #252
+2026-02-02 16:12:48 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:12:48 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:12:48 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:12:49 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-09
+2026-02-02 16:12:51 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Flux Gantt Project
+2026-02-02 16:12:53 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #253
+2026-02-02 16:12:54 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:12:54 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:12:54 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:12:55 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-10
+2026-02-02 16:12:57 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: HR management2
+2026-02-02 16:12:59 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #85
+2026-02-02 16:13:01 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:13:01 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:13:01 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:13:02 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-11
+2026-02-02 16:13:04 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: HR management2
+2026-02-02 16:13:06 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #114
+2026-02-02 16:13:08 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:13:08 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:13:08 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:13:09 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-12
+2026-02-02 16:13:10 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Education and training3
+2026-02-02 16:13:13 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #52
+2026-02-02 16:13:15 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:13:15 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:13:15 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:13:16 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-13
+2026-02-02 16:13:17 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Education and training3
+2026-02-02 16:13:19 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #19
+2026-02-02 16:13:21 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:13:21 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:13:22 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:13:22 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-14
+2026-02-02 16:13:24 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: MVP build for PaySheet Application
+2026-02-02 16:13:25 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #203
+2026-02-02 16:13:26 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:13:27 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:13:27 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:13:27 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-15
+2026-02-02 16:13:29 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Mobile app development1
+2026-02-02 16:13:31 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #185
+2026-02-02 16:13:32 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:13:33 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:13:33 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:13:33 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-16
+2026-02-02 16:13:35 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Agile Board Project
+2026-02-02 16:13:36 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #260
+2026-02-02 16:13:37 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:13:37 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:13:37 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:13:38 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-17
+2026-02-02 16:13:39 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: MVP build for PaySheet Application
+2026-02-02 16:13:41 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #203
+2026-02-02 16:13:42 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:13:42 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:13:43 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:13:43 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-18
+2026-02-02 16:13:45 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Education and training3
+2026-02-02 16:13:47 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #42
+2026-02-02 16:13:49 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:13:49 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:13:49 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:13:50 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-19
+2026-02-02 16:13:52 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:13:54 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #27
+2026-02-02 16:13:56 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:13:56 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:13:56 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:13:57 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-20
+2026-02-02 16:13:58 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Mobile app development1
+2026-02-02 16:14:01 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #58
+2026-02-02 16:14:03 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:14:03 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:14:03 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:14:04 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-21
+2026-02-02 16:14:05 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Flux Gantt Project
+2026-02-02 16:14:07 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #252
+2026-02-02 16:14:08 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:14:08 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:14:09 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:14:09 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-22
+2026-02-02 16:14:11 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:14:13 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #197
+2026-02-02 16:14:14 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:14:15 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:14:15 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:14:16 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-23
+2026-02-02 16:14:18 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:14:20 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #222
+2026-02-02 16:14:21 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:14:21 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:14:21 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:14:22 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-24
+2026-02-02 16:14:24 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: MVP build for PaySheet Application
+2026-02-02 16:14:26 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #205
+2026-02-02 16:14:26 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:14:27 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:14:27 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:14:28 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-25
+2026-02-02 16:14:29 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:14:32 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #75
+2026-02-02 16:14:33 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:14:33 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:14:34 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:14:34 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-26
+2026-02-02 16:14:36 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:14:38 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #139
+2026-02-02 16:14:39 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:14:39 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:14:39 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:14:40 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-27
+2026-02-02 16:14:41 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Mobile app development1
+2026-02-02 16:14:44 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #213
+2026-02-02 16:14:45 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:14:45 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:14:46 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:14:46 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-28
+2026-02-02 16:14:48 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Agile Board Project
+2026-02-02 16:14:49 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #241
+2026-02-02 16:14:50 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:14:50 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:14:50 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:14:51 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-29
+2026-02-02 16:14:53 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Education and training3
+2026-02-02 16:14:55 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #87
+2026-02-02 16:14:57 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:14:57 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:14:57 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:14:58 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-30
+2026-02-02 16:15:00 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Agile Board Project
+2026-02-02 16:15:02 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #244
+2026-02-02 16:15:03 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:15:03 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:15:03 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:15:04 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-31
+2026-02-02 16:15:05 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:15:08 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #3
+2026-02-02 16:15:10 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:15:10 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:15:10 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:15:11 INFO  TC0016_TimesheetTimeLogs:106 - Step 6: Logging out submitterUser
+2026-02-02 16:15:11 INFO  TC0016_TimesheetTimeLogs:51 - Step 1: Logging in as harmony.rose
+2026-02-02 16:15:12 INFO  TC0016_TimesheetTimeLogs:54 - Step 2: Navigating to Timesheet module
+2026-02-02 16:15:13 INFO  TC0016_TimesheetTimeLogs:57 - Step 3: Expanding timesheet view
+2026-02-02 16:15:13 INFO  TC0016_TimesheetTimeLogs:60 - Step 4: Selecting date range filter as 'Custom Range'
+2026-02-02 16:15:15 INFO  TC0016_TimesheetTimeLogs:68 - Step 5: Logging time entries for each day from Monday to Friday
+2026-02-02 16:15:15 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-01
+2026-02-02 16:15:16 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:15:18 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #116
+2026-02-02 16:15:19 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:15:19 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:15:20 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:15:20 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-02
+2026-02-02 16:15:22 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: HR management2
+2026-02-02 16:15:24 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #59
+2026-02-02 16:15:25 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:15:25 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:15:26 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:15:26 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-03
+2026-02-02 16:15:28 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Mobile app development1
+2026-02-02 16:15:30 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #81
+2026-02-02 16:15:32 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:15:32 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:15:32 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:15:33 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-04
+2026-02-02 16:15:34 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Agile Board Project
+2026-02-02 16:15:35 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #240
+2026-02-02 16:15:37 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:15:37 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:15:37 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:15:37 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-05
+2026-02-02 16:15:39 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:15:41 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #201
+2026-02-02 16:15:41 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:15:42 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:15:42 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:15:42 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-06
+2026-02-02 16:15:44 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Helpdesk Service Desk
+2026-02-02 16:15:45 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #230
+2026-02-02 16:15:46 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:15:47 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:15:47 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:15:47 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-07
+2026-02-02 16:15:49 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Mobile app development1
+2026-02-02 16:15:51 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #80
+2026-02-02 16:15:53 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:15:53 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:15:53 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:15:54 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-08
+2026-02-02 16:15:55 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Mobile app development1
+2026-02-02 16:15:58 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #6
+2026-02-02 16:16:00 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:16:00 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:16:00 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:16:01 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-09
+2026-02-02 16:16:02 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:16:05 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #179
+2026-02-02 16:16:06 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:16:06 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:16:07 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:16:07 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-10
+2026-02-02 16:16:09 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Flux Gantt Project
+2026-02-02 16:16:10 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #265
+2026-02-02 16:16:11 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:16:12 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:16:12 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:16:12 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-11
+2026-02-02 16:16:14 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Helpdesk Service Desk
+2026-02-02 16:16:15 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #228
+2026-02-02 16:16:16 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:16:16 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:16:17 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:16:17 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-12
+2026-02-02 16:16:19 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Helpdesk Service Desk
+2026-02-02 16:16:20 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #233
+2026-02-02 16:16:21 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:16:21 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:16:21 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:16:22 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-13
+2026-02-02 16:16:24 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Flux Gantt Project
+2026-02-02 16:16:25 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #264
+2026-02-02 16:16:26 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:16:26 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:16:26 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:16:27 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-14
+2026-02-02 16:16:29 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Helpdesk Service Desk
+2026-02-02 16:16:30 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #233
+2026-02-02 16:16:31 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:16:31 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:16:31 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:16:32 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-15
+2026-02-02 16:16:33 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Education and training3
+2026-02-02 16:16:36 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #166
+2026-02-02 16:16:37 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:16:37 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:16:37 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:16:38 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-16
+2026-02-02 16:16:39 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: MVP build for PaySheet Application
+2026-02-02 16:16:41 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #205
+2026-02-02 16:16:42 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:16:42 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:16:42 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:16:43 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-17
+2026-02-02 16:16:44 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Flux Gantt Project
+2026-02-02 16:16:46 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #264
+2026-02-02 16:16:47 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:16:48 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:16:48 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:16:48 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-18
+2026-02-02 16:16:50 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Agile Board Project
+2026-02-02 16:16:51 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #110
+2026-02-02 16:16:53 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:16:53 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:16:53 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:16:54 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-19
+2026-02-02 16:16:55 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Helpdesk Service Desk
+2026-02-02 16:16:57 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #231
+2026-02-02 16:16:58 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:16:58 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:16:58 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:16:59 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-20
+2026-02-02 16:17:00 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Helpdesk Service Desk
+2026-02-02 16:17:02 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #228
+2026-02-02 16:17:03 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:17:03 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:17:03 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:17:04 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-21
+2026-02-02 16:17:05 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:17:07 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #201
+2026-02-02 16:17:08 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:17:08 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:17:08 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:17:09 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-22
+2026-02-02 16:17:10 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Agile Board Project
+2026-02-02 16:17:12 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #240
+2026-02-02 16:17:13 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:17:13 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:17:13 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:17:14 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-23
+2026-02-02 16:17:15 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Education and training3
+2026-02-02 16:17:18 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #43
+2026-02-02 16:17:20 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:17:20 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:17:20 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:17:21 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-24
+2026-02-02 16:17:22 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Flux Gantt Project
+2026-02-02 16:17:24 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #254
+2026-02-02 16:17:25 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:17:26 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:17:26 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:17:26 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-25
+2026-02-02 16:17:28 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:17:30 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #22
+2026-02-02 16:17:32 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:17:32 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:17:32 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:17:33 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-26
+2026-02-02 16:17:35 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Helpdesk Service Desk
+2026-02-02 16:17:36 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #231
+2026-02-02 16:17:37 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:17:38 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:17:38 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:17:38 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-27
+2026-02-02 16:17:40 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Mobile app development1
+2026-02-02 16:17:43 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #184
+2026-02-02 16:17:44 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:17:44 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:17:44 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:17:45 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-28
+2026-02-02 16:17:46 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:17:49 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #71
+2026-02-02 16:17:51 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:17:51 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:17:51 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:17:52 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-29
+2026-02-02 16:17:54 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: HR management2
+2026-02-02 16:17:56 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #131
+2026-02-02 16:17:57 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:17:57 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:17:57 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:17:58 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-30
+2026-02-02 16:18:00 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Helpdesk Service Desk
+2026-02-02 16:18:01 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #230
+2026-02-02 16:18:02 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:18:02 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:18:03 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:18:03 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-31
+2026-02-02 16:18:05 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Flux Gantt Project
+2026-02-02 16:18:07 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #250
+2026-02-02 16:18:08 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:18:08 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:18:08 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:18:09 INFO  TC0016_TimesheetTimeLogs:106 - Step 6: Logging out submitterUser
+2026-02-02 16:18:09 INFO  TC0016_TimesheetTimeLogs:51 - Step 1: Logging in as isla.moon
+2026-02-02 16:18:10 INFO  TC0016_TimesheetTimeLogs:54 - Step 2: Navigating to Timesheet module
+2026-02-02 16:18:10 INFO  TC0016_TimesheetTimeLogs:57 - Step 3: Expanding timesheet view
+2026-02-02 16:18:11 INFO  TC0016_TimesheetTimeLogs:60 - Step 4: Selecting date range filter as 'Custom Range'
+2026-02-02 16:18:12 INFO  TC0016_TimesheetTimeLogs:68 - Step 5: Logging time entries for each day from Monday to Friday
+2026-02-02 16:18:12 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-01
+2026-02-02 16:18:14 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:18:16 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #23
+2026-02-02 16:18:17 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:18:18 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:18:18 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:18:18 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-02
+2026-02-02 16:18:20 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:18:22 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #201
+2026-02-02 16:18:23 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:18:23 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:18:23 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:18:24 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-03
+2026-02-02 16:18:25 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Helpdesk Service Desk
+2026-02-02 16:18:27 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #229
+2026-02-02 16:18:28 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:18:28 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:18:28 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:18:29 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-04
+2026-02-02 16:18:30 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Agile Board Project
+2026-02-02 16:18:32 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #259
+2026-02-02 16:18:32 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:18:33 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:18:33 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:18:33 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-05
+2026-02-02 16:18:35 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: HR management2
+2026-02-02 16:18:37 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #106
+2026-02-02 16:18:38 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:18:38 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:18:38 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:18:39 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-06
+2026-02-02 16:18:40 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Agile Board Project
+2026-02-02 16:18:42 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #239
+2026-02-02 16:18:43 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:18:43 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:18:43 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:18:44 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-07
+2026-02-02 16:18:45 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Agile Board Project
+2026-02-02 16:18:47 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #241
+2026-02-02 16:18:48 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:18:48 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:18:48 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:18:49 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-08
+2026-02-02 16:18:50 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:18:52 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #48
+2026-02-02 16:18:54 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:18:54 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:18:54 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:18:55 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-09
+2026-02-02 16:18:56 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Education and training3
+2026-02-02 16:18:58 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #43
+2026-02-02 16:19:00 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:19:00 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:19:00 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:19:01 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-10
+2026-02-02 16:19:02 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:19:04 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #200
+2026-02-02 16:19:05 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:19:05 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:19:05 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:19:06 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-11
+2026-02-02 16:19:08 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: MVP build for PaySheet Application
+2026-02-02 16:19:10 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #101
+2026-02-02 16:19:12 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:19:12 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:19:12 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:19:13 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-12
+2026-02-02 16:19:14 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Education and training3
+2026-02-02 16:19:17 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #44
+2026-02-02 16:19:18 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:19:19 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:19:19 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:19:19 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-13
+2026-02-02 16:19:21 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Helpdesk Service Desk
+2026-02-02 16:19:22 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #231
+2026-02-02 16:19:23 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:19:23 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:19:23 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:19:24 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-14
+2026-02-02 16:19:25 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Flux Gantt Project
+2026-02-02 16:19:27 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #246
+2026-02-02 16:19:29 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:19:29 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:19:29 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:19:30 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-15
+2026-02-02 16:19:31 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: MVP build for PaySheet Application
+2026-02-02 16:19:33 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #203
+2026-02-02 16:19:34 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:19:34 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:19:34 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:19:35 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-16
+2026-02-02 16:19:36 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Mobile app development1
+2026-02-02 16:19:39 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #105
+2026-02-02 16:19:40 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:19:40 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:19:40 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:19:41 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-17
+2026-02-02 16:19:43 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: HR management2
+2026-02-02 16:19:45 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #36
+2026-02-02 16:19:46 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:19:46 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:19:47 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:19:47 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-18
+2026-02-02 16:19:49 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:19:51 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #1
+2026-02-02 16:19:53 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:19:53 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:19:54 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:19:54 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-19
+2026-02-02 16:19:56 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: HR management2
+2026-02-02 16:19:58 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #82
+2026-02-02 16:19:59 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:19:59 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:19:59 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:20:00 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-20
+2026-02-02 16:20:02 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Helpdesk Service Desk
+2026-02-02 16:20:03 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #227
+2026-02-02 16:20:04 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:20:04 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:20:04 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:20:05 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-21
+2026-02-02 16:20:06 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: HR management2
+2026-02-02 16:20:09 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #98
+2026-02-02 16:20:10 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:20:10 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:20:10 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:20:11 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-22
+2026-02-02 16:20:13 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:20:15 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #179
+2026-02-02 16:20:16 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:20:16 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:20:16 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:20:17 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-23
+2026-02-02 16:20:18 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: MVP build for PaySheet Application
+2026-02-02 16:20:20 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #205
+2026-02-02 16:20:21 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:20:21 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:20:22 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:20:22 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-24
+2026-02-02 16:20:24 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Flux Gantt Project
+2026-02-02 16:20:25 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #267
+2026-02-02 16:20:26 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:20:26 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:20:26 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:20:27 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-25
+2026-02-02 16:20:29 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Mobile app development1
+2026-02-02 16:20:31 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #154
+2026-02-02 16:20:32 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:20:32 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:20:32 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:20:33 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-26
+2026-02-02 16:20:35 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:20:37 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #198
+2026-02-02 16:20:38 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:20:38 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:20:38 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:20:39 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-27
+2026-02-02 16:20:40 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:20:43 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #225
+2026-02-02 16:20:44 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:20:44 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:20:44 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:20:44 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-28
+2026-02-02 16:20:46 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:20:48 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #210
+2026-02-02 16:20:49 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:20:49 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:20:50 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:20:50 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-29
+2026-02-02 16:20:52 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: MVP build for PaySheet Application
+2026-02-02 16:20:54 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #143
+2026-02-02 16:20:55 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:20:55 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:20:56 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:20:56 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-30
+2026-02-02 16:20:58 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Education and training3
+2026-02-02 16:21:00 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #135
+2026-02-02 16:21:01 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:21:02 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:21:02 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:21:03 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-31
+2026-02-02 16:21:05 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Agile Board Project
+2026-02-02 16:21:06 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #245
+2026-02-02 16:21:07 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:21:07 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:21:08 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:21:09 INFO  TC0016_TimesheetTimeLogs:106 - Step 6: Logging out submitterUser
+2026-02-02 16:21:09 INFO  TC0016_TimesheetTimeLogs:51 - Step 1: Logging in as ivy.skylark
+2026-02-02 16:21:10 INFO  TC0016_TimesheetTimeLogs:54 - Step 2: Navigating to Timesheet module
+2026-02-02 16:21:10 INFO  TC0016_TimesheetTimeLogs:57 - Step 3: Expanding timesheet view
+2026-02-02 16:21:10 INFO  TC0016_TimesheetTimeLogs:60 - Step 4: Selecting date range filter as 'Custom Range'
+2026-02-02 16:21:12 INFO  TC0016_TimesheetTimeLogs:68 - Step 5: Logging time entries for each day from Monday to Friday
+2026-02-02 16:21:12 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-01
+2026-02-02 16:21:14 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:21:15 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #93
+2026-02-02 16:21:17 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:21:17 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:21:17 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:21:18 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-02
+2026-02-02 16:21:19 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:21:22 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #72
+2026-02-02 16:21:23 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:21:24 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:21:24 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:21:25 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-03
+2026-02-02 16:21:26 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: MVP build for PaySheet Application
+2026-02-02 16:21:28 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #49
+2026-02-02 16:21:29 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:21:29 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:21:29 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:21:30 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-04
+2026-02-02 16:21:31 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: HR management2
+2026-02-02 16:21:33 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #157
+2026-02-02 16:21:34 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:21:34 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:21:35 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:21:35 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-05
+2026-02-02 16:21:37 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Helpdesk Service Desk
+2026-02-02 16:21:38 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #231
+2026-02-02 16:21:39 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:21:39 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:21:39 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:21:40 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-06
+2026-02-02 16:21:41 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:21:43 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #74
+2026-02-02 16:21:45 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:21:45 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:21:45 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:21:46 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-07
+2026-02-02 16:21:47 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:21:50 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #5
+2026-02-02 16:21:52 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:21:52 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:21:52 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:21:53 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-08
+2026-02-02 16:21:54 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Flux Gantt Project
+2026-02-02 16:21:56 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #266
+2026-02-02 16:21:57 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:21:57 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 7
+2026-02-02 16:21:57 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:21:58 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-09
+2026-02-02 16:21:59 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Helpdesk Service Desk
+2026-02-02 16:22:00 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #229
+2026-02-02 16:22:01 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:22:01 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:22:02 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:22:02 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-10
+2026-02-02 16:22:04 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:22:06 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #91
+2026-02-02 16:22:07 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:22:07 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:22:08 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:22:09 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-11
+2026-02-02 16:22:10 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: MVP build for PaySheet Application
+2026-02-02 16:22:12 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #25
+2026-02-02 16:22:13 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:22:13 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:22:13 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:22:14 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-12
+2026-02-02 16:22:16 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:22:18 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #75
+2026-02-02 16:22:20 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:22:20 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:22:20 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:22:20 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-13
+2026-02-02 16:22:22 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:22:24 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #171
+2026-02-02 16:22:25 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:22:25 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:22:26 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:22:26 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-14
+2026-02-02 16:22:28 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: HR management2
+2026-02-02 16:22:30 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #37
+2026-02-02 16:22:32 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:22:32 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:22:32 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:22:33 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-15
+2026-02-02 16:22:35 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Agile Board Project
+2026-02-02 16:22:36 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #242
+2026-02-02 16:22:37 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:22:37 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:22:38 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:22:38 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-16
+2026-02-02 16:22:40 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Software development5
+2026-02-02 16:22:42 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #72
+2026-02-02 16:22:44 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:22:44 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:22:45 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:22:45 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-17
+2026-02-02 16:22:47 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: HR management2
+2026-02-02 16:22:49 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #161
+2026-02-02 16:22:50 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:22:50 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:22:50 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:22:51 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-18
+2026-02-02 16:22:52 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: MVP build for PaySheet Application
+2026-02-02 16:22:54 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #203
+2026-02-02 16:22:55 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:22:55 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 8
+2026-02-02 16:22:56 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:22:56 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-19
+2026-02-02 16:22:58 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Marketing campaign4
+2026-02-02 16:23:00 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #21
+2026-02-02 16:23:02 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Design
+2026-02-02 16:23:02 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 9
+2026-02-02 16:23:02 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:23:03 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-20
+2026-02-02 16:23:04 INFO  TC0016_TimesheetTimeLogs:76 - ------ Selecting project: Flux Gantt Project
+2026-02-02 16:23:06 INFO  TC0016_TimesheetTimeLogs:80 - ------ Selecting issue: #254
+2026-02-02 16:23:07 INFO  TC0016_TimesheetTimeLogs:84 - ------ Selecting activity: Development
+2026-02-02 16:23:08 INFO  TC0016_TimesheetTimeLogs:88 - ------ Entering hours: 6
+2026-02-02 16:23:08 INFO  TC0016_TimesheetTimeLogs:91 - ------ Clicking Log Time button
+2026-02-02 16:23:09 INFO  TC0016_TimesheetTimeLogs:72 - ---- Logging entry for: 2026-01-21

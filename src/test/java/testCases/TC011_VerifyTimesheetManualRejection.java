@@ -7,7 +7,7 @@ import testBase.BaseClass;
 
 import java.util.*;
 
-public class TC014_TimesheetApprovalMemberManualRejectionTests extends BaseClass {
+public class TC011_VerifyTimesheetManualRejection extends BaseClass {
     String[] approvalUsers = {
             "aurora.wren",    // 1Approval
             "autumn.grace",   // 2Approval
@@ -22,17 +22,18 @@ public class TC014_TimesheetApprovalMemberManualRejectionTests extends BaseClass
             "4Approval",
             "5Approval"
     };
-    String submitterUser = "briar.sunset"; // user8 replaced
+    //String submitterUser = "serenity.bloom"; // user8 replaced
+    String submitterUser = "summer.rain"; // user8 replaced
     String project = "New Project 5-Level-Schema";
     String startDate = "08/18/2025", endDate = "08/24/2025";
     String [] dateRanges = new String[2];
     Map<String , Map<String, Double>> projectActivityHours = new HashMap<>();
     Stack<List<String>> allHistory = new Stack<>();
     @Test(priority = 1, groups = {"Master","Regression"})
-    public void testSubmitTimesheetOfBriarSunsetForNewProject(){
+    public void testSubmitTimesheetOfSerenityBloomForNewProject(){
         HeaderPage headerPage = new HeaderPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
-        logger.info("Test Case 1: Verify Approval user can submit timesheet for new project");
+        logger.info("Test Case 1: Verify user can submit timesheet for new project");
 
         try {
             logger.info("Step 1: Logging in as " + this.submitterUser);
@@ -103,17 +104,17 @@ public class TC014_TimesheetApprovalMemberManualRejectionTests extends BaseClass
         }
     }
 
-    @Test(priority = 2, groups = {"Master","Regression"}, dependsOnMethods = {"testSubmitTimesheetOfBriarSunsetForNewProject"})
-    public void testRejectSubmittedTimesheetOfBriarSunset(){
+    @Test(priority = 2, groups = {"Master","Regression"}, dependsOnMethods = {"testSubmitTimesheetOfSerenityBloomForNewProject"})
+    public void testRejectSubmittedTimesheetOfSerenityBloom(){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
         TimesheetPage timesheetPage = new TimesheetPage(driver);
         HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
-        logger.info("Test Case 2: Verify Rejection Before Auto Approval");
+        logger.info("Test Case 2: Verify Rejection of Before Auto Approval");
         try{
-            logger.info("Step 1: Logging in as "+ approvalUsers[3]);
-            super.login(approvalUsers[3], "12345678");
+            logger.info("Step 1: Logging in as "+ approvalUsers[0]);
+            super.login(approvalUsers[0], "12345678");
 
             logger.info("Step 2: Navigate to project: " + project);
             headerPage.clickOnProjects();
@@ -131,25 +132,49 @@ public class TC014_TimesheetApprovalMemberManualRejectionTests extends BaseClass
 
             logger.info("Step 6: Reject timesheet for: "+this.submitterUser);
             timesheetApprovalPage.clickOnRejectBtn(toFullName(this.submitterUser));
-            timesheetApprovalPage.setRejectionText("Rejected by --------- "+toFullName(approvalUsers[3]));
+            timesheetApprovalPage.setRejectionText("Rejected by --------- "+toFullName(this.approvalUsers[0]));
             timesheetApprovalPage.clickOnSubmitBtnOfRejection();
 
             Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.submitterUser)),"Rejected");
 
             //checking history
-            logger.info("------ Clicking on show btn of : " + this.submitterUser + "Timesheet History");
+            logger.info("------ Clicking on show btn of : " + this.submitterUser + " Timesheet History");
             timesheetApprovalPage.clickOnShowHistoryOfUserTimesheet(toFullName(this.submitterUser));
             List<String> history = new ArrayList<>();
-            history.add("Project Name : " +this.project);
+            history.add("Project Name : " + this.project);
+            history.add("Level : Level 1 (" + this.approvalRoles[0]+")");
             history.add("Status : Rejected");
-            history.add("Level : Level 4 (" + this.approvalRoles[3]+")");
             history.add("Submitted By : " + toFullName(this.submitterUser));
-            history.add("Rejected By : " + toFullName(this.approvalUsers[3]));
-            history.add("Comment : Rejected by --------- "  + toFullName(this.approvalUsers[3]));
+            history.add("Rejected By : " + toFullName(this.approvalUsers[0]));
+            history.add("Comment : Rejected by --------- "  + toFullName(this.approvalUsers[0]));
             this.allHistory.push(history);
             Assert.assertTrue(historyApprovalPage.getLastUpdatedHistory().containsAll(history));
 
-            logger.info("Step 7: Logging out as "+ approvalUsers[3]);
+            logger.info("Step 7: Logging out as "+ approvalUsers[0]);
+            headerPage.clickOnLogout();
+
+
+            logger.info("Step 8: Logging in as "+this.submitterUser);
+            super.login(this.submitterUser,"12345678");
+
+            logger.info("Step 9: Navigating to Timesheet module");
+            headerPage.clickOnTimesheet();
+
+            logger.info("Step 10: Expanding timesheet view");
+            timesheetPage.selectExpand();
+
+            logger.info("Step 11: Selecting date range filter as 'Custom Range'");
+            timesheetPage.clickOnFilterDateRange();
+            timesheetPage.selectDateRangeOption("Custom Range");
+            timesheetPage.selectStartDate(startDate);
+            timesheetPage.selectEndDate(endDate);
+            timesheetPage.clickOnDateRangeApplyBtn();
+
+            logger.info("Step 12: Verifying status of timesheet");
+            Assert.assertTrue(timesheetPage.hasRejectedTimesheet(this.project));
+            Assert.assertEquals(timesheetPage.getSubmitTimesheetBtnText(),"Submit Timesheet");
+
+            logger.info("Step 13: Logging out "+this.submitterUser);
             headerPage.clickOnLogout();
 
         }catch (Exception e){
@@ -160,12 +185,11 @@ public class TC014_TimesheetApprovalMemberManualRejectionTests extends BaseClass
 
 
 
-    @Test(priority = 3, groups = {"Master", "Regression"}, dependsOnMethods = {"testRejectSubmittedTimesheetOfBriarSunset"})
+    @Test(priority = 3, groups = {"Master", "Regression"}, dependsOnMethods = {"testRejectSubmittedTimesheetOfSerenityBloom"})
     public void testAllHistoryOfApproval(){
         HeaderPage headerPage = new HeaderPage(driver);
         ProjectsPage projectsPage = new ProjectsPage(driver);
         TimesheetApprovalPage timesheetApprovalPage = new TimesheetApprovalPage(driver);
-        TimesheetPage timesheetPage = new TimesheetPage(driver);
         HistoryApprovalPage historyApprovalPage = new HistoryApprovalPage(driver);
         try{
             logger.info("Test Case 3: Verify All History of user");
@@ -185,7 +209,7 @@ public class TC014_TimesheetApprovalMemberManualRejectionTests extends BaseClass
 
             Assert.assertEquals(timesheetApprovalPage.getStatusValueOfUserTimesheet(toFullName(this.submitterUser)),"Rejected");
 
-            logger.info("------ Clicking on show btn of : " + this.submitterUser + "Timesheet History");
+            logger.info("------ Clicking on show btn of : " + this.submitterUser + " Timesheet History");
             timesheetApprovalPage.clickOnShowHistoryOfUserTimesheet(toFullName(this.submitterUser));
 
             //checking history

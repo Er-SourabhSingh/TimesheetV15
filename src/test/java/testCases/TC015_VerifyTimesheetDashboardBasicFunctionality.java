@@ -4,7 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import pageObjects.HeaderPage;
-import pageObjects.ProjectsPage;
 import pageObjects.TimesheetApprovalPage;
 import pageObjects.TimesheetPage;
 import testBase.BaseClass;
@@ -12,7 +11,7 @@ import testBase.BaseClass;
 import java.util.Arrays;
 import java.util.List;
 
-class TC015_TimesheetApprovalDashboardBasicFunctionalityTests extends BaseClass {
+class TC015_VerifyTimesheetDashboardBasicFunctionality extends BaseClass {
 
     String[] approvalUsers = new String[]{
             "aurora.wren", "autumn.grace", "briar.sunset", "celeste.dawn", "daisy.skye"

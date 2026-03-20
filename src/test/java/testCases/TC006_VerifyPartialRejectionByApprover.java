@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-public class TC006_TimesheetPartialRejectionForApprovalUserTests extends BaseClass {
+public class TC006_VerifyPartialRejectionByApprover extends BaseClass {
     String[] approvalUsers = new String[]{
             "briar.sunset",   // 3Approval
             "celeste.dawn",   // 4Approval

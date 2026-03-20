@@ -9,7 +9,7 @@ import utilities.DataProviders;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TC001_TimesheetApprovalTests extends BaseClass {
+public class TC001_VerifyTimesheetApprovalFlow extends BaseClass {
 
     @Test(priority = 1, groups = {"Data Driven"}, dataProvider = "schemaFlows", dataProviderClass = DataProviders.class)
     public void testTimesheetApprovalFlow(String projectName, String dateRange, String user, String[] approvers){

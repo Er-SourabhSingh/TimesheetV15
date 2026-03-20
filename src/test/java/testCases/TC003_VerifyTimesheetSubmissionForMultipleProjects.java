@@ -11,9 +11,8 @@ import testBase.BaseClass;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 
-public class TC003_TimesheetMultiProjectWorkflowTests extends BaseClass {
+public class TC003_VerifyTimesheetSubmissionForMultipleProjects extends BaseClass {
     String []projects = new String[]{"Project C 2-Level-Schema", "Project D 3-Level-Schema", "Project F 5-Level-Schema"};
     String[] approvalUsers = new String[]{
             "aurora.wren",    // 1Approval

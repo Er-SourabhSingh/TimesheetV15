@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TC007_TimesheetSubmissionAndApprovalSameSchemaTests extends BaseClass {
+public class TC007_VerifySubmissionAndApprovalWithinSameSchema extends BaseClass {
     String[] newApprovalUsers = {
             "ivy.skylark",    // New 1ApproverNew
             "luna.meadow",    // New 2ApproverNew

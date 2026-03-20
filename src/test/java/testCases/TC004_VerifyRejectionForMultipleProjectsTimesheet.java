@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-public class TC004_TimesheetMultiProjectRejectionTests extends BaseClass {
+public class TC004_VerifyRejectionForMultipleProjectsTimesheet extends BaseClass {
     String []projects = new String[]{"Project A Default-Schema", "Project C 2-Level-Schema", "Project D 3-Level-Schema"};
     String[] approvalUsers = new String[]{
             "aurora.wren",    // 1Approval

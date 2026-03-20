@@ -18,14 +18,14 @@
         <parameter name="approvalflow" value="manual"/>
         <classes>
              <class name="testBase.SetupPreconditions"/>
-             <class name="testCases.TC001_TimesheetApprovalTests"/>
-             <class name="testCases.TC002_TimesheetRejectionTests"/>
-             <class name="testCases.TC003_TimesheetMultiProjectWorkflowTests"/>
-             <class name="testCases.TC004_TimesheetMultiProjectRejectionTests"/>
-             <class name="testCases.TC005_TimesheetPartialRejectionForProjectsTests"/>
-             <class name="testCases.TC006_TimesheetPartialRejectionForApprovalUserTests"/>
-             <class name="testCases.TC008_BulkTimesheetApprovalAndRejectionTests"/>
-             <class name="testCases.TC015_TimesheetApprovalDashboardBasicFunctionalityTests"/>
+             <class name="testCases.TC001_VerifyTimesheetApprovalFlow"/>
+             <class name="testCases.TC002_VerifyTimesheetRejectionFlow"/>
+             <class name="testCases.TC003_VerifyTimesheetSubmissionForMultipleProjects"/>
+             <class name="testCases.TC004_VerifyRejectionForMultipleProjectsTimesheet"/>
+             <class name="testCases.TC005_VerifyPartialRejectionForMultipleProjects"/>
+             <class name="testCases.TC006_VerifyPartialRejectionByApprover"/>
+             <class name="testCases.TC008_VerifyBulkApprovalAndRejectionOfTimesheets"/>
+             <class name="testCases.TC015_VerifyTimesheetDashboardBasicFunctionality"/>
         </classes>
     </test>
 
@@ -35,7 +35,7 @@
          <parameter name="approvalflow" value="sameschema"/>
          <classes>
              <class name="testBase.SetupPreconditions"/>
-             <class name="testCases.TC007_TimesheetSubmissionAndApprovalSameSchemaTests"/>
+             <class name="testCases.TC007_VerifySubmissionAndApprovalWithinSameSchema"/>
          </classes>
      </test>
 
@@ -45,21 +45,21 @@
         <parameter name="approvalflow" value="auto"/>
         <classes>
             <class name="testBase.SetupPreconditions"/>
-            <class name="testCases.TC009_TimesheetAutoApprovalTest"/>
-            <class name="testCases.TC010_TimesheetManualApprovalTests"/>
-            <class name="testCases.TC011_TimesheetManualRejectionTests"/>
-            <class name="testCases.TC012_TimesheetApprovalMemberAutoApprovalTests"/>
-            <class name="testCases.TC013_TimesheetApprovalMemberManualApprovalTests"/>
-            <class name="testCases.TC014_TimesheetApprovalMemberManualRejectionTests"/>
+            <class name="testCases.TC009_VerifyTimesheetAutoApproval"/>
+            <class name="testCases.TC010_VerifyTimesheetManualApproval"/>
+            <class name="testCases.TC011_VerifyTimesheetManualRejection"/>
+            <class name="testCases.TC012_VerifyMemberAutoApprovalInTimesheet"/>
+            <class name="testCases.TC013_VerifyMemberManualApprovalInTimesheet"/>
+            <class name="testCases.TC014_VerifyMemberManualRejectionInTimesheet"/>
         </classes>
     </test>-->
 
     <test thread-count="5" parallel="none" name="TimeSheetManual">
         <parameter name="os" value="window"/>
         <parameter name="browser" value="chrome"/>
-        <parameter name="approvalflow" value="manual"/>
+        <!--<parameter name="approvalflow" value="manual"/>-->
         <classes>
-            <class name="testCases.TC0016_TimesheetTimeLogs"/>
+            <class name="testCases.TC016_VerifyTimesheetTimeLogging"/>
 
         </classes>
     </test>

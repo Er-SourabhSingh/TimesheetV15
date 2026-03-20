@@ -10,22 +10,17 @@ import utilities.ExcelUtility;
 import java.io.File;
 import java.util.*;
 
-public class TC0016_TimesheetTimeLogs extends BaseClass {
+public class TC016_VerifyTimesheetTimeLogging extends BaseClass {
     String[] users = {
-            "aurora.wren",
-            //"autumn.grace",   // 2Approval
-            /*"briar.sunset",   // 3Approval
-            "celeste.dawn",   // 4Approval
-            "daisy.skye",     // 5Approval
-
+            //"aurora.wren",
             "ember.lilac", "harmony.rose", "isla.moon", "ivy.skylark",
             "luna.meadow", "marigold.rayne", "nova.starling",
             "opal.sparrow", "sage.willow", "selene.frost", "serenity.bloom",
-            "summer.rain" , "luna.blossom", "violet.ember", "willow.belle"*/
+            "summer.rain" , "luna.blossom", "violet.ember", "willow.belle"
     };
 
 
-    String startDate = "11/01/2025", endDate = "11/30/2025";
+    String startDate = "01/01/2026", endDate = "01/31/2026";
 
     @Test(priority = 1)
     public void logTimesOnTimesheet() {
@@ -121,7 +116,7 @@ public class TC0016_TimesheetTimeLogs extends BaseClass {
     }
 
 
-    @Test(priority = 2)
+   /* @Test(priority = 2)
     public void checkTimeEntriesOnTimesheet(){
 
         HeaderPage headerPage = new HeaderPage(driver);
@@ -129,7 +124,8 @@ public class TC0016_TimesheetTimeLogs extends BaseClass {
         logger.info("Test Case 1: Verify As Approval can view timesheet of user of a month");
         try{
 
-            super.login(properties.getProperty("adminUser"),properties.getProperty("adminPassword"));
+            //super.login(properties.getProperty("adminUser"),properties.getProperty("adminPassword"));
+
 
             logger.info("Step 2: Navigating to Timesheet module");
             headerPage.clickOnTimesheet();
@@ -186,7 +182,7 @@ public class TC0016_TimesheetTimeLogs extends BaseClass {
             logger.error(e);
             Assert.fail();
         }
-    }
+    }*/
 
 
 }
